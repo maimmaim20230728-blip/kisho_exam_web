@@ -25,6 +25,10 @@ window.KISHO_DATA["56_ippan"] = {
 },
 {
 "q": 2,
+"expl_fig": {
+"file": "e_56_ippan_q02.svg",
+"caption": "図: 空気塊の上昇と、持ち上げ凝結高度・自由対流高度のイメージ"
+},
 "question": "<span class=\"term\" data-term=\"湿潤大気\">湿潤大気</span>中で<span class=\"term\" data-term=\"空気塊\">空気塊</span>を持ち上げたときの気温等の変化について述べた次の文章の<span class=\"term\" data-term=\"空欄\">空欄</span>(a),(b)に入る数値の組み合わせとして最も適切なものを，下記の①〜⑤の中から1つ選べ。ただし，<span class=\"term\" data-term=\"乾燥断熱減率\">乾燥断熱減率</span>は10<span class=\"term\" data-term=\"℃/km\">℃/km</span>，<span class=\"term\" data-term=\"湿潤断熱減率\">湿潤断熱減率</span>は5℃/km とする。\n地上(<span class=\"term\" data-term=\"高度\">高度</span>0km)で気温が25℃，高度3kmで気温が5℃の<span class=\"term\" data-term=\"大気\">大気</span>中において，周囲の空気と<span class=\"term\" data-term=\"混合\">混合</span>せずに<span class=\"term\" data-term=\"断熱的\">断熱的</span>に地上から上昇した空気塊の<span class=\"term\" data-term=\"自由対流高度\">自由対流高度</span>が3kmとなった。このとき，<span class=\"term\" data-term=\"持ち上げ凝結高度\">持ち上げ凝結高度</span>は (a) km，そこでの空気塊の温度は (b) ℃となる。",
 "choices": [
 "(a) 1 (b) 10",
@@ -95,6 +99,10 @@ window.KISHO_DATA["56_ippan"] = {
 },
 {
 "q": 6,
+"expl_fig": {
+"file": "e_56_ippan_q06.svg",
+"caption": "図: 地衡風のつり合いと、緯度による南北距離のちがいのイメージ"
+},
 "question": "<span class=\"term\" data-term=\"北緯\">北緯</span>30°と北緯45°の2つの地点で，いずれも東向きで<span class=\"term\" data-term=\"風速\">風速</span>100<span class=\"term\" data-term=\"m/s\">m/s</span>の<span class=\"term\" data-term=\"地衡風\">地衡風</span>が吹いているとする。\nこの2つの地点で，<span class=\"term\" data-term=\"水平気圧差\">水平気圧差</span>が4<span class=\"term\" data-term=\"hPa\">hPa</span>となる南北方向の距離を <span class=\"term\" data-term=\"Δ\">Δ</span>Y₃₀, ΔY₄₅ としたとき，ΔY₃₀と ΔY₄₅の比（ΔY₃₀／ΔY₄₅）の値として最も適切なものを，下記の①〜⑤の中から1つ選べ。ただし，2つの地点で<span class=\"term\" data-term=\"大気\">大気</span>の<span class=\"term\" data-term=\"密度\">密度</span>は等しく，<span class=\"term\" data-term=\"地表\">地表</span>の<span class=\"term\" data-term=\"摩擦\">摩擦</span>の影響は無視できるとし，<span class=\"term\" data-term=\"sin30°\">sin30°</span>＝1/2，<span class=\"term\" data-term=\"cos30°\">cos30°</span>＝1.7/2，<span class=\"term\" data-term=\"sin45°\">sin45°</span>＝1/1.4，<span class=\"term\" data-term=\"cos45°\">cos45°</span>＝1/1.4とする。",
 "choices": [
 "0.6",
@@ -130,6 +138,10 @@ window.KISHO_DATA["56_ippan"] = {
 },
 {
 "q": 8,
+"expl_fig": {
+"file": "e_56_ippan_q08.svg",
+"caption": "図: 発達期の温帯低気圧が西に傾いた構造のイメージ"
+},
 "question": "<span class=\"term\" data-term=\"北半球\">北半球</span>における<span class=\"term\" data-term=\"発達期\">発達期</span>の<span class=\"term\" data-term=\"温帯低気圧\">温帯低気圧</span>について述べた次の文(a)〜(d)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを，下記の①〜⑤の中から1つ選べ。\n(a) <span class=\"term\" data-term=\"低気圧\">低気圧</span>周辺の<span class=\"term\" data-term=\"相対的\">相対的</span>に<span class=\"term\" data-term=\"高温\">高温</span>の<span class=\"term\" data-term=\"領域\">領域</span>では<span class=\"term\" data-term=\"北よりの風\">北よりの風</span>で<span class=\"term\" data-term=\"上昇流\">上昇流</span>，<span class=\"term\" data-term=\"低温\">低温</span>の領域では<span class=\"term\" data-term=\"南よりの風\">南よりの風</span>で<span class=\"term\" data-term=\"下降流\">下降流</span>となっている。\n(b) 地上の低気圧の中心は<span class=\"term\" data-term=\"上層\">上層</span>の<span class=\"term\" data-term=\"気圧の谷\">気圧の谷</span>の東側にある。\n(c) 低気圧は<span class=\"term\" data-term=\"南北温度傾度\">南北温度傾度</span>の大きい<span class=\"term\" data-term=\"偏西風帯\">偏西風帯</span>で<span class=\"term\" data-term=\"発達\">発達</span>し，熱を<span class=\"term\" data-term=\"高緯度\">高緯度</span>に運んでいる。\n(d) 低気圧の発達には<span class=\"term\" data-term=\"水蒸気\">水蒸気</span>の<span class=\"term\" data-term=\"凝結\">凝結</span>による<span class=\"term\" data-term=\"熱エネルギー\">熱エネルギー</span>の<span class=\"term\" data-term=\"供給\">供給</span>が不可欠である。",
 "choices": [
 "(a)正 (b)正 (c)正 (d)誤",
@@ -147,6 +159,10 @@ window.KISHO_DATA["56_ippan"] = {
 },
 {
 "q": 9,
+"expl_fig": {
+"file": "e_56_ippan_q09.svg",
+"caption": "図: マルチセル型が世代交代しながら長続きするしくみのイメージ"
+},
 "question": "<span class=\"term\" data-term=\"孤立\">孤立</span>した<span class=\"term\" data-term=\"積乱雲\">積乱雲</span>と複数の積乱雲が<span class=\"term\" data-term=\"組織化\">組織化</span>した<span class=\"term\" data-term=\"マルチセル型\">マルチセル型</span>の<span class=\"term\" data-term=\"メソ対流系\">メソ対流系</span>を比較して述べた次の文章の下線部 (a)〜(d)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを，下記の①〜⑤の中から1つ選べ。\n孤立した積乱雲は，発生から<span class=\"term\" data-term=\"衰弱\">衰弱</span>までの時間が一般に (a)<u>10分間から20分間程度</u>である。このように寿命が短い主な理由は，積乱雲の<span class=\"term\" data-term=\"発達\">発達</span>が進むとともに，積乱雲の内部において (b)<u><span class=\"term\" data-term=\"降水粒子\">降水粒子</span>の<span class=\"term\" data-term=\"荷重\">荷重</span>や<span class=\"term\" data-term=\"融解\">融解</span>・<span class=\"term\" data-term=\"蒸発\">蒸発</span>にともなう<span class=\"term\" data-term=\"冷却\">冷却</span>により，<span class=\"term\" data-term=\"上昇流\">上昇流</span>が維持できなくなるため</u>である。\n組織化されたマルチセル型のメソ対流系は，孤立した積乱雲が発生するときよりも，<span class=\"term\" data-term=\"一般風\">一般風</span>の<span class=\"term\" data-term=\"鉛直シアー\">鉛直シアー</span>が (c)<u>小さい</u>ときに形成されることが多い。マルチセル型のメソ対流系では，(d)<u><span class=\"term\" data-term=\"対流系\">対流系</span>内の積乱雲の<span class=\"term\" data-term=\"下降流\">下降流</span>域から吹き出した<span class=\"term\" data-term=\"気流\">気流</span>が周辺の<span class=\"term\" data-term=\"高温高湿\">高温高湿</span>な気流とぶつかって空気を持ち上げ</u>，新たな<span class=\"term\" data-term=\"対流雲\">対流雲</span>が発生・発達して積乱雲に成長し，世代交代が持続的に起きる。この結果，マルチセル型のメソ対流系は孤立した積乱雲より長寿命となる。",
 "choices": [
 "(a)正 (b)正 (c)正 (d)誤",
@@ -164,6 +180,10 @@ window.KISHO_DATA["56_ippan"] = {
 },
 {
 "q": 10,
+"expl_fig": {
+"file": "e_56_ippan_q10.svg",
+"caption": "図: オゾンが低緯度でつくられ高緯度にたまる流れのイメージ"
+},
 "question": "<span class=\"term\" data-term=\"成層圏\">成層圏</span>の<span class=\"term\" data-term=\"オゾン\">オゾン</span>について述べた次の文(a)〜(d)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを，下記の①〜⑤の中から1つ選べ。\n(a) <span class=\"term\" data-term=\"高度\">高度</span>20〜60kmにおける気温の<span class=\"term\" data-term=\"経度平均\">経度平均</span>が<span class=\"term\" data-term=\"夏極\">夏極</span>に近いほど<span class=\"term\" data-term=\"高温\">高温</span>であるのは，オゾンの<span class=\"term\" data-term=\"紫外線\">紫外線</span><span class=\"term\" data-term=\"吸収\">吸収</span>に伴う<span class=\"term\" data-term=\"加熱量\">加熱量</span>がより多くなるからである。\n(b) オゾンは主として<span class=\"term\" data-term=\"高緯度\">高緯度</span>の成層圏で<span class=\"term\" data-term=\"生成\">生成</span>され，<span class=\"term\" data-term=\"蓄積\">蓄積</span>される。\n(c) <span class=\"term\" data-term=\"北半球\">北半球</span>の<span class=\"term\" data-term=\"中高緯度\">中高緯度</span>の<span class=\"term\" data-term=\"オゾン全量\">オゾン全量</span>は，冬から春にかけた時期が他の時期よりも多い。\n(d) 南極では，<span class=\"term\" data-term=\"極渦\">極渦</span>が弱い年ほど成層圏が<span class=\"term\" data-term=\"低温\">低温</span>になりやすく，<span class=\"term\" data-term=\"オゾンホール\">オゾンホール</span>が<span class=\"term\" data-term=\"発達\">発達</span>する<span class=\"term\" data-term=\"傾向\">傾向</span>がある。",
 "choices": [
 "(a)正 (b)正 (c)正 (d)誤",
@@ -181,6 +201,10 @@ window.KISHO_DATA["56_ippan"] = {
 },
 {
 "q": 11,
+"expl_fig": {
+"file": "e_56_ippan_q11.svg",
+"caption": "図: エルニーニョ現象で積乱雲の位置が東へ動くイメージ"
+},
 "question": "<span class=\"term\" data-term=\"エルニーニョ現象\">エルニーニョ現象</span>発生時の<span class=\"term\" data-term=\"天候\">天候</span>の特徴について述べた次の文章の下線部(a)〜(d)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを，下記の①〜⑤の中から1つ選べ。\nエルニーニョ現象が発生しているときには，ペルーやコロンビアなどの南米北部では，平均気温が<span class=\"term\" data-term=\"平年\">平年</span>に比べて (a)<u>低い</u><span class=\"term\" data-term=\"傾向\">傾向</span>が，また，インドネシアやオーストラリア北部などの西部太平洋<span class=\"term\" data-term=\"熱帯域\">熱帯域</span>では，<span class=\"term\" data-term=\"降水量\">降水量</span>が平年に比べて (b)<u>多い</u>傾向がみられる。\n日本では，<span class=\"term\" data-term=\"西日本\">西日本</span>の<span class=\"term\" data-term=\"夏季\">夏季</span>(6〜8月)において平均気温が平年に比べて (c)<u>高い</u>傾向が，<span class=\"term\" data-term=\"東日本\">東日本</span>の<span class=\"term\" data-term=\"冬季\">冬季</span>(12〜2月)では，平均気温は平年に比べて (d)<u>高い</u>傾向がみられる。",
 "choices": [
 "(a)正 (b)正 (c)誤 (d)正",

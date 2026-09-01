@@ -1,0 +1,58 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="q15b" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#2569a8"/>
+    </marker>
+    <marker id="q15o" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="34" font-family="sans-serif" font-size="19" fill="#1c2b36">風の向きが変わると暖水が寄る側も変わる</text>
+
+  <!-- 上段：平常時 -->
+  <text x="16" y="76" font-family="sans-serif" font-size="16" fill="#1c2b36">平常時（図A）</text>
+  <text x="88" y="100" font-family="sans-serif" font-size="14" fill="#2569a8">弱い西風</text>
+  <path d="M100,112 L172,112" fill="none" stroke="#2569a8" stroke-width="2" marker-end="url(#q15b)"/>
+  <text x="330" y="100" font-family="sans-serif" font-size="14" fill="#2569a8">強い東風（貿易風）</text>
+  <path d="M448,112 L330,112" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q15b)"/>
+  <rect x="40" y="124" width="210" height="70" fill="#2569a8" fill-opacity="0.15"/>
+  <rect x="270" y="124" width="240" height="70" fill="#2569a8" fill-opacity="0.15"/>
+  <path d="M40,124 L250,124 L250,170 C200,164 120,144 40,140 Z" fill="#f2a73b" fill-opacity="0.55"/>
+  <path d="M270,124 L510,124 L510,136 C435,140 355,166 270,174 Z" fill="#f2a73b" fill-opacity="0.55"/>
+  <line x1="40" y1="124" x2="250" y2="124" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="270" y1="124" x2="510" y2="124" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="260" y1="124" x2="260" y2="194" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <path d="M492,186 L492,138" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q15b)"/>
+  <text x="412" y="188" font-family="sans-serif" font-size="14" fill="#2569a8">冷水の湧昇</text>
+  <text x="290" y="156" font-family="sans-serif" font-size="14" fill="#1c2b36">暖かい海水</text>
+  <text x="18" y="129" font-family="sans-serif" font-size="14" fill="#5a6b78">西</text>
+  <text x="520" y="129" font-family="sans-serif" font-size="14" fill="#5a6b78">東</text>
+  <text x="44" y="212" font-family="sans-serif" font-size="14" fill="#5a6b78">インド洋（東部が厚い）</text>
+  <text x="300" y="212" font-family="sans-serif" font-size="14" fill="#5a6b78">太平洋（西部が厚い）</text>
+
+  <!-- 下段：エルニーニョ時 -->
+  <text x="16" y="240" font-family="sans-serif" font-size="16" fill="#1c2b36">エルニーニョ発生時（図B）</text>
+  <text x="88" y="264" font-family="sans-serif" font-size="14" fill="#2569a8">弱い東風</text>
+  <path d="M172,276 L100,276" fill="none" stroke="#2569a8" stroke-width="2" marker-end="url(#q15b)"/>
+  <text x="340" y="264" font-family="sans-serif" font-size="14" fill="#2569a8">東風が弱まる</text>
+  <path d="M400,276 L350,276" fill="none" stroke="#2569a8" stroke-width="2" marker-end="url(#q15b)"/>
+  <rect x="40" y="288" width="210" height="70" fill="#2569a8" fill-opacity="0.15"/>
+  <rect x="270" y="288" width="240" height="70" fill="#2569a8" fill-opacity="0.15"/>
+  <path d="M40,288 L250,288 L250,308 C200,314 120,332 40,336 Z" fill="#f2a73b" fill-opacity="0.55"/>
+  <path d="M270,288 L510,288 L510,322 C435,326 355,330 270,334 Z" fill="#f2a73b" fill-opacity="0.55"/>
+  <line x1="40" y1="288" x2="250" y2="288" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="270" y1="288" x2="510" y2="288" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="260" y1="288" x2="260" y2="358" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <path d="M200,308 L136,308" fill="none" stroke="#f2a73b" stroke-width="3" marker-end="url(#q15o)"/>
+  <text x="44" y="320" font-family="sans-serif" font-size="14" fill="#1c2b36">西へ広がる</text>
+  <path d="M330,314 L462,314" fill="none" stroke="#f2a73b" stroke-width="3" marker-end="url(#q15o)"/>
+  <text x="300" y="306" font-family="sans-serif" font-size="14" fill="#1c2b36">東へ広がる</text>
+  <path d="M492,350 L492,332" fill="none" stroke="#2569a8" stroke-width="2" marker-end="url(#q15b)"/>
+  <text x="410" y="352" font-family="sans-serif" font-size="14" fill="#2569a8">湧昇が弱い</text>
+
+  <!-- 下部の注記 -->
+  <text x="16" y="380" font-family="sans-serif" font-size="14" fill="#1c2b36">インド洋の風が西風から東風に変わり、暖水は東部から西部へ</text>
+  <text x="16" y="400" font-family="sans-serif" font-size="14" fill="#1c2b36">インド洋の水温変化は、太平洋よりおよそ3か月遅れて現れる</text>
+</svg>

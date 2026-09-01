@@ -1,0 +1,45 @@
+<svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#ffffff"/>
+  <defs>
+    <marker id="aRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0524d"/>
+    </marker>
+    <marker id="aBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+  </defs>
+
+  <text x="28" y="30" font-family="sans-serif" font-size="20" fill="#1c2b36">発達期の温帯低気圧は西に傾く</text>
+  <text x="532" y="30" text-anchor="end" font-family="sans-serif" font-size="13" fill="#5a6b78">北半球</text>
+
+  <line x1="50" y1="70" x2="50" y2="310" stroke="#5a6b78" stroke-width="1.5"/>
+  <line x1="50" y1="310" x2="516" y2="310" stroke="#1c2b36" stroke-width="2.5"/>
+  <line x1="60" y1="95" x2="500" y2="95" stroke="#5a6b78" stroke-width="1.2" stroke-dasharray="5 5"/>
+
+  <text x="44" y="100" text-anchor="end" font-family="sans-serif" font-size="12" fill="#5a6b78">上空</text>
+  <text x="44" y="306" text-anchor="end" font-family="sans-serif" font-size="12" fill="#5a6b78">地上</text>
+  <text x="52" y="332" font-family="sans-serif" font-size="14" fill="#5a6b78">西</text>
+  <text x="514" y="332" text-anchor="end" font-family="sans-serif" font-size="14" fill="#5a6b78">東</text>
+
+  <line x1="200" y1="83" x2="200" y2="107" stroke="#5a6b78" stroke-width="4"/>
+  <text x="212" y="82" font-family="sans-serif" font-size="13" fill="#5a6b78">上層の気圧の谷(トラフ)</text>
+
+  <line x1="330" y1="310" x2="200" y2="95" stroke="#5a6b78" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="280" y="215" font-family="sans-serif" font-size="13" fill="#5a6b78">軸は西に傾く</text>
+
+  <circle cx="330" cy="310" r="5" fill="#e0524d"/>
+  <text x="344" y="300" font-family="sans-serif" font-size="22" fill="#e0524d">L</text>
+  <text x="330" y="332" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#1c2b36">地上の低気圧の中心</text>
+
+  <line x1="390" y1="300" x2="440" y2="120" stroke="#e0524d" stroke-width="3" marker-end="url(#aRed)"/>
+  <text x="448" y="170" font-family="sans-serif" font-size="14" fill="#e0524d">上昇流</text>
+  <text x="448" y="190" font-family="sans-serif" font-size="13" fill="#e0524d">暖気が</text>
+  <text x="448" y="206" font-family="sans-serif" font-size="13" fill="#e0524d">すべり上がる</text>
+
+  <line x1="150" y1="150" x2="128" y2="285" stroke="#2569a8" stroke-width="3" marker-end="url(#aBlue)"/>
+  <text x="162" y="196" font-family="sans-serif" font-size="14" fill="#2569a8">下降流</text>
+  <text x="162" y="216" font-family="sans-serif" font-size="13" fill="#2569a8">寒気</text>
+
+  <text x="28" y="356" font-family="sans-serif" font-size="13" fill="#5a6b78">暖気側(南東)は南よりの風で上昇流、寒気側(北西)は北よりの風で下降流。</text>
+  <text x="28" y="376" font-family="sans-serif" font-size="13" fill="#5a6b78">上層の谷の前面(東側)で上昇流が起こり、低気圧が発達する。</text>
+</svg>

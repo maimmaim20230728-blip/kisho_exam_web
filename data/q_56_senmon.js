@@ -74,6 +74,10 @@ window.KISHO_DATA["56_senmon"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_56_senmon_q04.svg",
+"caption": "図: MEがゼロに近づいてもRMSEが悪化する例"
+},
 "explanation": "正解は ⑤ です。\n\n<span class=\"term\" data-term=\"数値予報\">数値予報</span>(コンピュータで<span class=\"term\" data-term=\"大気\">大気</span>の状態を計算して<span class=\"term\" data-term=\"予報\">予報</span>する方法)の<span class=\"term\" data-term=\"誤差\">誤差</span>について、よくある思い込みが3つ並んでいます。そのすべてが誤りだと気づけるかを聞いている問題です。\n\n(a)は誤りです。<span class=\"term\" data-term=\"初期値\">初期値</span>のもとになる<span class=\"term\" data-term=\"解析値\">解析値</span>は、<span class=\"term\" data-term=\"観測\">観測</span>データを取り込んで作ります。観測は日本付近や陸上では密なんですが、広い海の上や<span class=\"term\" data-term=\"南半球\">南半球</span>では粗くなります。観測が少ない場所では解析値の<span class=\"term\" data-term=\"精度\">精度</span>も落ちますから、<span class=\"term\" data-term=\"格子点\">格子点</span>の位置によらず<span class=\"term\" data-term=\"一様\">一様</span>、とはいえません。\n\n(b)も誤りです。同じ<span class=\"term\" data-term=\"モデル\">モデル</span>でも、そのときの大気の状態によって誤差の育ち方は大きく変わります。<span class=\"term\" data-term=\"気圧配置\">気圧配置</span>が<span class=\"term\" data-term=\"安定\">安定</span>しているときは誤差があまり増えません。でも<span class=\"term\" data-term=\"低気圧\">低気圧</span>が急<span class=\"term\" data-term=\"発達\">発達</span>するような場面では、わずかな初期値の違いが短時間で大きく育ちます。この性質があるからこそ、少しずつ違う初期値で何通りも計算する<span class=\"term\" data-term=\"アンサンブル予報\">アンサンブル予報</span>が使われているんですね。\n\n(c)も誤りです。<span class=\"term\" data-term=\"平均誤差\">平均誤差</span>(<span class=\"term\" data-term=\"ME\">ME</span>)は「予報−<span class=\"term\" data-term=\"実況\">実況</span>」をそのまま平均した値です。ですから大きく外した分もプラスと<span class=\"term\" data-term=\"マイナス\">マイナス</span>で打ち消し合ってしまって、ばらつきが大きくてもゼロに近づくことがあります。一方、<span class=\"term\" data-term=\"二乗平均平方根誤差\">二乗平均平方根誤差</span>(<span class=\"term\" data-term=\"RMSE\">RMSE</span>)は誤差を<span class=\"term\" data-term=\"二乗\">二乗</span>してから平均するので、打ち消し合いが起こりません。<span class=\"term\" data-term=\"偏り\">偏り</span>の大きさとばらつきの大きさの両方を含んだ値になります。つまり、モデルを変更して偏り(ME)が小さくなっても、同時に当たり外れのばらつきが大きくなれば、RMSEはかえって増えることがあるんです。MEがゼロに近づいてもRMSEが必ず減るとは限りません。\n\nポイント: MEは「偏りの向き」、RMSEは「誤差の大きさそのもの」を表す、別々の<span class=\"term\" data-term=\"指標\">指標</span>です。片方が良くなっても、もう片方が良くなるとは限りません。"
 },
 {
@@ -91,6 +95,10 @@ window.KISHO_DATA["56_senmon"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_56_senmon_q05.svg",
+"caption": "図: 格子間隔と、そのモデルが表現できる現象の大きさ"
+},
 "explanation": "正解は ② です。\n\n<span class=\"term\" data-term=\"気象庁\">気象庁</span>の<span class=\"term\" data-term=\"数値予報モデル\">数値予報モデル</span>について、<span class=\"term\" data-term=\"格子間隔\">格子間隔</span>と<span class=\"term\" data-term=\"パラメタリゼーション\">パラメタリゼーション</span>(<span class=\"term\" data-term=\"格子\">格子</span>より小さくて直接計算できない<span class=\"term\" data-term=\"現象\">現象</span>の効果を、まとめて式で見積もる工夫)の関係が分かれ目になる問題です。\n\n(a)は正しいです。<span class=\"term\" data-term=\"メソモデル\">メソモデル</span>は格子間隔が5kmで、上下方向の運動もきちんと扱う<span class=\"term\" data-term=\"非静力学モデル\">非静力学モデル</span>です。ただ、直径が数kmしかない<span class=\"term\" data-term=\"積雲\">積雲</span>ひとつひとつを表すには、格子が粗すぎるんですね。そのため<span class=\"term\" data-term=\"積雲対流パラメタリゼーション\">積雲対流パラメタリゼーション</span>を使って、積雲がまとめてもたらす熱や<span class=\"term\" data-term=\"水蒸気\">水蒸気</span>のやりとりを見積もっています。\n\n(b)も正しいです。<span class=\"term\" data-term=\"大気境界層\">大気境界層</span>(地面の影響を直接受ける、<span class=\"term\" data-term=\"地表\">地表</span>付近の空気の層)の中で熱や水蒸気を運んでいるのは、大きくても数百m程度の渦です。5km格子ではこれらを表せませんから、大気境界層<span class=\"term\" data-term=\"過程\">過程</span>のパラメタリゼーションが必要になります。\n\n(c)が誤りです。<span class=\"term\" data-term=\"局地モデル\">局地モデル</span>の格子間隔は2kmです。ここを押さえたいところなんですが、数値予報モデルが表現できるのは、ふつう格子間隔の数倍以上の大きさをもつ現象です。ですから2km格子でも、<span class=\"term\" data-term=\"水平スケール\">水平スケール</span>が数kmの<span class=\"term\" data-term=\"積乱雲\">積乱雲</span>ひとつひとつを予測することはできません。局地モデルは、<span class=\"term\" data-term=\"集中豪雨\">集中豪雨</span>などの激しい現象が起こりやすい場所と時間をとらえることをねらった<span class=\"term\" data-term=\"モデル\">モデル</span>なんです。\n\nポイント: 格子間隔が小さくなっても、格子間隔と同じくらいの大きさの現象は表現できません。<span class=\"term\" data-term=\"分解能\">分解能</span>が上がっても、パラメタリゼーションは必要です。"
 },
 {
@@ -126,6 +134,10 @@ window.KISHO_DATA["56_senmon"] = {
 ],
 "answer_note": "※ 専門知識の問7(c)の問題文に曖昧な表現があったことから，①または②を正解とします。",
 "figures": [],
+"expl_fig": {
+"file": "e_56_senmon_q07.svg",
+"caption": "図: ジェットの入口と出口で風が等高度線を横切る向き"
+},
 "explanation": "正解は ①または② です(公式発表による)。\n\n<span class=\"term\" data-term=\"ジェット気流\">ジェット気流</span>(<span class=\"term\" data-term=\"対流圏\">対流圏</span>の上のほうを流れる、<span class=\"term\" data-term=\"帯状\">帯状</span>の強い<span class=\"term\" data-term=\"西風\">西風</span>)の性質を、3つの側面から確かめる問題ですね。公式には(c)の文に曖昧な表現があったとして、①と②のどちらも正解とされました。\n\n(a)は正しいです。風が下流ほど強くなっている場所(ジェットの入口)では、空気は<span class=\"term\" data-term=\"加速\">加速</span>しています。加速するには進む向きに力が働く必要があって、その力が<span class=\"term\" data-term=\"気圧傾度力\">気圧傾度力</span>です。<span class=\"term\" data-term=\"等圧面\">等圧面</span>上では、気圧傾度力は<span class=\"term\" data-term=\"高度\">高度</span>の高い側から低い側へ向きます。ですから風は<span class=\"term\" data-term=\"等高度線\">等高度線</span>を、高い側から低い側へ斜めに横切るんですね。逆に風が弱まっている場所(出口)では<span class=\"term\" data-term=\"減速\">減速</span>するので、低い側から高い側へ横切ります。\n\n(b)も正しいです。<span class=\"term\" data-term=\"亜熱帯ジェット気流\">亜熱帯ジェット気流</span>の<span class=\"term\" data-term=\"風速\">風速</span>が最も強くなるのは高度12km前後(<span class=\"term\" data-term=\"200hPa\">200hPa</span>付近)です。でも<span class=\"term\" data-term=\"寒帯前線ジェット気流\">寒帯前線ジェット気流</span>は、それより低い高度9km前後(<span class=\"term\" data-term=\"300hPa\">300hPa</span>付近)で最強になります。北へ行くほど<span class=\"term\" data-term=\"圏界面\">圏界面</span>(対流圏と<span class=\"term\" data-term=\"成層圏\">成層圏</span>の境目)が低くなることに対応しています。\n\n(c)については、どちらのジェットも軸が対流圏<span class=\"term\" data-term=\"上層\">上層</span>の圏界面付近にあることは確かです。その一方で、<span class=\"term\" data-term=\"寒帯前線ジェット\">寒帯前線ジェット</span>が地上まで届く<span class=\"term\" data-term=\"寒帯前線帯\">寒帯前線帯</span>の上空にあるのに対して、<span class=\"term\" data-term=\"亜熱帯ジェット\">亜熱帯ジェット</span>は地上の<span class=\"term\" data-term=\"前線帯\">前線帯</span>を伴わないことが多いんです。ですから「<span class=\"term\" data-term=\"温度傾度\">温度傾度</span>の大きな前線帯の上空」という言い方が当てはまるかどうかは、読み方で分かれます。このため<span class=\"term\" data-term=\"正誤\">正誤</span>の判断が割れて、①②の両方が正解とされました。\n\nポイント: ジェットの入口では等高度線を高い側から低い側へ、出口では逆向きに横切る。そして寒帯前線ジェットのほうが、亜熱帯ジェットより低い高度で最強になる、と覚えます。"
 },
 {
@@ -162,6 +174,10 @@ window.KISHO_DATA["56_senmon"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_56_senmon_q09.svg",
+"caption": "図: 放射霧・滑昇霧・移流霧で空気が冷える仕組み"
+},
 "explanation": "正解は ④ です。\n\n「<span class=\"term\" data-term=\"霧\">霧</span>」の<span class=\"term\" data-term=\"定義\">定義</span>と、でき方による分類名を正しく覚えているかどうかを見ていく問題です。\n\n(a)は正しいです。<span class=\"term\" data-term=\"地上気象観測\">地上気象観測</span>では、ごく小さな<span class=\"term\" data-term=\"水滴\">水滴</span>が空中に浮かんでいて、<span class=\"term\" data-term=\"水平方向\">水平方向</span>に見通せる距離(<span class=\"term\" data-term=\"水平視程\">水平視程</span>)が1km未満になった状態を霧といいます。1km以上10km未満であれば「<span class=\"term\" data-term=\"もや\">もや</span>」ですね。\n\n(b)も正しいです。<span class=\"term\" data-term=\"放射霧\">放射霧</span>は、晴れて風の弱い夜に地面が<span class=\"term\" data-term=\"放射冷却\">放射冷却</span>(地面が熱を宇宙へ逃がして冷えること)で冷えて、それに接した空気が冷やされて<span class=\"term\" data-term=\"過飽和\">過飽和</span>(空気が抱えきれる限界を超えて<span class=\"term\" data-term=\"水蒸気\">水蒸気</span>を含んだ状態)になり、水滴ができるものです。盆地や谷でよく見られます。\n\n(c)も正しいです。<span class=\"term\" data-term=\"上昇霧\">上昇霧</span>(<span class=\"term\" data-term=\"滑昇霧\">滑昇霧</span>)は、湿った空気が山の斜面を上るときに<span class=\"term\" data-term=\"気圧\">気圧</span>が下がって<span class=\"term\" data-term=\"断熱膨張\">断熱膨張</span>し(まわりと熱をやりとりせずに膨らんで冷えることです)、過飽和になってできる霧です。\n\n(d)が誤りです。<span class=\"term\" data-term=\"移流霧\">移流霧</span>は、よそでできた霧が風で運ばれてきたものではありません。暖かく湿った空気が、冷たい海面や地面の上へ<span class=\"term\" data-term=\"移流\">移流</span>して(風で運ばれて)きて、下から冷やされて、その場で発生する霧のことをいいます。夏の三陸沖の<span class=\"term\" data-term=\"海霧\">海霧</span>が代表例です。\n\nポイント: 霧の名前は「どうやって空気が冷えたか」で付いています。移流霧は「霧が移動する」のではなく「空気が移動する」霧なんですね。"
 },
 {
@@ -196,6 +212,10 @@ window.KISHO_DATA["56_senmon"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_56_senmon_q11.svg",
+"caption": "図: 台風の暖気核と、傾度風の3つの力のつり合い"
+},
 "explanation": "正解は ③ です。\n\n台風の構造、<span class=\"term\" data-term=\"エネルギー\">エネルギー</span>のもと、<span class=\"term\" data-term=\"海面水温\">海面水温</span>への影響、そして風のつり合い。この4つをまとめて確かめる問題です。\n\n(a)は正しいです。台風は<span class=\"term\" data-term=\"暖気核\">暖気核</span>(中心付近が周りより暖かい構造)をもっていて、その暖かい部分は海面付近から<span class=\"term\" data-term=\"対流圏界面\">対流圏界面</span>近くまで、<span class=\"term\" data-term=\"対流圏\">対流圏</span>のほぼ全体に<span class=\"term\" data-term=\"及び\">及び</span>ます。\n\n(b)は誤りです。暖かい空気と冷たい空気が南北に隣り合っていると、その温度差そのものがエネルギー(<span class=\"term\" data-term=\"有効位置エネルギー\">有効位置エネルギー</span>)として蓄えられます。これが崩れて風のエネルギーに変わることで<span class=\"term\" data-term=\"発達\">発達</span>するのは、<span class=\"term\" data-term=\"温帯低気圧\">温帯低気圧</span>のほうなんです。台風は、暖かい海から<span class=\"term\" data-term=\"蒸発\">蒸発</span>した<span class=\"term\" data-term=\"水蒸気\">水蒸気</span>が雲の中で水に戻るときに出す<span class=\"term\" data-term=\"潜熱\">潜熱</span>(水蒸気が水になるときに放出する熱)を、主なエネルギー源にしています。\n\n(c)は正しいです。台風がゆっくり進むと、同じ海域に強い風が長く吹き続けます。すると海水がかき混ぜられて、深いところの冷たい海水が上へ湧き上がるので、海面水温の下がり方が大きくなります。これは台風自身の<span class=\"term\" data-term=\"勢力\">勢力</span>を弱める働きもします。\n\n(d)は誤りです。<span class=\"term\" data-term=\"低気圧\">低気圧</span>まわりの<span class=\"term\" data-term=\"傾度風\">傾度風</span>では、<span class=\"term\" data-term=\"気圧傾度力\">気圧傾度力</span>が「<span class=\"term\" data-term=\"コリオリ力\">コリオリ力</span>(地球の<span class=\"term\" data-term=\"自転\">自転</span>のせいで、動くものが<span class=\"term\" data-term=\"北半球\">北半球</span>では進む向きの右へ曲げられる<span class=\"term\" data-term=\"見かけの力\">見かけの力</span>)＋<span class=\"term\" data-term=\"遠心力\">遠心力</span>」とつり合っています。中心に近いほど回転の半径が小さいので、同じ<span class=\"term\" data-term=\"風速\">風速</span>でも遠心力が大きくなります。気圧傾度力と<span class=\"term\" data-term=\"緯度\">緯度</span>が同じなら、遠心力が大きくなる分だけ風速は小さくないとつり合いません。つまり、中心に近いほうが風は弱くなるんですね。\n\nポイント: 台風は「潜熱で回る暖気核の渦」です。傾度風では、<span class=\"term\" data-term=\"低気圧性\">低気圧性</span>の回転のとき遠心力が気圧傾度力に逆らう向きに働くので、半径が小さいほど風は弱くなります。"
 },
 {

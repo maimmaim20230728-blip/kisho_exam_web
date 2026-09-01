@@ -1,0 +1,70 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+<rect width="560" height="420" fill="#ffffff"/>
+
+<text x="28" y="32" font-size="17" font-weight="bold" fill="#1c2b36">地上気圧が同じなら、暖かく湿った気層ほど上空の気圧は高い</text>
+
+<!-- 高度1000mの基準線 -->
+<line x1="88" y1="150" x2="492" y2="150" stroke="#5a6b78" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="20" y="155" font-size="12" fill="#5a6b78">1000m</text>
+
+<!-- 地上 -->
+<line x1="88" y1="320" x2="492" y2="320" stroke="#1c2b36" stroke-width="2"/>
+<text x="20" y="325" font-size="12" fill="#5a6b78">地上</text>
+<line x1="96" y1="328" x2="104" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="124" y1="328" x2="132" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="152" y1="328" x2="160" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="180" y1="328" x2="188" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="208" y1="328" x2="216" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="236" y1="328" x2="244" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="264" y1="328" x2="272" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="292" y1="328" x2="300" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="320" y1="328" x2="328" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="348" y1="328" x2="356" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="376" y1="328" x2="384" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="404" y1="328" x2="412" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="432" y1="328" x2="440" y2="320" stroke="#5a6b78" stroke-width="1"/>
+<line x1="460" y1="328" x2="468" y2="320" stroke="#5a6b78" stroke-width="1"/>
+
+<!-- 地点A -->
+<text x="150" y="86" font-size="17" font-weight="bold" fill="#1c2b36" text-anchor="middle">地点A</text>
+<text x="150" y="110" font-size="13" fill="#1c2b36" text-anchor="middle">気温 低い</text>
+<text x="150" y="132" font-size="13" fill="#1c2b36" text-anchor="middle">水蒸気 少ない</text>
+<rect x="95" y="150" width="110" height="170" fill="#e6eef6" stroke="#1c2b36" stroke-width="1.5"/>
+<text x="150" y="176" font-size="11" fill="#5a6b78" text-anchor="middle">1000mの気圧</text>
+<text x="150" y="202" font-size="16" font-weight="bold" fill="#2569a8" text-anchor="middle">PA 最も低い</text>
+<text x="150" y="240" font-size="12" fill="#1c2b36" text-anchor="middle">冷たく重い空気</text>
+<circle cx="110" cy="266" r="3.5" fill="#2569a8"/><circle cx="130" cy="266" r="3.5" fill="#2569a8"/><circle cx="150" cy="266" r="3.5" fill="#2569a8"/><circle cx="170" cy="266" r="3.5" fill="#2569a8"/><circle cx="190" cy="266" r="3.5" fill="#2569a8"/>
+<circle cx="110" cy="280" r="3.5" fill="#2569a8"/><circle cx="130" cy="280" r="3.5" fill="#2569a8"/><circle cx="150" cy="280" r="3.5" fill="#2569a8"/><circle cx="170" cy="280" r="3.5" fill="#2569a8"/><circle cx="190" cy="280" r="3.5" fill="#2569a8"/>
+<circle cx="110" cy="294" r="3.5" fill="#2569a8"/><circle cx="130" cy="294" r="3.5" fill="#2569a8"/><circle cx="150" cy="294" r="3.5" fill="#2569a8"/><circle cx="170" cy="294" r="3.5" fill="#2569a8"/><circle cx="190" cy="294" r="3.5" fill="#2569a8"/>
+<circle cx="110" cy="308" r="3.5" fill="#2569a8"/><circle cx="130" cy="308" r="3.5" fill="#2569a8"/><circle cx="150" cy="308" r="3.5" fill="#2569a8"/><circle cx="170" cy="308" r="3.5" fill="#2569a8"/><circle cx="190" cy="308" r="3.5" fill="#2569a8"/>
+
+<!-- 地点B -->
+<text x="290" y="86" font-size="17" font-weight="bold" fill="#1c2b36" text-anchor="middle">地点B</text>
+<text x="290" y="110" font-size="13" fill="#1c2b36" text-anchor="middle">気温 高い</text>
+<text x="290" y="132" font-size="13" fill="#1c2b36" text-anchor="middle">水蒸気 少ない</text>
+<rect x="235" y="150" width="110" height="170" fill="#f1f0ec" stroke="#1c2b36" stroke-width="1.5"/>
+<text x="290" y="176" font-size="11" fill="#5a6b78" text-anchor="middle">1000mの気圧</text>
+<text x="290" y="202" font-size="16" font-weight="bold" fill="#5a6b78" text-anchor="middle">PB 中くらい</text>
+<text x="290" y="240" font-size="12" fill="#1c2b36" text-anchor="middle">その中間</text>
+<circle cx="260" cy="266" r="3.5" fill="#5a6b78"/><circle cx="290" cy="266" r="3.5" fill="#5a6b78"/><circle cx="320" cy="266" r="3.5" fill="#5a6b78"/>
+<circle cx="260" cy="280" r="3.5" fill="#5a6b78"/><circle cx="290" cy="280" r="3.5" fill="#5a6b78"/><circle cx="320" cy="280" r="3.5" fill="#5a6b78"/>
+<circle cx="260" cy="294" r="3.5" fill="#5a6b78"/><circle cx="290" cy="294" r="3.5" fill="#5a6b78"/><circle cx="320" cy="294" r="3.5" fill="#5a6b78"/>
+<circle cx="260" cy="308" r="3.5" fill="#5a6b78"/><circle cx="290" cy="308" r="3.5" fill="#5a6b78"/><circle cx="320" cy="308" r="3.5" fill="#5a6b78"/>
+
+<!-- 地点C -->
+<text x="430" y="86" font-size="17" font-weight="bold" fill="#1c2b36" text-anchor="middle">地点C</text>
+<text x="430" y="110" font-size="13" fill="#1c2b36" text-anchor="middle">気温 高い</text>
+<text x="430" y="132" font-size="13" fill="#1c2b36" text-anchor="middle">水蒸気 多い</text>
+<rect x="375" y="150" width="110" height="170" fill="#fbe9e8" stroke="#1c2b36" stroke-width="1.5"/>
+<text x="430" y="176" font-size="11" fill="#5a6b78" text-anchor="middle">1000mの気圧</text>
+<text x="430" y="202" font-size="16" font-weight="bold" fill="#e0524d" text-anchor="middle">PC 最も高い</text>
+<text x="430" y="240" font-size="12" fill="#1c2b36" text-anchor="middle">暖かく軽い空気</text>
+<circle cx="405" cy="270" r="3.5" fill="#e0524d"/><circle cx="455" cy="270" r="3.5" fill="#e0524d"/>
+<circle cx="405" cy="292" r="3.5" fill="#e0524d"/><circle cx="455" cy="292" r="3.5" fill="#e0524d"/>
+
+<!-- まとめ -->
+<text x="290" y="344" font-size="13" fill="#5a6b78" text-anchor="middle">地上気圧は3地点とも同じ</text>
+<line x1="26" y1="356" x2="534" y2="356" stroke="#dde4e9" stroke-width="1"/>
+<text x="280" y="376" font-size="14" fill="#1c2b36" text-anchor="middle">仮温度(水蒸気が多いほど高くなる温度)　A ＜ B ＜ C</text>
+<text x="280" y="400" font-size="16" font-weight="bold" fill="#15a35a" text-anchor="middle">よって 高度1000mの気圧　PA ＜ PB ＜ PC</text>
+</svg>

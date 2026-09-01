@@ -8,6 +8,10 @@ window.KISHO_DATA["59_ippan"] = {
 "questions": [
 {
 "q": 1,
+"expl_fig": {
+"file": "e_59_ippan_q01.svg",
+"caption": "図: 気温の高度分布とオゾン数密度の高度分布のイメージ"
+},
 "question": "地球<span class=\"term\" data-term=\"大気\">大気</span>の平均的な気温の<span class=\"term\" data-term=\"高度\">高度</span><span class=\"term\" data-term=\"分布\">分布</span>について述べた次の文(a)〜(c)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを、下記の①〜⑤の中から１つ選べ。\n(a) <span class=\"term\" data-term=\"中間圏\">中間圏</span>では、気温は高度が上がるとともに低下し、<span class=\"term\" data-term=\"中間圏界面\">中間圏界面</span>で<span class=\"term\" data-term=\"極小\">極小</span>となっている。\n(b) <span class=\"term\" data-term=\"成層圏\">成層圏</span>では、<span class=\"term\" data-term=\"オゾン\">オゾン</span>が太陽からの<span class=\"term\" data-term=\"紫外線\">紫外線</span>を<span class=\"term\" data-term=\"吸収\">吸収</span>して大気を加熱しており、オゾンの<span class=\"term\" data-term=\"数密度\">数密度</span>が<span class=\"term\" data-term=\"極大\">極大</span>となる高度で気温も極大となっている。\n(c) <span class=\"term\" data-term=\"対流圏\">対流圏</span>の<span class=\"term\" data-term=\"気温減率\">気温減率</span>は、<span class=\"term\" data-term=\"放射\">放射</span>や<span class=\"term\" data-term=\"対流\">対流</span>など様々な<span class=\"term\" data-term=\"過程\">過程</span>が関わり決まっているため、<span class=\"term\" data-term=\"放射収支\">放射収支</span>のみを<span class=\"term\" data-term=\"考慮\">考慮</span>した計算から求められる気温減率よりも大きくなっている。",
 "choices": [
 "(a)正 (b)正 (c)誤",
@@ -42,6 +46,10 @@ window.KISHO_DATA["59_ippan"] = {
 },
 {
 "q": 3,
+"expl_fig": {
+"file": "e_59_ippan_q03.svg",
+"caption": "図: 気層の仮温度と高度1000mの気圧の関係のイメージ"
+},
 "question": "地点 A、B、C における地上（<span class=\"term\" data-term=\"高度\">高度</span> 0m）から高度 1000m までの<span class=\"term\" data-term=\"気層\">気層</span>の気温の平均値がそれぞれ TA、TB、TC、<span class=\"term\" data-term=\"混合比\">混合比</span>がそれぞれ qA、qB、qC であり、また、TA &lt; TB = TC かつ qA = qB &lt; qC となっている。各地点の<span class=\"term\" data-term=\"地上気圧\">地上気圧</span>が等しいとき、地点 A、B、C における高度 1000m の<span class=\"term\" data-term=\"気圧\">気圧</span> PA、PB、PC の大小関係として正しいものを下記の①〜⑤の中から１つ選べ。ただし、いずれの地点でも<span class=\"term\" data-term=\"大気\">大気</span>は<span class=\"term\" data-term=\"静力学平衡\">静力学平衡</span>の状態にあり、<span class=\"term\" data-term=\"重力加速度\">重力加速度</span>は一定とする。",
 "choices": [
 "PA &lt; PB &lt; PC",
@@ -93,6 +101,10 @@ window.KISHO_DATA["59_ippan"] = {
 },
 {
 "q": 6,
+"expl_fig": {
+"file": "e_59_ippan_q06.svg",
+"caption": "図: 地上風にはたらく三つの力とコリオリ力の向きのイメージ"
+},
 "question": "<span class=\"term\" data-term=\"北半球\">北半球</span><span class=\"term\" data-term=\"中緯度\">中緯度</span>にある<span class=\"term\" data-term=\"平坦\">平坦</span>な地域において、一定の<span class=\"term\" data-term=\"気圧\">気圧</span>間隔で描かれた地上の<span class=\"term\" data-term=\"等圧線\">等圧線</span>の<span class=\"term\" data-term=\"分布\">分布</span>が、図のように東西に<span class=\"term\" data-term=\"一様\">一様</span>で北にいくほど間隔が狭くなっており、<span class=\"term\" data-term=\"相対渦度\">相対渦度</span>の<span class=\"term\" data-term=\"鉛直\">鉛直</span><span class=\"term\" data-term=\"成分\">成分</span>が図の範囲でどこでも正になっているとする。このとき地上付近の<span class=\"term\" data-term=\"空気塊\">空気塊</span>に働く<span class=\"term\" data-term=\"コリオリ力\">コリオリ力</span>の向きを示す矢印として適切なものを、図の①〜⑤の中から１つ選べ。ただし、<span class=\"term\" data-term=\"コリオリパラメータ\">コリオリパラメータ</span>は一定とし、空気塊に働く<span class=\"term\" data-term=\"水平方向\">水平方向</span>の力は<span class=\"term\" data-term=\"気圧傾度力\">気圧傾度力</span>、コリオリ力、<span class=\"term\" data-term=\"摩擦力\">摩擦力</span>のみで、摩擦力の大きさは<span class=\"term\" data-term=\"風速\">風速</span>に比例し、その向きは<span class=\"term\" data-term=\"風向\">風向</span>と反対の向きに働くとする。",
 "choices": [
 "図中の左端の矢印（北西向き）",
@@ -131,6 +143,10 @@ window.KISHO_DATA["59_ippan"] = {
 },
 {
 "q": 8,
+"expl_fig": {
+"file": "e_59_ippan_q08.svg",
+"caption": "図: 発達中の温帯低気圧の断面と谷の軸の傾きのイメージ"
+},
 "question": "<span class=\"term\" data-term=\"温帯低気圧\">温帯低気圧</span>について述べた次の文(a)〜(c)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを、下記の①〜⑤の中から１つ選べ。\n(a) <span class=\"term\" data-term=\"発達\">発達</span>中の温帯低気圧では、極向きに熱が<span class=\"term\" data-term=\"輸送\">輸送</span>されており、<span class=\"term\" data-term=\"気圧の谷\">気圧の谷</span>の軸は上空ほど東に傾いている。\n(b) 発達中の温帯低気圧では、暖かい空気が上昇し、冷たい空気が下降することに伴い、<span class=\"term\" data-term=\"環境場\">環境場</span>の<span class=\"term\" data-term=\"有効位置エネルギー\">有効位置エネルギー</span>が増加している。\n(c) 発達しきった<span class=\"term\" data-term=\"最盛期\">最盛期</span>の温帯低気圧の上空では、<span class=\"term\" data-term=\"対流圏界面\">対流圏界面</span>が周囲より高くなっている。",
 "choices": [
 "(a)正 (b)正 (c)正",
@@ -148,6 +164,10 @@ window.KISHO_DATA["59_ippan"] = {
 },
 {
 "q": 9,
+"expl_fig": {
+"file": "e_59_ippan_q09.svg",
+"caption": "図: 積乱雲の下降流とガストフロントの断面のイメージ"
+},
 "question": "<span class=\"term\" data-term=\"ガストフロント\">ガストフロント</span>について述べた次の文章の下線部(a)〜(c)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを、下記の①〜⑤の中から１つ選べ。\n<span class=\"term\" data-term=\"発達\">発達</span>した<span class=\"term\" data-term=\"積乱雲\">積乱雲</span>の中で<span class=\"term\" data-term=\"降水\">降水</span>を伴う<span class=\"term\" data-term=\"下降流\">下降流</span>が生じ、<span class=\"term\" data-term=\"地表面\">地表面</span>まで達すると<span class=\"term\" data-term=\"外出流\">外出流</span>となって周辺に拡がっていくことがある。ガストフロントは (a)<u>この外出流の先端が周囲の空気と衝突する部分に形成される</u>。ガストフロントに沿って<span class=\"term\" data-term=\"地表\">地表</span>では<span class=\"term\" data-term=\"突風\">突風</span>が吹くことがあり、また、<span class=\"term\" data-term=\"アーク雲\">アーク雲</span>と呼ばれる雲が発生することがある。ガストフロントの通過とともに地上では (b)<u><span class=\"term\" data-term=\"気圧\">気圧</span>が下降する</u>。積乱雲直下からのガストフロントの到達距離は (c)<u>最大で3km程度である</u>。",
 "choices": [
 "(a)正 (b)正 (c)誤",
@@ -182,6 +202,10 @@ window.KISHO_DATA["59_ippan"] = {
 },
 {
 "q": 11,
+"expl_fig": {
+"file": "e_59_ippan_q11.svg",
+"caption": "図: 平年とエルニーニョ時の太平洋赤道域のイメージ"
+},
 "question": "<span class=\"term\" data-term=\"エルニーニョ現象\">エルニーニョ現象</span>発生時の平均的な<span class=\"term\" data-term=\"海洋\">海洋</span>や<span class=\"term\" data-term=\"大気\">大気</span>の特徴について述べた次の文(a)〜(d)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを、下記の①〜⑤の中から１つ選べ。\n(a) インドネシア近海から<span class=\"term\" data-term=\"日付変更線\">日付変更線</span>付近にかけての太平洋<span class=\"term\" data-term=\"赤道域\">赤道域</span>で、<span class=\"term\" data-term=\"海面水温\">海面水温</span>が<span class=\"term\" data-term=\"平年\">平年</span>に比べて上昇する。\n(b) 太平洋の赤道域で吹いている<span class=\"term\" data-term=\"東風\">東風</span>が、平年に比べて強くなる。\n(c) 太平洋赤道域のインドネシア近海で<span class=\"term\" data-term=\"対流活動\">対流活動</span>が強まり、この<span class=\"term\" data-term=\"領域\">領域</span>の<span class=\"term\" data-term=\"降水量\">降水量</span>が平年に比べて多くなる。\n(d) オーストラリア北部のダーウィンでは<span class=\"term\" data-term=\"海面気圧\">海面気圧</span>が平年に比べて高く、南太平洋東部のタヒチでは平年に比べて低くなる。",
 "choices": [
 "(a)正 (b)正 (c)誤 (d)正",

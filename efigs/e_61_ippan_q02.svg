@@ -1,0 +1,52 @@
+<svg viewBox="0 0 560 410" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="410" fill="#ffffff"/>
+  <defs>
+    <marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="mr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0524d"/>
+    </marker>
+    <marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1c2b36"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="34" font-family="sans-serif" font-size="19" fill="#1c2b36">受け取るのは断面 πr²、出すのは全表面 4πr²</text>
+
+  <!-- 左:吸収 -->
+  <text x="44" y="112" font-family="sans-serif" font-size="15" fill="#f2a73b">太陽放射 S</text>
+  <line x1="44" y1="128" x2="92" y2="128" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#mo)"/>
+  <line x1="44" y1="152" x2="92" y2="152" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#mo)"/>
+  <line x1="44" y1="176" x2="92" y2="176" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#mo)"/>
+  <line x1="44" y1="200" x2="92" y2="200" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#mo)"/>
+  <line x1="44" y1="224" x2="92" y2="224" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#mo)"/>
+
+  <circle cx="150" cy="176" r="54" fill="#2569a8" opacity="0.12"/>
+  <circle cx="150" cy="176" r="54" fill="none" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="150" y1="176" x2="150" y2="122" stroke="#1c2b36" stroke-width="1.5" marker-end="url(#md)"/>
+  <text x="158" y="150" font-family="sans-serif" font-size="15" fill="#1c2b36">r</text>
+
+  <text x="150" y="286" font-family="sans-serif" font-size="15" fill="#1c2b36" text-anchor="middle">受ける = 断面積 πr²</text>
+  <text x="150" y="308" font-family="sans-serif" font-size="15" fill="#2569a8" text-anchor="middle">S(1−A) × πr²</text>
+
+  <!-- 右:放射 -->
+  <circle cx="410" cy="176" r="54" fill="#e0524d" opacity="0.10"/>
+  <circle cx="410" cy="176" r="54" fill="none" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="468" y1="176" x2="498" y2="176" stroke="#e0524d" stroke-width="2.5" marker-end="url(#mr)"/>
+  <line x1="451" y1="217" x2="472" y2="238" stroke="#e0524d" stroke-width="2.5" marker-end="url(#mr)"/>
+  <line x1="410" y1="234" x2="410" y2="264" stroke="#e0524d" stroke-width="2.5" marker-end="url(#mr)"/>
+  <line x1="369" y1="217" x2="348" y2="238" stroke="#e0524d" stroke-width="2.5" marker-end="url(#mr)"/>
+  <line x1="352" y1="176" x2="322" y2="176" stroke="#e0524d" stroke-width="2.5" marker-end="url(#mr)"/>
+  <line x1="369" y1="135" x2="348" y2="114" stroke="#e0524d" stroke-width="2.5" marker-end="url(#mr)"/>
+  <line x1="410" y1="118" x2="410" y2="88" stroke="#e0524d" stroke-width="2.5" marker-end="url(#mr)"/>
+  <line x1="451" y1="135" x2="472" y2="114" stroke="#e0524d" stroke-width="2.5" marker-end="url(#mr)"/>
+
+  <text x="410" y="286" font-family="sans-serif" font-size="15" fill="#1c2b36" text-anchor="middle">出す = 全表面積 4πr²</text>
+  <text x="410" y="308" font-family="sans-serif" font-size="15" fill="#e0524d" text-anchor="middle">σT⁴ × 4πr²</text>
+
+  <line x1="24" y1="330" x2="536" y2="330" stroke="#5a6b78" stroke-width="1"/>
+
+  <text x="280" y="358" font-family="sans-serif" font-size="16" fill="#1c2b36" text-anchor="middle">σT⁴ × 4πr² = S(1−A) × πr² → T⁴ は (1−A) に比例</text>
+  <text x="280" y="386" font-family="sans-serif" font-size="15" fill="#15a35a" text-anchor="middle">A が 0.30 → 0.35 なら T₂ = (0.65/0.7)^(1/4) × T₁ で低くなる</text>
+</svg>

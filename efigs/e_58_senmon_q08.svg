@@ -1,0 +1,48 @@
+<svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="400" fill="#ffffff"/>
+
+  <text x="20" y="34" font-size="19" fill="#1c2b36">高気圧の「背の高さ」のちがい</text>
+  <text x="20" y="58" font-size="13" fill="#5a6b78">同じ高気圧でも、上空まで高圧かどうかで構造がまったく違う</text>
+
+  <line x1="280" y1="74" x2="280" y2="330" stroke="#e2e8ec" stroke-width="1.5"/>
+
+  <!-- 左: シベリア高気圧 -->
+  <text x="30" y="96" font-size="16" fill="#1c2b36">シベリア高気圧(冬)</text>
+  <text x="30" y="118" font-size="13" fill="#5a6b78">背が低い(寒冷高気圧)</text>
+  <rect x="66" y="130" width="90" height="126" fill="#f0f3f5"/>
+  <rect x="66" y="256" width="90" height="54" fill="#b9d7ee"/>
+  <rect x="66" y="130" width="90" height="180" fill="none" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="28" y="134" font-size="12" fill="#5a6b78">10km</text>
+  <text x="34" y="260" font-size="12" fill="#5a6b78">3km</text>
+  <line x1="28" y1="310" x2="268" y2="310" stroke="#1c2b36" stroke-width="2.5"/>
+  <rect x="28" y="310" width="240" height="10" fill="#dfe5e9"/>
+  <circle cx="111" cy="283" r="15" fill="#ffffff" stroke="#2569a8" stroke-width="2"/>
+  <text x="103" y="289" font-size="15" fill="#2569a8">高</text>
+  <text x="166" y="170" font-size="13" fill="#5a6b78">上空は高気圧に</text>
+  <text x="166" y="188" font-size="13" fill="#5a6b78">なっていない</text>
+  <text x="166" y="278" font-size="13" fill="#1c2b36">冷たく重い</text>
+  <text x="166" y="296" font-size="13" fill="#1c2b36">空気がたまる</text>
+
+  <!-- 右: ブロッキング高気圧 -->
+  <text x="298" y="96" font-size="16" fill="#1c2b36">ブロッキング高気圧</text>
+  <text x="298" y="118" font-size="13" fill="#5a6b78">背が高い(太平洋高気圧も同じ)</text>
+  <rect x="334" y="130" width="90" height="180" fill="#f7dcd8" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="296" y="134" font-size="12" fill="#5a6b78">10km</text>
+  <line x1="296" y1="310" x2="536" y2="310" stroke="#1c2b36" stroke-width="2.5"/>
+  <rect x="296" y="310" width="240" height="10" fill="#dfe5e9"/>
+  <circle cx="379" cy="160" r="15" fill="#ffffff" stroke="#e0524d" stroke-width="2"/>
+  <text x="371" y="166" font-size="15" fill="#e0524d">高</text>
+  <circle cx="379" cy="225" r="15" fill="#ffffff" stroke="#e0524d" stroke-width="2"/>
+  <text x="371" y="231" font-size="15" fill="#e0524d">高</text>
+  <circle cx="379" cy="288" r="15" fill="#ffffff" stroke="#e0524d" stroke-width="2"/>
+  <text x="371" y="294" font-size="15" fill="#e0524d">高</text>
+  <text x="434" y="166" font-size="13" fill="#e0524d">上空まで高気圧</text>
+  <text x="434" y="244" font-size="13" fill="#1c2b36">中心付近は</text>
+  <text x="434" y="262" font-size="13" fill="#1c2b36">まわりより高温</text>
+
+  <!-- まとめ -->
+  <rect x="20" y="338" width="252" height="46" rx="8" fill="#f4f8fb" stroke="#cfe0ec" stroke-width="1.5"/>
+  <text x="32" y="366" font-size="14" fill="#1c2b36">上空には及ばない=背が低い</text>
+  <rect x="288" y="338" width="252" height="46" rx="8" fill="#f4f8fb" stroke="#cfe0ec" stroke-width="1.5"/>
+  <text x="300" y="366" font-size="14" fill="#1c2b36">上空まで高圧=背が高い</text>
+</svg>

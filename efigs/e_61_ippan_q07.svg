@@ -1,0 +1,69 @@
+<svg viewBox="0 0 560 370" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="370" fill="#ffffff"/>
+  <defs>
+    <marker id="mb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="mo" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="md" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1c2b36"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="30" font-family="sans-serif" font-size="19" fill="#1c2b36">地衡風の強さは 気圧傾度 ÷ sin(緯度) に比例</text>
+  <rect x="452" y="14" width="84" height="28" rx="6" fill="#2569a8" opacity="0.12"/>
+  <rect x="452" y="14" width="84" height="28" rx="6" fill="none" stroke="#2569a8" stroke-width="1.2"/>
+  <text x="494" y="34" font-family="sans-serif" font-size="15" fill="#2569a8" text-anchor="middle">北半球</text>
+
+  <!-- 左:力のつり合い -->
+  <line x1="44" y1="112" x2="312" y2="112" stroke="#5a6b78" stroke-width="1.2"/>
+  <line x1="44" y1="172" x2="312" y2="172" stroke="#5a6b78" stroke-width="1.2"/>
+  <line x1="44" y1="232" x2="312" y2="232" stroke="#5a6b78" stroke-width="1.2"/>
+  <text x="312" y="104" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="end">1000 hPa</text>
+  <text x="312" y="164" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="end">1004 hPa</text>
+  <text x="312" y="224" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="end">1008 hPa</text>
+  <text x="44" y="100" font-family="sans-serif" font-size="14" fill="#5a6b78">低圧側</text>
+  <text x="44" y="252" font-family="sans-serif" font-size="14" fill="#5a6b78">高圧側</text>
+
+  <line x1="60" y1="172" x2="240" y2="172" stroke="#2569a8" stroke-width="3" marker-end="url(#mb)"/>
+  <text x="60" y="196" font-family="sans-serif" font-size="14" fill="#2569a8">地衡風</text>
+
+  <line x1="200" y1="172" x2="200" y2="124" stroke="#f2a73b" stroke-width="3" marker-end="url(#mo)"/>
+  <text x="208" y="132" font-family="sans-serif" font-size="14" fill="#1c2b36">気圧傾度力</text>
+  <line x1="200" y1="172" x2="200" y2="220" stroke="#1c2b36" stroke-width="3" marker-end="url(#md)"/>
+  <text x="208" y="200" font-family="sans-serif" font-size="14" fill="#1c2b36">コリオリ力</text>
+
+  <text x="24" y="274" font-family="sans-serif" font-size="14" fill="#5a6b78">コリオリ力は風の進む向きの右側にはたらく</text>
+
+  <!-- 右:条件の比較 -->
+  <text x="470" y="94" font-family="sans-serif" font-size="14" fill="#5a6b78" text-anchor="middle">水平気圧傾度</text>
+  <text x="470" y="112" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">(hPa/100km)</text>
+  <text x="448" y="140" font-family="sans-serif" font-size="16" fill="#1c2b36" text-anchor="middle">2</text>
+  <text x="510" y="140" font-family="sans-serif" font-size="16" fill="#1c2b36" text-anchor="middle">3</text>
+
+  <text x="414" y="176" font-family="sans-serif" font-size="14" fill="#1c2b36" text-anchor="end">緯度30°</text>
+  <text x="414" y="220" font-family="sans-serif" font-size="14" fill="#1c2b36" text-anchor="end">緯度45°</text>
+
+  <rect x="480" y="150" width="60" height="42" fill="#f2a73b" opacity="0.25"/>
+  <rect x="418" y="150" width="60" height="42" fill="none" stroke="#5a6b78" stroke-width="1"/>
+  <rect x="480" y="150" width="60" height="42" fill="none" stroke="#5a6b78" stroke-width="1"/>
+  <rect x="418" y="194" width="60" height="42" fill="none" stroke="#5a6b78" stroke-width="1"/>
+  <rect x="480" y="194" width="60" height="42" fill="none" stroke="#5a6b78" stroke-width="1"/>
+
+  <text x="448" y="167" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">(a)</text>
+  <text x="448" y="186" font-family="sans-serif" font-size="15" fill="#1c2b36" text-anchor="middle">4.0</text>
+  <text x="510" y="167" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">(b)</text>
+  <text x="510" y="186" font-family="sans-serif" font-size="15" fill="#1c2b36" text-anchor="middle">6.0</text>
+  <text x="448" y="211" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">(c)</text>
+  <text x="448" y="230" font-family="sans-serif" font-size="15" fill="#1c2b36" text-anchor="middle">2.9</text>
+  <text x="510" y="211" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">(d)</text>
+  <text x="510" y="230" font-family="sans-serif" font-size="15" fill="#1c2b36" text-anchor="middle">4.3</text>
+
+  <text x="540" y="258" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="end">数値は 気圧傾度 ÷ sin(緯度)</text>
+
+  <line x1="24" y1="292" x2="536" y2="292" stroke="#5a6b78" stroke-width="1"/>
+  <text x="280" y="320" font-family="sans-serif" font-size="16" fill="#15a35a" text-anchor="middle">(b) ＞ (d) ＞ (a) ＞ (c)</text>
+  <text x="280" y="348" font-family="sans-serif" font-size="14" fill="#5a6b78" text-anchor="middle">(d)は緯度が高くても、傾度が大きいので(a)を上回る</text>
+</svg>

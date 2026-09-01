@@ -1,0 +1,58 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="q08arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="q08arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="32" font-size="19" font-weight="bold" fill="#1c2b36">亜熱帯高気圧（太平洋高気圧）の断面</text>
+  <text x="536" y="32" font-size="14" fill="#5a6b78" text-anchor="end">北半球</text>
+
+  <!-- 圏界面 -->
+  <line x1="40" y1="56" x2="520" y2="56" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="7,5"/>
+  <text x="44" y="50" font-size="12" fill="#5a6b78">対流圏界面</text>
+
+  <!-- 地面 -->
+  <line x1="40" y1="300" x2="520" y2="300" stroke="#1c2b36" stroke-width="2"/>
+  <text x="95" y="318" font-size="13" fill="#1c2b36" text-anchor="middle">赤道付近</text>
+  <text x="380" y="318" font-size="13" fill="#1c2b36" text-anchor="middle">緯度20〜30度</text>
+
+  <!-- 赤道の上昇流 -->
+  <polygon points="88,292 102,292 102,96 110,96 95,72 80,96 88,96" fill="#e0524d"/>
+  <polygon points="124,282 166,282 180,140 110,140" fill="#f6f9fb" stroke="#5a6b78" stroke-width="1.5"/>
+  <ellipse cx="124" cy="134" rx="24" ry="18" fill="#f6f9fb" stroke="#5a6b78" stroke-width="1.5"/>
+  <ellipse cx="172" cy="136" rx="22" ry="16" fill="#f6f9fb" stroke="#5a6b78" stroke-width="1.5"/>
+  <ellipse cx="150" cy="122" rx="30" ry="20" fill="#f6f9fb" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="186" y="200" font-size="13" fill="#e0524d">積乱雲（上昇）</text>
+
+  <!-- 上層の流れ -->
+  <line x1="118" y1="76" x2="352" y2="76" stroke="#5a6b78" stroke-width="2.5" marker-end="url(#q08arG)"/>
+  <text x="230" y="96" font-size="13" fill="#5a6b78">上層では高緯度側へ</text>
+
+  <!-- 下降流 -->
+  <polygon points="366,88 394,88 394,258 402,258 380,286 358,258 366,258" fill="#2569a8"/>
+  <text x="398" y="120" font-size="15" font-weight="bold" fill="#2569a8">亜熱帯高気圧</text>
+  <text x="398" y="142" font-size="14" fill="#2569a8">＝下降流の場</text>
+
+  <!-- 中・上層は乾燥（下降流の場の側に置く） -->
+  <text x="398" y="196" font-size="16" font-weight="bold" fill="#1c2b36">中・上層は乾燥</text>
+  <text x="398" y="218" font-size="12" fill="#5a6b78">（下降で圧縮され昇温）</text>
+
+  <!-- 湿った下層（亜熱帯高気圧の圏内だけ） -->
+  <rect x="206" y="238" width="314" height="22" fill="#dbeaf5"/>
+  <text x="216" y="254" font-size="13" fill="#2569a8">湿っているのは下層だけ</text>
+
+  <!-- 下層の発散 -->
+  <line x1="356" y1="288" x2="220" y2="288" stroke="#2569a8" stroke-width="3" marker-end="url(#q08arB)"/>
+  <line x1="404" y1="288" x2="504" y2="288" stroke="#2569a8" stroke-width="3" marker-end="url(#q08arB)"/>
+  <text x="220" y="278" font-size="13" fill="#2569a8">地上では発散</text>
+
+  <!-- 説明 -->
+  <text x="24" y="348" font-size="14" fill="#1c2b36">・下降した空気は断熱圧縮で昇温するので、相対湿度はかえって下がる。</text>
+  <text x="24" y="372" font-size="14" fill="#1c2b36">・上層の高気圧とも重なると対流にふたがされ、積乱雲は発達しにくい。</text>
+  <text x="24" y="396" font-size="14" fill="#1c2b36">・東西の広がりは1万km前後で、総観規模より一回り大きい。</text>
+</svg>

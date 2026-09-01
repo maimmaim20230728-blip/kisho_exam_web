@@ -1,0 +1,71 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="a9b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="a9r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0524d"/>
+    </marker>
+    <marker id="a9g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a6b78"/>
+    </marker>
+    <marker id="a9gs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M10,0 L0,5 L10,10 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="28" font-size="18" font-weight="bold" fill="#1c2b36">図: ガストフロントのしくみ(鉛直断面)</text>
+
+  <!-- 積乱雲 -->
+  <g fill="#dfe7ec">
+    <ellipse cx="430" cy="100" rx="84" ry="30"/>
+    <ellipse cx="378" cy="146" rx="56" ry="38"/>
+    <ellipse cx="468" cy="136" rx="56" ry="38"/>
+    <ellipse cx="430" cy="178" rx="92" ry="44"/>
+    <rect x="340" y="172" width="180" height="40"/>
+  </g>
+  <text x="430" y="146" font-size="16" fill="#1c2b36" text-anchor="middle">積乱雲</text>
+  <text x="430" y="204" font-size="14" fill="#2569a8" text-anchor="middle">冷たい下降流</text>
+
+  <!-- 冷気プール -->
+  <polygon points="120,300 133,272 152,252 178,246 205,252 245,248 300,240 380,234 460,230 536,228 536,300"
+           fill="#cfe0ee" stroke="#2569a8" stroke-width="2"/>
+
+  <!-- 降水 -->
+  <g stroke="#2569a8" stroke-width="1.5">
+    <line x1="360" y1="216" x2="354" y2="288"/>
+    <line x1="385" y1="216" x2="379" y2="288"/>
+    <line x1="410" y1="216" x2="404" y2="288"/>
+    <line x1="455" y1="216" x2="449" y2="288"/>
+    <line x1="480" y1="216" x2="474" y2="288"/>
+    <line x1="505" y1="216" x2="499" y2="288"/>
+  </g>
+
+  <!-- 冷たい下降流 -->
+  <line x1="430" y1="216" x2="430" y2="286" stroke="#2569a8" stroke-width="5" marker-end="url(#a9b)"/>
+
+  <!-- 冷気が周囲へ広がる -->
+  <line x1="350" y1="266" x2="185" y2="266" stroke="#2569a8" stroke-width="2.5" marker-end="url(#a9b)"/>
+  <text x="240" y="290" font-size="14" fill="#1c2b36" text-anchor="middle">冷気プール(冷たい空気)</text>
+
+  <!-- ガストフロント -->
+  <line x1="120" y1="178" x2="120" y2="300" stroke="#f2a73b" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <text x="120" y="148" font-size="16" font-weight="bold" fill="#f2a73b" text-anchor="middle">ガストフロント</text>
+  <text x="120" y="170" font-size="14" fill="#f2a73b" text-anchor="middle">(冷気の先端)</text>
+
+  <!-- 暖気の持ち上がり -->
+  <path d="M40,290 L115,290 Q126,290 133,266 Q145,236 178,212" fill="none" stroke="#e0524d" stroke-width="3" marker-end="url(#a9r)"/>
+  <text x="40" y="276" font-size="14" fill="#e0524d">暖かい空気</text>
+  <text x="190" y="196" font-size="14" fill="#e0524d">暖気は持ち上げられる</text>
+
+  <!-- 地面 -->
+  <line x1="16" y1="300" x2="544" y2="300" stroke="#1c2b36" stroke-width="2"/>
+
+  <!-- 到達距離 -->
+  <line x1="120" y1="322" x2="440" y2="322" stroke="#5a6b78" stroke-width="2" marker-start="url(#a9gs)" marker-end="url(#a9g)"/>
+  <text x="280" y="342" font-size="14" fill="#5a6b78" text-anchor="middle">積乱雲の下から数十kmに達することもある</text>
+
+  <text x="280" y="370" font-size="14" fill="#1c2b36" text-anchor="middle">通過すると 気温は下降・気圧は上昇・相対湿度は上昇・風向風速が急変</text>
+  <text x="280" y="396" font-size="14" fill="#1c2b36" text-anchor="middle">発生は下降流が現れる成熟期(成長期ではない)</text>
+</svg>

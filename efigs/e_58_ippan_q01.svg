@@ -1,0 +1,77 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="420" fill="#ffffff"/>
+<defs>
+<marker id="aUp" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 Z" fill="#2569a8"/></marker>
+<marker id="aDn" markerUnits="userSpaceOnUse" markerWidth="11" markerHeight="11" refX="10" refY="5.5" orient="auto"><path d="M0,0 L11,5.5 L0,11 Z" fill="#e0524d"/></marker>
+</defs>
+
+<text x="20" y="35" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1c2b36">大気の鉛直構造と気温</text>
+
+<!-- 高度軸 -->
+<line x1="64" y1="54" x2="64" y2="384" stroke="#5a6b78" stroke-width="1.5"/>
+<line x1="58" y1="384" x2="64" y2="384" stroke="#5a6b78" stroke-width="1"/>
+<line x1="58" y1="318" x2="64" y2="318" stroke="#5a6b78" stroke-width="1"/>
+<line x1="58" y1="252" x2="64" y2="252" stroke="#5a6b78" stroke-width="1"/>
+<line x1="58" y1="186" x2="64" y2="186" stroke="#5a6b78" stroke-width="1"/>
+<line x1="58" y1="120" x2="64" y2="120" stroke="#5a6b78" stroke-width="1"/>
+<line x1="58" y1="54" x2="64" y2="54" stroke="#5a6b78" stroke-width="1"/>
+<text x="54" y="388" font-family="sans-serif" font-size="11" fill="#5a6b78" text-anchor="end">0</text>
+<text x="54" y="322" font-family="sans-serif" font-size="11" fill="#5a6b78" text-anchor="end">20</text>
+<text x="54" y="256" font-family="sans-serif" font-size="11" fill="#5a6b78" text-anchor="end">40</text>
+<text x="54" y="190" font-family="sans-serif" font-size="11" fill="#5a6b78" text-anchor="end">60</text>
+<text x="54" y="124" font-family="sans-serif" font-size="11" fill="#5a6b78" text-anchor="end">80</text>
+<text x="54" y="58" font-family="sans-serif" font-size="11" fill="#5a6b78" text-anchor="end">100km</text>
+
+<!-- 層の境界 -->
+<line x1="64" y1="344" x2="236" y2="344" stroke="#5a6b78" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="64" y1="219" x2="236" y2="219" stroke="#5a6b78" stroke-width="1.2" stroke-dasharray="5 4"/>
+<line x1="64" y1="120" x2="236" y2="120" stroke="#5a6b78" stroke-width="1.2" stroke-dasharray="5 4"/>
+<text x="240" y="340" font-family="sans-serif" font-size="12" fill="#5a6b78">対流圏界面</text>
+<text x="240" y="215" font-family="sans-serif" font-size="12" fill="#5a6b78">成層圏界面</text>
+<text x="240" y="116" font-family="sans-serif" font-size="12" fill="#5a6b78">中間圏界面</text>
+
+<!-- 気温プロファイル -->
+<polyline points="226,384 110,344 108,318 140,278 212,219 150,170 90,120 94,87 104,54" fill="none" stroke="#2569a8" stroke-width="3" stroke-linejoin="round"/>
+
+<!-- 層名 -->
+<text x="70" y="366" font-family="sans-serif" font-size="13" fill="#1c2b36">対流圏</text>
+<text x="70" y="290" font-family="sans-serif" font-size="13" fill="#1c2b36">成層圏</text>
+<text x="70" y="195" font-family="sans-serif" font-size="13" fill="#1c2b36">中間圏</text>
+<text x="70" y="70" font-family="sans-serif" font-size="13" fill="#1c2b36">熱圏</text>
+
+<!-- 地表 -->
+<line x1="64" y1="384" x2="236" y2="384" stroke="#1c2b36" stroke-width="2.5"/>
+<text x="236" y="402" font-family="sans-serif" font-size="11.5" fill="#5a6b78" text-anchor="end">右へいくほど気温が高い</text>
+
+<!-- 右カラム -->
+<text x="316" y="60" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1c2b36">この問題の要点</text>
+
+<line x1="316" y1="72" x2="316" y2="134" stroke="#2569a8" stroke-width="3"/>
+<text x="328" y="90" font-family="sans-serif" font-size="14" fill="#1c2b36">圏界面の高さは緯度で違う</text>
+<text x="328" y="110" font-family="sans-serif" font-size="14" fill="#1c2b36">低緯度 約16〜17km</text>
+<text x="328" y="130" font-family="sans-serif" font-size="14" fill="#1c2b36">高緯度 約8km</text>
+
+<line x1="316" y1="148" x2="316" y2="210" stroke="#15a35a" stroke-width="3"/>
+<text x="328" y="166" font-family="sans-serif" font-size="14" fill="#1c2b36">成分が一様なのは高度</text>
+<text x="328" y="186" font-family="sans-serif" font-size="14" fill="#1c2b36">約80〜90kmまで。それより</text>
+<text x="328" y="206" font-family="sans-serif" font-size="14" fill="#1c2b36">上は分子量ごとに分離</text>
+
+<line x1="316" y1="224" x2="316" y2="252" stroke="#f2a73b" stroke-width="3"/>
+<text x="328" y="242" font-family="sans-serif" font-size="14" fill="#1c2b36">中間圏界面は夏極が最も低温</text>
+
+<rect x="316" y="268" width="228" height="118" rx="4" fill="#f7fafc" stroke="#d7dee3" stroke-width="1"/>
+<line x1="430" y1="278" x2="430" y2="378" stroke="#dfe6ea" stroke-width="1"/>
+<text x="374" y="292" font-family="sans-serif" font-size="13" font-weight="bold" fill="#2569a8" text-anchor="middle">夏極</text>
+<line x1="340" y1="358" x2="340" y2="306" stroke="#2569a8" stroke-width="2.5" marker-end="url(#aUp)"/>
+<text x="352" y="322" font-family="sans-serif" font-size="12" fill="#1c2b36">上昇</text>
+<text x="352" y="340" font-family="sans-serif" font-size="12" fill="#1c2b36">膨張</text>
+<text x="352" y="358" font-family="sans-serif" font-size="12" fill="#1c2b36">冷える</text>
+<text x="374" y="380" font-family="sans-serif" font-size="11.5" fill="#2569a8" text-anchor="middle">約-100℃</text>
+
+<text x="488" y="292" font-family="sans-serif" font-size="13" font-weight="bold" fill="#e0524d" text-anchor="middle">冬極</text>
+<line x1="452" y1="306" x2="452" y2="358" stroke="#e0524d" stroke-width="2.5" marker-end="url(#aDn)"/>
+<text x="464" y="322" font-family="sans-serif" font-size="12" fill="#1c2b36">下降</text>
+<text x="464" y="340" font-family="sans-serif" font-size="12" fill="#1c2b36">圧縮</text>
+<text x="464" y="358" font-family="sans-serif" font-size="12" fill="#1c2b36">暖まる</text>
+<text x="488" y="380" font-family="sans-serif" font-size="11.5" fill="#e0524d" text-anchor="middle">夏極より高温</text>
+</svg>

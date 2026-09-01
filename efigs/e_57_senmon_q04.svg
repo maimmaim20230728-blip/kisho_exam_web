@@ -1,0 +1,49 @@
+<svg viewBox="0 0 560 366" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="366" fill="#ffffff"/>
+<defs>
+<marker id="q4g" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 Z" fill="#5a6b78"/></marker>
+</defs>
+<g font-family="sans-serif">
+<text x="20" y="33" font-size="19" font-weight="bold" fill="#1c2b36">現象の空間スケールと時間スケール</text>
+<text x="20" y="57" font-size="14" fill="#5a6b78">空間的に大きな現象ほど寿命も長い（正の相関）</text>
+
+<line x1="100" y1="295" x2="510" y2="295" stroke="#1c2b36" stroke-width="2"/>
+<line x1="100" y1="295" x2="100" y2="100" stroke="#1c2b36" stroke-width="2"/>
+
+<line x1="110" y1="295" x2="110" y2="301" stroke="#1c2b36" stroke-width="2"/>
+<line x1="190" y1="295" x2="190" y2="301" stroke="#1c2b36" stroke-width="2"/>
+<line x1="270" y1="295" x2="270" y2="301" stroke="#1c2b36" stroke-width="2"/>
+<line x1="350" y1="295" x2="350" y2="301" stroke="#1c2b36" stroke-width="2"/>
+<line x1="430" y1="295" x2="430" y2="301" stroke="#1c2b36" stroke-width="2"/>
+<text x="110" y="316" font-size="14" fill="#1c2b36" text-anchor="middle">1km</text>
+<text x="190" y="316" font-size="14" fill="#1c2b36" text-anchor="middle">10km</text>
+<text x="270" y="316" font-size="14" fill="#1c2b36" text-anchor="middle">100km</text>
+<text x="350" y="316" font-size="14" fill="#1c2b36" text-anchor="middle">1000km</text>
+<text x="430" y="316" font-size="14" fill="#1c2b36" text-anchor="middle">1万km</text>
+<text x="300" y="340" font-size="14" fill="#5a6b78" text-anchor="middle">空間スケール（対数目盛）</text>
+
+<line x1="94" y1="285" x2="100" y2="285" stroke="#1c2b36" stroke-width="2"/>
+<line x1="94" y1="250" x2="100" y2="250" stroke="#1c2b36" stroke-width="2"/>
+<line x1="94" y1="188" x2="100" y2="188" stroke="#1c2b36" stroke-width="2"/>
+<line x1="94" y1="143" x2="100" y2="143" stroke="#1c2b36" stroke-width="2"/>
+<line x1="94" y1="121" x2="100" y2="121" stroke="#1c2b36" stroke-width="2"/>
+<text x="88" y="290" font-size="14" fill="#1c2b36" text-anchor="end">10分</text>
+<text x="88" y="255" font-size="14" fill="#1c2b36" text-anchor="end">1時間</text>
+<text x="88" y="193" font-size="14" fill="#1c2b36" text-anchor="end">1日</text>
+<text x="88" y="148" font-size="14" fill="#1c2b36" text-anchor="end">10日</text>
+<text x="88" y="126" font-size="14" fill="#1c2b36" text-anchor="end">1か月</text>
+<text x="31" y="196" font-size="14" fill="#5a6b78" text-anchor="middle" transform="rotate(-90 31 196)">時間スケール（対数目盛）</text>
+
+<line x1="140" y1="280" x2="458" y2="126" stroke="#5a6b78" stroke-width="2" stroke-dasharray="8 6"/>
+
+<circle cx="166" cy="263" r="6" fill="#2569a8"/>
+<circle cx="246" cy="228" r="6" fill="#2569a8"/>
+<circle cx="388" cy="166" r="6" fill="#2569a8"/>
+<circle cx="444" cy="129" r="6" fill="#2569a8"/>
+
+<text x="178" y="286" font-size="14" fill="#1c2b36">積乱雲　数km・数十分</text>
+<text x="258" y="244" font-size="14" fill="#1c2b36">メソ対流系　数十km・数時間</text>
+<text x="376" y="152" font-size="14" fill="#1c2b36" text-anchor="end">温帯低気圧　数千km・数日</text>
+<text x="432" y="114" font-size="14" fill="#1c2b36" text-anchor="end">超長波　1万km以上・数週間</text>
+</g>
+</svg>

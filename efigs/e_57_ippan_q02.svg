@@ -1,0 +1,48 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="420" fill="#ffffff"/>
+
+<text x="20" y="35" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1c2b36">7月の東西風　高さによる変わり方（中緯度）</text>
+
+<!-- 左パネル 北半球 夏 -->
+<text x="165" y="74" font-family="sans-serif" font-size="15" fill="#1c2b36" text-anchor="middle" font-weight="bold">北半球（夏）</text>
+<line x1="60" y1="90" x2="60" y2="330" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="60" y1="330" x2="270" y2="330" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="165" y1="90" x2="165" y2="330" stroke="#5a6b78" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="60" y1="272" x2="270" y2="272" stroke="#5a6b78" stroke-width="1" stroke-dasharray="4 3"/>
+<polyline points="165,330 180,306 202,272 165,234 127,186 97,138 75,90" fill="none" stroke="#2569a8" stroke-width="3" stroke-linejoin="round"/>
+<text x="62" y="262" font-family="sans-serif" font-size="12" fill="#5a6b78">対流圏界面</text>
+<text x="62" y="286" font-family="sans-serif" font-size="12" fill="#5a6b78">西風が極大</text>
+<text x="175" y="230" font-family="sans-serif" font-size="12" fill="#5a6b78">西風が弱い</text>
+<text x="108" y="108" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2569a8">東風</text>
+<text x="100" y="128" font-family="sans-serif" font-size="12" fill="#5a6b78">上ほど強い</text>
+<text x="165" y="352" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="middle">東風 ←　0　→ 西風</text>
+
+<!-- 高度目盛（左パネルのみ） -->
+<text x="44" y="80" font-family="sans-serif" font-size="12" fill="#5a6b78">高度 km</text>
+<line x1="55" y1="330" x2="60" y2="330" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="55" y1="272" x2="60" y2="272" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="55" y1="234" x2="60" y2="234" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="55" y1="90" x2="60" y2="90" stroke="#1c2b36" stroke-width="1.5"/>
+<text x="51" y="334" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="end">0</text>
+<text x="51" y="276" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="end">12</text>
+<text x="51" y="238" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="end">20</text>
+<text x="51" y="94" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="end">50</text>
+
+<!-- 右パネル 南半球 冬 -->
+<text x="405" y="74" font-family="sans-serif" font-size="15" fill="#1c2b36" text-anchor="middle" font-weight="bold">南半球（冬）</text>
+<line x1="300" y1="90" x2="300" y2="330" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="300" y1="330" x2="510" y2="330" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="405" y1="90" x2="405" y2="330" stroke="#5a6b78" stroke-width="1" stroke-dasharray="4 3"/>
+<line x1="300" y1="272" x2="510" y2="272" stroke="#5a6b78" stroke-width="1" stroke-dasharray="4 3"/>
+<polyline points="405,330 423,306 453,272 417,234 447,186 477,138 501,90" fill="none" stroke="#2569a8" stroke-width="3" stroke-linejoin="round"/>
+<text x="302" y="262" font-family="sans-serif" font-size="12" fill="#5a6b78">対流圏界面</text>
+<text x="302" y="286" font-family="sans-serif" font-size="12" fill="#5a6b78">西風が極大</text>
+<text x="310" y="230" font-family="sans-serif" font-size="12" fill="#5a6b78">西風が弱い</text>
+<text x="418" y="108" font-family="sans-serif" font-size="16" font-weight="bold" fill="#2569a8">西風</text>
+<text x="368" y="128" font-family="sans-serif" font-size="12" fill="#5a6b78">（極夜ジェット）</text>
+<text x="405" y="352" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="middle">東風 ←　0　→ 西風</text>
+
+<!-- ポイント -->
+<text x="20" y="380" font-family="sans-serif" font-size="14" fill="#1c2b36">■ 夏半球（北）は極側の成層圏が暖かく、上空ほど東風。</text>
+<text x="20" y="400" font-family="sans-serif" font-size="14" fill="#1c2b36">■ 冬半球（南）は極側が冷たく、上空ほど西風が強い。</text>
+</svg>

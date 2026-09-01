@@ -1,0 +1,73 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="420" fill="#ffffff"/>
+<defs>
+<marker id="aO" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="10.5" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 Z" fill="#f2a73b"/></marker>
+</defs>
+
+<text x="20" y="35" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1c2b36">条件付き不安定と持ち上げた空気塊</text>
+
+<!-- 左メイン -->
+<text x="30" y="88" font-family="sans-serif" font-size="12" fill="#5a6b78">高度（km）</text>
+<text x="152" y="88" font-family="sans-serif" font-size="12" fill="#f2a73b" font-weight="bold">T は 10〜15℃</text>
+
+<line x1="80" y1="96" x2="80" y2="340" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="80" y1="340" x2="300" y2="340" stroke="#1c2b36" stroke-width="1.5"/>
+
+<!-- 条件付き不安定になる気温減率の範囲 -->
+<polygon points="275,340 191,100 107,100" fill="#2569a8" opacity="0.12"/>
+<line x1="275" y1="340" x2="191" y2="100" stroke="#5a6b78" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="275" y1="340" x2="107" y2="100" stroke="#5a6b78" stroke-width="2" stroke-dasharray="6 4"/>
+<line x1="107" y1="100" x2="191" y2="100" stroke="#f2a73b" stroke-width="4"/>
+<circle cx="275" cy="340" r="5" fill="#f2a73b" stroke="#1c2b36" stroke-width="1"/>
+
+<text x="136" y="334" font-family="sans-serif" font-size="12" fill="#1c2b36">高度500m　20℃</text>
+<text x="142" y="126" font-family="sans-serif" font-size="12" fill="#2569a8" font-weight="bold">条件付き</text>
+<text x="142" y="144" font-family="sans-serif" font-size="12" fill="#2569a8" font-weight="bold">不安定</text>
+<text x="126" y="256" font-family="sans-serif" font-size="12" fill="#5a6b78">乾燥断熱減率</text>
+<text x="126" y="274" font-family="sans-serif" font-size="12" fill="#5a6b78">10℃/km</text>
+<text x="222" y="150" font-family="sans-serif" font-size="12" fill="#5a6b78">湿潤断熱減率</text>
+<text x="222" y="168" font-family="sans-serif" font-size="12" fill="#5a6b78">5℃/km</text>
+
+<!-- 高度目盛 -->
+<line x1="75" y1="340" x2="80" y2="340" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="75" y1="220" x2="80" y2="220" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="75" y1="100" x2="80" y2="100" stroke="#1c2b36" stroke-width="1.5"/>
+<text x="71" y="344" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="end">0.5</text>
+<text x="71" y="224" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="end">1.0</text>
+<text x="71" y="104" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="end">1.5</text>
+
+<!-- 気温目盛 -->
+<line x1="107" y1="340" x2="107" y2="345" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="191" y1="340" x2="191" y2="345" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="275" y1="340" x2="275" y2="345" stroke="#1c2b36" stroke-width="1.5"/>
+<text x="107" y="359" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="middle">10</text>
+<text x="191" y="359" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="middle">15</text>
+<text x="275" y="359" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="middle">20</text>
+<text x="190" y="381" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">気温（℃）</text>
+
+<!-- 右パネル 拡大 -->
+<text x="326" y="88" font-family="sans-serif" font-size="13" fill="#1c2b36" font-weight="bold">拡大図（高度500〜560m）</text>
+<rect x="326" y="100" width="218" height="246" fill="none" stroke="#5a6b78" stroke-width="1"/>
+
+<circle cx="338" cy="114" r="4.5" fill="#2569a8"/>
+<text x="348" y="118" font-family="sans-serif" font-size="12" fill="#1c2b36">空気塊　19.5℃</text>
+<circle cx="338" cy="132" r="4.5" fill="#1c2b36"/>
+<text x="348" y="136" font-family="sans-serif" font-size="12" fill="#1c2b36">まわり　19.6℃</text>
+
+<line x1="360" y1="150" x2="534" y2="150" stroke="#5a6b78" stroke-width="1" stroke-dasharray="4 3"/>
+<text x="444" y="166" font-family="sans-serif" font-size="12" fill="#5a6b78">高度550m</text>
+
+<line x1="516" y1="330" x2="412" y2="150" stroke="#1c2b36" stroke-width="2.5"/>
+<line x1="516" y1="330" x2="378" y2="150" stroke="#2569a8" stroke-width="3"/>
+<circle cx="378" cy="150" r="4.5" fill="#2569a8"/>
+<circle cx="412" cy="150" r="4.5" fill="#1c2b36"/>
+<circle cx="516" cy="330" r="4.5" fill="#f2a73b" stroke="#1c2b36" stroke-width="1"/>
+
+<text x="336" y="240" font-family="sans-serif" font-size="11" fill="#5a6b78">空気塊は乾燥断熱で</text>
+<text x="336" y="258" font-family="sans-serif" font-size="11" fill="#5a6b78">10℃/km 下がる</text>
+<text x="336" y="292" font-family="sans-serif" font-size="13" fill="#f2a73b" font-weight="bold">まわりより冷たい</text>
+<text x="336" y="312" font-family="sans-serif" font-size="13" fill="#f2a73b" font-weight="bold">→ 下降を始める</text>
+<line x1="470" y1="292" x2="470" y2="332" stroke="#f2a73b" stroke-width="3" marker-end="url(#aO)"/>
+
+<text x="435" y="366" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="middle">低い ← 気温 → 高い</text>
+</svg>

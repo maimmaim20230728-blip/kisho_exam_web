@@ -1,0 +1,59 @@
+<svg viewBox="0 0 560 390" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="390" fill="#ffffff"/>
+  <defs>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="ad" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1c2b36"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="32" font-family="sans-serif" font-size="18" fill="#1c2b36">熱的低気圧:昼間の加熱と谷風循環</text>
+  <text x="20" y="54" font-family="sans-serif" font-size="14" fill="#5a6b78">暖まるのは下層だけ。盆地は下降流の昇温が加わる</text>
+
+  <circle cx="498" cy="72" r="14" fill="#f2a73b"/>
+  <line x1="498" y1="48" x2="498" y2="56" stroke="#f2a73b" stroke-width="2"/>
+  <line x1="474" y1="72" x2="482" y2="72" stroke="#f2a73b" stroke-width="2"/>
+  <line x1="514" y1="72" x2="522" y2="72" stroke="#f2a73b" stroke-width="2"/>
+  <line x1="481" y1="55" x2="487" y2="61" stroke="#f2a73b" stroke-width="2"/>
+  <line x1="515" y1="55" x2="509" y2="61" stroke="#f2a73b" stroke-width="2"/>
+  <text x="498" y="104" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#5a6b78">日射</text>
+
+  <line x1="30" y1="118" x2="540" y2="118" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="36" y="110" font-family="sans-serif" font-size="14" fill="#5a6b78">上層:気圧の変化はほとんどない</text>
+
+  <polygon points="20,300 160,300 250,196 300,262 360,262 430,186 540,300 540,306 20,306" fill="#e8ecef"/>
+  <polyline points="20,300 160,300 250,196 300,262 360,262 430,186 540,300" fill="none" stroke="#f2a73b" stroke-width="3"/>
+
+  <line x1="185" y1="262" x2="240" y2="200" stroke="#2569a8" stroke-width="2.5" marker-end="url(#ab)"/>
+  <line x1="298" y1="252" x2="262" y2="204" stroke="#2569a8" stroke-width="2.5" marker-end="url(#ab)"/>
+  <line x1="362" y1="252" x2="418" y2="191" stroke="#2569a8" stroke-width="2.5" marker-end="url(#ab)"/>
+  <line x1="500" y1="250" x2="450" y2="199" stroke="#2569a8" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="268" y="190" font-family="sans-serif" font-size="14" fill="#2569a8">谷風</text>
+  <text x="445" y="165" font-family="sans-serif" font-size="14" fill="#2569a8">谷風</text>
+
+  <line x1="336" y1="126" x2="336" y2="236" stroke="#f2a73b" stroke-width="3.5" marker-end="url(#ao)"/>
+  <text x="352" y="150" font-family="sans-serif" font-size="14" fill="#1c2b36">補償の下降流</text>
+  <text x="352" y="175" font-family="sans-serif" font-size="14" fill="#1c2b36">断熱昇温</text>
+
+  <circle cx="308" cy="150" r="15" fill="#ffffff" stroke="#e0524d" stroke-width="2"/>
+  <text x="308" y="156" text-anchor="middle" font-family="sans-serif" font-size="16" fill="#e0524d">L</text>
+  <line x1="228" y1="150" x2="291" y2="150" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="224" y="155" text-anchor="end" font-family="sans-serif" font-size="14" fill="#e0524d">熱的低気圧</text>
+
+  <text x="95" y="270" font-family="sans-serif" font-size="14" fill="#f2a73b">地面の加熱</text>
+  <text x="60" y="292" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#5a6b78">平野部</text>
+  <text x="330" y="258" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#5a6b78">盆地</text>
+
+  <text x="20" y="332" font-family="sans-serif" font-size="14" fill="#1c2b36">気圧低下量</text>
+  <line x1="110" y1="312" x2="110" y2="334" stroke="#1c2b36" stroke-width="2" marker-end="url(#ad)"/>
+  <text x="125" y="328" font-family="sans-serif" font-size="14" fill="#1c2b36">平野:小</text>
+  <line x1="330" y1="312" x2="330" y2="356" stroke="#1c2b36" stroke-width="2" marker-end="url(#ad)"/>
+  <text x="345" y="339" font-family="sans-serif" font-size="14" fill="#1c2b36">盆地:大</text>
+
+  <text x="20" y="372" font-family="sans-serif" font-size="14" fill="#5a6b78">気圧が下がるのは下層だけ。夜は加熱がなくなり消える</text>
+</svg>

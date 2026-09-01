@@ -1,0 +1,44 @@
+<svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="380" fill="#ffffff"/>
+  <defs>
+    <marker id="ab" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="32" font-family="sans-serif" font-size="18" fill="#1c2b36">高潮を起こす3つの効果</text>
+  <text x="20" y="54" font-family="sans-serif" font-size="14" fill="#5a6b78">吸い上げ・吹き寄せ・波浪が重なって潮位が上がる</text>
+
+  <polygon points="20,330 380,300 500,220 540,220 540,344 20,344" fill="#e8ecef"/>
+  <polygon points="20,238 487,229 380,300 20,330" fill="#2569a8" fill-opacity="0.18"/>
+  <polyline points="20,330 380,300 500,220 540,220" fill="none" stroke="#5a6b78" stroke-width="2"/>
+  <line x1="20" y1="256" x2="446" y2="256" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <line x1="20" y1="238" x2="487" y2="229" stroke="#2569a8" stroke-width="3"/>
+  <text x="510" y="208" font-family="sans-serif" font-size="14" fill="#5a6b78">陸地</text>
+  <text x="26" y="274" font-family="sans-serif" font-size="14" fill="#5a6b78">平常の潮位</text>
+
+  <text x="30" y="96" font-family="sans-serif" font-size="15" fill="#1c2b36">台風:気圧が低い</text>
+  <text x="30" y="120" font-family="sans-serif" font-size="14" fill="#5a6b78">1hPa低下で海面は約1cm上昇</text>
+  <line x1="55" y1="256" x2="55" y2="238" stroke="#2569a8" stroke-width="2" marker-end="url(#ab)"/>
+  <line x1="95" y1="256" x2="95" y2="237" stroke="#2569a8" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="30" y="228" font-family="sans-serif" font-size="14" fill="#1c2b36">①吸い上げ</text>
+
+  <line x1="180" y1="170" x2="330" y2="170" stroke="#2569a8" stroke-width="3" marker-end="url(#ab)"/>
+  <line x1="200" y1="198" x2="340" y2="198" stroke="#2569a8" stroke-width="3" marker-end="url(#ab)"/>
+  <text x="180" y="152" font-family="sans-serif" font-size="14" fill="#1c2b36">②吹き寄せ(岸向きの風)</text>
+
+  <path d="M 384 231 q 12 -11 24 0" fill="none" stroke="#2569a8" stroke-width="2"/>
+  <path d="M 412 230 q 12 -12 24 0" fill="none" stroke="#2569a8" stroke-width="2"/>
+  <path d="M 440 230 q 11 -13 22 0" fill="none" stroke="#2569a8" stroke-width="2"/>
+  <text x="390" y="196" font-family="sans-serif" font-size="14" fill="#1c2b36">③波浪(砕波)</text>
+  <line x1="420" y1="202" x2="430" y2="222" stroke="#5a6b78" stroke-width="1.5"/>
+
+  <line x1="350" y1="256" x2="350" y2="232" stroke="#5a6b78" stroke-width="2" marker-start="url(#ag)" marker-end="url(#ag)"/>
+  <line x1="290" y1="282" x2="344" y2="262" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="250" y="286" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1c2b36">潮位の上昇</text>
+
+  <text x="20" y="364" font-family="sans-serif" font-size="14" fill="#5a6b78">3つが重なって潮位は大きく上がる</text>
+</svg>

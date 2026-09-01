@@ -1,0 +1,54 @@
+<svg viewBox="0 0 560 414" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="414" fill="#ffffff"/>
+
+  <text x="24" y="32" font-family="sans-serif" font-size="19" fill="#1c2b36">晴れて風の弱い日の大気境界層</text>
+  <text x="24" y="54" font-family="sans-serif" font-size="14" fill="#5a6b78">下層を強調した模式図。縦軸はどれも高度</text>
+
+  <text x="24" y="78" font-family="sans-serif" font-size="15" fill="#1c2b36">① 正午の気温</text>
+  <line x1="40" y1="88" x2="40" y2="188" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="40" y1="188" x2="265" y2="188" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="40" y1="164" x2="265" y2="164" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="40" y1="104" x2="265" y2="104" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="240" y1="188" x2="160" y2="88" stroke="#5a6b78" stroke-width="2" stroke-dasharray="7 5"/>
+  <polyline points="240,188 200,164 152,104 149,88" fill="none" stroke="#2569a8" stroke-width="3"/>
+  <text x="44" y="120" font-family="sans-serif" font-size="14" fill="#5a6b78">対流混合層</text>
+  <text x="44" y="182" font-family="sans-serif" font-size="14" fill="#5a6b78">接地境界層</text>
+  <text x="215" y="202" font-family="sans-serif" font-size="12" fill="#5a6b78">気温 →</text>
+  <text x="24" y="222" font-family="sans-serif" font-size="14" fill="#1c2b36">破線は乾燥断熱減率 接地層はより急</text>
+
+  <text x="296" y="78" font-family="sans-serif" font-size="15" fill="#1c2b36">② 夜間の接地逆転層</text>
+  <line x1="312" y1="88" x2="312" y2="188" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="312" y1="188" x2="537" y2="188" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="470" y1="178" x2="410" y2="88" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="316" y="108" font-family="sans-serif" font-size="14" fill="#5a6b78">どの時刻も同じ</text>
+  <line x1="430" y1="188" x2="470" y2="178" stroke="#5a6b78" stroke-width="2.5"/>
+  <line x1="400" y1="188" x2="457" y2="158" stroke="#2569a8" stroke-width="2.5"/>
+  <line x1="365" y1="188" x2="443" y2="138" stroke="#f2a73b" stroke-width="3"/>
+  <text x="450" y="134" font-family="sans-serif" font-size="14" fill="#f2a73b">日の出</text>
+  <text x="464" y="162" font-family="sans-serif" font-size="14" fill="#2569a8">夜半</text>
+  <text x="478" y="182" font-family="sans-serif" font-size="14" fill="#5a6b78">日の入り</text>
+  <text x="487" y="202" font-family="sans-serif" font-size="12" fill="#5a6b78">気温 →</text>
+  <text x="296" y="222" font-family="sans-serif" font-size="14" fill="#1c2b36">夜に発達し 日の出頃に最も厚い</text>
+
+  <text x="24" y="250" font-family="sans-serif" font-size="15" fill="#1c2b36">③ 正午の湿り</text>
+  <line x1="40" y1="260" x2="40" y2="360" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="40" y1="360" x2="265" y2="360" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="40" y1="336" x2="265" y2="336" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="40" y1="276" x2="265" y2="276" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="110" y1="360" x2="110" y2="276" stroke="#2569a8" stroke-width="3"/>
+  <line x1="160" y1="360" x2="215" y2="276" stroke="#f2a73b" stroke-width="3"/>
+  <text x="62" y="320" font-family="sans-serif" font-size="14" fill="#2569a8">混合比</text>
+  <text x="128" y="300" font-family="sans-serif" font-size="14" fill="#f2a73b">相対湿度</text>
+  <text x="190" y="374" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">（横軸は目安）</text>
+  <text x="24" y="394" font-family="sans-serif" font-size="14" fill="#1c2b36">混合比は一様 相対湿度は上ほど大</text>
+
+  <text x="296" y="250" font-family="sans-serif" font-size="15" fill="#1c2b36">④ 正午の風速</text>
+  <line x1="312" y1="260" x2="312" y2="360" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="312" y1="360" x2="537" y2="360" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="312" y1="336" x2="537" y2="336" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="312" y1="276" x2="537" y2="276" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <polyline points="330,360 410,336 420,276 422,260" fill="none" stroke="#2569a8" stroke-width="3"/>
+  <text x="432" y="300" font-family="sans-serif" font-size="14" fill="#1c2b36">ほぼ一様</text>
+  <text x="480" y="374" font-family="sans-serif" font-size="12" fill="#5a6b78">風速 →</text>
+  <text x="296" y="394" font-family="sans-serif" font-size="14" fill="#1c2b36">接地層で増加 混合層はほぼ一様</text>
+</svg>

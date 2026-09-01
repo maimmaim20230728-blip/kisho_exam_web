@@ -38,6 +38,10 @@ window.KISHO_DATA["58_senmon"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_58_senmon_q02.svg",
+"caption": "図: 落下する雨粒の扁平な形と、二重偏波が測る位相の差・反射の比のイメージ"
+},
 "explanation": "正解は ① です。\n<span class=\"term\" data-term=\"二重偏波気象ドップラーレーダー\">二重偏波気象ドップラーレーダー</span>(<span class=\"term\" data-term=\"電波\">電波</span>を横ゆれと縦ゆれの2種類で発射する<span class=\"term\" data-term=\"レーダー\">レーダー</span>)が、何をどうやって測っているのかを聞いている問題です。\n\n(a)は正しいです。電波が水の中を進むときの速さは、<span class=\"term\" data-term=\"雨粒\">雨粒</span>のない<span class=\"term\" data-term=\"大気\">大気</span>中を進むときより少し遅くなります。水は電波に対する<span class=\"term\" data-term=\"屈折率\">屈折率</span>(電波の進みにくさを表す数値)が、空気よりずっと大きいからなんです。この性質があるので、雨粒がたくさんある場所を通ってきた電波は<span class=\"term\" data-term=\"位相\">位相</span>(波の山と谷が来るタイミング)が遅れますね。\n(b)は正しいです。落ちていく雨粒は<span class=\"term\" data-term=\"空気の抵抗\">空気の抵抗</span>で下からつぶされて、横長のまんじゅうのような形になります。すると<span class=\"term\" data-term=\"水平偏波\">水平偏波</span>(横ゆれの電波)のほうが水の中を通る距離が長くなって、<span class=\"term\" data-term=\"垂直偏波\">垂直偏波</span>より位相が遅れるんです。この位相の差が距離とともに増えていく割合は、通り道にある雨粒の量に対応します。つまり、そこから雨の強さを見積もることができるわけですね。電波の弱まり(<span class=\"term\" data-term=\"減衰\">減衰</span>)の影響を受けにくいのが利点です。\n(c)は正しいです。返ってくる<span class=\"term\" data-term=\"反射波\">反射波</span>の強さ(<span class=\"term\" data-term=\"振幅\">振幅</span>)を、水平偏波と垂直偏波でくらべてみましょう。粒が横長なら、水平のほうが強く返ってきます。この比(<span class=\"term\" data-term=\"反射因子差\">反射因子差</span>)の大きさから粒がどれくらい平たいかがわかって、雨・雪・<span class=\"term\" data-term=\"ひょう\">ひょう</span>などの判別に使われます。\n\nポイント:位相の差からは「雨の強さ」、振幅の比からは「粒の形」。この二本柱が<span class=\"term\" data-term=\"二重偏波\">二重偏波</span>レーダーの中心です。"
 },
 {
@@ -58,6 +62,10 @@ window.KISHO_DATA["58_senmon"] = {
 "58_senmon_p03_1.png",
 "58_senmon_p03_2.png"
 ],
+"expl_fig": {
+"file": "e_58_senmon_q03.svg",
+"caption": "図: 台風の中心が観測点の東側・西側どちらを通ると風向がどう変わるかのイメージ"
+},
 "explanation": "正解は ③ です。\n台風のまわりでは風が<span class=\"term\" data-term=\"反時計回り\">反時計回り</span>に吹く、という性質を使います。<span class=\"term\" data-term=\"風向\">風向</span>の時間変化から、台風がどちら側を通ったのかを読み取る問題ですね。\n\nまず図の見方です。<span class=\"term\" data-term=\"横軸\">横軸</span>は右端が3時、左端が12時で、下の矢印が示すとおり時間は右から左へ進みます。<span class=\"term\" data-term=\"矢羽根\">矢羽根</span>は「風が吹いてくる方向」へ軸をのばして、その先に羽根をつけて描きます。ですから、羽根のついていない側が<span class=\"term\" data-term=\"観測\">観測</span>点だと思って向きを読みましょう。\n・宮古(図エ)の風はとても強くて、3時ごろは軸が右下にのびる東寄りの風、12時ごろはほぼ真下にのびる南寄りの風です。風向が時計回りに変わっていますね。<span class=\"term\" data-term=\"北半球\">北半球</span>の台風では、中心が観測点の西側を通るときに風向が時計回りに変わります。風が強いことから、中心がすぐ近くを通ったこともわかります。\n・仙台(図イ)は3時ごろが北寄り、12時ごろは南西寄りで、反時計回りに変わっています。これは中心が東側を通ったことを示しています。\n・酒田(図ウ)も北東寄りから北西寄りへと反時計回りなので、やはり中心は東側です。\n・高田(図ア)は終始5〜10<span class=\"term\" data-term=\"ノット\">ノット</span>(1ノットは秒速およそ0.5mなので、秒速2.5〜5m程度)の弱い北西から西の風で、台風は遠くを通ったとわかります。\n\nつまり求める経路は、仙台と酒田の東側を通って、宮古のすぐ西側を通り、高田からは遠い、という条件を満たすものなんです。これに合うのは図(c)だけですね。図(a)(b)は仙台の東を通りません。図(d)(e)はどちらも中心が仙台の北側を通るので、仙台では風向が時計回りに変わってしまいます。さらに図(e)は高田のすぐそばを通るため、高田で終始弱い風だったことと合いません。\n\nポイント:台風の中心が観測点の東側を通れば風向は反時計回り、西側を通れば時計回りに変わります。"
 },
 {
@@ -143,6 +151,10 @@ window.KISHO_DATA["58_senmon"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_58_senmon_q08.svg",
+"caption": "図: 背の低い寒冷高気圧と背の高い温暖高気圧の構造のちがいのイメージ"
+},
 "explanation": "正解は ④ です。\n日本のまわりに現れる代表的な<span class=\"term\" data-term=\"高気圧\">高気圧</span>について、背の高さ(上空まで高気圧かどうか)と構造を聞いている問題です。\n\n(a)は誤りです。<span class=\"term\" data-term=\"シベリア高気圧\">シベリア高気圧</span>は、冬に大陸が強く冷えて、<span class=\"term\" data-term=\"地表\">地表</span>付近の空気が冷やされて重くなることでできる高気圧ですね。冷たく重い空気がたまるのは<span class=\"term\" data-term=\"下層\">下層</span>だけで、上空(およそ3km付近より上)では高気圧になっていません。つまり「<span class=\"term\" data-term=\"背の低い高気圧\">背の低い高気圧</span>(<span class=\"term\" data-term=\"寒冷高気圧\">寒冷高気圧</span>)」なんです。<span class=\"term\" data-term=\"対流圏\">対流圏</span>の<span class=\"term\" data-term=\"上層\">上層</span>まで寒冷な空気で満たされた、<span class=\"term\" data-term=\"背の高い高気圧\">背の高い高気圧</span>ではありません。\n(b)は正しいです。<span class=\"term\" data-term=\"移動性高気圧\">移動性高気圧</span>は西から東へ進みます。中心の東側(<span class=\"term\" data-term=\"前面\">前面</span>)は<span class=\"term\" data-term=\"下降流\">下降流</span>におおわれて晴れますが、西側(<span class=\"term\" data-term=\"後面\">後面</span>)ではもう次の<span class=\"term\" data-term=\"低気圧\">低気圧</span>や<span class=\"term\" data-term=\"気圧の谷\">気圧の谷</span>が近づいていて、<span class=\"term\" data-term=\"巻雲\">巻雲</span>や<span class=\"term\" data-term=\"高層雲\">高層雲</span>などの上・<span class=\"term\" data-term=\"中層雲\">中層雲</span>が広がっていることがよくあります。\n(c)は正しいです。<span class=\"term\" data-term=\"オホーツク海高気圧\">オホーツク海高気圧</span>は、下層に冷たく湿った空気(オホーツク海<span class=\"term\" data-term=\"気団\">気団</span>)を伴う、動きの遅い高気圧です。この空気が東北地方に流れ込むと、<span class=\"term\" data-term=\"やませ\">やませ</span>になりますね。その上空には<span class=\"term\" data-term=\"偏西風\">偏西風</span>の流れをせき止める<span class=\"term\" data-term=\"ブロッキング高気圧\">ブロッキング高気圧</span>があることが多くて、こちらは上空で暖かく、中心付近の気温は周辺より高くなっています。\n\nポイント:シベリア高気圧は背が低い寒冷高気圧、<span class=\"term\" data-term=\"太平洋高気圧\">太平洋高気圧</span>やブロッキング高気圧は背が高く中心付近が暖かい高気圧、と対にして覚えます。"
 },
 {
@@ -160,6 +172,10 @@ window.KISHO_DATA["58_senmon"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_58_senmon_q09.svg",
+"caption": "図: 成長期の上昇流と、成熟期の下降流・冷気プール・かなとこ雲のイメージ"
+},
 "explanation": "正解は ② です。\n<span class=\"term\" data-term=\"積乱雲\">積乱雲</span>が生まれてから衰えるまでの間に、雲の内部と<span class=\"term\" data-term=\"地表\">地表</span>付近で何が起きているかを聞いている問題です。\n\n(a)は正しいです。積乱雲が上へのびていく<span class=\"term\" data-term=\"成長期\">成長期</span>には、雲の中はほぼ全体が<span class=\"term\" data-term=\"上昇流\">上昇流</span>になっています。まわりより暖かくて軽いからこそ浮き上がるわけで、雲の中の温度は同じ高さのまわりの空気より高くなっているんです。\n(b)は正しいです。<span class=\"term\" data-term=\"成熟期\">成熟期</span>になると、落ちてくる雨が周囲の乾いた空気を巻き込んで<span class=\"term\" data-term=\"蒸発\">蒸発</span>します。そのとき熱をうばうので、空気が冷えて重くなって<span class=\"term\" data-term=\"下降流\">下降流</span>ができますね。この冷たい空気は地面にぶつかって水平に広がり、<span class=\"term\" data-term=\"冷気プール\">冷気プール</span>をつくります。冷たく重い空気がたまるので地上の<span class=\"term\" data-term=\"気圧\">気圧</span>は<span class=\"term\" data-term=\"局所的\">局所的</span>に高くなって、小さな<span class=\"term\" data-term=\"高気圧\">高気圧</span>(<span class=\"term\" data-term=\"メソハイ\">メソハイ</span>)として現れます。\n(c)は誤りです。夏に地表付近が<span class=\"term\" data-term=\"高温\">高温</span>になって<span class=\"term\" data-term=\"発達\">発達</span>する積乱雲は、<span class=\"term\" data-term=\"雲頂\">雲頂</span>が<span class=\"term\" data-term=\"氷点下\">氷点下</span>の高さまでのびて、雲の中に氷の粒ができます。氷の粒が成長して落ちながらとける「<span class=\"term\" data-term=\"冷たい雨\">冷たい雨</span>」が主で、氷が関わらない「<span class=\"term\" data-term=\"暖かい雨\">暖かい雨</span>」ではありません。暖かい雨が主になるのは、<span class=\"term\" data-term=\"熱帯\">熱帯</span>の海上に見られるような<span class=\"term\" data-term=\"背の低い\">背の低い</span>雲のほうなんです。\n(d)は誤りです。雲頂が<span class=\"term\" data-term=\"対流圏界面\">対流圏界面</span>(それより上には上がりにくくなる高さ)に達すると、上昇流は横に広がって<span class=\"term\" data-term=\"かなとこ雲\">かなとこ雲</span>になります。このとき雲頂から流れ出た<span class=\"term\" data-term=\"巻雲\">巻雲</span>は上空の<span class=\"term\" data-term=\"一般風\">一般風</span>に流されるので、主に<span class=\"term\" data-term=\"風下\">風下</span>側にのびます。<span class=\"term\" data-term=\"風上\">風上</span>側は一般風とぶつかるため広がりにくくて、雲の<span class=\"term\" data-term=\"縁\">縁</span>がくっきり立ちますね。\n\nポイント:成長期は上昇流とまわりより高い温度、成熟期は下降流と冷気プール。かなとこ雲の巻雲は風下側にのびます。"
 },
 {
@@ -215,6 +231,10 @@ window.KISHO_DATA["58_senmon"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_58_senmon_q12.svg",
+"caption": "図: 最盛期の台風の断面と、風速が最大になる場所のイメージ"
+},
 "explanation": "正解は ⑤ です。\n<span class=\"term\" data-term=\"発達\">発達</span>した台風の構造と、海上での強度の決め方を聞いている問題です。四つとも正しい<span class=\"term\" data-term=\"記述\">記述</span>なんです。\n\n(a)は正しいです。台風の風は中心に近づくほど強まりますが、いちばん内側の<span class=\"term\" data-term=\"眼\">眼</span>の中では急に弱まります。ですから<span class=\"term\" data-term=\"風速\">風速</span>が最大になるのは、眼を取り巻く<span class=\"term\" data-term=\"壁雲\">壁雲</span>(<span class=\"term\" data-term=\"アイウォール\">アイウォール</span>。眼のふちに立ち並ぶ背の高い<span class=\"term\" data-term=\"積乱雲\">積乱雲</span>の壁)の付近ですね。\n(b)は正しいです。台風は<span class=\"term\" data-term=\"暖気核\">暖気核</span>(中心付近がまわりより暖かい構造)をもっています。眼の中では弱い<span class=\"term\" data-term=\"下降流\">下降流</span>があって、空気が押し縮められて暖まります。そのおかげで、<span class=\"term\" data-term=\"地表\">地表</span>付近からほぼ<span class=\"term\" data-term=\"対流圏界面\">対流圏界面</span>まで、周囲の同じ高さよりも気温が高くなっているんです。上空まで暖かいことが、中心の<span class=\"term\" data-term=\"気圧\">気圧</span>を低く保つ理由でもあります。\n(c)は正しいです。壁雲では強い<span class=\"term\" data-term=\"上昇流\">上昇流</span>がありますが、その一部が中心側へ回り込んで、眼の中をゆっくり下降しています。下降する空気の中では雲ができにくいので、眼の中は晴れて見えるわけですね。\n(d)は正しいです。海上には<span class=\"term\" data-term=\"観測\">観測</span>点がないため、<span class=\"term\" data-term=\"気象衛星画像\">気象衛星画像</span>に写る<span class=\"term\" data-term=\"雲域\">雲域</span>の形(渦の巻き方や眼の見え方)と<span class=\"term\" data-term=\"雲頂温度\">雲頂温度</span>の<span class=\"term\" data-term=\"分布\">分布</span>のパターンから強度を見積もる方法(<span class=\"term\" data-term=\"ドボラック法\">ドボラック法</span>)が使われています。\n\nポイント:<span class=\"term\" data-term=\"最大風速\">最大風速</span>は壁雲付近、暖気核は地表から<span class=\"term\" data-term=\"圏界面\">圏界面</span>まで、眼の中は弱い下降流。海上の強度は衛星画像から<span class=\"term\" data-term=\"推定\">推定</span>します。"
 },
 {

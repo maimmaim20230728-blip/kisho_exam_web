@@ -1,0 +1,67 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="420" fill="#ffffff"/>
+<defs>
+<marker id="aB" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="10.5" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 Z" fill="#2569a8"/></marker>
+<marker id="aBig" markerUnits="userSpaceOnUse" markerWidth="18" markerHeight="15" refX="16" refY="7.5" orient="auto"><path d="M0,0 L18,7.5 L0,15 Z" fill="#2569a8"/></marker>
+</defs>
+
+<text x="20" y="35" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1c2b36">ダウンバーストが強まる仕組み</text>
+
+<!-- 積乱雲 -->
+<g fill="#eaeff3">
+<rect x="140" y="180" width="205" height="70"/>
+<circle cx="165" cy="185" r="34"/>
+<circle cx="205" cy="160" r="42"/>
+<circle cx="252" cy="145" r="46"/>
+<circle cx="300" cy="170" r="38"/>
+<circle cx="330" cy="196" r="30"/>
+<circle cx="185" cy="205" r="38"/>
+<circle cx="240" cy="200" r="45"/>
+<circle cx="295" cy="211" r="39"/>
+</g>
+<text x="158" y="214" font-family="sans-serif" font-size="13" fill="#1c2b36">積乱雲</text>
+
+<!-- 0℃高度 -->
+<line x1="95" y1="195" x2="362" y2="195" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+<text x="20" y="199" font-family="sans-serif" font-size="13" fill="#5a6b78">0℃高度</text>
+
+<!-- 下降流 -->
+<line x1="240" y1="122" x2="240" y2="330" stroke="#2569a8" stroke-width="5" marker-end="url(#aBig)"/>
+
+<!-- 降水粒子 -->
+<line x1="220" y1="150" x2="217" y2="162" stroke="#2569a8" stroke-width="1.5"/>
+<line x1="256" y1="140" x2="253" y2="152" stroke="#2569a8" stroke-width="1.5"/>
+<line x1="224" y1="200" x2="221" y2="212" stroke="#2569a8" stroke-width="1.5"/>
+<line x1="258" y1="205" x2="255" y2="217" stroke="#2569a8" stroke-width="1.5"/>
+<line x1="220" y1="255" x2="217" y2="267" stroke="#2569a8" stroke-width="1.5"/>
+<line x1="258" y1="262" x2="255" y2="274" stroke="#2569a8" stroke-width="1.5"/>
+<line x1="226" y1="300" x2="223" y2="312" stroke="#2569a8" stroke-width="1.5"/>
+<line x1="256" y1="305" x2="253" y2="317" stroke="#2569a8" stroke-width="1.5"/>
+
+<!-- 雲底下 -->
+<text x="30" y="290" font-family="sans-serif" font-size="13" fill="#5a6b78">雲底下が</text>
+<text x="30" y="308" font-family="sans-serif" font-size="13" fill="#5a6b78">乾いている</text>
+
+<!-- 地面と吹き出し -->
+<line x1="20" y1="345" x2="544" y2="345" stroke="#1c2b36" stroke-width="3"/>
+<line x1="234" y1="338" x2="150" y2="338" stroke="#2569a8" stroke-width="3.5" marker-end="url(#aB)"/>
+<line x1="246" y1="338" x2="330" y2="338" stroke="#2569a8" stroke-width="3.5" marker-end="url(#aB)"/>
+
+<!-- 引き出し線 -->
+<line x1="372" y1="125" x2="270" y2="150" stroke="#5a6b78" stroke-width="1"/>
+<line x1="372" y1="187" x2="268" y2="215" stroke="#5a6b78" stroke-width="1"/>
+<line x1="372" y1="249" x2="270" y2="290" stroke="#5a6b78" stroke-width="1"/>
+
+<!-- 説明 -->
+<text x="376" y="116" font-family="sans-serif" font-size="14" fill="#1c2b36">① 降水粒子が</text>
+<text x="376" y="134" font-family="sans-serif" font-size="14" fill="#1c2b36">　 空気を引きずる</text>
+<text x="376" y="178" font-family="sans-serif" font-size="14" fill="#1c2b36">② 氷が融けて</text>
+<text x="376" y="196" font-family="sans-serif" font-size="14" fill="#1c2b36">　 周囲を冷やす</text>
+<text x="376" y="240" font-family="sans-serif" font-size="14" fill="#1c2b36">③ 雨が蒸発して</text>
+<text x="376" y="258" font-family="sans-serif" font-size="14" fill="#1c2b36">　 さらに冷やす</text>
+<text x="376" y="300" font-family="sans-serif" font-size="14" fill="#e0524d" font-weight="bold">冷たく重い空気が</text>
+<text x="376" y="318" font-family="sans-serif" font-size="14" fill="#e0524d" font-weight="bold">一気に落ちる</text>
+
+<text x="20" y="370" font-family="sans-serif" font-size="14" fill="#1c2b36">地面にぶつかって四方へ吹き出す＝ダウンバースト</text>
+<text x="20" y="398" font-family="sans-serif" font-size="14" fill="#1c2b36">■ 多いのは成長期ではなく、成熟期〜衰弱期の積乱雲。</text>
+</svg>

@@ -21,6 +21,10 @@ window.KISHO_DATA["64_ippan"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_64_ippan_q01.svg",
+"caption": "図: 気温とオゾン数密度の鉛直分布のイメージ"
+},
 "explanation": "正解は ④ です。\n\n地面から上空へ向かって、<span class=\"term\" data-term=\"大気\">大気</span>の温度がどう変わっていくのか。その仕組みがわかっているかを聞いている問題です。\n\n(a)は誤りです。<span class=\"term\" data-term=\"国際標準大気\">国際標準大気</span>(世界共通の目安として決められた標準的な大気の状態)では、<span class=\"term\" data-term=\"対流圏\">対流圏</span>の<span class=\"term\" data-term=\"気温減率\">気温減率</span>(高さとともに気温が下がる割合)は6.5<span class=\"term\" data-term=\"℃/km\">℃/km</span>で一定とされています。でも<span class=\"term\" data-term=\"温位\">温位</span>(空気のかたまりを<span class=\"term\" data-term=\"1000hPa\">1000hPa</span>の<span class=\"term\" data-term=\"気圧\">気圧</span>のところまで<span class=\"term\" data-term=\"乾燥断熱的\">乾燥断熱的</span>に動かしたときの温度)のほうは一定ではありません。たしかに温位は、その空気のかたまり自身を乾燥断熱的に上げ下げするかぎり変わりません。ただしこれは1つのかたまりについての話ですね。まわりの大気の温位が高さによってどう変わるかは、それとは別の話です。<span class=\"term\" data-term=\"乾燥断熱減率\">乾燥断熱減率</span>は約9.8℃/kmで、実際の<span class=\"term\" data-term=\"減率\">減率</span>6.5℃/kmのほうが小さいですよね。だからまわりの大気の温位は、上空へ行くほど高くなります。\n\n(b)は正しいです。<span class=\"term\" data-term=\"対流圏界面\">対流圏界面</span>(対流圏と<span class=\"term\" data-term=\"成層圏\">成層圏</span>の境目)の高さは、<span class=\"term\" data-term=\"赤道\">赤道</span>付近の<span class=\"term\" data-term=\"低緯度\">低緯度</span>で約16〜17km、<span class=\"term\" data-term=\"高緯度\">高緯度</span>では約8kmです。暖かい空気ほど<span class=\"term\" data-term=\"対流\">対流</span>の背が高くなるので、低緯度のほうが高くなるんですね。\n\n(c)は誤りです。<span class=\"term\" data-term=\"オゾン\">オゾン</span>の<span class=\"term\" data-term=\"数密度\">数密度</span>(一定の体積あたりのオゾン<span class=\"term\" data-term=\"分子\">分子</span>の個数)が最大になるのは<span class=\"term\" data-term=\"高度\">高度</span>20〜25kmあたり、つまり成層圏の下のほうです。一方、気温が<span class=\"term\" data-term=\"極大\">極大</span>になる<span class=\"term\" data-term=\"成層圏界面\">成層圏界面</span>は高度約50km。注意したいのは、上空ほど空気が薄いという点です。少しのオゾンでも、<span class=\"term\" data-term=\"紫外線\">紫外線</span>を<span class=\"term\" data-term=\"吸収\">吸収</span>すると温度が大きく上がります。だからオゾンが一番多い高さと、一番暖かい高さはずれるんです。\n\n(d)は誤りです。<span class=\"term\" data-term=\"中間圏\">中間圏</span>(高度約50〜85km)は、上空ほど気温が下がる層です。<span class=\"term\" data-term=\"窒素分子\">窒素分子</span>や<span class=\"term\" data-term=\"酸素分子\">酸素分子</span>が紫外線を吸収して<span class=\"term\" data-term=\"光電離\">光電離</span>(光の<span class=\"term\" data-term=\"エネルギー\">エネルギー</span>で分子から<span class=\"term\" data-term=\"電子\">電子</span>がはがれること)し、上空ほど<span class=\"term\" data-term=\"高温\">高温</span>になる。これはその上にある<span class=\"term\" data-term=\"熱圏\">熱圏</span>の特徴です。\n\nポイント:気温減率が一定でも温位は一定になりません。またオゾンが最も多い高さ(約25km)と、気温が最も高い高さ(約50km)は別物です。"
 },
 {
@@ -57,6 +61,10 @@ window.KISHO_DATA["64_ippan"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_64_ippan_q03.svg",
+"caption": "図: 温度・湿球温度・露点温度と混合比の関係のイメージ"
+},
 "explanation": "正解は ③ です。\n\n温度・<span class=\"term\" data-term=\"湿球温度\">湿球温度</span>・<span class=\"term\" data-term=\"露点温度\">露点温度</span>という3つの温度と、<span class=\"term\" data-term=\"水蒸気\">水蒸気</span>の量(<span class=\"term\" data-term=\"混合比\">混合比</span>)の関係が整理できているかを聞いている問題です。\n\n(a)から見ていきましょう。\n露点温度 <span class=\"term\" data-term=\"T₂\">T₂</span> は、その空気を<span class=\"term\" data-term=\"気圧\">気圧</span>も水蒸気の量も変えずに冷やしていったとき、ちょうど<span class=\"term\" data-term=\"飽和\">飽和</span>する温度です。つまり「T₂ における<span class=\"term\" data-term=\"飽和混合比\">飽和混合比</span>」が「いま実際に含まれている混合比」と等しくなるんですね。だから w ＝ <span class=\"term\" data-term=\"w₂\">w₂</span> です。\n一方、湿球温度 <span class=\"term\" data-term=\"T₁\">T₁</span> は、その空気に水を<span class=\"term\" data-term=\"蒸発\">蒸発</span>させて飽和させたときの温度で、蒸発した分だけ水蒸気が増えています。<span class=\"term\" data-term=\"未飽和\">未飽和</span>の空気では T₂ ＜ T₁ ＜ T という関係があって、飽和混合比は温度が高いほど大きいので w₂ ＜ <span class=\"term\" data-term=\"w₁\">w₁</span> となります。\nまとめると w ＝ w₂ ＜ w₁ ですね。\n\n(b)にいきます。\n湿球温度は、まわりと熱をやりとりしないまま(<span class=\"term\" data-term=\"断熱的\">断熱的</span>に)、気圧を変えずに水を蒸発させて空気を飽和させたときの温度でした。このとき、\n・増えた水蒸気の量は w₁ － w\n・その蒸発に必要な熱は L(w₁ － w)\n・この熱は空気自身の温度が T から T₁ まで下がることでまかなわれ、そこで放出される熱は <span class=\"term\" data-term=\"Cₚ\">Cₚ</span>(T － T₁)\nこの2つがつり合うので\nL(w₁ － w) ＝ Cₚ(T － T₁)\nとなります。\n\nというわけで (a) が w＝w₂＜w₁、(b) が L(w₁－w)＝Cₚ(T－T₁) となっている ③ が正解です。\n\nポイント:露点温度は「水蒸気を足さずに冷やして飽和させる温度」、湿球温度は「水を蒸発させて飽和させる温度」です。<span class=\"term\" data-term=\"露点\">露点</span>では混合比がそのまま、湿球では混合比が増える。この違いが決め手になります。"
 },
 {
@@ -74,6 +82,10 @@ window.KISHO_DATA["64_ippan"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_64_ippan_q04.svg",
+"caption": "図: 氷粒子と過冷却水滴が共存する雲の中のイメージ"
+},
 "explanation": "正解は ④ です。\n\n雲の中で氷の粒がどう育って、雪がどうやって地上へ届くのか。そこを聞いている問題です。\n\n(a)は誤りです。<span class=\"term\" data-term=\"雪結晶\">雪結晶</span>どうしがくっついて<span class=\"term\" data-term=\"雪片\">雪片</span>(ぼたん雪のような大きなかたまり)になりやすいのは、気温が0℃に近い、比較的高いときなんです。<span class=\"term\" data-term=\"結晶\">結晶</span>の表面がわずかに湿った状態になって、ぶつかったときにくっつきやすくなるからですね。気温が低いほど表面は乾いていて、ぶつかってもはね返りやすく、大きな雪片はできにくくなります。「気温が低いほど<span class=\"term\" data-term=\"付着\">付着</span>しやすい」は逆になっていますね。\n\n(b)は正しいです。同じ温度でも、氷の表面に対する<span class=\"term\" data-term=\"飽和水蒸気圧\">飽和水蒸気圧</span>は、水の表面に対する飽和水蒸気圧より小さくなります(0℃より低い温度でこの差が生じて、−12℃付近で差が最も大きくなります)。ですから<span class=\"term\" data-term=\"氷粒子\">氷粒子</span>と<span class=\"term\" data-term=\"過冷却水滴\">過冷却水滴</span>(0℃以下でも凍らずにいる水の粒)が同じ場所にあると、<span class=\"term\" data-term=\"水滴\">水滴</span>にとっては<span class=\"term\" data-term=\"未飽和\">未飽和</span>なのに、氷にとっては<span class=\"term\" data-term=\"過飽和\">過飽和</span>という状態になるんです。その結果、水滴が<span class=\"term\" data-term=\"蒸発\">蒸発</span>しながら、その<span class=\"term\" data-term=\"水蒸気\">水蒸気</span>が氷粒子にくっついて(<span class=\"term\" data-term=\"昇華凝結\">昇華凝結</span>して)氷が育っていきます。これは<span class=\"term\" data-term=\"氷晶過程\">氷晶過程</span>(<span class=\"term\" data-term=\"ベルジェロン過程\">ベルジェロン過程</span>)と呼ばれていて、<span class=\"term\" data-term=\"中緯度\">中緯度</span>で雨ができるおもな仕組みです。\n\n(c)は誤りです。雪片が融けるには<span class=\"term\" data-term=\"融解\">融解</span>の熱が必要ですし、さらに表面についた水が蒸発すると、蒸発の<span class=\"term\" data-term=\"潜熱\">潜熱</span>(蒸発するときに周りから奪う熱)で雪片が冷やされます。空気が乾いているほど蒸発が盛んになりますよね。だから雪片は冷えて、かえって融けにくくなるんです。気温が0℃以上でも<span class=\"term\" data-term=\"湿度\">湿度</span>が低いと雪のまま落ちてくることがあります。「湿度が低いほど融けやすい」は逆ですね。\n\nポイント:大きな雪片になるのは0℃に近いとき、そして乾いた空気の中では雪は融けにくい。この2点を押さえておきましょう。"
 },
 {
@@ -108,6 +120,10 @@ window.KISHO_DATA["64_ippan"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_64_ippan_q06.svg",
+"caption": "図: 温度風で700hPaの風がどう変わるかのイメージ"
+},
 "explanation": "正解は ① です。\n\n温度の南北差と上空の風の関係、いわゆる<span class=\"term\" data-term=\"温度風\">温度風</span>を使って考える問題です。\n\n温度風というのは、上の高さの<span class=\"term\" data-term=\"地衡風\">地衡風</span>から下の高さの地衡風を引いた差(<span class=\"term\" data-term=\"ベクトル\">ベクトル</span>の差)のことです。その大きさはおおよそ「その層の平均の<span class=\"term\" data-term=\"水平温度勾配\">水平温度勾配</span> ÷ <span class=\"term\" data-term=\"コリオリパラメータ\">コリオリパラメータ</span> f」に比例します。f は f＝2<span class=\"term\" data-term=\"Ω\">Ω</span><span class=\"term\" data-term=\"sinφ\">sinφ</span>(<span class=\"term\" data-term=\"φ\">φ</span> は<span class=\"term\" data-term=\"緯度\">緯度</span>)なので、緯度が低いほど小さくなるんですね。\n\n(a)から見ていきましょう。気温は北へ行くほど低いので、温度風は<span class=\"term\" data-term=\"等温線\">等温線</span>に沿った<span class=\"term\" data-term=\"西風\">西風</span>(西から東へ吹く風)になります。<span class=\"term\" data-term=\"1000hPa\">1000hPa</span>の風は5<span class=\"term\" data-term=\"m/s\">m/s</span>の<span class=\"term\" data-term=\"南風\">南風</span>ですから、<span class=\"term\" data-term=\"700hPa\">700hPa</span>の風はこの南風に<span class=\"term\" data-term=\"西風成分\">西風成分</span>が加わった<span class=\"term\" data-term=\"南西風\">南西風</span>。その速さは 5m/s と温度風の大きさを直角に足し合わせた値になります。ここで<span class=\"term\" data-term=\"温度勾配\">温度勾配</span>は両地点で等しいのに、f は緯度30°の地点Aのほうが緯度45°の地点Bより小さいですよね。だから温度風は地点Aのほうが大きくなります。つまり700hPaの<span class=\"term\" data-term=\"風速\">風速</span>も、地点Aのほうが大きいというわけです。\n\n(b)にいきます。この層の中ではどの高さでも南風の<span class=\"term\" data-term=\"成分\">成分</span>があって、南の暖かい空気を北へ運んでいます。これが<span class=\"term\" data-term=\"暖気移流\">暖気移流</span>(暖かい空気が風で運ばれてくること)ですね。高さとともに<span class=\"term\" data-term=\"風向\">風向</span>が南風から南西風へ時計回りに変わっていることからも、暖気移流と判断できます。\n\n(c)です。<span class=\"term\" data-term=\"温度移流\">温度移流</span>の大きさは「等温線を横切る向きの風の成分 × 温度勾配」で決まります。ここがだいじなところなんですが、温度風は等温線に平行な西風なので、南北方向の風の成分をまったく増やしません。つまり層の中で<span class=\"term\" data-term=\"南北成分\">南北成分</span>は両地点とも5m/sのまま。温度勾配も等しいので、暖気移流の大きさは地点Aと地点Bで同じになります。\n\nポイント:温度風の大きさは f に反比例するので、<span class=\"term\" data-term=\"低緯度\">低緯度</span>ほど大きくなります。一方、温度移流は等温線を横切る風の成分だけで決まるので、等温線に平行な温度風は<span class=\"term\" data-term=\"移流\">移流</span>の大きさを変えません。"
 },
 {
@@ -163,6 +179,10 @@ window.KISHO_DATA["64_ippan"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_64_ippan_q09.svg",
+"caption": "図: ガストフロントの鉛直断面のイメージ"
+},
 "explanation": "正解は ⑤ です。\n\n<span class=\"term\" data-term=\"積乱雲\">積乱雲</span>がつくる冷たい空気の吹き出し、その先端である<span class=\"term\" data-term=\"ガストフロント\">ガストフロント</span>の性質がテーマです。\n\nガストフロントというのは、積乱雲の中で<span class=\"term\" data-term=\"雨粒\">雨粒</span>が<span class=\"term\" data-term=\"蒸発\">蒸発</span>したり冷たい空気が引きずり降ろされたりしてできた<span class=\"term\" data-term=\"冷気\">冷気</span>が、<span class=\"term\" data-term=\"地表\">地表</span>に達して周囲へ広がるとき、その冷気と周りの暖かい空気との境目にできる<span class=\"term\" data-term=\"前線\">前線</span>のことです。\n\n(a)は誤りです。ガストフロントができるのは、雲の中で<span class=\"term\" data-term=\"上昇流\">上昇流</span>が強まっている<span class=\"term\" data-term=\"成長期\">成長期</span>ではありません。<span class=\"term\" data-term=\"降水\">降水</span>が始まって<span class=\"term\" data-term=\"下降流\">下降流</span>(冷気の吹き出し)が現れる<span class=\"term\" data-term=\"成熟期\">成熟期</span>のころなんです。上昇流だけの段階では、地表へ広がる冷気そのものがまだできていませんよね。\n\n(b)は誤りです。ガストフロントは積乱雲の真下から数十km先まで達することがあります。積乱雲の本体がすでに衰えたあとでも、冷気の先端だけが遠くまで進んで、その先で新しい積乱雲を生むこともあるんです。3km程度というのは、実際よりかなり小さい値ですね。\n\n(c)は誤りです。ガストフロントが通過すると、冷たく重い空気に入れかわるので、気温は下降しますが<span class=\"term\" data-term=\"気圧\">気圧</span>は上昇します。冷たい空気は重いですよね。その場所の上に乗っている空気の重さが増えるからです。<span class=\"term\" data-term=\"相対湿度\">相対湿度</span>のほうは、気温が下がることと、<span class=\"term\" data-term=\"降水域\">降水域</span>からの湿った空気が入ることによって上昇します。ですから「気温と気圧はともに下降」という部分が誤りです。あわせて風が急に強まり、<span class=\"term\" data-term=\"風向\">風向</span>も大きく変わります。\n\nポイント:ガストフロント通過時は「気温は下がる・気圧は上がる・風が急変する」が基本のセットです。発生するのは成熟期、到達距離は数十kmに及ぶ。この2点も押さえておきましょう。"
 },
 {

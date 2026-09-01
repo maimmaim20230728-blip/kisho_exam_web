@@ -1,0 +1,76 @@
+<svg viewBox="0 0 560 412" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="412" fill="#ffffff"/>
+  <defs>
+    <marker id="ar" viewBox="0 0 12 10" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,5 L0,10 z" fill="#e0524d"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 12 10" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="ao" viewBox="0 0 12 10" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-family="sans-serif" font-size="19" fill="#1c2b36">図: 霧のでき方 4タイプ</text>
+
+  <!-- (1) 移流霧 -->
+  <rect x="20" y="46" width="252" height="170" rx="6" fill="#fbfcfd" stroke="#dce3e8" stroke-width="1"/>
+  <text x="146" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1c2b36" text-anchor="middle">① 移流霧</text>
+  <line x1="36" y1="112" x2="118" y2="112" stroke="#e0524d" stroke-width="3" marker-end="url(#ar)"/>
+  <text x="36" y="100" font-family="sans-serif" font-size="13" fill="#e0524d">暖かく湿った空気</text>
+  <line x1="146" y1="124" x2="146" y2="152" stroke="#2569a8" stroke-width="2" marker-end="url(#ab)"/>
+  <line x1="172" y1="124" x2="172" y2="152" stroke="#2569a8" stroke-width="2" marker-end="url(#ab)"/>
+  <text x="166" y="116" font-family="sans-serif" font-size="13" fill="#2569a8" text-anchor="middle">冷える</text>
+  <ellipse cx="202" cy="150" rx="15" ry="7" fill="#cbd5db"/>
+  <ellipse cx="230" cy="146" rx="14" ry="6" fill="#cbd5db"/>
+  <ellipse cx="252" cy="151" rx="12" ry="6" fill="#cbd5db"/>
+  <text x="228" y="132" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">霧</text>
+  <rect x="34" y="164" width="224" height="18" fill="#2569a8"/>
+  <text x="146" y="177" font-family="sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">冷たい海面</text>
+  <text x="146" y="202" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">暖かい空気が下から冷える</text>
+
+  <!-- (2) 蒸気霧 -->
+  <rect x="288" y="46" width="252" height="170" rx="6" fill="#fbfcfd" stroke="#dce3e8" stroke-width="1"/>
+  <text x="414" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1c2b36" text-anchor="middle">② 蒸気霧</text>
+  <line x1="302" y1="108" x2="382" y2="108" stroke="#2569a8" stroke-width="3" marker-end="url(#ab)"/>
+  <text x="302" y="96" font-family="sans-serif" font-size="13" fill="#2569a8">冷たい空気</text>
+  <ellipse cx="404" cy="112" rx="15" ry="7" fill="#cbd5db"/>
+  <ellipse cx="438" cy="106" rx="14" ry="6" fill="#cbd5db"/>
+  <ellipse cx="468" cy="112" rx="12" ry="6" fill="#cbd5db"/>
+  <text x="488" y="116" font-family="sans-serif" font-size="13" fill="#5a6b78">霧</text>
+  <line x1="406" y1="158" x2="406" y2="132" stroke="#e0524d" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="438" y1="158" x2="438" y2="132" stroke="#e0524d" stroke-width="2" marker-end="url(#ar)"/>
+  <line x1="470" y1="158" x2="470" y2="132" stroke="#e0524d" stroke-width="2" marker-end="url(#ar)"/>
+  <text x="398" y="142" font-family="sans-serif" font-size="13" fill="#e0524d" text-anchor="end">水蒸気</text>
+  <rect x="302" y="164" width="224" height="18" fill="#e0524d"/>
+  <text x="414" y="177" font-family="sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">暖かい水面</text>
+  <text x="414" y="202" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">冷たい空気に水蒸気が加わる</text>
+
+  <!-- (3) 放射霧 -->
+  <rect x="20" y="226" width="252" height="170" rx="6" fill="#fbfcfd" stroke="#dce3e8" stroke-width="1"/>
+  <text x="146" y="250" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1c2b36" text-anchor="middle">③ 放射霧</text>
+  <line x1="58" y1="344" x2="58" y2="288" stroke="#f2a73b" stroke-width="2" marker-end="url(#ao)"/>
+  <line x1="86" y1="344" x2="86" y2="288" stroke="#f2a73b" stroke-width="2" marker-end="url(#ao)"/>
+  <text x="72" y="280" font-family="sans-serif" font-size="13" fill="#f2a73b" text-anchor="middle">赤外放射</text>
+  <ellipse cx="156" cy="336" rx="16" ry="7" fill="#cbd5db"/>
+  <ellipse cx="192" cy="332" rx="15" ry="7" fill="#cbd5db"/>
+  <ellipse cx="228" cy="337" rx="14" ry="6" fill="#cbd5db"/>
+  <ellipse cx="250" cy="333" rx="11" ry="5" fill="#cbd5db"/>
+  <text x="200" y="314" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">霧</text>
+  <rect x="34" y="346" width="224" height="18" fill="#5a6b78"/>
+  <text x="146" y="359" font-family="sans-serif" font-size="13" fill="#ffffff" text-anchor="middle">冷えた地面</text>
+  <text x="146" y="382" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">放射冷却で地面が冷える</text>
+
+  <!-- (4) 上昇霧 -->
+  <rect x="288" y="226" width="252" height="170" rx="6" fill="#fbfcfd" stroke="#dce3e8" stroke-width="1"/>
+  <text x="414" y="250" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1c2b36" text-anchor="middle">④ 上昇霧</text>
+  <path d="M302 358 L396 358 L502 292 L526 292 L526 358 Z" fill="#eef2f4" stroke="#5a6b78" stroke-width="1.5"/>
+  <path d="M312 348 C358 346, 408 334, 462 308" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#ab)"/>
+  <text x="356" y="322" font-family="sans-serif" font-size="13" fill="#2569a8" text-anchor="middle">斜面を上る</text>
+  <ellipse cx="478" cy="286" rx="15" ry="7" fill="#cbd5db"/>
+  <ellipse cx="508" cy="281" rx="13" ry="6" fill="#cbd5db"/>
+  <text x="462" y="268" font-family="sans-serif" font-size="13" fill="#5a6b78">霧</text>
+  <text x="430" y="288" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="end">膨張して冷える</text>
+  <text x="414" y="382" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">斜面で断熱膨張して冷える</text>
+</svg>

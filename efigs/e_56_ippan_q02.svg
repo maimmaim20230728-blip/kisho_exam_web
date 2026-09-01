@@ -1,0 +1,54 @@
+<svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#ffffff"/>
+  <defs>
+    <marker id="aOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+
+  <text x="28" y="30" font-family="sans-serif" font-size="20" fill="#1c2b36">空気塊の上昇と2つの高度</text>
+  <text x="28" y="52" font-family="sans-serif" font-size="13" fill="#5a6b78">地上25℃・高度3kmで5℃の大気を空気塊が上昇する</text>
+
+  <line x1="100" y1="246.7" x2="290" y2="246.7" stroke="#cbd5dd" stroke-width="1" stroke-dasharray="4 4"/>
+  <line x1="100" y1="80" x2="170" y2="80" stroke="#cbd5dd" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <line x1="100" y1="70" x2="100" y2="330" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="100" y1="330" x2="480" y2="330" stroke="#1c2b36" stroke-width="2"/>
+
+  <line x1="94" y1="246.7" x2="100" y2="246.7" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="94" y1="163.3" x2="100" y2="163.3" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="94" y1="80" x2="100" y2="80" stroke="#1c2b36" stroke-width="2"/>
+  <text x="90" y="335" text-anchor="end" font-family="sans-serif" font-size="12" fill="#5a6b78">0km</text>
+  <text x="90" y="251" text-anchor="end" font-family="sans-serif" font-size="12" fill="#5a6b78">1km</text>
+  <text x="90" y="168" text-anchor="end" font-family="sans-serif" font-size="12" fill="#5a6b78">2km</text>
+  <text x="90" y="85" text-anchor="end" font-family="sans-serif" font-size="12" fill="#5a6b78">3km</text>
+
+  <line x1="110" y1="330" x2="110" y2="336" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="230" y1="330" x2="230" y2="336" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="350" y1="330" x2="350" y2="336" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="470" y1="330" x2="470" y2="336" stroke="#1c2b36" stroke-width="2"/>
+  <text x="110" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">0</text>
+  <text x="230" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">10</text>
+  <text x="350" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">20</text>
+  <text x="470" y="350" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">30</text>
+  <text x="290" y="374" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#5a6b78">気温 (℃)</text>
+
+  <line x1="410" y1="330" x2="170" y2="80" stroke="#5a6b78" stroke-width="2.5"/>
+  <line x1="410" y1="330" x2="290" y2="246.7" stroke="#2569a8" stroke-width="3"/>
+  <line x1="290" y1="246.7" x2="175" y2="87" stroke="#f2a73b" stroke-width="3" marker-end="url(#aOrange)"/>
+
+  <circle cx="410" cy="330" r="5" fill="#1c2b36"/>
+  <circle cx="290" cy="246.7" r="6" fill="#ffffff" stroke="#f2a73b" stroke-width="3"/>
+  <circle cx="170" cy="80" r="6" fill="#ffffff" stroke="#15a35a" stroke-width="3"/>
+
+  <text x="420" y="318" font-family="sans-serif" font-size="13" fill="#1c2b36">地上 25℃</text>
+  <text x="395" y="300" font-family="sans-serif" font-size="13" fill="#2569a8">乾燥断熱 10℃/km</text>
+  <text x="240" y="200" text-anchor="end" font-family="sans-serif" font-size="13" fill="#f2a73b">湿潤断熱 5℃/km</text>
+  <text x="262" y="150" font-family="sans-serif" font-size="13" fill="#5a6b78">周囲の気温</text>
+
+  <text x="280" y="268" text-anchor="end" font-family="sans-serif" font-size="13" fill="#1c2b36">持ち上げ凝結高度 1km</text>
+  <text x="280" y="286" text-anchor="end" font-family="sans-serif" font-size="13" fill="#1c2b36">そこでの空気塊の温度 15℃</text>
+
+  <text x="195" y="76" font-family="sans-serif" font-size="13" fill="#15a35a">自由対流高度 3km</text>
+  <text x="195" y="94" font-family="sans-serif" font-size="13" fill="#15a35a">空気塊＝周囲の気温</text>
+</svg>

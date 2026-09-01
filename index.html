@@ -187,6 +187,11 @@
   .expl{background:var(--card); border-radius:var(--r); box-shadow:var(--shadow);
     padding:16px 18px 20px; font-size:15.5px; line-height:1.85; margin-bottom:16px;}
   .expl h3{margin:0 0 8px; font-size:14px; color:var(--brand-dark);}
+  /* 解説図（本アプリが描いたSVG）。試験の図と同じ扱いで、夜間モードでも白背景のまま */
+  .efig{display:none; margin:0 0 12px;}
+  .efig img{max-width:100%; height:auto; display:block; margin:0 auto; background:#fff;
+    border:1px solid var(--line); border-radius:8px; cursor:zoom-in;}
+  .efig-cap{margin-top:6px; font-size:12px; line-height:1.7; text-align:center; color:var(--ink-soft);}
   .expl .body{white-space:pre-wrap; overflow-wrap:anywhere;}
   .result-foot{margin-top:auto; text-align:center;}
 
@@ -394,6 +399,11 @@
     <div class="figs" id="r-figs"></div>
     <div class="expl">
       <h3>解説</h3>
+      <!-- 解説図（expl_fig のある問題だけ出す。未配置なら onerror で静かに隠す） -->
+      <div class="efig" id="expl-fig">
+        <img id="expl-fig-img" alt="解説の図">
+        <div class="efig-cap" id="expl-fig-cap"></div>
+      </div>
       <div class="body" id="expl-body"></div>
     </div>
     <div class="result-foot">
@@ -480,7 +490,7 @@
 (function(){
   "use strict";
 
-  var VERSION="0.5.0";
+  var VERSION="0.6.0";
   var STORAGE_KEY="kishoexam.save.v1";
   var THEME_KEY="kishoexam.theme.v1";
   var THEME_META={ light:"#2569a8", dark:"#101821" };   // ブラウザのバーの色
@@ -860,10 +870,23 @@
     if(q.answer_note){ note.innerHTML=q.answer_note; note.style.display="block"; }
     else { note.innerHTML=""; note.style.display="none"; }
   }
+  // 解説図。試験の図とは別で、本アプリが解説のために描いたSVG。無い問題では領域ごと隠す。
+  function renderExplFig(q){
+    var box=el("expl-fig"), img=el("expl-fig-img"), cap=el("expl-fig-cap");
+    var e=q&&q.expl_fig, name=(e&&e.file)?String(e.file):"";
+    if(!name){ box.style.display="none"; img.removeAttribute("src"); cap.innerHTML=""; return; }
+    box.style.display="block";
+    img.src="efigs/"+name;
+    // caption はビルド時にエスケープ済み。空なら行ごと出さない
+    var c=(e.caption==null)?"":String(e.caption).trim();
+    if(c){ cap.innerHTML=c; cap.style.display=""; }
+    else { cap.innerHTML=""; cap.style.display="none"; }
+  }
   // 問題文の再掲・図・解説本文（採点からの閲覧でも解説閲覧モードでも同じ）
   function renderRecap(f){
     el("r-question").innerHTML=f.q.question||"";
     renderFigs(el("r-figs"), f.q.figures, f.q.figures_note);
+    renderExplFig(f.q);
     var body=el("expl-body");
     if(f.q.explanation){ body.innerHTML=f.q.explanation; }
     else { body.innerHTML=""; body.textContent="(この問題の解説は準備中です)"; }
@@ -1167,6 +1190,9 @@
   el("pick-cancel").addEventListener("click", closePick);
   el("fig-overlay").addEventListener("click", closeFig);   // 背景タップで閉じる
   el("fig-close").addEventListener("click", closeFig);
+  // 解説図は差し替えるだけなので登録は一度きり。未配置なら壊れた画像を出さずに領域ごと隠す
+  el("expl-fig-img").addEventListener("error", function(){ el("expl-fig").style.display="none"; });
+  el("expl-fig-img").addEventListener("click", function(){ openFig(el("expl-fig-img").src); });
   // 解説閲覧
   el("browse-home").addEventListener("click", goHome);
   el("browse-exams").addEventListener("click", function(){ mode="browse"; renderExams(); show("exams"); });

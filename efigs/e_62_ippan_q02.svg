@@ -1,0 +1,69 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4.5" markerHeight="4.5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif">
+    <text x="24" y="30" font-size="18" fill="#1c2b36">温度がつり合った高度Bを中心に空気塊は振動する</text>
+
+    <!-- 凡例 -->
+    <line x1="24" y1="51" x2="52" y2="51" stroke="#5a6b78" stroke-width="2"/>
+    <text x="58" y="56" font-size="14" fill="#1c2b36">周囲の大気 0.6℃/100m</text>
+    <line x1="326" y1="51" x2="354" y2="51" stroke="#2569a8" stroke-width="3"/>
+    <text x="360" y="56" font-size="14" fill="#1c2b36">空気塊 1.0℃/100m</text>
+
+    <!-- 浮力の向きを示す領域 -->
+    <path d="M288,275 L158,115 L210,115 Z" fill="#eaf2f9"/>
+    <path d="M288,275 L329,325 L312,325 Z" fill="#fdf0da"/>
+
+    <!-- 軸 -->
+    <line x1="100" y1="80" x2="100" y2="325" stroke="#1c2b36" stroke-width="2"/>
+    <line x1="100" y1="325" x2="345" y2="325" stroke="#1c2b36" stroke-width="2"/>
+
+    <!-- 周囲の大気 -->
+    <line x1="193" y1="80" x2="312" y2="325" stroke="#5a6b78" stroke-width="2"/>
+    <!-- 空気塊(A→B) -->
+    <line x1="158" y1="115" x2="280" y2="265" stroke="#2569a8" stroke-width="3" marker-end="url(#arB)"/>
+    <!-- 空気塊(Bより下へ行き過ぎる分) -->
+    <line x1="288" y1="275" x2="329" y2="325" stroke="#2569a8" stroke-width="2.5" stroke-dasharray="6 4"/>
+
+    <!-- 高度A・高度B -->
+    <line x1="92" y1="115" x2="92" y2="275" stroke="#5a6b78" stroke-width="2" marker-start="url(#arG)" marker-end="url(#arG)"/>
+    <text x="20" y="120" font-size="14" fill="#1c2b36">高度A</text>
+    <text x="20" y="280" font-size="14" fill="#1c2b36">高度B</text>
+    <text x="106" y="200" font-size="14" fill="#1c2b36">約1000m</text>
+
+    <!-- Aでの温度差 -->
+    <line x1="158" y1="115" x2="210" y2="115" stroke="#f2a73b" stroke-width="2.5" marker-start="url(#arO)" marker-end="url(#arO)"/>
+    <text x="106" y="104" font-size="14" fill="#1c2b36">4℃低い</text>
+
+    <circle cx="210" cy="115" r="4" fill="#5a6b78"/>
+    <circle cx="158" cy="115" r="5" fill="#2569a8"/>
+    <circle cx="288" cy="275" r="6" fill="#f2a73b" stroke="#1c2b36" stroke-width="1.5"/>
+
+    <!-- 振動 -->
+    <line x1="334" y1="240" x2="334" y2="305" stroke="#f2a73b" stroke-width="3" marker-start="url(#arO)" marker-end="url(#arO)"/>
+
+    <text x="222" y="344" font-size="14" fill="#5a6b78" text-anchor="middle">気温 →(右ほど高い)</text>
+
+    <!-- 注記 -->
+    <text x="360" y="118" font-size="14" fill="#1c2b36">A 周囲より4℃低い</text>
+    <text x="360" y="140" font-size="14" fill="#5a6b78">静かに放して落下</text>
+    <text x="360" y="264" font-size="14" fill="#1c2b36">B 温度が等しい</text>
+    <text x="360" y="286" font-size="14" fill="#5a6b78">浮力ゼロでも速度は残り</text>
+    <text x="360" y="308" font-size="14" fill="#5a6b78">Bより下へ行き過ぎる</text>
+    <text x="360" y="330" font-size="14" fill="#5a6b78">暖かくて押し戻される</text>
+
+    <rect x="16" y="352" width="528" height="52" rx="6" fill="#f7f9fa"/>
+    <text x="24" y="372" font-size="14" fill="#1c2b36">高度差 = 4℃ ÷ (1.0 − 0.6)℃/100m = 10 × 100m = 約1000m</text>
+    <text x="24" y="394" font-size="14" fill="#1c2b36">浮力がゼロでも速度は残るので、高度Bを中心に上下に振動する。</text>
+  </g>
+</svg>

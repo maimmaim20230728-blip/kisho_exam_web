@@ -1,0 +1,58 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="a1n" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1c2b36"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="30" font-size="18" font-weight="bold" fill="#1c2b36">図: 大気の鉛直構造(気温とオゾン数密度)</text>
+  <text x="70" y="54" font-size="14" fill="#5a6b78" text-anchor="end">高度</text>
+
+  <!-- 層の境界 -->
+  <line x1="80" y1="273.6" x2="462" y2="273.6" stroke="#5a6b78" stroke-width="1" stroke-dasharray="6 5"/>
+  <line x1="80" y1="180" x2="462" y2="180" stroke="#5a6b78" stroke-width="1" stroke-dasharray="6 5"/>
+  <line x1="80" y1="96" x2="462" y2="96" stroke="#5a6b78" stroke-width="1" stroke-dasharray="6 5"/>
+
+  <!-- オゾン最大高度の目印 -->
+  <line x1="80" y1="240" x2="450" y2="240" stroke="#f2a73b" stroke-width="1" stroke-dasharray="2 4"/>
+
+  <!-- 高度軸 -->
+  <line x1="80" y1="60" x2="80" y2="300" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="80" y1="300" x2="270" y2="300" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="74" y1="300" x2="80" y2="300" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="74" y1="273.6" x2="80" y2="273.6" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="74" y1="240" x2="80" y2="240" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="74" y1="180" x2="80" y2="180" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="74" y1="96" x2="80" y2="96" stroke="#1c2b36" stroke-width="1.5"/>
+  <text x="70" y="305" font-size="14" fill="#1c2b36" text-anchor="end">0km</text>
+  <text x="70" y="278" font-size="14" fill="#1c2b36" text-anchor="end">11km</text>
+  <text x="70" y="245" font-size="14" fill="#1c2b36" text-anchor="end">25km</text>
+  <text x="70" y="185" font-size="14" fill="#1c2b36" text-anchor="end">50km</text>
+  <text x="70" y="101" font-size="14" fill="#1c2b36" text-anchor="end">85km</text>
+
+  <!-- 気温の鉛直分布 -->
+  <polyline points="238,300 152.8,273.6 152.8,252 166,228 190,204 220,180 184,156 154,132 112,96 172,60"
+            fill="none" stroke="#2569a8" stroke-width="3" stroke-linejoin="round"/>
+  <text x="86" y="268" font-size="12" fill="#5a6b78">対流圏界面</text>
+  <text x="175" y="320" font-size="14" fill="#1c2b36" text-anchor="middle">気温 →</text>
+
+  <!-- オゾン数密度 -->
+  <line x1="310" y1="60" x2="310" y2="300" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="310" y1="300" x2="462" y2="300" stroke="#1c2b36" stroke-width="2"/>
+  <polyline points="312,300 317,290.4 327,280.8 348,271.2 385,261.6 428,252 445,247.2 450,240 444,232.8 430,223.2 412,213.6 394,204 374,192 356,180 336,156 324,132 316,96 312,60"
+            fill="none" stroke="#f2a73b" stroke-width="3" stroke-linejoin="round"/>
+  <circle cx="450" cy="240" r="4" fill="#f2a73b"/>
+  <text x="386" y="320" font-size="14" fill="#1c2b36" text-anchor="middle">オゾン数密度 →</text>
+
+  <!-- 層の名前 -->
+  <text x="474" y="292" font-size="14" fill="#1c2b36">対流圏</text>
+  <text x="474" y="232" font-size="14" fill="#1c2b36">成層圏</text>
+  <text x="474" y="143" font-size="14" fill="#1c2b36">中間圏</text>
+  <text x="474" y="83" font-size="14" fill="#1c2b36">熱圏</text>
+
+  <!-- 注記 -->
+  <text x="16" y="346" font-size="14" fill="#1c2b36">・対流圏界面は低緯度ほど高い(低緯度16〜17km / 高緯度約8km)</text>
+  <text x="16" y="372" font-size="14" fill="#1c2b36">・オゾン数密度の最大は約20〜25km、気温の最大は約50km(ずれている)</text>
+  <text x="16" y="398" font-size="14" fill="#1c2b36">・気温減率6.5℃/kmは乾燥断熱減率9.8℃/kmより小さく、温位は上ほど高い</text>
+</svg>

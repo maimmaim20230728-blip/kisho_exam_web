@@ -1,0 +1,55 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="q11r" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#e0524d"/>
+    </marker>
+    <marker id="q11b" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#2569a8"/>
+    </marker>
+    <marker id="q11g" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="34" font-family="sans-serif" font-size="19" fill="#1c2b36">積乱雲の発達と長持ちのしくみ</text>
+
+  <!-- 左：単体の積乱雲 -->
+  <text x="16" y="58" font-family="sans-serif" font-size="16" fill="#1c2b36">まわりより暖かいから上がる</text>
+  <line x1="90" y1="106" x2="330" y2="106" stroke="#5a6b78" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="36" y="100" font-family="sans-serif" font-size="14" fill="#5a6b78">圏界面</text>
+  <rect x="30" y="300" width="300" height="45" fill="#5a6b78" fill-opacity="0.13"/>
+  <path d="M100,290 L100,175 C100,140 128,118 162,118 C196,118 224,140 224,175 L224,290 Z" fill="#2569a8" fill-opacity="0.12" stroke="#2569a8" stroke-width="2"/>
+  <line x1="70" y1="225" x2="330" y2="225" stroke="#2569a8" stroke-width="1" stroke-dasharray="6 4"/>
+  <text x="36" y="230" font-family="sans-serif" font-size="14" fill="#2569a8">0℃</text>
+  <path d="M118,285 L118,148" fill="none" stroke="#e0524d" stroke-width="3" marker-end="url(#q11r)"/>
+  <text x="132" y="272" font-family="sans-serif" font-size="14" fill="#e0524d">暖かい</text>
+  <text x="140" y="190" font-family="sans-serif" font-size="14" fill="#1c2b36">氷の粒</text>
+  <line x1="152" y1="294" x2="146" y2="344" stroke="#2569a8" stroke-width="2"/>
+  <line x1="168" y1="294" x2="162" y2="344" stroke="#2569a8" stroke-width="2"/>
+  <line x1="184" y1="294" x2="178" y2="344" stroke="#2569a8" stroke-width="2"/>
+  <path d="M215,296 L215,352" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q11b)"/>
+  <text x="36" y="328" font-family="sans-serif" font-size="14" fill="#5a6b78">乾燥層</text>
+  <text x="248" y="328" font-family="sans-serif" font-size="14" fill="#2569a8">蒸発で冷却</text>
+  <line x1="30" y1="366" x2="330" y2="366" stroke="#1c2b36" stroke-width="2"/>
+  <path d="M206,360 L174,360" fill="none" stroke="#5a6b78" stroke-width="2" marker-end="url(#q11g)"/>
+  <path d="M224,360 L256,360" fill="none" stroke="#5a6b78" stroke-width="2" marker-end="url(#q11g)"/>
+
+  <!-- 右：鉛直シアー -->
+  <text x="350" y="58" font-family="sans-serif" font-size="16" fill="#1c2b36">鉛直シアーで長持ち</text>
+  <text x="356" y="110" font-family="sans-serif" font-size="14" fill="#5a6b78">上ほど強い風</text>
+  <path d="M356,170 L404,170" fill="none" stroke="#5a6b78" stroke-width="2" marker-end="url(#q11g)"/>
+  <path d="M356,240 L392,240" fill="none" stroke="#5a6b78" stroke-width="2" marker-end="url(#q11g)"/>
+  <path d="M356,320 L376,320" fill="none" stroke="#5a6b78" stroke-width="2" marker-end="url(#q11g)"/>
+  <path d="M400,330 L500,330 L530,155 L440,155 Z" fill="#2569a8" fill-opacity="0.12" stroke="#2569a8" stroke-width="2"/>
+  <path d="M418,338 L466,178" fill="none" stroke="#e0524d" stroke-width="3" marker-end="url(#q11r)"/>
+  <path d="M502,186 L516,336" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q11b)"/>
+  <text x="440" y="300" font-family="sans-serif" font-size="14" fill="#e0524d">上昇</text>
+  <text x="474" y="250" font-family="sans-serif" font-size="14" fill="#2569a8">下降</text>
+  <line x1="356" y1="366" x2="544" y2="366" stroke="#1c2b36" stroke-width="2"/>
+  <text x="356" y="356" font-family="sans-serif" font-size="14" fill="#1c2b36">上昇域と下降域がずれる</text>
+
+  <!-- 下部の注記 -->
+  <text x="16" y="390" font-family="sans-serif" font-size="14" fill="#1c2b36">雲の中はまわりより高温で浮力を得る。氷の粒が関わる「冷たい雨」</text>
+  <text x="16" y="410" font-family="sans-serif" font-size="14" fill="#1c2b36">乾いた層での蒸発が下降流を強め、シアーが上昇域と下降域を分ける</text>
+</svg>

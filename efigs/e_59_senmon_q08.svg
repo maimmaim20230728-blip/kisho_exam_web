@@ -1,0 +1,49 @@
+<svg viewBox="0 0 560 390" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="390" fill="#ffffff"/>
+  <defs>
+    <marker id="ao" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="ag" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="32" font-family="sans-serif" font-size="18" fill="#1c2b36">低気圧の後面で起こること</text>
+  <text x="20" y="54" font-family="sans-serif" font-size="14" fill="#5a6b78">上空の等圧面高度と地上気圧は逆向きに動く</text>
+
+  <text x="135" y="88" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1c2b36">低気圧の前面</text>
+  <text x="305" y="88" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#1c2b36">低気圧の後面</text>
+
+  <rect x="80" y="125" width="110" height="175" fill="#e0524d" fill-opacity="0.12" stroke="#e0524d" stroke-width="1.5"/>
+  <rect x="250" y="175" width="110" height="125" fill="#2569a8" fill-opacity="0.15" stroke="#2569a8" stroke-width="1.5"/>
+
+  <line x1="65" y1="125" x2="205" y2="125" stroke="#1c2b36" stroke-width="2.5"/>
+  <line x1="235" y1="175" x2="375" y2="175" stroke="#1c2b36" stroke-width="2.5"/>
+  <line x1="205" y1="125" x2="235" y2="175" stroke="#1c2b36" stroke-width="2" stroke-dasharray="5 4"/>
+  <text x="60" y="116" font-family="sans-serif" font-size="14" fill="#1c2b36">500hPa面</text>
+
+  <line x1="50" y1="300" x2="540" y2="300" stroke="#1c2b36" stroke-width="3"/>
+  <text x="55" y="320" font-family="sans-serif" font-size="14" fill="#5a6b78">地表</text>
+  <line x1="60" y1="286" x2="370" y2="286" stroke="#1c2b36" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="120" y="279" font-family="sans-serif" font-size="13" fill="#1c2b36">1000hPa面</text>
+
+  <line x1="105" y1="131" x2="105" y2="280" stroke="#5a6b78" stroke-width="2" marker-start="url(#ag)" marker-end="url(#ag)"/>
+  <text x="120" y="215" font-family="sans-serif" font-size="14" fill="#5a6b78">層厚 大</text>
+  <text x="120" y="160" font-family="sans-serif" font-size="15" fill="#e0524d">暖気</text>
+
+  <line x1="275" y1="181" x2="275" y2="280" stroke="#5a6b78" stroke-width="2" marker-start="url(#ag)" marker-end="url(#ag)"/>
+  <text x="290" y="240" font-family="sans-serif" font-size="14" fill="#5a6b78">層厚 小</text>
+  <text x="290" y="205" font-family="sans-serif" font-size="15" fill="#2569a8">寒気</text>
+
+  <line x1="400" y1="128" x2="400" y2="172" stroke="#f2a73b" stroke-width="3" marker-end="url(#ao)"/>
+  <text x="415" y="140" font-family="sans-serif" font-size="14" fill="#1c2b36">500hPa面の</text>
+  <text x="415" y="158" font-family="sans-serif" font-size="14" fill="#1c2b36">高度は下降</text>
+
+  <line x1="400" y1="290" x2="400" y2="246" stroke="#f2a73b" stroke-width="3" marker-end="url(#ao)"/>
+  <text x="415" y="262" font-family="sans-serif" font-size="14" fill="#1c2b36">地上気圧は</text>
+  <text x="415" y="280" font-family="sans-serif" font-size="14" fill="#1c2b36">上昇</text>
+
+  <text x="20" y="346" font-family="sans-serif" font-size="14" fill="#1c2b36">寒気で空気が縮む → 層が薄くなる → 上空の等圧面は下がる</text>
+  <text x="20" y="368" font-family="sans-serif" font-size="14" fill="#5a6b78">一方、重い寒気がたまるので地上の気圧は上がる</text>
+</svg>

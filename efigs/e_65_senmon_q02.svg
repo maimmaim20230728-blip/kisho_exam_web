@@ -1,0 +1,68 @@
+<svg viewBox="0 0 560 330" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="330" fill="#ffffff"/>
+  <defs>
+    <marker id="q02b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="q02r" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0524d"/>
+    </marker>
+    <marker id="q02o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="q02g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="30" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1c2b36">温暖前線の接近と上空の風の変わり方</text>
+  <text x="536" y="30" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="end">北半球</text>
+
+  <!-- 左: 鉛直断面 -->
+  <text x="24" y="56" font-family="sans-serif" font-size="14" fill="#1c2b36">①温暖前線の断面</text>
+
+  <polygon points="30,72 292,72 292,92 72,238 30,238" fill="#fbe3e1"/>
+  <polygon points="72,238 292,92 292,238" fill="#dbe8f4"/>
+  <line x1="72" y1="238" x2="292" y2="92" stroke="#e0524d" stroke-width="2.5"/>
+  <circle cx="72" cy="238" r="4.5" fill="#e0524d"/>
+  <line x1="30" y1="238" x2="292" y2="238" stroke="#1c2b36" stroke-width="2"/>
+  <rect x="30" y="238" width="262" height="6" fill="#e6ebee"/>
+
+  <text x="46" y="110" font-family="sans-serif" font-size="15" fill="#e0524d">暖気</text>
+  <text x="196" y="226" font-family="sans-serif" font-size="15" fill="#2569a8">寒気</text>
+
+  <line x1="232" y1="76" x2="232" y2="238" stroke="#5a6b78" stroke-width="1.2" stroke-dasharray="4,4"/>
+  <text x="232" y="68" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="middle">観測点</text>
+  <line x1="232" y1="134" x2="232" y2="206" stroke="#f2a73b" stroke-width="3" marker-end="url(#q02o)"/>
+  <text x="240" y="170" font-family="sans-serif" font-size="11" fill="#f2a73b">前線面が</text>
+  <text x="240" y="184" font-family="sans-serif" font-size="11" fill="#f2a73b">下がる</text>
+
+  <text x="72" y="256" font-family="sans-serif" font-size="11" fill="#e0524d" text-anchor="middle">地上前線</text>
+  <line x1="150" y1="252" x2="215" y2="252" stroke="#5a6b78" stroke-width="2" marker-end="url(#q02g)"/>
+  <text x="222" y="256" font-family="sans-serif" font-size="11" fill="#5a6b78">前線の動き</text>
+  <text x="24" y="274" font-family="sans-serif" font-size="12" fill="#5a6b78">前線面は観測点の上空を高い所から順に通過</text>
+
+  <!-- 右: ウィンドプロファイラの時系列 -->
+  <text x="316" y="56" font-family="sans-serif" font-size="14" fill="#1c2b36">②ウィンドプロファイラの見え方</text>
+  <text x="316" y="74" font-family="sans-serif" font-size="12" fill="#5a6b78">高度↑</text>
+
+  <polygon points="316,80 540,80 540,196 316,100" fill="#fbe3e1"/>
+  <polygon points="316,100 540,196 540,238 316,238" fill="#dbe8f4"/>
+  <line x1="316" y1="100" x2="540" y2="196" stroke="#e0524d" stroke-width="2"/>
+  <rect x="316" y="80" width="224" height="158" fill="none" stroke="#5a6b78" stroke-width="1.2"/>
+
+  <line x1="430" y1="129" x2="430" y2="99" stroke="#e0524d" stroke-width="2" marker-end="url(#q02r)"/>
+  <line x1="480" y1="137" x2="480" y2="107" stroke="#e0524d" stroke-width="2" marker-end="url(#q02r)"/>
+  <line x1="520" y1="148" x2="520" y2="118" stroke="#e0524d" stroke-width="2" marker-end="url(#q02r)"/>
+  <line x1="371" y1="167" x2="349" y2="189" stroke="#2569a8" stroke-width="2" marker-end="url(#q02b)"/>
+  <line x1="441" y1="183" x2="419" y2="205" stroke="#2569a8" stroke-width="2" marker-end="url(#q02b)"/>
+  <line x1="511" y1="198" x2="489" y2="220" stroke="#2569a8" stroke-width="2" marker-end="url(#q02b)"/>
+
+  <text x="322" y="96" font-family="sans-serif" font-size="12" fill="#e0524d">暖気(南より)</text>
+  <text x="326" y="232" font-family="sans-serif" font-size="12" fill="#2569a8">寒気(北東より)</text>
+  <text x="316" y="256" font-family="sans-serif" font-size="12" fill="#5a6b78">時間→</text>
+  <text x="540" y="256" font-family="sans-serif" font-size="11" fill="#5a6b78" text-anchor="end">矢印は風の吹く向き(上が北)</text>
+  <text x="316" y="274" font-family="sans-serif" font-size="12" fill="#5a6b78">上空から先に暖気が入り下へ厚くなる</text>
+
+  <text x="24" y="302" font-family="sans-serif" font-size="13" fill="#1c2b36">暖気は地表付近からではなく、上空から先に入る</text>
+</svg>

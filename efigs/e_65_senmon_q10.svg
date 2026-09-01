@@ -1,0 +1,53 @@
+<svg viewBox="0 0 560 350" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="350" fill="#ffffff"/>
+  <defs>
+    <marker id="q10d" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1c2b36"/>
+    </marker>
+    <marker id="q10o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="30" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1c2b36">混合層の湿りと対流不安定</text>
+
+  <!-- 左: 混合比と飽和混合比 -->
+  <text x="24" y="58" font-family="sans-serif" font-size="14" fill="#1c2b36">①混合比が一様な層</text>
+
+  <path d="M94,226 L94,90 L104,90 C120,160 170,200 238,226 Z" fill="#fdf1de"/>
+  <line x1="70" y1="90" x2="250" y2="90" stroke="#5a6b78" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="252" y="84" font-family="sans-serif" font-size="11" fill="#5a6b78" text-anchor="end">混合層の上端</text>
+
+  <line x1="70" y1="226" x2="70" y2="86" stroke="#1c2b36" stroke-width="1.5" marker-end="url(#q10d)"/>
+  <line x1="70" y1="226" x2="252" y2="226" stroke="#1c2b36" stroke-width="1.5" marker-end="url(#q10d)"/>
+  <text x="70" y="78" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="middle">高度</text>
+
+  <path d="M238,226 C170,200 120,160 104,90" fill="none" stroke="#5a6b78" stroke-width="2.5"/>
+  <line x1="94" y1="226" x2="94" y2="90" stroke="#2569a8" stroke-width="2.5"/>
+  <line x1="146" y1="144" x2="130" y2="140" stroke="#5a6b78" stroke-width="1"/>
+  <text x="150" y="148" font-family="sans-serif" font-size="12" fill="#5a6b78">飽和混合比</text>
+  <text x="94" y="244" font-family="sans-serif" font-size="12" fill="#2569a8" text-anchor="middle">混合比(層内で一様)</text>
+
+  <line x1="116" y1="106" x2="103" y2="102" stroke="#f2a73b" stroke-width="1.5"/>
+  <text x="120" y="110" font-family="sans-serif" font-size="12" fill="#f2a73b">湿度 高</text>
+  <text x="120" y="200" font-family="sans-serif" font-size="12" fill="#f2a73b">湿度 低</text>
+
+  <!-- 右: 相当温位の鉛直分布 -->
+  <text x="296" y="58" font-family="sans-serif" font-size="14" fill="#1c2b36">②相当温位が上ほど低い層</text>
+
+  <rect x="340" y="140" width="180" height="86" fill="#fdf1de"/>
+  <line x1="340" y1="226" x2="340" y2="86" stroke="#1c2b36" stroke-width="1.5" marker-end="url(#q10d)"/>
+  <line x1="340" y1="226" x2="520" y2="226" stroke="#1c2b36" stroke-width="1.5" marker-end="url(#q10d)"/>
+  <text x="340" y="78" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="middle">高度</text>
+  <text x="520" y="244" font-family="sans-serif" font-size="12" fill="#1c2b36" text-anchor="end">相当温位</text>
+
+  <path d="M470,226 C450,206 415,180 386,140 C382,124 392,108 402,92" fill="none" stroke="#2569a8" stroke-width="2.5"/>
+  <text x="346" y="190" font-family="sans-serif" font-size="12" fill="#5a6b78">対流不安定</text>
+  <text x="410" y="158" font-family="sans-serif" font-size="11" fill="#5a6b78">上ほど相当温位が低い</text>
+
+  <line x1="316" y1="220" x2="316" y2="150" stroke="#f2a73b" stroke-width="3" marker-end="url(#q10o)"/>
+  <text x="296" y="244" font-family="sans-serif" font-size="12" fill="#f2a73b">層全体が上昇</text>
+
+  <text x="24" y="300" font-family="sans-serif" font-size="13" fill="#1c2b36">①混合比が一様でも上ほど気温が低く飽和混合比が小さい→相対湿度は上ほど高い</text>
+  <text x="24" y="322" font-family="sans-serif" font-size="13" fill="#1c2b36">②下層が湿り中層が乾くと上ほど相当温位が低くなり、層全体の上昇で対流が発現</text>
+</svg>

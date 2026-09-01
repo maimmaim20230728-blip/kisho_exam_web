@@ -1,0 +1,52 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="q10b" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#2569a8"/>
+    </marker>
+    <marker id="q10o" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="q10g" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="34" font-family="sans-serif" font-size="19" fill="#1c2b36">発達した台風の構造（北半球）</text>
+
+  <!-- 左：水平面 -->
+  <text x="16" y="58" font-family="sans-serif" font-size="16" fill="#1c2b36">進行方向の右側で風が強い</text>
+  <circle cx="140" cy="200" r="80" fill="none" stroke="#5a6b78" stroke-width="1" stroke-dasharray="6 4"/>
+  <path d="M140,120 C96,120 68,152 62,192" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10b)"/>
+  <path d="M64,212 C72,252 100,278 138,280" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10b)"/>
+  <path d="M158,278 C198,270 218,240 218,204" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10b)"/>
+  <circle cx="140" cy="200" r="17" fill="#ffffff" stroke="#1c2b36" stroke-width="2"/>
+  <text x="140" y="205" font-family="sans-serif" text-anchor="middle" font-size="14" fill="#1c2b36">眼</text>
+  <path d="M140,112 L140,78" fill="none" stroke="#1c2b36" stroke-width="3" marker-end="url(#q10g)"/>
+  <text x="150" y="94" font-family="sans-serif" font-size="14" fill="#1c2b36">進行方向</text>
+  <path d="M240,254 L240,150" fill="none" stroke="#f2a73b" stroke-width="4" marker-end="url(#q10o)"/>
+  <text x="212" y="274" font-family="sans-serif" font-size="14" fill="#f2a73b">強い</text>
+  <path d="M40,176 L40,214" fill="none" stroke="#5a6b78" stroke-width="2" marker-end="url(#q10g)"/>
+  <text x="26" y="240" font-family="sans-serif" font-size="14" fill="#5a6b78">弱い</text>
+  <text x="16" y="326" font-family="sans-serif" font-size="14" fill="#5a6b78">上が北。回転と移動が重なる右側が強い</text>
+
+  <!-- 右：鉛直断面 -->
+  <text x="300" y="58" font-family="sans-serif" font-size="16" fill="#1c2b36">下層で最も強く回る</text>
+  <line x1="306" y1="340" x2="544" y2="340" stroke="#1c2b36" stroke-width="2"/>
+  <rect x="306" y="308" width="238" height="32" fill="#f2a73b" fill-opacity="0.25"/>
+  <path d="M370,338 L392,338 L382,140 L358,140 Z" fill="#2569a8" fill-opacity="0.25" stroke="#2569a8" stroke-width="2"/>
+  <path d="M470,338 L448,338 L458,140 L482,140 Z" fill="#2569a8" fill-opacity="0.25" stroke="#2569a8" stroke-width="2"/>
+  <path d="M420,172 L420,300" fill="none" stroke="#f2a73b" stroke-width="3" marker-end="url(#q10o)"/>
+  <text x="420" y="158" font-family="sans-serif" text-anchor="middle" font-size="14" fill="#f2a73b">下降流</text>
+  <path d="M352,132 L314,120" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10b)"/>
+  <path d="M488,132 L532,120" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10b)"/>
+  <path d="M312,324 L352,324" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10b)"/>
+  <path d="M538,324 L498,324" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10b)"/>
+  <text x="300" y="104" font-family="sans-serif" font-size="14" fill="#2569a8">上層は外へ吹き出す</text>
+  <text x="306" y="360" font-family="sans-serif" font-size="14" fill="#1c2b36">下層で吹き込み・接線風が最大</text>
+  <text x="490" y="200" font-family="sans-serif" font-size="14" fill="#5a6b78">壁雲</text>
+
+  <!-- 下部の注記 -->
+  <text x="16" y="380" font-family="sans-serif" font-size="14" fill="#1c2b36">眼の中の下降流 → 断熱圧縮で気温は高く、湿度は低い</text>
+  <text x="16" y="400" font-family="sans-serif" font-size="14" fill="#1c2b36">流す大きな流れがなければ、台風はゆっくり北西へ進む</text>
+</svg>

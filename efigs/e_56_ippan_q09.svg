@@ -1,0 +1,67 @@
+<svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#ffffff"/>
+  <defs>
+    <marker id="aRed" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0524d"/>
+    </marker>
+    <marker id="aBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="aOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="aGray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="28" y="30" font-family="sans-serif" font-size="20" fill="#1c2b36">マルチセル型の世代交代</text>
+  <text x="28" y="52" font-family="sans-serif" font-size="13" fill="#5a6b78">冷たい外出流が暖かく湿った空気を持ち上げ、次のセルが生まれる</text>
+
+  <text x="45" y="140" font-family="sans-serif" font-size="13" fill="#5a6b78">鉛直シアーが大きい</text>
+  <line x1="45" y1="160" x2="135" y2="160" stroke="#5a6b78" stroke-width="2" marker-end="url(#aGray)"/>
+  <line x1="45" y1="230" x2="105" y2="230" stroke="#5a6b78" stroke-width="2" marker-end="url(#aGray)"/>
+  <line x1="45" y1="300" x2="75" y2="300" stroke="#5a6b78" stroke-width="2" marker-end="url(#aGray)"/>
+
+  <g fill="#c8d7e3">
+    <ellipse cx="195" cy="242" rx="44" ry="26"/>
+    <rect x="163" y="242" width="64" height="58"/>
+  </g>
+  <text x="195" y="200" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1c2b36">衰弱期</text>
+  <text x="176" y="320" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">単独なら30分〜1時間で衰弱</text>
+
+  <g fill="#c8d7e3">
+    <ellipse cx="312" cy="142" rx="62" ry="22"/>
+    <rect x="278" y="142" width="68" height="158"/>
+    <ellipse cx="312" cy="180" rx="42" ry="30"/>
+  </g>
+  <text x="312" y="108" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1c2b36">成熟期</text>
+
+  <g fill="#c8d7e3">
+    <ellipse cx="437" cy="272" rx="36" ry="24"/>
+    <rect x="411" y="272" width="52" height="28"/>
+  </g>
+  <text x="440" y="236" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1c2b36">新しいセル</text>
+
+  <polygon points="262,331 418,331 400,309 276,309" fill="#cfe0ef"/>
+  <line x1="30" y1="331" x2="530" y2="331" stroke="#1c2b36" stroke-width="2.5"/>
+
+  <line x1="290" y1="302" x2="290" y2="326" stroke="#2569a8" stroke-width="1.5"/>
+  <line x1="302" y1="302" x2="302" y2="326" stroke="#2569a8" stroke-width="1.5"/>
+  <line x1="314" y1="302" x2="314" y2="326" stroke="#2569a8" stroke-width="1.5"/>
+  <line x1="326" y1="302" x2="326" y2="326" stroke="#2569a8" stroke-width="1.5"/>
+
+  <line x1="340" y1="240" x2="348" y2="312" stroke="#2569a8" stroke-width="3" marker-end="url(#aBlue)"/>
+  <line x1="352" y1="320" x2="404" y2="320" stroke="#2569a8" stroke-width="3" marker-end="url(#aBlue)"/>
+
+  <line x1="408" y1="310" x2="432" y2="258" stroke="#f2a73b" stroke-width="3" marker-end="url(#aOrange)"/>
+  <text x="406" y="286" text-anchor="end" font-family="sans-serif" font-size="12" fill="#f2a73b">持ち上げ</text>
+
+  <line x1="520" y1="322" x2="462" y2="322" stroke="#e0524d" stroke-width="3" marker-end="url(#aRed)"/>
+  <text x="530" y="316" text-anchor="end" font-family="sans-serif" font-size="12" fill="#e0524d">高温多湿の空気</text>
+
+  <text x="30" y="349" font-family="sans-serif" font-size="12" fill="#5a6b78">地上</text>
+  <text x="300" y="349" text-anchor="middle" font-family="sans-serif" font-size="13" fill="#2569a8">冷たい外出流</text>
+
+  <text x="28" y="376" font-family="sans-serif" font-size="13" fill="#5a6b78">シアーが大きいと上昇流と下降流が離れて共存でき、世代交代が続く。</text>
+</svg>

@@ -1,0 +1,64 @@
+<svg viewBox="0 0 560 390" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="390" fill="#ffffff"/>
+<defs>
+<marker id="q8b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 Z" fill="#2569a8"/></marker>
+<marker id="q8bs" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto"><path d="M0 0 L8 3.5 L0 7 Z" fill="#2569a8"/></marker>
+<marker id="q8bse" markerWidth="8" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M8 0 L0 3.5 L8 7 Z" fill="#2569a8"/></marker>
+<marker id="q8g" markerWidth="8" markerHeight="7" refX="7" refY="3.5" orient="auto"><path d="M0 0 L8 3.5 L0 7 Z" fill="#5a6b78"/></marker>
+<marker id="q8ge" markerWidth="8" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M8 0 L0 3.5 L8 7 Z" fill="#5a6b78"/></marker>
+<marker id="q8d" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0 L9 3.5 L0 7 Z" fill="#1c2b36"/></marker>
+</defs>
+<g font-family="sans-serif">
+<text x="20" y="33" font-size="19" font-weight="bold" fill="#1c2b36">冬型のときの日本海の筋状雲（鉛直断面）</text>
+
+<text x="46" y="57" font-size="14" fill="#5a6b78">高度(km)</text>
+<line x1="70" y1="270" x2="70" y2="66" stroke="#1c2b36" stroke-width="2"/>
+<line x1="64" y1="270" x2="70" y2="270" stroke="#1c2b36" stroke-width="2"/>
+<line x1="64" y1="230" x2="70" y2="230" stroke="#1c2b36" stroke-width="2"/>
+<line x1="64" y1="190" x2="70" y2="190" stroke="#1c2b36" stroke-width="2"/>
+<line x1="64" y1="150" x2="70" y2="150" stroke="#1c2b36" stroke-width="2"/>
+<line x1="64" y1="110" x2="70" y2="110" stroke="#1c2b36" stroke-width="2"/>
+<line x1="64" y1="70" x2="70" y2="70" stroke="#1c2b36" stroke-width="2"/>
+<text x="58" y="275" font-size="14" fill="#1c2b36" text-anchor="end">0</text>
+<text x="58" y="235" font-size="14" fill="#1c2b36" text-anchor="end">2</text>
+<text x="58" y="195" font-size="14" fill="#1c2b36" text-anchor="end">4</text>
+<text x="58" y="155" font-size="14" fill="#1c2b36" text-anchor="end">6</text>
+<text x="58" y="115" font-size="14" fill="#1c2b36" text-anchor="end">8</text>
+<text x="58" y="75" font-size="14" fill="#1c2b36" text-anchor="end">10</text>
+
+<line x1="110" y1="70" x2="520" y2="70" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="140" y="62" font-size="14" fill="#5a6b78">対流圏界面（約10km）</text>
+
+<text x="310" y="132" font-size="15" fill="#1c2b36" text-anchor="middle">筋状の対流雲の雲頂は約2〜3km</text>
+<text x="310" y="156" font-size="15" fill="#1c2b36" text-anchor="middle">逆転層にふたをされ、圏界面までは達しない</text>
+
+<line x1="222" y1="206" x2="510" y2="206" stroke="#f2a73b" stroke-width="2.5" stroke-dasharray="8 5"/>
+<text x="214" y="198" font-size="14" fill="#1c2b36" text-anchor="end">沈降性の逆転層</text>
+
+<rect x="150" y="270" width="370" height="24" fill="#dbe9f4"/>
+<line x1="70" y1="270" x2="520" y2="270" stroke="#1c2b36" stroke-width="2"/>
+<path d="M 70 262 L 150 262 L 150 294 L 70 294 Z" fill="#e4e8eb" stroke="#b9c3ca" stroke-width="1.5"/>
+<text x="110" y="287" font-size="14" fill="#1c2b36" text-anchor="middle">大陸</text>
+<text x="410" y="287" font-size="14" fill="#1c2b36" text-anchor="middle">暖かい海面</text>
+
+<line x1="86" y1="252" x2="214" y2="252" stroke="#2569a8" stroke-width="3" marker-end="url(#q8b)"/>
+<text x="88" y="242" font-size="14" fill="#2569a8">寒気の吹き出し</text>
+
+<path d="M 240 258 L 240 238 C 240 226 252 222 258 230 C 264 216 282 224 280 238 L 280 258 Z" fill="#eef2f6" stroke="#8ea3b1" stroke-width="1.5"/>
+<path d="M 290 258 L 290 238 C 290 226 302 222 308 230 C 314 216 332 224 330 238 L 330 258 Z" fill="#eef2f6" stroke="#8ea3b1" stroke-width="1.5"/>
+<path d="M 340 258 L 340 236 C 340 224 352 220 358 228 C 364 214 382 222 380 236 L 380 258 Z" fill="#eef2f6" stroke="#8ea3b1" stroke-width="1.5"/>
+<path d="M 390 258 L 390 234 C 390 222 402 218 408 226 C 414 212 432 220 430 234 L 430 258 Z" fill="#eef2f6" stroke="#8ea3b1" stroke-width="1.5"/>
+<path d="M 440 258 L 440 234 C 440 222 452 218 458 226 C 464 212 482 220 480 234 L 480 258 Z" fill="#eef2f6" stroke="#8ea3b1" stroke-width="1.5"/>
+
+<line x1="228" y1="294" x2="228" y2="246" stroke="#2569a8" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="150" y1="294" x2="150" y2="338" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="5 4"/>
+<line x1="306" y1="294" x2="306" y2="338" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+<line x1="150" y1="310" x2="224" y2="310" stroke="#2569a8" stroke-width="2.5" marker-start="url(#q8bse)" marker-end="url(#q8bs)"/>
+<text x="318" y="315" font-size="14" fill="#2569a8">寒気が強い（気温が低い）</text>
+<line x1="150" y1="336" x2="306" y2="336" stroke="#5a6b78" stroke-width="2.5" marker-start="url(#q8ge)" marker-end="url(#q8g)"/>
+<text x="318" y="341" font-size="14" fill="#5a6b78">寒気が弱い（気温が高い）</text>
+
+<text x="20" y="368" font-size="14" fill="#1c2b36">海面との温度差が大きいほど、雲ができ始める距離は短い</text>
+</g>
+</svg>

@@ -1,0 +1,55 @@
+<svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="400" fill="#ffffff"/>
+  <defs>
+    <marker id="arO" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+  <g font-family="sans-serif">
+    <text x="24" y="30" font-size="18" fill="#1c2b36">氷面の飽和水蒸気圧は水面より低い</text>
+
+    <!-- 左: 棒の比較 -->
+    <text x="24" y="62" font-size="16" fill="#1c2b36">気温 −10℃での比較</text>
+    <text x="24" y="84" font-size="14" fill="#5a6b78">(高さの差は強調しています)</text>
+
+    <rect x="100" y="160" width="55" height="140" fill="#5a6b78"/>
+    <rect x="200" y="205" width="55" height="95" fill="#2569a8"/>
+    <line x1="60" y1="300" x2="300" y2="300" stroke="#1c2b36" stroke-width="2"/>
+
+    <line x1="60" y1="170" x2="300" y2="170" stroke="#f2a73b" stroke-width="2.5" stroke-dasharray="7 5"/>
+    <text x="300" y="162" font-size="14" fill="#1c2b36" text-anchor="end">実際の水蒸気圧</text>
+
+    <line x1="227" y1="203" x2="227" y2="174" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#arO)"/>
+    <text x="262" y="194" font-size="14" fill="#1c2b36">過飽和</text>
+
+    <text x="127" y="320" font-size="14" fill="#1c2b36" text-anchor="middle">水面に対する</text>
+    <text x="127" y="342" font-size="14" fill="#1c2b36" text-anchor="middle">飽和水蒸気圧</text>
+    <text x="227" y="320" font-size="14" fill="#1c2b36" text-anchor="middle">氷面に対する</text>
+    <text x="227" y="342" font-size="14" fill="#1c2b36" text-anchor="middle">飽和水蒸気圧</text>
+
+    <!-- 右: 水滴から氷晶へ -->
+    <text x="320" y="62" font-size="16" fill="#1c2b36">だから氷晶だけが育つ</text>
+
+    <circle cx="372" cy="140" r="34" fill="none" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <circle cx="372" cy="140" r="24" fill="#eaf2f9" stroke="#5a6b78" stroke-width="2"/>
+
+    <polygon points="496,104 464.8,122 464.8,158 496,176 527.2,158 527.2,122" fill="#dbeaf6" stroke="#2569a8" stroke-width="2.5"/>
+    <polygon points="496,114 473.5,127 473.5,153 496,166 518.5,153 518.5,127" fill="none" stroke="#2569a8" stroke-width="1.5" stroke-dasharray="5 4"/>
+
+    <line x1="408" y1="120" x2="452" y2="120" stroke="#f2a73b" stroke-width="3" marker-end="url(#arO)"/>
+    <text x="430" y="106" font-size="14" fill="#1c2b36" text-anchor="middle">水蒸気</text>
+
+    <text x="372" y="196" font-size="14" fill="#1c2b36" text-anchor="middle">過冷却水滴</text>
+    <text x="372" y="218" font-size="14" fill="#5a6b78" text-anchor="middle">小さくなる</text>
+    <text x="496" y="196" font-size="14" fill="#1c2b36" text-anchor="middle">氷晶</text>
+    <text x="496" y="218" font-size="14" fill="#5a6b78" text-anchor="middle">大きくなる</text>
+
+    <text x="320" y="250" font-size="14" fill="#1c2b36">水滴にはほぼ飽和でも、</text>
+    <text x="320" y="272" font-size="14" fill="#1c2b36">氷晶にとっては過飽和になる。</text>
+    <text x="320" y="294" font-size="14" fill="#1c2b36">だから水蒸気が氷晶へ移り、</text>
+    <text x="320" y="316" font-size="14" fill="#1c2b36">氷晶だけが速く成長する。</text>
+
+    <rect x="16" y="352" width="528" height="32" rx="6" fill="#f7f9fa"/>
+    <text x="24" y="373" font-size="14" fill="#1c2b36">これがベルジェロン過程(氷晶過程)。冷たい雨のもとになるしくみです。</text>
+  </g>
+</svg>

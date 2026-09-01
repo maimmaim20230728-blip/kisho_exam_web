@@ -25,6 +25,10 @@ window.KISHO_DATA["65_senmon"] = {
 },
 {
 "q": 2,
+"expl_fig": {
+"file": "e_65_senmon_q02.svg",
+"caption": "図: 温暖前線が近づくと暖気は上空から先に入り、その層が下へ厚くなる"
+},
 "question": "<span class=\"term\" data-term=\"気象庁\">気象庁</span>が行っている<span class=\"term\" data-term=\"ウィンドプロファイラ\">ウィンドプロファイラ</span><span class=\"term\" data-term=\"観測\">観測</span>について述べた次の文 (a)〜(c)の下線部の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを、下記の①〜⑤の中から1つ選べ。\n(a) ウィンドプロファイラで<span class=\"term\" data-term=\"温暖前線\">温暖前線</span>の通過を観測すると、<u><span class=\"term\" data-term=\"地表\">地表</span>付近に<span class=\"term\" data-term=\"南よりの風\">南よりの風</span>が入り始め、時間とともにその層が上空に向かって厚くなる</u>様子を捉えることができる。\n(b) 非常に激しい雨が降っているときに、<u><span class=\"term\" data-term=\"降水粒子\">降水粒子</span>による<span class=\"term\" data-term=\"電波\">電波</span>の<span class=\"term\" data-term=\"散乱\">散乱</span>が強すぎてそれより上空の観測データが得られない</u>場合がある。\n(c) ウィンドプロファイラは、<span class=\"term\" data-term=\"雨粒\">雨粒</span>などよりも<span class=\"term\" data-term=\"スケール\">スケール</span>の大きな<span class=\"term\" data-term=\"大気\">大気</span>中の<span class=\"term\" data-term=\"乱流\">乱流</span>などに伴う空気の<span class=\"term\" data-term=\"屈折率\">屈折率</span>の<span class=\"term\" data-term=\"揺らぎ\">揺らぎ</span>による電波の散乱から上空の風を<span class=\"term\" data-term=\"測定\">測定</span>するため、<u><span class=\"term\" data-term=\"気象レーダー\">気象レーダー</span>よりも長い<span class=\"term\" data-term=\"波長\">波長</span>の電波が用いられる</u>。",
 "choices": [
 "(a)正 (b)正 (c)正",
@@ -42,6 +46,10 @@ window.KISHO_DATA["65_senmon"] = {
 },
 {
 "q": 3,
+"expl_fig": {
+"file": "e_65_senmon_q03.svg",
+"caption": "図: 仰角一定のビームは遠いほど高く、融解層との交わりが輪に見える"
+},
 "question": "2月のある日に、千葉県柏市にある<span class=\"term\" data-term=\"気象庁\">気象庁</span>の<span class=\"term\" data-term=\"気象レーダー\">気象レーダー</span>で<span class=\"term\" data-term=\"観測\">観測</span>した<span class=\"term\" data-term=\"仰角\">仰角</span>3.5°の<span class=\"term\" data-term=\"レーダーエコー\">レーダーエコー</span>を図Aに示した。図Bは、この時のレーダーエコーの<span class=\"term\" data-term=\"高度\">高度</span>と<span class=\"term\" data-term=\"レーダー\">レーダー</span>からの距離の関係を示したものとする。これらの図について述べた次の文章の下線部 (a)〜(d)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを、下記の①〜⑤の中から1つ選べ。\n　上空では<span class=\"term\" data-term=\"雪片\">雪片</span>であった<span class=\"term\" data-term=\"降水粒子\">降水粒子</span>が、落下して周囲の気温が0℃となる高度付近（<span class=\"term\" data-term=\"融解層\">融解層</span>）に達すると、(a) <u><span class=\"term\" data-term=\"雨滴\">雨滴</span>よりも<span class=\"term\" data-term=\"粒子\">粒子</span>が大きく、<span class=\"term\" data-term=\"固体\">固体</span>（雪）の表面が<span class=\"term\" data-term=\"液体\">液体</span>で覆われて</u>いる「<span class=\"term\" data-term=\"みぞれ\">みぞれ</span>」の状態となる。降水粒子には、(b) <u>固体の状態よりは液体の状態の方が、</u>また粒子が大きい方が、気象レーダーの<span class=\"term\" data-term=\"電波\">電波</span>をよく<span class=\"term\" data-term=\"反射\">反射</span>する性質がある。このため、仰角一定のレーダーエコーには、融解層の高度に対応する強い<span class=\"term\" data-term=\"環状\">環状</span>の<span class=\"term\" data-term=\"エコー\">エコー</span>が観測され、「<span class=\"term\" data-term=\"ブライトバンド\">ブライトバンド</span>」と呼ばれる。\n　図Aと図Bから、この時の融解層の上端の高さはおよそ(c) <u>2500m</u>と見積もられる。仮にこの後、ブライトバンドの半径が時間の経過と共に(d) <u>小さくなる</u>場合は、融解層の高度が低下していることを示し、低い<span class=\"term\" data-term=\"標高\">標高</span>の地域でも雨から雪に変わる可能性が高くなる。",
 "choices": [
 "(a)正 (b)正 (c)正 (d)正",
@@ -168,6 +176,10 @@ window.KISHO_DATA["65_senmon"] = {
 },
 {
 "q": 10,
+"expl_fig": {
+"file": "e_65_senmon_q10.svg",
+"caption": "図: 混合比が一様な層の湿り方と、上ほど相当温位が低い層の持ち上げ"
+},
 "question": "<span class=\"term\" data-term=\"大気\">大気</span>の<span class=\"term\" data-term=\"成層\">成層</span>について述べた次の文 (a)〜(c)の下線部の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを、下記の①〜⑤の中から1つ選べ。\n(a) <span class=\"term\" data-term=\"冬季\">冬季</span>に大陸からの<span class=\"term\" data-term=\"寒気\">寒気</span>が日本海に吹き出すと、海面から<span class=\"term\" data-term=\"供給\">供給</span>される熱と<span class=\"term\" data-term=\"水蒸気\">水蒸気</span>により<span class=\"term\" data-term=\"対流\">対流</span>が発生し、水蒸気の<span class=\"term\" data-term=\"混合比\">混合比</span>が<span class=\"term\" data-term=\"高度\">高度</span>によらずほぼ<span class=\"term\" data-term=\"一様\">一様</span>な<span class=\"term\" data-term=\"対流混合層\">対流混合層</span>が形成されるが、<u>この層の上部では下部より<span class=\"term\" data-term=\"相対湿度\">相対湿度</span>が高い</u>。\n(b) 一般に、<span class=\"term\" data-term=\"対流雲\">対流雲</span>が大<span class=\"term\" data-term=\"規模\">規模</span>に発生する前の大気の成層状態は、<u><span class=\"term\" data-term=\"下層\">下層</span>から<span class=\"term\" data-term=\"中層\">中層</span>にかけては<span class=\"term\" data-term=\"絶対不安定\">絶対不安定</span>となっており、<span class=\"term\" data-term=\"降水\">降水</span>が始まると対流雲内の大気は<span class=\"term\" data-term=\"条件付不安定\">条件付不安定</span>に変化する</u>。\n(c) 地上の<span class=\"term\" data-term=\"寒冷前線\">寒冷前線</span>の前方中層に西から<span class=\"term\" data-term=\"乾燥空気\">乾燥空気</span>が<span class=\"term\" data-term=\"流入\">流入</span>するような場においては、中層以下の層では<u>上空ほど<span class=\"term\" data-term=\"相当温位\">相当温位</span>が低い<span class=\"term\" data-term=\"対流不安定\">対流不安定</span>となり、この層全体が上昇することで<span class=\"term\" data-term=\"不安定\">不安定</span>が<span class=\"term\" data-term=\"顕在化\">顕在化</span>する</u>ことがある。",
 "choices": [
 "(a)正 (b)正 (c)誤",
@@ -185,6 +197,10 @@ window.KISHO_DATA["65_senmon"] = {
 },
 {
 "q": 11,
+"expl_fig": {
+"file": "e_65_senmon_q11.svg",
+"caption": "図: 湾に吹き込む風になるのは最接近時ではなく台風の通過後"
+},
 "question": "一般的な台風について述べた次の文(a)〜(c)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを、下記の①〜⑤の中から1つ選べ。\n(a) 台風は、ほとんどが<span class=\"term\" data-term=\"北緯\">北緯</span>5°以北で発生し、北緯5°以南の発生数は少ない。\n(b) <span class=\"term\" data-term=\"発達\">発達</span>した台風の中心付近の気温は、<span class=\"term\" data-term=\"対流圏\">対流圏</span>の<span class=\"term\" data-term=\"下層\">下層</span>から<span class=\"term\" data-term=\"中層\">中層</span>で周囲より高く、<span class=\"term\" data-term=\"上層\">上層</span>から<span class=\"term\" data-term=\"対流圏界面\">対流圏界面</span>にかけて逆に周囲より低くなっている。\n(c) <span class=\"term\" data-term=\"猛烈な台風\">猛烈な台風</span>が、西に開いた水深が浅い湾を<span class=\"term\" data-term=\"暴風域\">暴風域</span>に巻き込みながら、<span class=\"term\" data-term=\"気圧\">気圧</span>や風の<span class=\"term\" data-term=\"分布\">分布</span>などの<span class=\"term\" data-term=\"勢力\">勢力</span>を変えずに湾の西側を北へ進む時、<span class=\"term\" data-term=\"湾奥\">湾奥</span>での<span class=\"term\" data-term=\"潮位\">潮位</span>の<span class=\"term\" data-term=\"偏差\">偏差</span>が最大となるのは台風の最接近時よりも後である。",
 "choices": [
 "(a)正 (b)正 (c)正",

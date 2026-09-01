@@ -1,0 +1,70 @@
+<svg viewBox="0 0 560 410" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="410" fill="#ffffff"/>
+<defs>
+<marker id="q14b" markerWidth="10" markerHeight="8" refX="9" refY="4" orient="auto"><path d="M0 0 L10 4 L0 8 Z" fill="#2569a8"/></marker>
+<marker id="q14g" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0 L9 3.5 L0 7 Z" fill="#5a6b78"/></marker>
+<marker id="q14o" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0 L9 3.5 L0 7 Z" fill="#f2a73b"/></marker>
+<marker id="q14oe" markerWidth="9" markerHeight="7" refX="1" refY="3.5" orient="auto"><path d="M9 0 L0 3.5 L9 7 Z" fill="#f2a73b"/></marker>
+</defs>
+<g font-family="sans-serif">
+<text x="20" y="32" font-size="19" font-weight="bold" fill="#1c2b36">流域雨量指数のしくみ</text>
+
+<text x="24" y="56" font-size="14" fill="#2569a8">上流域に降る雨</text>
+<line x1="60" y1="64" x2="60" y2="98" stroke="#2569a8" stroke-width="2" marker-end="url(#q14b)"/>
+<line x1="108" y1="64" x2="108" y2="98" stroke="#2569a8" stroke-width="2" marker-end="url(#q14b)"/>
+<line x1="156" y1="64" x2="156" y2="98" stroke="#2569a8" stroke-width="2" marker-end="url(#q14b)"/>
+<path d="M 24 190 L 70 112 L 110 150 L 150 108 L 200 190 Z" fill="#eef3f7" stroke="#5a6b78" stroke-width="1.5"/>
+<text x="112" y="178" font-size="14" fill="#1c2b36" text-anchor="middle">上流域</text>
+
+<circle cx="206" cy="105" r="11" fill="#f2a73b"/>
+<text x="206" y="110" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+<text x="262" y="110" font-size="14" font-weight="bold" fill="#1c2b36" text-anchor="middle">タンクモデル</text>
+<rect x="222" y="118" width="80" height="70" fill="#f6f8f9" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="222" y1="152" x2="226" y2="152" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="241" y1="152" x2="302" y2="152" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="233" y1="144" x2="233" y2="164" stroke="#5a6b78" stroke-width="2" marker-end="url(#q14g)"/>
+<text x="266" y="138" font-size="14" fill="#1c2b36" text-anchor="middle">地表流出</text>
+<text x="266" y="176" font-size="14" fill="#1c2b36" text-anchor="middle">地中流出</text>
+<line x1="302" y1="134" x2="330" y2="144" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q14b)"/>
+<line x1="302" y1="172" x2="330" y2="154" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q14b)"/>
+
+<circle cx="348" cy="120" r="11" fill="#f2a73b"/>
+<text x="348" y="125" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+<text x="366" y="126" font-size="14" font-weight="bold" fill="#1c2b36">河川を流れ下る</text>
+<path d="M 336 150 L 404 164 L 486 184" fill="none" stroke="#2569a8" stroke-width="9" stroke-opacity="0.28"/>
+<path d="M 336 150 L 404 164 L 478 182" fill="none" stroke="#2569a8" stroke-width="2" marker-end="url(#q14b)"/>
+<circle cx="486" cy="184" r="7" fill="#f2a73b" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="492" y1="166" x2="488" y2="176" stroke="#5a6b78" stroke-width="1"/>
+<text x="492" y="160" font-size="14" fill="#1c2b36" text-anchor="middle">対象地点</text>
+
+<circle cx="30" cy="210" r="10" fill="#f2a73b"/>
+<text x="30" y="215" font-size="14" fill="#ffffff" text-anchor="middle">1</text>
+<text x="46" y="215" font-size="14" fill="#1c2b36">降った雨が地表と地中を通って河川に流れ出す量をタンクモデルで計算</text>
+<circle cx="30" cy="234" r="10" fill="#f2a73b"/>
+<text x="30" y="239" font-size="14" fill="#ffffff" text-anchor="middle">2</text>
+<text x="46" y="239" font-size="14" fill="#1c2b36">河川を流れ下る量を運動方程式で計算し、対象地点までの時間差を表現</text>
+
+<line x1="90" y1="272" x2="520" y2="272" stroke="#cfd8de" stroke-width="1.5"/>
+<rect x="110" y="272" width="12" height="8" fill="#2569a8" fill-opacity="0.5"/>
+<rect x="126" y="272" width="12" height="16" fill="#2569a8" fill-opacity="0.5"/>
+<rect x="142" y="272" width="12" height="26" fill="#2569a8" fill-opacity="0.5"/>
+<rect x="158" y="272" width="12" height="34" fill="#2569a8" fill-opacity="0.5"/>
+<rect x="174" y="272" width="12" height="28" fill="#2569a8" fill-opacity="0.5"/>
+<rect x="190" y="272" width="12" height="20" fill="#2569a8" fill-opacity="0.5"/>
+<rect x="206" y="272" width="12" height="12" fill="#2569a8" fill-opacity="0.5"/>
+<rect x="222" y="272" width="12" height="8" fill="#2569a8" fill-opacity="0.5"/>
+<rect x="238" y="272" width="12" height="5" fill="#2569a8" fill-opacity="0.5"/>
+<text x="516" y="264" font-size="14" fill="#2569a8" text-anchor="end">上流域の雨量</text>
+
+<line x1="90" y1="372" x2="520" y2="372" stroke="#1c2b36" stroke-width="2"/>
+<path d="M 110 370 C 200 366 250 356 306 330 C 370 342 430 356 500 364" fill="none" stroke="#f2a73b" stroke-width="3"/>
+<text x="516" y="334" font-size="14" fill="#f2a73b" text-anchor="end">流域雨量指数</text>
+
+<line x1="164" y1="306" x2="164" y2="314" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="306" y1="322" x2="306" y2="330" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="4 3"/>
+<line x1="164" y1="318" x2="306" y2="318" stroke="#f2a73b" stroke-width="2.5" marker-start="url(#q14oe)" marker-end="url(#q14o)"/>
+<text x="316" y="323" font-size="14" font-weight="bold" fill="#f2a73b">時間差</text>
+
+<text x="516" y="390" font-size="14" fill="#5a6b78" text-anchor="end">→ 時間</text>
+</g>
+</svg>

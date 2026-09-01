@@ -1,0 +1,67 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="420" fill="#ffffff"/>
+<defs>
+<marker id="aB" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="10.5" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 Z" fill="#2569a8"/></marker>
+<marker id="aO" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="10.5" refY="5" orient="auto"><path d="M0,0 L12,5 L0,10 Z" fill="#f2a73b"/></marker>
+</defs>
+
+<text x="20" y="34" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1c2b36">降水量と蒸発量の緯度分布（模式）</text>
+<text x="20" y="54" font-family="sans-serif" font-size="13" fill="#5a6b78">経度方向に平均。P−E が負の帯が水蒸気の供給元</text>
+
+<!-- A〜D の位置 -->
+<text x="185" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#f2a73b" text-anchor="middle">A</text>
+<text x="239" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#f2a73b" text-anchor="middle">B</text>
+<text x="290" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#f2a73b" text-anchor="middle">C</text>
+<text x="338" y="70" font-family="sans-serif" font-size="15" font-weight="bold" fill="#f2a73b" text-anchor="middle">D</text>
+<line x1="185" y1="76" x2="185" y2="314" stroke="#f2a73b" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="239" y1="76" x2="239" y2="314" stroke="#f2a73b" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="290" y1="76" x2="290" y2="314" stroke="#f2a73b" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="338" y1="76" x2="338" y2="314" stroke="#f2a73b" stroke-width="1" stroke-dasharray="4 4"/>
+
+<!-- 段1 P と E -->
+<text x="74" y="90" font-family="sans-serif" font-size="11" fill="#5a6b78">（mm/日）</text>
+<line x1="70" y1="190" x2="530" y2="190" stroke="#5a6b78" stroke-width="1"/>
+<text x="64" y="194" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="end">0</text>
+<polyline points="70,188.6 108,184.5 147,176.3 185,162.5 211,148.8 236,137.8 262,135 287,140.5 300,141.9 320,135 338,128.1 356,129.5 382,140.5 415,159.8 453,174.9 492,184.5 530,188.6" fill="none" stroke="#5a6b78" stroke-width="2.5" stroke-linejoin="round"/>
+<polyline points="70,184.5 108,180.4 147,170.7 172,157 185,154.2 203,159.7 223,170.7 239,176.2 262,165.2 280,135 290,113 300,121.2 320,148.7 341,165.2 361,169.4 389,159.7 415,151.5 453,159.7 492,179 530,185.9" fill="none" stroke="#1c2b36" stroke-width="3.5" stroke-linejoin="round"/>
+
+<!-- 凡例 -->
+<line x1="440" y1="100" x2="466" y2="100" stroke="#1c2b36" stroke-width="3.5"/>
+<text x="472" y="104" font-family="sans-serif" font-size="12" fill="#1c2b36">降水量 P</text>
+<line x1="440" y1="120" x2="466" y2="120" stroke="#5a6b78" stroke-width="2.5"/>
+<text x="472" y="124" font-family="sans-serif" font-size="12" fill="#1c2b36">蒸発量 E</text>
+
+<!-- 緯度目盛 -->
+<text x="70" y="206" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="middle">90N</text>
+<text x="147" y="206" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="middle">60N</text>
+<text x="223" y="206" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="middle">30N</text>
+<text x="300" y="206" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="middle">0</text>
+<text x="377" y="206" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="middle">30S</text>
+<text x="453" y="206" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="middle">60S</text>
+<text x="524" y="206" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="middle">90S</text>
+
+<!-- 段2 P-E -->
+<line x1="70" y1="270" x2="530" y2="270" stroke="#5a6b78" stroke-width="1"/>
+<text x="64" y="274" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="end">0</text>
+<polyline points="70,265.8 108,265.8 147,264.4 185,261.6 203,268.6 223,291 239,305 262,300.8 280,267.2 290,242 300,249 320,284 338,306.4 361,307.8 389,286.8 415,261.6 453,254.6 492,264.4 530,267.2" fill="none" stroke="#1c2b36" stroke-width="2" stroke-dasharray="7 4" stroke-linejoin="round"/>
+<text x="450" y="246" font-family="sans-serif" font-size="13" fill="#1c2b36">P − E</text>
+<text x="76" y="246" font-family="sans-serif" font-size="12" fill="#5a6b78">＋（運び込まれる）</text>
+<text x="76" y="300" font-family="sans-serif" font-size="12" fill="#5a6b78">−（送り出す）</text>
+
+<!-- 段3 循環模式 -->
+<text x="70" y="344" font-family="sans-serif" font-size="12" fill="#5a6b78">大規模な子午面循環</text>
+<text x="70" y="362" font-family="sans-serif" font-size="12" fill="#5a6b78">（ハドレー循環）</text>
+<line x1="170" y1="400" x2="400" y2="400" stroke="#1c2b36" stroke-width="2.5"/>
+<line x1="290" y1="396" x2="290" y2="336" stroke="#2569a8" stroke-width="4" marker-end="url(#aB)"/>
+<line x1="239" y1="336" x2="239" y2="386" stroke="#2569a8" stroke-width="4" marker-end="url(#aB)"/>
+<line x1="338" y1="336" x2="338" y2="386" stroke="#2569a8" stroke-width="4" marker-end="url(#aB)"/>
+<line x1="286" y1="332" x2="248" y2="332" stroke="#2569a8" stroke-width="2.5" marker-end="url(#aB)"/>
+<line x1="294" y1="332" x2="330" y2="332" stroke="#2569a8" stroke-width="2.5" marker-end="url(#aB)"/>
+<line x1="234" y1="394" x2="280" y2="394" stroke="#f2a73b" stroke-width="3" marker-end="url(#aO)"/>
+<line x1="343" y1="394" x2="300" y2="394" stroke="#f2a73b" stroke-width="3" marker-end="url(#aO)"/>
+<text x="296" y="362" font-family="sans-serif" font-size="12" fill="#2569a8">上昇</text>
+<text x="200" y="362" font-family="sans-serif" font-size="12" fill="#2569a8">下降</text>
+<text x="348" y="362" font-family="sans-serif" font-size="12" fill="#2569a8">下降</text>
+<text x="420" y="344" font-family="sans-serif" font-size="13" fill="#f2a73b" font-weight="bold">貿易風が水蒸気を</text>
+<text x="420" y="362" font-family="sans-serif" font-size="13" fill="#f2a73b" font-weight="bold">赤道側へ運ぶ</text>
+</svg>

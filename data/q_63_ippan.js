@@ -59,7 +59,11 @@ window.KISHO_DATA["63_ippan"] = {
 "answer_note": "",
 "figures": [
 "63_ippan_p03_1.png"
-]
+],
+"expl_fig": {
+"file": "e_63_ippan_q03.svg",
+"caption": "図: 山を越える空気塊の温度変化のイメージ"
+}
 },
 {
 "q": 4,
@@ -76,7 +80,11 @@ window.KISHO_DATA["63_ippan"] = {
 3
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_63_ippan_q04.svg",
+"caption": "図: 霧のでき方4タイプの違いのイメージ"
+}
 },
 {
 "q": 5,
@@ -93,7 +101,11 @@ window.KISHO_DATA["63_ippan"] = {
 5
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_63_ippan_q05.svg",
+"caption": "図: 放射のつり合いと雲頂の長波放射のイメージ"
+}
 },
 {
 "q": 6,
@@ -165,7 +177,11 @@ window.KISHO_DATA["63_ippan"] = {
 2
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_63_ippan_q09.svg",
+"caption": "図: 地衡風と低気圧性傾度風の力のつり合いのイメージ"
+}
 },
 {
 "q": 10,
@@ -183,6 +199,10 @@ window.KISHO_DATA["63_ippan"] = {
 ],
 "answer_note": "",
 "figures": [],
+"expl_fig": {
+"file": "e_63_ippan_q10.svg",
+"caption": "図: 極側の温度と上空の風の関係のイメージ"
+},
 "figures_note": "この問題の図は、市販書籍などからの引用を含むため本アプリでは表示していません。図は気象業務支援センターが公開している試験問題冊子でご確認ください。"
 },
 {
@@ -202,7 +222,11 @@ window.KISHO_DATA["63_ippan"] = {
 "answer_note": "",
 "figures": [
 "63_ippan_p08_1.png"
-]
+],
+"expl_fig": {
+"file": "e_63_ippan_q11.svg",
+"caption": "図: 平常時とエルニーニョ時のウォーカー循環のイメージ"
+}
 },
 {
 "q": 12,

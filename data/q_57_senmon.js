@@ -59,6 +59,10 @@ window.KISHO_DATA["57_senmon"] = {
 },
 {
 "q": 4,
+"expl_fig": {
+"file": "e_57_senmon_q04.svg",
+"caption": "図: 現象の空間スケールと時間スケールの関係のイメージ"
+},
 "question": "<span class=\"term\" data-term=\"大気現象\">大気現象</span>の<span class=\"term\" data-term=\"スケール\">スケール</span>に着目して述べた次の文(a)〜(d)の下線部の<span class=\"term\" data-term=\"正誤\">正誤</span>について，下記の①〜⑤の中から正しいものを1つ選べ。\n(a) <span class=\"term\" data-term=\"大気\">大気</span>中には，様々な時間<span class=\"term\" data-term=\"空間スケール\">空間スケール</span>を持った<span class=\"term\" data-term=\"現象\">現象</span>が存在しているが，一般的に<u>現象の空間スケールと<span class=\"term\" data-term=\"時間スケール\">時間スケール</span>との間には，<span class=\"term\" data-term=\"正の相関\">正の相関</span>がある</u>。\n(b) <span class=\"term\" data-term=\"準定常\">準定常</span>的な<span class=\"term\" data-term=\"超長波\">超長波</span>(<span class=\"term\" data-term=\"プラネタリー波\">プラネタリー波</span>)は，<span class=\"term\" data-term=\"波長\">波長</span>が1万km以上もある大気中で最大スケールの<span class=\"term\" data-term=\"擾乱\">擾乱</span>であり，<u><span class=\"term\" data-term=\"チベット高原\">チベット高原</span>等の大<span class=\"term\" data-term=\"規模\">規模</span>な地形による<span class=\"term\" data-term=\"力学的効果\">力学的効果</span>や大陸と<span class=\"term\" data-term=\"海洋\">海洋</span>の<span class=\"term\" data-term=\"分布\">分布</span>による<span class=\"term\" data-term=\"熱的効果\">熱的効果</span>により<span class=\"term\" data-term=\"励起\">励起</span>されたものである</u>。\n(c) ある地点で大雨時に<span class=\"term\" data-term=\"観測\">観測</span>される<span class=\"term\" data-term=\"降水強度\">降水強度</span>には，数分〜10分程度の時間スケールの変動がしばしば見られる。この変動の<span class=\"term\" data-term=\"要因\">要因</span>の一つとして，<u>個々の<span class=\"term\" data-term=\"積乱雲\">積乱雲</span>の発生・<span class=\"term\" data-term=\"衰弱\">衰弱</span>や移動がある</u>。\n(d) <span class=\"term\" data-term=\"温帯低気圧\">温帯低気圧</span>のうち，<span class=\"term\" data-term=\"梅雨前線\">梅雨前線</span>上に発生する<span class=\"term\" data-term=\"低気圧\">低気圧</span>は<span class=\"term\" data-term=\"相対的\">相対的</span>に<span class=\"term\" data-term=\"水平スケール\">水平スケール</span>が小さく，<u><span class=\"term\" data-term=\"対流圏\">対流圏</span><span class=\"term\" data-term=\"上層\">上層</span>においては<span class=\"term\" data-term=\"明瞭\">明瞭</span>な構造が見られないことが多い</u>。",
 "choices": [
 "(a)のみ誤り",
@@ -110,6 +114,10 @@ window.KISHO_DATA["57_senmon"] = {
 },
 {
 "q": 7,
+"expl_fig": {
+"file": "e_57_senmon_q07.svg",
+"caption": "図: 寒冷低気圧の切離と、寒気核・軸の鉛直構造のイメージ"
+},
 "question": "日本付近の<span class=\"term\" data-term=\"寒冷低気圧\">寒冷低気圧</span>について述べた次の文章の下線部(a)〜(d)の<span class=\"term\" data-term=\"正誤\">正誤</span>について，下記の①〜⑤の中から正しいものを1つ選べ。\n寒冷低気圧は，(a)<u><span class=\"term\" data-term=\"偏西風帯\">偏西風帯</span>の<span class=\"term\" data-term=\"ジェット気流\">ジェット気流</span>がほぼ東西方向に流れているときに形成される</u>。<span class=\"term\" data-term=\"対流圏\">対流圏</span>では，周辺より気温が低い<span class=\"term\" data-term=\"寒気核\">寒気核</span>を持ち，(b)<u>寒気核は対流圏の中・<span class=\"term\" data-term=\"上層\">上層</span>より<span class=\"term\" data-term=\"下層\">下層</span>の方が<span class=\"term\" data-term=\"顕著\">顕著</span>である</u>。また(c)<u>寒冷低気圧の中心を結ぶ軸は，上層ほど大きく西に傾いていることが多い</u>。\n<span class=\"term\" data-term=\"夏季\">夏季</span>に日本付近に進んでくる寒冷低気圧においては，東から南東<span class=\"term\" data-term=\"象限\">象限</span>の下層に暖かく湿った<span class=\"term\" data-term=\"気塊\">気塊</span>が<span class=\"term\" data-term=\"流入\">流入</span>することが多く，そのようなときは<span class=\"term\" data-term=\"大気\">大気</span>の<span class=\"term\" data-term=\"成層\">成層</span>が<span class=\"term\" data-term=\"不安定\">不安定</span>となり<span class=\"term\" data-term=\"対流雲\">対流雲</span>が<span class=\"term\" data-term=\"組織的\">組織的</span>に<span class=\"term\" data-term=\"発達\">発達</span>するが，(d)<u>寒冷低気圧は一般に動きが速いため，成層が不安定な状態は半日程度で解消することが多い</u>。",
 "choices": [
 "(a)のみ正しい",
@@ -127,6 +135,10 @@ window.KISHO_DATA["57_senmon"] = {
 },
 {
 "q": 8,
+"expl_fig": {
+"file": "e_57_senmon_q08.svg",
+"caption": "図: 冬型のときに筋状雲ができ始める位置と雲頂の高さのイメージ"
+},
 "question": "<span class=\"term\" data-term=\"冬季\">冬季</span>の日本周辺の<span class=\"term\" data-term=\"降水\">降水</span>に関わる<span class=\"term\" data-term=\"現象\">現象</span>について述べた次の文(a)〜(d)の下線部の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合せとして正しいものを，下記の①〜⑤の中から1つ選べ。\n(a) <span class=\"term\" data-term=\"冬型の気圧配置\">冬型の気圧配置</span>のときに，日本海上で<span class=\"term\" data-term=\"筋状\">筋状</span>の<span class=\"term\" data-term=\"対流雲\">対流雲</span>ができ始める地点と大陸の海岸線との間の距離は，<span class=\"term\" data-term=\"海面水温\">海面水温</span>や<span class=\"term\" data-term=\"風速\">風速</span>など他の条件が同じならば，<u>大陸から吹き出す<span class=\"term\" data-term=\"大気\">大気</span>の<span class=\"term\" data-term=\"下層\">下層</span>の気温が低いほど短い</u>。\n(b) 冬型の気圧配置のとき，大陸からの<span class=\"term\" data-term=\"寒気の吹き出し\">寒気の吹き出し</span>により形成される筋状の対流雲は，<u>強い<span class=\"term\" data-term=\"不安定\">不安定</span>により<span class=\"term\" data-term=\"発達\">発達</span>して<span class=\"term\" data-term=\"雲頂\">雲頂</span>が<span class=\"term\" data-term=\"対流圏界面\">対流圏界面</span>に達することが多い</u>。\n(c) <span class=\"term\" data-term=\"上層\">上層</span>の<span class=\"term\" data-term=\"気圧の谷\">気圧の谷</span>が日本列島の東に抜け，<span class=\"term\" data-term=\"低気圧\">低気圧</span>が日本の東海上や千島方面で発達して，本州付近では上空に<span class=\"term\" data-term=\"寒気\">寒気</span>が入り，地上の<span class=\"term\" data-term=\"等圧線\">等圧線</span>が南北の縦縞に並ぶときには，<u>日本海側の山沿いの地方を中心に<span class=\"term\" data-term=\"山雪型\">山雪型</span>と呼ばれる大雪になることが多い</u>。\n(d) <span class=\"term\" data-term=\"地上気温\">地上気温</span>が0℃以上であっても<span class=\"term\" data-term=\"降雨\">降雨</span>ではなく<span class=\"term\" data-term=\"降雪\">降雪</span>となることがある。この場合，降雨になるか降雪になるかは，<u>地上付近の気温とともに<span class=\"term\" data-term=\"湿度\">湿度</span>も影響し，気温が同じであれば湿度が低いほど雪になる可能性が高くなる</u>。",
 "choices": [
 "(a)正 (b)正 (c)誤 (d)誤",
@@ -163,6 +175,10 @@ window.KISHO_DATA["57_senmon"] = {
 },
 {
 "q": 10,
+"expl_fig": {
+"file": "e_57_senmon_q10.svg",
+"caption": "図: 台風の断面（吹き込み・壁雲・眼）と鉛直シアーの影響のイメージ"
+},
 "question": "台風について述べた次の文(a)〜(d)の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを，下記の①〜⑤の中から1つ選べ。\n(a) 台風が発生するのは，主に<span class=\"term\" data-term=\"海面水温\">海面水温</span>が26〜27℃以上の海域で，特に<span class=\"term\" data-term=\"北緯\">北緯</span>5°以南の<span class=\"term\" data-term=\"赤道\">赤道</span>付近では平均的な発生数が多い。\n(b) 発生したばかりの台風では<span class=\"term\" data-term=\"眼\">眼</span>ははっきりしないが，眼ができ始めるころから，<span class=\"term\" data-term=\"中心気圧\">中心気圧</span>は急速に低下していくことが多い。\n(c) 台風の中心に近い<span class=\"term\" data-term=\"領域\">領域</span>では，<span class=\"term\" data-term=\"地表面摩擦\">地表面摩擦</span>の影響により，<span class=\"term\" data-term=\"地表面\">地表面</span>(海面)近くで中心に吹き込む<span class=\"term\" data-term=\"気流\">気流</span>が生じ，その<span class=\"term\" data-term=\"収束\">収束</span>による<span class=\"term\" data-term=\"上昇流\">上昇流</span>が複数の<span class=\"term\" data-term=\"積乱雲\">積乱雲</span>を<span class=\"term\" data-term=\"組織化\">組織化</span>して<span class=\"term\" data-term=\"壁雲\">壁雲</span>を形成している。\n(d) 台風の<span class=\"term\" data-term=\"発達期\">発達期</span>において，積乱雲が上昇流を維持し続けるためには，<span class=\"term\" data-term=\"水平風\">水平風</span>の<span class=\"term\" data-term=\"鉛直シアー\">鉛直シアー</span>が強い必要があることから，水平風の鉛直シアーが強いほど台風が<span class=\"term\" data-term=\"発達\">発達</span>しやすい。",
 "choices": [
 "(a)正 (b)正 (c)正 (d)誤",
@@ -233,6 +249,10 @@ window.KISHO_DATA["57_senmon"] = {
 },
 {
 "q": 14,
+"expl_fig": {
+"file": "e_57_senmon_q14.svg",
+"caption": "図: 流域雨量指数の計算の流れと、雨から洪水リスクまでの時間差のイメージ"
+},
 "question": "<span class=\"term\" data-term=\"気象庁\">気象庁</span>が作成している<span class=\"term\" data-term=\"流域雨量指数\">流域雨量指数</span>について述べた次の文(a)〜(c)の下線部の<span class=\"term\" data-term=\"正誤\">正誤</span>の組み合わせとして正しいものを，下記の①〜⑤の中から1つ選べ。\n(a) 流域雨量指数とは，<span class=\"term\" data-term=\"河川\">河川</span>の<span class=\"term\" data-term=\"上流域\">上流域</span>に降った雨により，<u>対象地点の<span class=\"term\" data-term=\"洪水リスク\">洪水リスク</span>がどの程度高まるかを把握するための<span class=\"term\" data-term=\"指標\">指標</span>で，<span class=\"term\" data-term=\"洪水警報\">洪水警報</span>の「<span class=\"term\" data-term=\"危険度分布\">危険度分布</span>」に用いられている</u>。\n(b) 流域雨量指数は，降った雨が<span class=\"term\" data-term=\"地表面\">地表面</span>や地中を通って河川に流れ出す量を<span class=\"term\" data-term=\"タンクモデル\">タンクモデル</span>で計算し，河川を<span class=\"term\" data-term=\"流下\">流下</span>する量を<span class=\"term\" data-term=\"運動方程式\">運動方程式</span>を用いて計算したもので，<u>降った雨が時間をかけて河川に流れ出し，対象地点に流下するまでの時間差を表現することができる</u>。\n(c) 現在の洪水警報・<span class=\"term\" data-term=\"洪水注意報\">洪水注意報</span>の<span class=\"term\" data-term=\"発表基準\">発表基準</span>の<span class=\"term\" data-term=\"気象要素\">気象要素</span>には，<u>流域雨量指数が用いられており，雨量は用いられていない。<span class=\"term\" data-term=\"基準値\">基準値</span>は過去の<span class=\"term\" data-term=\"洪水\">洪水</span>災害発生時の流域雨量指数の値をもとに設定されており，流域雨量指数の<span class=\"term\" data-term=\"実況値\">実況値</span>や<span class=\"term\" data-term=\"予測値\">予測値</span>とこの基準値を比較することにより，洪水リスクの高まりを把握することができる</u>。",
 "choices": [
 "(a)正 (b)正 (c)正",

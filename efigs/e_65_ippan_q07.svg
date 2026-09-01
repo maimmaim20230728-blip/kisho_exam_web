@@ -1,0 +1,54 @@
+<svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="400" fill="#ffffff"/>
+<defs>
+<marker id="g7blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/></marker>
+<marker id="g7dark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#1c2b36"/></marker>
+<marker id="g7orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/></marker>
+</defs>
+
+<text x="20" y="28" font-family="sans-serif" font-size="18" font-weight="bold" fill="#1c2b36">低気圧まわりの傾度風（北半球）</text>
+
+<circle cx="118" cy="185" r="78" fill="none" stroke="#5a6b78" stroke-width="1.2"/>
+<circle cx="118" cy="185" r="56" fill="none" stroke="#5a6b78" stroke-width="1.2"/>
+<circle cx="118" cy="185" r="34" fill="none" stroke="#5a6b78" stroke-width="1.2"/>
+<text x="172" y="122" font-family="sans-serif" font-size="13" fill="#5a6b78">等圧線</text>
+<text x="109" y="194" font-family="sans-serif" font-size="21" font-weight="bold" fill="#2569a8">L</text>
+
+<line x1="118" y1="107" x2="118" y2="55" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#g7orange)"/>
+<line x1="118" y1="107" x2="118" y2="159" stroke="#1c2b36" stroke-width="2.5" marker-end="url(#g7dark)"/>
+<line x1="118" y1="107" x2="52" y2="107" stroke="#2569a8" stroke-width="3" marker-end="url(#g7blue)"/>
+<circle cx="118" cy="107" r="4.5" fill="#1c2b36"/>
+<text x="60" y="96" font-family="sans-serif" font-size="13" fill="#2569a8">風 V</text>
+
+<path d="M 40 185 A 78 78 0 0 0 118 263" fill="none" stroke="#2569a8" stroke-width="2" marker-end="url(#g7blue)"/>
+
+<line x1="22" y1="296" x2="44" y2="296" stroke="#2569a8" stroke-width="3"/>
+<text x="52" y="301" font-family="sans-serif" font-size="13" fill="#1c2b36">風 V（反時計回り）</text>
+<line x1="22" y1="318" x2="44" y2="318" stroke="#1c2b36" stroke-width="2.5"/>
+<text x="52" y="323" font-family="sans-serif" font-size="13" fill="#1c2b36">気圧傾度力 fVg（内向き）</text>
+<line x1="22" y1="342" x2="44" y2="342" stroke="#f2a73b" stroke-width="2.5"/>
+<text x="52" y="347" font-family="sans-serif" font-size="13" fill="#1c2b36">コリオリ力 fV ＋ 遠心力 V²/r</text>
+<text x="52" y="369" font-family="sans-serif" font-size="13" fill="#5a6b78">（ともに外向き）</text>
+
+<text x="258" y="84" font-family="sans-serif" font-size="13" fill="#5a6b78">風速</text>
+<line x1="272" y1="90" x2="272" y2="336" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="272" y1="336" x2="528" y2="336" stroke="#1c2b36" stroke-width="1.5"/>
+<text x="282" y="116" font-family="sans-serif" font-size="13" fill="#f2a73b">外向きの V²/r がある分 V＜Vg</text>
+<text x="282" y="140" font-family="sans-serif" font-size="13" fill="#5a6b78">A→B で Vg に近づく</text>
+
+<line x1="272" y1="168" x2="528" y2="168" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="6 4"/>
+<text x="398" y="160" font-family="sans-serif" font-size="13" fill="#5a6b78">Vg（地衡風速）</text>
+
+<path d="M 272 336 C 300 268, 336 216, 396 196 C 448 180, 494 176, 526 174" fill="none" stroke="#2569a8" stroke-width="3"/>
+<text x="378" y="232" font-family="sans-serif" font-size="13" fill="#2569a8">V（傾度風速）</text>
+
+<circle cx="310" cy="258" r="4" fill="#f2a73b"/>
+<circle cx="500" cy="176" r="4" fill="#f2a73b"/>
+<text x="292" y="248" font-family="sans-serif" font-size="13" fill="#1c2b36">A</text>
+<text x="508" y="198" font-family="sans-serif" font-size="13" fill="#1c2b36">B</text>
+<line x1="310" y1="336" x2="310" y2="342" stroke="#5a6b78" stroke-width="1.5"/>
+<line x1="500" y1="336" x2="500" y2="342" stroke="#5a6b78" stroke-width="1.5"/>
+<text x="284" y="358" font-family="sans-serif" font-size="12" fill="#5a6b78">A（内側）</text>
+<text x="474" y="358" font-family="sans-serif" font-size="12" fill="#5a6b78">B（外側）</text>
+<text x="330" y="380" font-family="sans-serif" font-size="13" fill="#1c2b36">中心からの距離 r</text>
+</svg>

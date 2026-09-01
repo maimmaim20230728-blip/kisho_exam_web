@@ -1,0 +1,76 @@
+<svg viewBox="0 0 560 410" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="410" fill="#ffffff"/>
+  <defs>
+    <marker id="a6b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="a6o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="a6g" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#15a35a"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="28" font-size="18" font-weight="bold" fill="#1c2b36">図: 温度風と700hPaの風のでき方</text>
+  <text x="544" y="28" font-size="14" fill="#5a6b78" text-anchor="end">北半球(上が北)</text>
+
+  <text x="150" y="78" font-size="16" fill="#1c2b36" text-anchor="middle">地点A(緯度30°)</text>
+  <text x="420" y="78" font-size="16" fill="#1c2b36" text-anchor="middle">地点B(緯度45°)</text>
+
+  <!-- 地点A -->
+  <rect x="30" y="88" width="240" height="192" fill="none" stroke="#5a6b78" stroke-width="1"/>
+  <g stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 5">
+    <line x1="36" y1="100" x2="264" y2="100"/>
+    <line x1="36" y1="140" x2="264" y2="140"/>
+    <line x1="36" y1="180" x2="264" y2="180"/>
+    <line x1="36" y1="220" x2="264" y2="220"/>
+    <line x1="36" y1="260" x2="264" y2="260"/>
+  </g>
+  <text x="210" y="134" font-size="14" fill="#5a6b78">等温線</text>
+  <text x="40" y="120" font-size="14" fill="#2569a8">寒</text>
+  <text x="40" y="246" font-size="14" fill="#e0524d">暖</text>
+  <g stroke="#5a6b78" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="100" y1="190" x2="200" y2="190"/>
+    <line x1="200" y1="250" x2="200" y2="190"/>
+  </g>
+  <line x1="100" y1="250" x2="100" y2="190" stroke="#2569a8" stroke-width="3" marker-end="url(#a6b)"/>
+  <line x1="100" y1="250" x2="200" y2="250" stroke="#f2a73b" stroke-width="3" marker-end="url(#a6o)"/>
+  <line x1="100" y1="250" x2="200" y2="190" stroke="#15a35a" stroke-width="3" marker-end="url(#a6g)"/>
+  <text x="88" y="214" font-size="14" fill="#2569a8" text-anchor="end">5m/s</text>
+
+  <!-- 地点B -->
+  <rect x="300" y="88" width="240" height="192" fill="none" stroke="#5a6b78" stroke-width="1"/>
+  <g stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 5">
+    <line x1="306" y1="100" x2="534" y2="100"/>
+    <line x1="306" y1="140" x2="534" y2="140"/>
+    <line x1="306" y1="180" x2="534" y2="180"/>
+    <line x1="306" y1="220" x2="534" y2="220"/>
+    <line x1="306" y1="260" x2="534" y2="260"/>
+  </g>
+  <text x="480" y="134" font-size="14" fill="#5a6b78">等温線</text>
+  <text x="310" y="120" font-size="14" fill="#2569a8">寒</text>
+  <text x="310" y="246" font-size="14" fill="#e0524d">暖</text>
+  <g stroke="#5a6b78" stroke-width="1" stroke-dasharray="4 4">
+    <line x1="370" y1="190" x2="440" y2="190"/>
+    <line x1="440" y1="250" x2="440" y2="190"/>
+  </g>
+  <line x1="370" y1="250" x2="370" y2="190" stroke="#2569a8" stroke-width="3" marker-end="url(#a6b)"/>
+  <line x1="370" y1="250" x2="440" y2="250" stroke="#f2a73b" stroke-width="3" marker-end="url(#a6o)"/>
+  <line x1="370" y1="250" x2="440" y2="190" stroke="#15a35a" stroke-width="3" marker-end="url(#a6g)"/>
+  <text x="358" y="214" font-size="14" fill="#2569a8" text-anchor="end">5m/s</text>
+
+  <text x="150" y="300" font-size="14" font-weight="bold" fill="#15a35a" text-anchor="middle">700hPaの風速 大</text>
+  <text x="420" y="300" font-size="14" font-weight="bold" fill="#15a35a" text-anchor="middle">700hPaの風速 小</text>
+
+  <!-- 凡例 -->
+  <line x1="50" y1="328" x2="76" y2="328" stroke="#2569a8" stroke-width="3" marker-end="url(#a6b)"/>
+  <text x="84" y="333" font-size="14" fill="#1c2b36">1000hPaの風(南風5m/s)</text>
+  <line x1="261" y1="328" x2="287" y2="328" stroke="#f2a73b" stroke-width="3" marker-end="url(#a6o)"/>
+  <text x="295" y="333" font-size="14" fill="#1c2b36">温度風(西風)</text>
+  <line x1="399" y1="328" x2="425" y2="328" stroke="#15a35a" stroke-width="3" marker-end="url(#a6g)"/>
+  <text x="433" y="333" font-size="14" fill="#1c2b36">700hPaの風</text>
+
+  <text x="280" y="362" font-size="14" fill="#1c2b36" text-anchor="middle">温度風の大きさは f に反比例 → 低緯度の地点Aほど大きい</text>
+  <text x="280" y="388" font-size="14" fill="#1c2b36" text-anchor="middle">温度風は等温線に平行 → 南北成分は変わらず、暖気移流はA・Bで同じ</text>
+</svg>

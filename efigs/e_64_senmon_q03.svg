@@ -1,0 +1,55 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="q3ao" markerWidth="9" markerHeight="9" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="34" font-family="sans-serif" font-size="19" fill="#1c2b36">圏界面の高さは緯度で変わる（北半球）</text>
+
+  <!-- 左パネル -->
+  <text x="16" y="60" font-family="sans-serif" font-size="16" fill="#1c2b36">緯度と圏界面</text>
+  <line x1="52" y1="80" x2="52" y2="350" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="52" y1="350" x2="256" y2="350" stroke="#1c2b36" stroke-width="2"/>
+  <text x="46" y="356" font-family="sans-serif" text-anchor="end" font-size="14" fill="#5a6b78">0</text>
+  <text x="46" y="221" font-family="sans-serif" text-anchor="end" font-size="14" fill="#5a6b78">10</text>
+  <text x="46" y="86" font-family="sans-serif" text-anchor="end" font-size="14" fill="#5a6b78">20</text>
+  <text x="58" y="78" font-family="sans-serif" font-size="14" fill="#5a6b78">km</text>
+  <line x1="48" y1="215" x2="52" y2="215" stroke="#5a6b78" stroke-width="2"/>
+  <line x1="48" y1="80" x2="52" y2="80" stroke="#5a6b78" stroke-width="2"/>
+
+  <path d="M58,208 L146,204 L180,126 L252,120" fill="none" stroke="#f2a73b" stroke-width="3"/>
+  <text x="60" y="180" font-family="sans-serif" font-size="14" fill="#1c2b36">約10km</text>
+  <text x="60" y="198" font-family="sans-serif" font-size="14" fill="#5a6b78">300hPa付近</text>
+  <text x="182" y="146" font-family="sans-serif" font-size="14" fill="#1c2b36">約17km</text>
+  <text x="182" y="164" font-family="sans-serif" font-size="14" fill="#5a6b78">70〜80hPa</text>
+  <text x="86" y="102" font-family="sans-serif" font-size="14" fill="#5a6b78">成層圏</text>
+  <text x="86" y="300" font-family="sans-serif" font-size="14" fill="#5a6b78">対流圏</text>
+  <text x="58" y="344" font-family="sans-serif" font-size="14" fill="#1c2b36">中緯度 A・B</text>
+  <text x="172" y="344" font-family="sans-serif" font-size="14" fill="#1c2b36">低緯度 C</text>
+
+  <!-- 右パネル -->
+  <text x="300" y="60" font-family="sans-serif" font-size="16" fill="#1c2b36">C地点の気温プロファイル</text>
+  <line x1="340" y1="80" x2="340" y2="350" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="340" y1="350" x2="544" y2="350" stroke="#1c2b36" stroke-width="2"/>
+  <text x="334" y="356" font-family="sans-serif" text-anchor="end" font-size="14" fill="#5a6b78">1000</text>
+  <text x="334" y="297" font-family="sans-serif" text-anchor="end" font-size="14" fill="#5a6b78">800</text>
+  <text x="334" y="220" font-family="sans-serif" text-anchor="end" font-size="14" fill="#5a6b78">500</text>
+  <text x="334" y="126" font-family="sans-serif" text-anchor="end" font-size="14" fill="#5a6b78">100</text>
+  <text x="300" y="78" font-family="sans-serif" font-size="14" fill="#5a6b78">hPa</text>
+
+  <line x1="345" y1="108" x2="530" y2="108" stroke="#f2a73b" stroke-width="2" stroke-dasharray="7 5"/>
+  <text x="400" y="98" font-family="sans-serif" font-size="14" fill="#f2a73b">圏界面（70〜80hPa）</text>
+
+  <path d="M500,350 L480,305 L472,292 L500,274 L455,215 L400,146 L368,108 L392,82" fill="none" stroke="#e0524d" stroke-width="3"/>
+  <text x="390" y="200" font-family="sans-serif" font-size="14" fill="#e0524d">気温</text>
+  <text x="424" y="316" font-family="sans-serif" font-size="14" fill="#2569a8">湿潤</text>
+  <text x="508" y="258" font-family="sans-serif" font-size="14" fill="#5a6b78">乾燥</text>
+  <path d="M516,296 L502,282" fill="none" stroke="#f2a73b" stroke-width="2" marker-end="url(#q3ao)"/>
+  <text x="344" y="344" font-family="sans-serif" font-size="14" fill="#5a6b78">地上</text>
+
+  <!-- 下部の注記 -->
+  <text x="16" y="380" font-family="sans-serif" font-size="14" fill="#1c2b36">800hPa付近の逆転：下は湿潤・上は急に乾燥 → 沈降による昇温</text>
+  <text x="16" y="400" font-family="sans-serif" font-size="14" fill="#1c2b36">圏界面は気温分布から判断する（風向の変化からではない）</text>
+</svg>

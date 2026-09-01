@@ -1,0 +1,58 @@
+<svg viewBox="0 0 560 376" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="376" fill="#ffffff"/>
+  <defs>
+    <marker id="aBlue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="32" font-family="sans-serif" font-size="19" fill="#1c2b36">持ち上げ凝結高度は「混合比＝飽和混合比」の高さ</text>
+  <text x="24" y="54" font-family="sans-serif" font-size="14" fill="#5a6b78">混合比は一定のまま 10℃/km で冷えて飽和混合比が下がってくる</text>
+
+  <line x1="80" y1="90" x2="80" y2="300" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="80" y1="300" x2="300" y2="300" stroke="#1c2b36" stroke-width="1.5"/>
+  <text x="26" y="84" font-family="sans-serif" font-size="12" fill="#5a6b78">高度 [m]</text>
+
+  <line x1="76" y1="248" x2="80" y2="248" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="76" y1="195" x2="80" y2="195" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="76" y1="143" x2="80" y2="143" stroke="#1c2b36" stroke-width="1.5"/>
+  <text x="74" y="252" text-anchor="end" font-family="sans-serif" font-size="12" fill="#5a6b78">800</text>
+  <text x="74" y="199" text-anchor="end" font-family="sans-serif" font-size="12" fill="#5a6b78">1000</text>
+  <text x="74" y="147" text-anchor="end" font-family="sans-serif" font-size="12" fill="#5a6b78">1200</text>
+
+  <line x1="80" y1="300" x2="80" y2="304" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="168" y1="300" x2="168" y2="304" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="256" y1="300" x2="256" y2="304" stroke="#1c2b36" stroke-width="1.5"/>
+  <text x="80" y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">10</text>
+  <text x="168" y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">12</text>
+  <text x="256" y="318" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">14</text>
+  <text x="190" y="340" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#1c2b36">混合比 [g/kg]</text>
+
+  <polyline points="287,274 265,248 186,195 137,143 111,116" fill="none" stroke="#f2a73b" stroke-width="3"/>
+  <circle cx="265" cy="248" r="4.5" fill="#f2a73b"/>
+  <circle cx="137" cy="143" r="4.5" fill="#f2a73b"/>
+
+  <text x="92" y="106" font-family="sans-serif" font-size="14" fill="#f2a73b">飽和混合比</text>
+
+  <line x1="186" y1="300" x2="186" y2="195" stroke="#2569a8" stroke-width="3"/>
+  <line x1="186" y1="195" x2="186" y2="96" stroke="#2569a8" stroke-width="3" stroke-dasharray="6 5" marker-end="url(#aBlue)"/>
+  <text x="192" y="104" font-family="sans-serif" font-size="14" fill="#2569a8">空気塊の混合比</text>
+  <text x="192" y="122" font-family="sans-serif" font-size="14" fill="#2569a8">12.4 g/kg</text>
+
+  <circle cx="186" cy="195" r="7" fill="none" stroke="#15a35a" stroke-width="3"/>
+  <line x1="179" y1="214" x2="183" y2="202" stroke="#15a35a" stroke-width="1.5"/>
+  <text x="176" y="222" text-anchor="end" font-family="sans-serif" font-size="14" fill="#15a35a">凝結高度</text>
+
+  <text x="316" y="110" font-family="sans-serif" font-size="14" fill="#1c2b36">各高度で確かめる</text>
+
+  <text x="316" y="136" font-family="sans-serif" font-size="14" fill="#5a6b78">1200m 14℃ 880hPa</text>
+  <text x="316" y="154" font-family="sans-serif" font-size="14" fill="#5a6b78">飽和混合比 11.3 行き過ぎ</text>
+
+  <text x="316" y="188" font-family="sans-serif" font-size="14" fill="#15a35a">1000m 16℃ 900hPa</text>
+  <text x="316" y="206" font-family="sans-serif" font-size="14" fill="#15a35a">飽和混合比 12.4 ちょうど</text>
+
+  <text x="316" y="241" font-family="sans-serif" font-size="14" fill="#5a6b78">800m 18℃ 920hPa</text>
+  <text x="316" y="259" font-family="sans-serif" font-size="14" fill="#5a6b78">飽和混合比 14.2 まだ余裕</text>
+
+  <text x="24" y="360" font-family="sans-serif" font-size="14" fill="#1c2b36">飽和混合比 ＝ 620 × 飽和水蒸気圧 ÷ 気圧</text>
+</svg>

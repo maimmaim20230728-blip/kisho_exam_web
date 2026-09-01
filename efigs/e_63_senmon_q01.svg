@@ -1,0 +1,112 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="aB" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2569a8"/>
+    </marker>
+    <marker id="aG" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="38" font-size="19" fill="#1c2b36">凍るのはどこの水か</text>
+  <text x="24" y="62" font-size="14" fill="#5a6b78">同じ「凍る」でも、凍った水の居場所で名前が変わる</text>
+
+  <!-- セル1 凍雨 -->
+  <rect x="24" y="70" width="248" height="178" rx="8" fill="none" stroke="#dfe5ea" stroke-width="1.5"/>
+  <text x="40" y="94" font-size="16" fill="#2569a8">凍雨</text>
+  <text x="80" y="94" font-size="14" fill="#5a6b78">落下中の空中で凍る</text>
+  <g stroke="#2569a8" stroke-width="2">
+    <line x1="83" y1="116" x2="101" y2="116"/>
+    <line x1="87.5" y1="108" x2="96.5" y2="124"/>
+    <line x1="87.5" y1="124" x2="96.5" y2="108"/>
+  </g>
+  <line x1="92" y1="127" x2="92" y2="138" stroke="#2569a8" stroke-width="2" marker-end="url(#aB)"/>
+  <rect x="44" y="142" width="96" height="16" fill="#e0524d" opacity="0.20"/>
+  <line x1="92" y1="162" x2="92" y2="172" stroke="#2569a8" stroke-width="2" marker-end="url(#aB)"/>
+  <path d="M92,174 C97,181 98,186 92,189 C86,186 87,181 92,174 z" fill="#2569a8"/>
+  <rect x="44" y="191" width="96" height="16" fill="#2569a8" opacity="0.20"/>
+  <line x1="92" y1="211" x2="92" y2="221" stroke="#2569a8" stroke-width="2" marker-end="url(#aB)"/>
+  <polygon points="86,229 92,223 98,229 92,235" fill="#2569a8"/>
+  <line x1="44" y1="240" x2="140" y2="240" stroke="#1c2b36" stroke-width="2"/>
+  <text x="152" y="121" font-size="14" fill="#1c2b36">上空の雪が</text>
+  <text x="152" y="154" font-size="14" fill="#e0524d">暖かい層で解け</text>
+  <text x="152" y="182" font-size="14" fill="#1c2b36">雨粒になり</text>
+  <text x="152" y="205" font-size="14" fill="#2569a8">冷たい層で</text>
+  <text x="152" y="232" font-size="14" fill="#1c2b36">もう一度凍る</text>
+
+  <!-- セル2 雨氷 -->
+  <rect x="288" y="70" width="248" height="178" rx="8" fill="none" stroke="#dfe5ea" stroke-width="1.5"/>
+  <text x="304" y="94" font-size="16" fill="#2569a8">雨氷</text>
+  <text x="344" y="94" font-size="14" fill="#5a6b78">地物の上で凍る</text>
+  <g fill="#cfd9e0">
+    <ellipse cx="340" cy="122" rx="20" ry="13"/>
+    <ellipse cx="360" cy="116" rx="22" ry="15"/>
+    <ellipse cx="374" cy="124" rx="16" ry="11"/>
+  </g>
+  <g stroke="#2569a8" stroke-width="2">
+    <line x1="334" y1="142" x2="334" y2="168" marker-end="url(#aB)"/>
+    <line x1="352" y1="142" x2="352" y2="172" marker-end="url(#aB)"/>
+    <line x1="370" y1="142" x2="370" y2="168" marker-end="url(#aB)"/>
+  </g>
+  <g stroke="#f2a73b" stroke-width="7" stroke-linecap="round" fill="none" opacity="0.75">
+    <path d="M340,210 L340,192"/>
+    <path d="M340,197 L328,188"/>
+    <path d="M340,200 L353,190"/>
+  </g>
+  <g stroke="#1c2b36" stroke-width="2.5" stroke-linecap="round" fill="none">
+    <path d="M340,210 L340,192"/>
+    <path d="M340,197 L328,188"/>
+    <path d="M340,200 L353,190"/>
+  </g>
+  <rect x="304" y="205" width="96" height="5" fill="#f2a73b" opacity="0.75"/>
+  <line x1="304" y1="210" x2="400" y2="210" stroke="#1c2b36" stroke-width="2"/>
+  <text x="412" y="130" font-size="14" fill="#1c2b36">0℃以下でも</text>
+  <text x="412" y="158" font-size="14" fill="#1c2b36">凍らない雨滴が</text>
+  <text x="412" y="186" font-size="14" fill="#1c2b36">地面や枝に当たり</text>
+  <text x="412" y="214" font-size="14" fill="#f2a73b">その場で凍る</text>
+
+  <!-- セル3 霜 -->
+  <rect x="24" y="260" width="248" height="140" rx="8" fill="none" stroke="#dfe5ea" stroke-width="1.5"/>
+  <text x="40" y="282" font-size="16" fill="#2569a8">霜</text>
+  <text x="64" y="282" font-size="14" fill="#5a6b78">空気中の水蒸気から</text>
+  <g fill="#5a6b78">
+    <circle cx="60" cy="304" r="3.5"/>
+    <circle cx="84" cy="300" r="3.5"/>
+    <circle cx="108" cy="306" r="3.5"/>
+    <circle cx="128" cy="300" r="3.5"/>
+  </g>
+  <line x1="92" y1="314" x2="92" y2="338" stroke="#5a6b78" stroke-width="2" marker-end="url(#aG)"/>
+  <g stroke="#2569a8" stroke-width="1.8">
+    <line x1="56" y1="350" x2="68" y2="350"/><line x1="59" y1="345" x2="65" y2="355"/><line x1="59" y1="355" x2="65" y2="345"/>
+    <line x1="86" y1="349" x2="98" y2="349"/><line x1="89" y1="344" x2="95" y2="354"/><line x1="89" y1="354" x2="95" y2="344"/>
+    <line x1="114" y1="351" x2="126" y2="351"/><line x1="117" y1="346" x2="123" y2="356"/><line x1="117" y1="356" x2="123" y2="346"/>
+  </g>
+  <line x1="44" y1="358" x2="140" y2="358" stroke="#1c2b36" stroke-width="2"/>
+  <rect x="44" y="358" width="96" height="22" fill="#eef2f5"/>
+  <text x="152" y="308" font-size="14" fill="#1c2b36">空気中の水蒸気が</text>
+  <text x="152" y="334" font-size="14" fill="#1c2b36">冷えた地面の上で</text>
+  <text x="152" y="360" font-size="14" fill="#1c2b36">直接氷になる</text>
+
+  <!-- セル4 霜柱 -->
+  <rect x="288" y="260" width="248" height="140" rx="8" fill="none" stroke="#dfe5ea" stroke-width="1.5"/>
+  <text x="304" y="282" font-size="16" fill="#2569a8">霜柱</text>
+  <text x="344" y="282" font-size="14" fill="#5a6b78">地中の水から</text>
+  <rect x="326" y="308" width="46" height="6" fill="#cfd9e0"/>
+  <g fill="#2569a8" opacity="0.4">
+    <rect x="330" y="314" width="7" height="26"/>
+    <rect x="345" y="314" width="7" height="26"/>
+    <rect x="360" y="314" width="7" height="26"/>
+  </g>
+  <line x1="304" y1="340" x2="400" y2="340" stroke="#1c2b36" stroke-width="2"/>
+  <rect x="304" y="340" width="96" height="40" fill="#eef2f5"/>
+  <g fill="#2569a8">
+    <circle cx="324" cy="366" r="4"/>
+    <circle cx="348" cy="370" r="4"/>
+    <circle cx="374" cy="364" r="4"/>
+  </g>
+  <line x1="312" y1="360" x2="312" y2="330" stroke="#2569a8" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="412" y="316" font-size="14" fill="#1c2b36">地中の水分が凍り</text>
+  <text x="412" y="344" font-size="14" fill="#1c2b36">地面を押し上げて</text>
+  <text x="412" y="372" font-size="14" fill="#1c2b36">柱になったもの</text>
+</svg>

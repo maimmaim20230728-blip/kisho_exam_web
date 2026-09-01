@@ -1,0 +1,58 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="aB" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2569a8"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="38" font-size="19" fill="#1c2b36">二重偏波レーダーの2つの手がかり</text>
+  <text x="24" y="62" font-size="14" fill="#5a6b78">水平偏波と垂直偏波を送受信して、雨粒の形まで読み取る</text>
+
+  <!-- (a) 減衰 -->
+  <text x="24" y="88" font-size="16" fill="#1c2b36">(a) 手前の強い雨で電波が減衰し、奥は弱いエコーになる</text>
+  <line x1="52" y1="148" x2="52" y2="124" stroke="#1c2b36" stroke-width="3"/>
+  <path d="M40,126 Q52,111 64,120" fill="none" stroke="#1c2b36" stroke-width="3"/>
+  <line x1="32" y1="148" x2="72" y2="148" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="74" y1="118" x2="192" y2="118" stroke="#2569a8" stroke-width="7" opacity="0.85"/>
+  <line x1="192" y1="118" x2="400" y2="118" stroke="#2569a8" stroke-width="4.5" opacity="0.5"/>
+  <line x1="400" y1="118" x2="512" y2="118" stroke="#2569a8" stroke-width="2.5" opacity="0.3" marker-end="url(#aB)"/>
+  <rect x="192" y="98" width="64" height="42" fill="#2569a8" opacity="0.38"/>
+  <rect x="402" y="102" width="56" height="34" fill="#2569a8" opacity="0.16"/>
+  <text x="52" y="166" font-size="14" fill="#1c2b36" text-anchor="middle">レーダー</text>
+  <text x="224" y="166" font-size="14" fill="#1c2b36" text-anchor="middle">強い雨</text>
+  <text x="430" y="166" font-size="14" fill="#5a6b78" text-anchor="middle">奥の雨</text>
+
+  <line x1="24" y1="180" x2="536" y2="180" stroke="#e6ebef" stroke-width="1.5"/>
+
+  <!-- 粒の形 -->
+  <text x="24" y="204" font-size="16" fill="#1c2b36">雨粒は大きいほど扁平・氷粒子は扁平にならない</text>
+  <circle cx="96" cy="242" r="12" fill="#2569a8" opacity="0.75"/>
+  <text x="96" y="278" font-size="14" fill="#1c2b36" text-anchor="middle">小さい雨粒</text>
+  <ellipse cx="266" cy="242" rx="32" ry="15" fill="#2569a8" opacity="0.75"/>
+  <text x="266" y="278" font-size="14" fill="#1c2b36" text-anchor="middle">大きい雨粒(扁平)</text>
+  <polygon points="434,238 442,226 458,224 468,234 466,250 452,258 438,250" fill="#5a6b78" opacity="0.6"/>
+  <text x="452" y="278" font-size="14" fill="#1c2b36" text-anchor="middle">氷粒子(扁平でない)</text>
+
+  <line x1="24" y1="292" x2="536" y2="292" stroke="#e6ebef" stroke-width="1.5"/>
+
+  <!-- 位相差 -->
+  <rect x="24" y="300" width="248" height="104" rx="8" fill="none" stroke="#dfe5ea" stroke-width="1.5"/>
+  <text x="40" y="320" font-size="16" fill="#2569a8">位相差 → 雨の強さ</text>
+  <text x="44" y="344" font-size="14" fill="#f2a73b">水平偏波</text>
+  <text x="150" y="344" font-size="14" fill="#5a6b78">垂直偏波</text>
+  <path d="M44,368 q13,-16 26,0 t26,0 t26,0 t26,0 t26,0 t26,0 t26,0" fill="none" stroke="#f2a73b" stroke-width="2"/>
+  <path d="M57,368 q13,-16 26,0 t26,0 t26,0 t26,0 t26,0 t26,0 t26,0" fill="none" stroke="#5a6b78" stroke-width="2"/>
+  <text x="148" y="398" font-size="14" fill="#1c2b36" text-anchor="middle">ずれが大きいほど強い雨</text>
+
+  <!-- 振幅比 -->
+  <rect x="288" y="300" width="248" height="104" rx="8" fill="none" stroke="#dfe5ea" stroke-width="1.5"/>
+  <text x="304" y="320" font-size="16" fill="#2569a8">振幅比 → 粒の形と種別</text>
+  <line x1="312" y1="378" x2="424" y2="378" stroke="#1c2b36" stroke-width="1.5"/>
+  <rect x="324" y="342" width="26" height="36" fill="#f2a73b"/>
+  <rect x="386" y="362" width="26" height="16" fill="#5a6b78"/>
+  <text x="337" y="396" font-size="14" fill="#1c2b36" text-anchor="middle">水平</text>
+  <text x="399" y="396" font-size="14" fill="#1c2b36" text-anchor="middle">垂直</text>
+  <text x="440" y="354" font-size="14" fill="#1c2b36">比が大きい</text>
+  <text x="440" y="378" font-size="14" fill="#1c2b36">= 扁平な雨粒</text>
+</svg>

@@ -1,0 +1,58 @@
+<svg viewBox="0 0 560 400" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="400" fill="#ffffff"/>
+  <defs>
+    <marker id="a3b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="a3o" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+
+  <text x="16" y="30" font-size="18" font-weight="bold" fill="#1c2b36">図: 温度・湿球温度・露点温度と混合比の関係</text>
+
+  <!-- 軸 -->
+  <line x1="90" y1="70" x2="90" y2="280" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="90" y1="280" x2="410" y2="280" stroke="#1c2b36" stroke-width="2"/>
+  <text x="64" y="62" font-size="14" fill="#1c2b36">混合比 w</text>
+  <text x="416" y="286" font-size="14" fill="#1c2b36">温度</text>
+
+  <!-- 飽和混合比の曲線 -->
+  <polyline points="110,272 150,262 190,247 230,226 270,198 310,162 350,118 390,78"
+            fill="none" stroke="#1c2b36" stroke-width="2.5" stroke-linejoin="round"/>
+  <text x="140" y="112" font-size="14" fill="#1c2b36">飽和混合比の曲線</text>
+  <line x1="256" y1="108" x2="324" y2="146" stroke="#5a6b78" stroke-width="1"/>
+
+  <!-- 混合比の水準線 -->
+  <line x1="90" y1="212" x2="250" y2="212" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="90" y1="242" x2="200" y2="242" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="84" y="217" font-size="14" fill="#1c2b36" text-anchor="end">w₁</text>
+  <text x="84" y="247" font-size="14" fill="#1c2b36" text-anchor="end">w＝w₂</text>
+
+  <!-- 温度の目盛線 -->
+  <line x1="200" y1="242" x2="200" y2="280" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="250" y1="212" x2="250" y2="280" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <line x1="340" y1="242" x2="340" y2="280" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5 4"/>
+  <text x="200" y="298" font-size="14" fill="#1c2b36" text-anchor="middle">T₂</text>
+  <text x="250" y="298" font-size="14" fill="#1c2b36" text-anchor="middle">T₁</text>
+  <text x="340" y="298" font-size="14" fill="#1c2b36" text-anchor="middle">T</text>
+
+  <!-- 露点にいたる道すじ(混合比そのままで冷やす) -->
+  <line x1="336" y1="242" x2="206" y2="242" stroke="#2569a8" stroke-width="2.5" marker-end="url(#a3b)"/>
+  <text x="290" y="260" font-size="14" fill="#2569a8" text-anchor="middle">冷やす</text>
+
+  <!-- 湿球にいたる道すじ(水を蒸発させる) -->
+  <line x1="335" y1="238" x2="258" y2="215" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#a3o)"/>
+  <text x="298" y="200" font-size="14" fill="#f2a73b">水を蒸発させる</text>
+
+  <!-- 状態点 -->
+  <circle cx="200" cy="242" r="4.5" fill="#2569a8"/>
+  <circle cx="250" cy="212" r="4.5" fill="#f2a73b"/>
+  <circle cx="340" cy="242" r="5" fill="#1c2b36"/>
+  <text x="352" y="248" font-size="14" fill="#1c2b36">いまの空気(未飽和)</text>
+
+  <!-- 凡例と結論 -->
+  <text x="280" y="322" font-size="14" fill="#5a6b78" text-anchor="middle">T₂ 露点温度　T₁ 湿球温度　T 温度</text>
+  <text x="280" y="350" font-size="16" font-weight="bold" fill="#1c2b36" text-anchor="middle">T₂ ＜ T₁ ＜ T　　w ＝ w₂ ＜ w₁</text>
+  <text x="280" y="378" font-size="14" fill="#1c2b36" text-anchor="middle">蒸発に使う熱 L(w₁－w) ＝ 空気が失う熱 Cₚ(T－T₁)</text>
+</svg>

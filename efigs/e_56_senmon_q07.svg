@@ -1,0 +1,42 @@
+<svg viewBox="0 0 560 344" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="344" fill="#ffffff"/>
+  <defs>
+    <marker id="jB" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2569a8"/>
+    </marker>
+    <marker id="jO" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="34" font-size="18" fill="#1c2b36" text-anchor="middle">ジェット気流の入口と出口(北半球・300hPa面)</text>
+  <text x="280" y="58" font-size="14" fill="#5a6b78" text-anchor="middle">上から見た図。細線は等高度線(数字は高度m)</text>
+
+  <!-- 等高度線 -->
+  <line x1="40" y1="110" x2="470" y2="110" stroke="#5a6b78" stroke-width="1.5"/>
+  <polyline points="40,165 145,165 200,172 360,172 415,165 470,165" fill="none" stroke="#5a6b78" stroke-width="1.5"/>
+  <polyline points="40,220 145,220 200,202 360,202 415,220 470,220" fill="none" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="476" y="106" font-size="14" fill="#5a6b78">9000</text>
+  <text x="476" y="161" font-size="14" fill="#5a6b78">9120</text>
+  <text x="476" y="216" font-size="14" fill="#5a6b78">9240</text>
+  <text x="24" y="100" font-size="16" fill="#5a6b78">北</text>
+  <text x="24" y="248" font-size="16" fill="#5a6b78">南</text>
+
+  <!-- ジェット軸 -->
+  <polyline points="50,250 190,185 370,185 510,250" fill="none" stroke="#2569a8" stroke-width="4" marker-end="url(#jB)"/>
+  <polygon points="152,193 166,199 152,205" fill="#2569a8" transform="rotate(-24.9 160 199)"/>
+  <polygon points="282,179 296,185 282,191" fill="#2569a8"/>
+  <polygon points="392,193 406,199 392,205" fill="#2569a8" transform="rotate(24.9 400 199)"/>
+
+  <!-- 気圧傾度力 -->
+  <line x1="100" y1="227" x2="100" y2="178" stroke="#f2a73b" stroke-width="3" marker-end="url(#jO)"/>
+  <line x1="460" y1="227" x2="460" y2="178" stroke="#f2a73b" stroke-width="3" marker-end="url(#jO)"/>
+  <text x="93" y="200" font-size="14" fill="#1c2b36" text-anchor="end">気圧傾度力</text>
+
+  <text x="280" y="220" font-size="14" fill="#1c2b36" text-anchor="middle">風速が最大</text>
+  <text x="118" y="272" font-size="14" fill="#1c2b36" text-anchor="middle">入口(風が強まる)</text>
+  <text x="442" y="272" font-size="14" fill="#1c2b36" text-anchor="middle">出口(風が弱まる)</text>
+
+  <text x="280" y="300" font-size="14" fill="#5a6b78" text-anchor="middle">橙の矢印は気圧傾度力。等高度線に直交し、高い側から低い側へ向く</text>
+  <text x="280" y="322" font-size="14" fill="#5a6b78" text-anchor="middle">入口では力の向きへ進むので加速、出口では力に逆らうので減速する</text>
+</svg>

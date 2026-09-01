@@ -1,0 +1,53 @@
+<svg viewBox="0 0 560 376" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="376" fill="#ffffff"/>
+  <defs>
+    <marker id="aDark" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1c2b36"/>
+    </marker>
+    <marker id="aOrange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="32" font-family="sans-serif" font-size="19" fill="#1c2b36">氷の面のほうが飽和水蒸気圧が低い</text>
+  <text x="24" y="54" font-family="sans-serif" font-size="14" fill="#5a6b78">だから水滴は縮み 氷粒子だけが育つ（氷晶過程）</text>
+
+  <text x="36" y="78" font-family="sans-serif" font-size="14" fill="#1c2b36">飽和水蒸気圧</text>
+  <line x1="50" y1="85" x2="50" y2="270" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="50" y1="270" x2="285" y2="270" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="55" y1="270" x2="55" y2="274" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="165" y1="270" x2="165" y2="274" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="275" y1="270" x2="275" y2="274" stroke="#1c2b36" stroke-width="1.5"/>
+  <text x="55" y="288" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">-20℃</text>
+  <text x="165" y="288" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">-10℃</text>
+  <text x="275" y="288" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#5a6b78">0℃</text>
+
+  <polyline points="55,234 110,216 143,201 165,189 220,150 275,96" fill="none" stroke="#e0524d" stroke-width="3"/>
+  <polyline points="55,260 110,245 143,231 165,218 220,173 275,96" fill="none" stroke="#2569a8" stroke-width="3"/>
+
+  <line x1="143" y1="203" x2="143" y2="229" stroke="#1c2b36" stroke-width="2" marker-start="url(#aDark)" marker-end="url(#aDark)"/>
+  <text x="128" y="264" font-family="sans-serif" font-size="14" fill="#1c2b36">この差が氷粒子を育てる</text>
+
+  <line x1="45" y1="302" x2="75" y2="302" stroke="#e0524d" stroke-width="3"/>
+  <text x="82" y="307" font-family="sans-serif" font-size="14" fill="#1c2b36">水面に対する飽和水蒸気圧</text>
+  <line x1="45" y1="324" x2="75" y2="324" stroke="#2569a8" stroke-width="3"/>
+  <text x="82" y="329" font-family="sans-serif" font-size="14" fill="#1c2b36">氷面に対する飽和水蒸気圧</text>
+
+  <text x="310" y="88" font-family="sans-serif" font-size="14" fill="#1c2b36">水滴と氷粒子が共存する雲の中</text>
+  <rect x="310" y="95" width="234" height="175" fill="#f7f9fa" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="6 4"/>
+
+  <circle cx="350" cy="222" r="15" fill="#fbe4e3" stroke="#e0524d" stroke-width="2"/>
+  <circle cx="346" cy="178" r="11" fill="#fbe4e3" stroke="#e0524d" stroke-width="2"/>
+  <circle cx="352" cy="136" r="7" fill="#fbe4e3" stroke="#e0524d" stroke-width="2"/>
+  <text x="318" y="258" font-family="sans-serif" font-size="14" fill="#e0524d">過冷却水滴は縮む</text>
+
+  <polygon points="498,221 507.5,226.5 507.5,237.5 498,243 488.5,237.5 488.5,226.5" fill="#dceaf5" stroke="#2569a8" stroke-width="2"/>
+  <polygon points="500,165 514.7,173.5 514.7,190.5 500,199 485.3,190.5 485.3,173.5" fill="#dceaf5" stroke="#2569a8" stroke-width="2"/>
+  <polygon points="502,104 522.8,116 522.8,140 502,152 481.2,140 481.2,116" fill="#dceaf5" stroke="#2569a8" stroke-width="2"/>
+  <text x="452" y="262" font-family="sans-serif" font-size="14" fill="#2569a8">氷粒子は育つ</text>
+
+  <line x1="378" y1="180" x2="462" y2="178" stroke="#f2a73b" stroke-width="3" marker-end="url(#aOrange)"/>
+  <text x="398" y="168" font-family="sans-serif" font-size="14" fill="#f2a73b">水蒸気</text>
+
+  <text x="24" y="356" font-family="sans-serif" font-size="12" fill="#5a6b78">※左の図は水と氷の差を強調した模式図です</text>
+</svg>

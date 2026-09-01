@@ -1,0 +1,58 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="ao" viewBox="0 0 12 10" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="ab" viewBox="0 0 12 10" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="ar" viewBox="0 0 12 10" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto" markerUnits="userSpaceOnUse">
+      <path d="M0,0 L12,5 L0,10 z" fill="#e0524d"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="30" font-family="sans-serif" font-size="19" fill="#1c2b36">図: 放射のつり合いと雲頂の長波放射</text>
+
+  <!-- 上段: 放射収支 -->
+  <line x1="40" y1="78" x2="520" y2="78" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <text x="520" y="96" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="end">大気の上端</text>
+  <line x1="40" y1="200" x2="520" y2="200" stroke="#1c2b36" stroke-width="2.5"/>
+  <text x="40" y="218" font-family="sans-serif" font-size="13" fill="#5a6b78">地表</text>
+
+  <line x1="92" y1="82" x2="92" y2="196" stroke="#f2a73b" stroke-width="4" marker-end="url(#ao)"/>
+  <text x="92" y="64" font-family="sans-serif" font-size="14" fill="#f2a73b" text-anchor="middle">太陽放射 100</text>
+  <ellipse cx="180" cy="158" rx="24" ry="10" fill="#e3e9ec" stroke="#5a6b78" stroke-width="1"/>
+  <text x="148" y="163" font-family="sans-serif" font-size="12" fill="#5a6b78" text-anchor="end">雲</text>
+  <line x1="180" y1="150" x2="180" y2="84" stroke="#f2a73b" stroke-width="3" marker-end="url(#ao)"/>
+  <text x="188" y="64" font-family="sans-serif" font-size="14" fill="#f2a73b" text-anchor="middle">反射 30</text>
+  <line x1="434" y1="192" x2="434" y2="84" stroke="#2569a8" stroke-width="4" marker-end="url(#ab)"/>
+  <text x="434" y="64" font-family="sans-serif" font-size="14" fill="#2569a8" text-anchor="middle">外向き長波 70</text>
+
+  <rect x="212" y="106" width="196" height="84" rx="6" fill="#f7f9fa" stroke="#dce3e8" stroke-width="1"/>
+  <text x="310" y="130" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">つり合うのは</text>
+  <text x="310" y="156" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1c2b36" text-anchor="middle">吸収70 ＝ 長波70</text>
+  <text x="310" y="180" font-family="sans-serif" font-size="13" fill="#e0524d" text-anchor="middle">入射100 とは等しくない</text>
+
+  <text x="280" y="228" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">長波を吸収するのは水蒸気や二酸化炭素</text>
+
+  <line x1="20" y1="244" x2="540" y2="244" stroke="#dce3e8" stroke-width="1"/>
+
+  <!-- 下段: 雲頂と海面 -->
+  <text x="20" y="264" font-family="sans-serif" font-size="15" font-weight="bold" fill="#1c2b36">雲頂が冷たいほど長波放射は弱い</text>
+
+  <path d="M118 362 L118 326 C118 302 142 292 158 296 C180 288 204 300 202 322 L202 362 Z" fill="#e3e9ec" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="110" y="308" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="end">積乱雲</text>
+  <line x1="160" y1="290" x2="160" y2="276" stroke="#2569a8" stroke-width="2.5" marker-end="url(#ab)"/>
+  <text x="178" y="286" font-family="sans-serif" font-size="14" fill="#2569a8">弱い</text>
+  <text x="160" y="326" font-family="sans-serif" font-size="14" fill="#2569a8" text-anchor="middle">雲頂</text>
+  <text x="160" y="348" font-family="sans-serif" font-size="14" fill="#2569a8" text-anchor="middle">−60℃</text>
+
+  <line x1="400" y1="360" x2="400" y2="278" stroke="#e0524d" stroke-width="4" marker-end="url(#ar)"/>
+  <text x="418" y="310" font-family="sans-serif" font-size="14" fill="#e0524d">強い</text>
+
+  <rect x="40" y="362" width="480" height="18" fill="#a8c7e0"/>
+  <text x="400" y="375" font-family="sans-serif" font-size="13" fill="#1c2b36" text-anchor="middle">海面 約25℃</text>
+
+  <text x="280" y="400" font-family="sans-serif" font-size="13" fill="#5a6b78" text-anchor="middle">放射の強さは絶対温度(K)の4乗に比例する</text>
+</svg>

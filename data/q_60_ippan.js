@@ -21,7 +21,11 @@ window.KISHO_DATA["60_ippan"] = {
 5
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_60_ippan_q01.svg",
+"caption": "図: オゾンが低緯度でつくられ高緯度にたまるイメージ"
+}
 },
 {
 "q": 2,
@@ -41,7 +45,11 @@ window.KISHO_DATA["60_ippan"] = {
 "figures": [
 "60_ippan_q02_extra1.png",
 "60_ippan_q02_extra2.png"
-]
+],
+"expl_fig": {
+"file": "e_60_ippan_q02.svg",
+"caption": "図: 混合比と飽和混合比が一致する高さを探すイメージ"
+}
 },
 {
 "q": 3,
@@ -81,7 +89,11 @@ window.KISHO_DATA["60_ippan"] = {
 2
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_60_ippan_q04.svg",
+"caption": "図: 氷面の飽和水蒸気圧が低いために氷粒子が育つイメージ"
+}
 },
 {
 "q": 5,
@@ -177,7 +189,11 @@ window.KISHO_DATA["60_ippan"] = {
 1
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_60_ippan_q09.svg",
+"caption": "図: 夏の極が最も暖かく冬の極が極渦になるイメージ"
+}
 },
 {
 "q": 10,
@@ -194,7 +210,11 @@ window.KISHO_DATA["60_ippan"] = {
 5
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_60_ippan_q10.svg",
+"caption": "図: 大気境界層の気温・逆転層・湿り・風速のイメージ"
+}
 },
 {
 "q": 11,

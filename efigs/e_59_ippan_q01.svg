@@ -1,0 +1,62 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+<rect width="560" height="420" fill="#ffffff"/>
+
+<text x="28" y="32" font-size="18" font-weight="bold" fill="#1c2b36">気温の極大とオゾンの極大は高さがちがう</text>
+
+<!-- カラム見出し -->
+<text x="26" y="70" font-size="12" fill="#5a6b78">高度 km</text>
+<text x="78" y="70" font-size="12" fill="#5a6b78">気温(右ほど高温)</text>
+<text x="262" y="70" font-size="12" fill="#5a6b78">オゾン数密度(右ほど大)</text>
+<text x="412" y="70" font-size="12" fill="#5a6b78">大気の層</text>
+
+<!-- カラム区切り -->
+<line x1="256" y1="80" x2="256" y2="344" stroke="#dde4e9" stroke-width="1"/>
+<line x1="406" y1="80" x2="406" y2="344" stroke="#dde4e9" stroke-width="1"/>
+
+<!-- 高度軸 -->
+<line x1="72" y1="80" x2="72" y2="344" stroke="#1c2b36" stroke-width="1.5"/>
+<line x1="67" y1="344" x2="72" y2="344" stroke="#5a6b78" stroke-width="1"/>
+<line x1="67" y1="315" x2="72" y2="315" stroke="#5a6b78" stroke-width="1"/>
+<line x1="67" y1="286" x2="72" y2="286" stroke="#5a6b78" stroke-width="1"/>
+<line x1="67" y1="212" x2="72" y2="212" stroke="#5a6b78" stroke-width="1"/>
+<line x1="67" y1="133" x2="72" y2="133" stroke="#5a6b78" stroke-width="1"/>
+<line x1="67" y1="80" x2="72" y2="80" stroke="#5a6b78" stroke-width="1"/>
+<text x="62" y="348" font-size="11.5" fill="#5a6b78" text-anchor="end">0</text>
+<text x="62" y="320" font-size="11.5" fill="#5a6b78" text-anchor="end">11</text>
+<text x="62" y="291" font-size="11.5" fill="#5a6b78" text-anchor="end">22</text>
+<text x="62" y="217" font-size="11.5" fill="#5a6b78" text-anchor="end">50</text>
+<text x="62" y="138" font-size="11.5" fill="#5a6b78" text-anchor="end">80</text>
+<text x="62" y="85" font-size="11.5" fill="#5a6b78" text-anchor="end">100</text>
+
+<!-- 高度の目安線 -->
+<line x1="72" y1="315" x2="404" y2="315" stroke="#c9d6e0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="72" y1="286" x2="404" y2="286" stroke="#c9d6e0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="72" y1="212" x2="404" y2="212" stroke="#c9d6e0" stroke-width="1" stroke-dasharray="4 4"/>
+<line x1="72" y1="133" x2="404" y2="133" stroke="#c9d6e0" stroke-width="1" stroke-dasharray="4 4"/>
+
+<!-- 気温プロファイル -->
+<polyline points="227,344 137,315 137,291 150,265 180,238 204,212 95,133 132,80" fill="none" stroke="#2569a8" stroke-width="2.8" stroke-linejoin="round"/>
+<circle cx="204" cy="212" r="4.5" fill="#f2a73b" stroke="#1c2b36" stroke-width="1"/>
+<text x="196" y="197" font-size="11.5" fill="#1c2b36">気温の極大</text>
+<text x="112" y="126" font-size="11.5" fill="#5a6b78">最も低温</text>
+
+<!-- オゾン数密度プロファイル -->
+<polyline points="269,344 274,317 300,304 360,291 380,286 365,278 330,265 292,238 272,212 267,186" fill="none" stroke="#f2a73b" stroke-width="2.8" stroke-linejoin="round"/>
+<circle cx="380" cy="286" r="4.5" fill="#f2a73b" stroke="#1c2b36" stroke-width="1"/>
+<line x1="350" y1="326" x2="374" y2="292" stroke="#f2a73b" stroke-width="1.2"/>
+<text x="346" y="332" font-size="11.5" fill="#1c2b36" text-anchor="end">オゾンの極大</text>
+
+<!-- 層の名前 -->
+<text x="414" y="108" font-size="13" fill="#1c2b36">熱圏</text>
+<text x="414" y="138" font-size="11.5" fill="#5a6b78">中間圏界面</text>
+<text x="414" y="178" font-size="13" fill="#1c2b36">中間圏</text>
+<text x="414" y="217" font-size="11.5" fill="#5a6b78">成層圏界面</text>
+<text x="414" y="262" font-size="13" fill="#1c2b36">成層圏</text>
+<text x="414" y="320" font-size="11.5" fill="#5a6b78">対流圏界面</text>
+<text x="414" y="338" font-size="13" fill="#1c2b36">対流圏</text>
+
+<!-- 下部の要点 -->
+<line x1="26" y1="360" x2="534" y2="360" stroke="#dde4e9" stroke-width="1"/>
+<text x="26" y="380" font-size="14" fill="#1c2b36">オゾンが最も多いのは約22km、気温が最も高いのは約50km。</text>
+<text x="26" y="400" font-size="14" fill="#1c2b36">上ほど紫外線が強く空気も薄いので、暖まる高さは上にずれる。</text>
+</svg>

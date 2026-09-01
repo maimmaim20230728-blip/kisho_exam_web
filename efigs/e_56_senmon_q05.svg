@@ -1,0 +1,37 @@
+<svg viewBox="0 0 560 340" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="340" fill="#ffffff"/>
+
+  <text x="280" y="30" font-size="18" fill="#1c2b36" text-anchor="middle">格子間隔と、表現できる現象の大きさ</text>
+  <text x="280" y="54" font-size="14" fill="#5a6b78" text-anchor="middle">表現できるのは、ふつう格子間隔の数倍以上の大きさの現象</text>
+
+  <!-- 現象の帯 -->
+  <text x="143" y="106" font-size="14" fill="#1c2b36" text-anchor="middle">積雲・積乱雲(数km)</text>
+  <rect x="70" y="114" width="147" height="18" rx="6" fill="#cfe3f2" stroke="#2569a8" stroke-width="2"/>
+  <text x="312" y="106" font-size="14" fill="#1c2b36" text-anchor="middle">線状の降水域(数十km)</text>
+  <rect x="261" y="114" width="102" height="18" rx="6" fill="#cfe3f2" stroke="#2569a8" stroke-width="2"/>
+  <text x="472" y="106" font-size="14" fill="#1c2b36" text-anchor="middle">温帯低気圧</text>
+  <rect x="434" y="114" width="76" height="18" rx="6" fill="#cfe3f2" stroke="#2569a8" stroke-width="2"/>
+
+  <!-- 目盛り軸(水平スケール) -->
+  <line x1="70" y1="160" x2="510" y2="160" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="70" y1="154" x2="70" y2="166" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="217" y1="154" x2="217" y2="166" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="363" y1="154" x2="363" y2="166" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="510" y1="154" x2="510" y2="166" stroke="#1c2b36" stroke-width="2"/>
+  <text x="66" y="152" font-size="14" fill="#5a6b78">1km</text>
+  <text x="217" y="152" font-size="14" fill="#5a6b78" text-anchor="middle">10km</text>
+  <text x="363" y="152" font-size="14" fill="#5a6b78" text-anchor="middle">100km</text>
+  <text x="514" y="152" font-size="14" fill="#5a6b78" text-anchor="end">1000km</text>
+
+  <!-- 各モデルが表現できる下限 -->
+  <line x1="217" y1="162" x2="217" y2="190" stroke="#f2a73b" stroke-width="3"/>
+  <text x="209" y="195" font-size="14" fill="#1c2b36" text-anchor="end">局地モデル 2km格子の下限</text>
+  <line x1="275" y1="162" x2="275" y2="222" stroke="#f2a73b" stroke-width="3"/>
+  <text x="267" y="227" font-size="14" fill="#1c2b36" text-anchor="end">メソモデル 5km格子の下限</text>
+  <line x1="363" y1="162" x2="363" y2="254" stroke="#f2a73b" stroke-width="3"/>
+  <text x="355" y="259" font-size="14" fill="#1c2b36" text-anchor="end">全球モデル 20km格子の下限</text>
+
+  <text x="280" y="278" font-size="12" fill="#5a6b78" text-anchor="middle">大気境界層の渦(数百m)は図の左端よりさらに小さく、どのモデルも直接は表現できない</text>
+  <text x="280" y="300" font-size="14" fill="#5a6b78" text-anchor="middle">橙の線は、そのモデルが表現できる大きさのおよその下限</text>
+  <text x="280" y="322" font-size="14" fill="#5a6b78" text-anchor="middle">これより小さい現象の効果は、パラメタリゼーションで見積もる</text>
+</svg>

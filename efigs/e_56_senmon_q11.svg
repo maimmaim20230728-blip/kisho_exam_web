@@ -1,0 +1,60 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="tB" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2569a8"/>
+    </marker>
+    <marker id="tO" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="tG" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#5a6b78"/>
+    </marker>
+    <marker id="tR" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#e0524d"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="32" font-size="18" fill="#1c2b36" text-anchor="middle">台風の構造と風のつり合い(北半球)</text>
+  <line x1="280" y1="48" x2="280" y2="360" stroke="#5a6b78" stroke-width="1" opacity="0.3"/>
+
+  <!-- 左: 暖気核の鉛直断面 -->
+  <text x="145" y="64" font-size="16" fill="#1c2b36" text-anchor="middle">中心は海面〜圏界面まで暖かい</text>
+  <line x1="30" y1="96" x2="260" y2="96" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="30" y="86" font-size="14" fill="#5a6b78">対流圏界面</text>
+  <rect x="100" y="136" width="30" height="150" rx="8" fill="#cfd6db"/>
+  <rect x="160" y="136" width="30" height="150" rx="8" fill="#cfd6db"/>
+  <rect x="100" y="100" width="90" height="186" fill="#e0524d" opacity="0.16"/>
+  <text x="145" y="150" font-size="14" fill="#1c2b36" text-anchor="middle">眼</text>
+  <text x="36" y="124" font-size="14" fill="#1c2b36">暖気核</text>
+  <line x1="84" y1="120" x2="124" y2="120" stroke="#e0524d" stroke-width="2.5" marker-end="url(#tR)"/>
+  <rect x="30" y="286" width="230" height="18" fill="#dce9f4"/>
+  <line x1="30" y1="286" x2="260" y2="286" stroke="#1c2b36" stroke-width="2"/>
+  <text x="145" y="300" font-size="14" fill="#2569a8" text-anchor="middle">海面</text>
+  <text x="145" y="326" font-size="14" fill="#5a6b78" text-anchor="middle">まわりより高温な部分が上下に貫く</text>
+  <text x="145" y="348" font-size="14" fill="#5a6b78" text-anchor="middle">エネルギー源は水蒸気の潜熱</text>
+
+  <!-- 右: 傾度風のつり合い -->
+  <text x="415" y="64" font-size="16" fill="#1c2b36" text-anchor="middle">傾度風の3つの力のつり合い</text>
+  <text x="415" y="86" font-size="14" fill="#2569a8" text-anchor="middle">反時計回りに回る</text>
+  <circle cx="415" cy="190" r="92" fill="none" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="6,4"/>
+  <text x="300" y="124" font-size="14" fill="#5a6b78">等圧線</text>
+  <line x1="462" y1="106" x2="368" y2="106" stroke="#2569a8" stroke-width="3" marker-end="url(#tB)"/>
+  <text x="415" y="196" font-size="16" fill="#1c2b36" text-anchor="middle">低</text>
+
+  <text x="415" y="222" font-size="14" fill="#1c2b36" text-anchor="middle">気圧傾度力</text>
+  <line x1="415" y1="278" x2="415" y2="232" stroke="#f2a73b" stroke-width="3" marker-end="url(#tO)"/>
+  <line x1="415" y1="282" x2="490" y2="282" stroke="#2569a8" stroke-width="3.5" marker-end="url(#tB)"/>
+  <text x="498" y="287" font-size="14" fill="#2569a8">風</text>
+  <line x1="405" y1="286" x2="405" y2="309" stroke="#5a6b78" stroke-width="3" marker-end="url(#tG)"/>
+  <line x1="429" y1="286" x2="429" y2="309" stroke="#5a6b78" stroke-width="3" marker-end="url(#tG)"/>
+  <circle cx="415" cy="282" r="4" fill="#1c2b36"/>
+  <line x1="399" y1="318" x2="405" y2="312" stroke="#5a6b78" stroke-width="1"/>
+  <line x1="435" y1="318" x2="429" y2="312" stroke="#5a6b78" stroke-width="1"/>
+  <text x="397" y="326" font-size="14" fill="#1c2b36" text-anchor="end">遠心力</text>
+  <text x="437" y="326" font-size="14" fill="#1c2b36">コリオリ力</text>
+  <text x="415" y="354" font-size="14" fill="#5a6b78" text-anchor="middle">半径が小さいほど遠心力が大きい</text>
+
+  <text x="280" y="376" font-size="14" fill="#5a6b78" text-anchor="middle">気圧傾度力(内向き)＝コリオリ力＋遠心力(ともに外向き)</text>
+  <text x="280" y="398" font-size="14" fill="#5a6b78" text-anchor="middle">同じ緯度・同じ気圧傾度なら、中心に近いほど風は弱い</text>
+</svg>

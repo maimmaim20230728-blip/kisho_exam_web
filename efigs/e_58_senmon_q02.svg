@@ -1,0 +1,58 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="aB" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2569a8"/>
+    </marker>
+    <marker id="aBr" viewBox="0 0 12 12" refX="2" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M12,0 L0,6 L12,12 z" fill="#2569a8"/>
+    </marker>
+    <marker id="aG" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#5a6b78"/>
+    </marker>
+    <marker id="aGr" viewBox="0 0 12 12" refX="2" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M12,0 L0,6 L12,12 z" fill="#5a6b78"/>
+    </marker>
+    <marker id="aO" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="34" font-size="18" fill="#1c2b36">二重偏波レーダーは何を測るか</text>
+  <text x="20" y="58" font-size="13" fill="#5a6b78">落ちていく雨粒は空気の抵抗でつぶされ、横に長い形になる</text>
+
+  <line x1="275" y1="76" x2="275" y2="286" stroke="#e2e8ec" stroke-width="1.5"/>
+
+  <!-- 左: 雨粒の形 -->
+  <text x="30" y="100" font-size="15" fill="#1c2b36">落ちる雨粒の形</text>
+  <text x="30" y="128" font-size="13" fill="#5a6b78">落下</text>
+  <line x1="56" y1="136" x2="56" y2="214" stroke="#5a6b78" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="130" y="124" font-size="13" fill="#5a6b78">横に長い</text>
+  <line x1="100" y1="132" x2="216" y2="132" stroke="#5a6b78" stroke-width="2" marker-start="url(#aGr)" marker-end="url(#aG)"/>
+  <ellipse cx="158" cy="178" rx="58" ry="30" fill="#cfe3f2" stroke="#2569a8" stroke-width="2"/>
+  <line x1="128" y1="236" x2="128" y2="222" stroke="#5a6b78" stroke-width="2" marker-end="url(#aG)"/>
+  <line x1="158" y1="236" x2="158" y2="222" stroke="#5a6b78" stroke-width="2" marker-end="url(#aG)"/>
+  <line x1="188" y1="236" x2="188" y2="222" stroke="#5a6b78" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="120" y="258" font-size="13" fill="#5a6b78">空気の抵抗</text>
+
+  <!-- 右: 偏波の振れる向き -->
+  <text x="300" y="100" font-size="15" fill="#1c2b36">偏波の振れる向き</text>
+  <ellipse cx="412" cy="176" rx="70" ry="36" fill="#cfe3f2" stroke="#2569a8" stroke-width="2"/>
+  <line x1="350" y1="176" x2="474" y2="176" stroke="#2569a8" stroke-width="3" marker-start="url(#aBr)" marker-end="url(#aB)"/>
+  <line x1="412" y1="146" x2="412" y2="206" stroke="#5a6b78" stroke-width="2" marker-start="url(#aGr)" marker-end="url(#aG)"/>
+  <text x="298" y="236" font-size="13" fill="#2569a8">水平の振れ=水の中が長い</text>
+  <text x="298" y="258" font-size="13" fill="#5a6b78">垂直の振れ=水の中が短い</text>
+
+  <!-- 結論 -->
+  <rect x="20" y="300" width="240" height="104" rx="8" fill="#f4f8fb" stroke="#cfe0ec" stroke-width="1.5"/>
+  <text x="36" y="328" font-size="15" fill="#1c2b36">位相の差の増え方</text>
+  <line x1="36" y1="348" x2="64" y2="348" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#aO)"/>
+  <text x="76" y="354" font-size="15" fill="#1c2b36">雨の強さ</text>
+  <text x="36" y="386" font-size="13" fill="#5a6b78">電波の弱まりに強い</text>
+
+  <rect x="300" y="300" width="240" height="104" rx="8" fill="#f4f8fb" stroke="#cfe0ec" stroke-width="1.5"/>
+  <text x="316" y="328" font-size="15" fill="#1c2b36">反射の強さの比</text>
+  <line x1="316" y1="348" x2="344" y2="348" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#aO)"/>
+  <text x="356" y="354" font-size="15" fill="#1c2b36">粒の形</text>
+  <text x="316" y="386" font-size="13" fill="#5a6b78">雨・雪・ひょうの判別</text>
+</svg>

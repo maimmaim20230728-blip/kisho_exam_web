@@ -1,0 +1,71 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="q02arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="q02arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a6b78"/>
+    </marker>
+    <marker id="q02arGs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M10,0 L0,5 L10,10 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="32" font-size="19" font-weight="bold" fill="#1c2b36">ブライトバンド：融解層が環状に強く光る</text>
+
+  <!-- 左：鉛直断面 -->
+  <text x="24" y="58" font-size="13" fill="#5a6b78">鉛直断面（仰角は誇張して描いています）</text>
+
+  <rect x="30" y="152" width="310" height="18" fill="#dbeaf5"/>
+
+  <line x1="185" y1="262" x2="340" y2="144" stroke="#5a6b78" stroke-width="2"/>
+  <line x1="185" y1="262" x2="30" y2="144" stroke="#5a6b78" stroke-width="2"/>
+
+  <text x="185" y="166" font-size="13" fill="#2569a8" text-anchor="middle">融解層（0℃付近）</text>
+
+  <circle cx="318" cy="161" r="7" fill="#f2a73b"/>
+  <circle cx="52" cy="161" r="7" fill="#f2a73b"/>
+  <line x1="318" y1="172" x2="318" y2="198" stroke="#f2a73b" stroke-width="2"/>
+  <text x="318" y="215" font-size="13" font-weight="bold" fill="#f2a73b" text-anchor="middle">強いエコー</text>
+
+  <line x1="52" y1="152" x2="52" y2="134" stroke="#5a6b78" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="318" y1="152" x2="318" y2="134" stroke="#5a6b78" stroke-width="1" stroke-dasharray="4,3"/>
+  <line x1="52" y1="128" x2="318" y2="128" stroke="#5a6b78" stroke-width="2" marker-end="url(#q02arG)" marker-start="url(#q02arGs)"/>
+  <text x="185" y="120" font-size="13" fill="#5a6b78" text-anchor="middle">レーダーから等距離</text>
+
+  <line x1="30" y1="262" x2="340" y2="262" stroke="#1c2b36" stroke-width="2"/>
+  <polygon points="177,262 193,262 185,244" fill="#1c2b36"/>
+  <text x="185" y="280" font-size="13" fill="#1c2b36" text-anchor="middle">レーダー</text>
+  <text x="185" y="297" font-size="12" fill="#5a6b78" text-anchor="middle">一定の仰角で回転させる</text>
+
+  <!-- 右：平面（上から見た図） -->
+  <text x="378" y="58" font-size="13" fill="#5a6b78">上から見ると</text>
+  <circle cx="455" cy="168" r="70" fill="#eef4f9"/>
+  <circle cx="455" cy="168" r="52" fill="none" stroke="#f2a73b" stroke-width="12" opacity="0.9"/>
+  <line x1="449" y1="162" x2="461" y2="174" stroke="#1c2b36" stroke-width="2.5"/>
+  <line x1="461" y1="162" x2="449" y2="174" stroke="#1c2b36" stroke-width="2.5"/>
+  <text x="455" y="258" font-size="14" font-weight="bold" fill="#f2a73b" text-anchor="middle">環状の強エコー</text>
+  <text x="455" y="278" font-size="12" fill="#5a6b78" text-anchor="middle">（×＝レーダーの位置）</text>
+
+  <line x1="24" y1="300" x2="536" y2="300" stroke="#5a6b78" stroke-width="1" opacity="0.35"/>
+
+  <!-- 下段：落下にともなう粒子の変化 -->
+  <text x="24" y="322" font-size="13" fill="#5a6b78">落下にともなう変化</text>
+
+  <polygon points="110,326 118,342 136,344 122,356 126,374 110,364 94,374 98,356 84,344 102,342" fill="#ffffff" stroke="#2569a8" stroke-width="2"/>
+  <text x="110" y="392" font-size="13" fill="#1c2b36" text-anchor="middle">雪片（乾いた氷）</text>
+  <text x="110" y="410" font-size="12" fill="#5a6b78" text-anchor="middle">反射は弱い</text>
+
+  <circle cx="290" cy="349" r="24" fill="#8fc0e2"/>
+  <circle cx="290" cy="349" r="15" fill="#ffffff" stroke="#2569a8" stroke-width="2"/>
+  <text x="290" y="392" font-size="13" fill="#1c2b36" text-anchor="middle">表面が水の膜</text>
+  <text x="290" y="410" font-size="12" font-weight="bold" fill="#f2a73b" text-anchor="middle">反射が最も強い</text>
+
+  <circle cx="470" cy="349" r="10" fill="#2569a8"/>
+  <text x="470" y="392" font-size="13" fill="#1c2b36" text-anchor="middle">雨滴（粒は小さい）</text>
+  <text x="470" y="410" font-size="12" fill="#5a6b78" text-anchor="middle">反射は中くらい</text>
+
+  <line x1="150" y1="349" x2="248" y2="349" stroke="#5a6b78" stroke-width="2" marker-end="url(#q02arG)"/>
+  <line x1="332" y1="349" x2="430" y2="349" stroke="#5a6b78" stroke-width="2" marker-end="url(#q02arG)"/>
+</svg>

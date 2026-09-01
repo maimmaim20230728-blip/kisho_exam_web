@@ -21,7 +21,11 @@ window.KISHO_DATA["63_senmon"] = {
 3
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_63_senmon_q01.svg",
+"caption": "図: どこの水が凍るかで呼び名が変わるイメージ"
+}
 },
 {
 "q": 2,
@@ -55,7 +59,11 @@ window.KISHO_DATA["63_senmon"] = {
 1
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_63_senmon_q03.svg",
+"caption": "図: 位相差で雨の強さ、振幅比で粒の形を見るイメージ"
+}
 },
 {
 "q": 4,
@@ -106,7 +114,11 @@ window.KISHO_DATA["63_senmon"] = {
 2
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_63_senmon_q06.svg",
+"caption": "図: 平均は山をならし、最大は山を拾うイメージ"
+}
 },
 {
 "q": 7,
@@ -159,7 +171,11 @@ window.KISHO_DATA["63_senmon"] = {
 1
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_63_senmon_q09.svg",
+"caption": "図: 水蒸気を運ぶ2つの気流と相当温位集中帯のイメージ"
+}
 },
 {
 "q": 10,
@@ -176,7 +192,11 @@ window.KISHO_DATA["63_senmon"] = {
 2
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_63_senmon_q10.svg",
+"caption": "図: 摩擦による吹き込みが壁雲をつくるイメージ"
+}
 },
 {
 "q": 11,
@@ -193,7 +213,11 @@ window.KISHO_DATA["63_senmon"] = {
 3
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_63_senmon_q11.svg",
+"caption": "図: 蒸発で冷えた空気が落ちて四方へ広がるイメージ"
+}
 },
 {
 "q": 12,

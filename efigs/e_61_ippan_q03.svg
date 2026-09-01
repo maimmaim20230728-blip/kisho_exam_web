@@ -1,0 +1,39 @@
+<svg viewBox="0 0 560 406" xmlns="http://www.w3.org/2000/svg">
+  <rect width="560" height="406" fill="#ffffff"/>
+  <defs>
+    <marker id="mb" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="34" font-family="sans-serif" font-size="19" fill="#1c2b36">持ち上げ凝結高度を境に、変わり方が変わる</text>
+
+  <!-- 雲 -->
+  <circle cx="98" cy="182" r="20" fill="#5a6b78" opacity="0.22"/>
+  <circle cx="124" cy="170" r="26" fill="#5a6b78" opacity="0.22"/>
+  <circle cx="152" cy="184" r="18" fill="#5a6b78" opacity="0.22"/>
+
+  <!-- 上昇する空気塊 -->
+  <line x1="120" y1="348" x2="120" y2="96" stroke="#2569a8" stroke-width="3" marker-end="url(#mb)"/>
+  <circle cx="120" cy="322" r="11" fill="#ffffff" stroke="#2569a8" stroke-width="2"/>
+  <text x="100" y="327" font-family="sans-serif" font-size="14" fill="#2569a8" text-anchor="end">空気塊</text>
+  <text x="104" y="110" font-family="sans-serif" font-size="14" fill="#2569a8" text-anchor="end">上昇</text>
+
+  <!-- 上のブロック -->
+  <text x="200" y="118" font-family="sans-serif" font-size="16" fill="#5a6b78">LCL より上(凝結したあと)</text>
+  <text x="200" y="148" font-family="sans-serif" font-size="14" fill="#1c2b36">凝結して雲ができる</text>
+  <text x="200" y="176" font-family="sans-serif" font-size="14" fill="#e0524d">潜熱が加わる → 温位 上昇</text>
+  <text x="200" y="204" font-family="sans-serif" font-size="14" fill="#2569a8">水蒸気が減る → 混合比 減少</text>
+
+  <!-- 持ち上げ凝結高度 -->
+  <line x1="60" y1="248" x2="520" y2="248" stroke="#f2a73b" stroke-width="2.5" stroke-dasharray="7 5"/>
+  <text x="520" y="240" font-family="sans-serif" font-size="14" fill="#1c2b36" text-anchor="end">持ち上げ凝結高度 (LCL)</text>
+
+  <!-- 下のブロック -->
+  <text x="200" y="278" font-family="sans-serif" font-size="16" fill="#5a6b78">LCL より下(未飽和のまま)</text>
+  <text x="200" y="308" font-family="sans-serif" font-size="14" fill="#1c2b36">温位 : 変化しない</text>
+  <text x="200" y="336" font-family="sans-serif" font-size="14" fill="#1c2b36">混合比 : 変化しない</text>
+
+  <line x1="24" y1="356" x2="536" y2="356" stroke="#1c2b36" stroke-width="2"/>
+  <text x="24" y="386" font-family="sans-serif" font-size="14" fill="#5a6b78">温位は熱の出入り、混合比は水蒸気の出入りで決まる</text>
+</svg>

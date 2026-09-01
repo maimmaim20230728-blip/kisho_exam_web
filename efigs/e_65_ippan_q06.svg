@@ -1,0 +1,44 @@
+<svg viewBox="0 0 560 350" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="350" fill="#ffffff"/>
+<defs>
+<marker id="i6blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/></marker>
+<marker id="i6orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/></marker>
+<marker id="i6gray" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5a6b78"/></marker>
+</defs>
+
+<text x="20" y="30" font-family="sans-serif" font-size="19" font-weight="bold" fill="#1c2b36">北半球の慣性振動</text>
+
+<circle cx="150" cy="200" r="72" fill="none" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="6 5"/>
+<circle cx="150" cy="200" r="3" fill="#5a6b78"/>
+<line x1="150" y1="200" x2="201" y2="251" stroke="#5a6b78" stroke-width="1"/>
+<text x="172" y="244" font-family="sans-serif" font-size="13" fill="#5a6b78">r</text>
+
+<path d="M 150 272 A 72 72 0 0 1 78 200" fill="none" stroke="#2569a8" stroke-width="2" marker-end="url(#i6blue)"/>
+<text x="26" y="256" font-family="sans-serif" font-size="14" fill="#2569a8">時計回り</text>
+
+<line x1="150" y1="128" x2="150" y2="76" stroke="#5a6b78" stroke-width="2.5" marker-end="url(#i6gray)"/>
+<text x="160" y="90" font-family="sans-serif" font-size="13" fill="#5a6b78">遠心力 V²/r</text>
+
+<line x1="150" y1="128" x2="228" y2="128" stroke="#2569a8" stroke-width="3" marker-end="url(#i6blue)"/>
+<text x="176" y="118" font-family="sans-serif" font-size="13" fill="#2569a8">V（速さ）</text>
+
+<line x1="150" y1="128" x2="150" y2="180" stroke="#f2a73b" stroke-width="2.5" marker-end="url(#i6orange)"/>
+<line x1="234" y1="176" x2="151" y2="162" stroke="#5a6b78" stroke-width="1"/>
+<text x="238" y="180" font-family="sans-serif" font-size="13" fill="#f2a73b">コリオリ力 fV</text>
+<circle cx="150" cy="128" r="5" fill="#1c2b36"/>
+
+<text x="26" y="300" font-family="sans-serif" font-size="13" fill="#5a6b78">コリオリ力は進行方向の右向き</text>
+<text x="26" y="320" font-family="sans-serif" font-size="13" fill="#5a6b78">＝ つねに円の中心を向く</text>
+
+<text x="338" y="90" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1c2b36">力の釣り合い</text>
+<text x="338" y="116" font-family="sans-serif" font-size="14" fill="#1c2b36">fV ＝ V²/r</text>
+<text x="338" y="140" font-family="sans-serif" font-size="13" fill="#5a6b78">→ r ＝ V / f</text>
+<line x1="338" y1="158" x2="530" y2="158" stroke="#5a6b78" stroke-width="1"/>
+<text x="338" y="186" font-family="sans-serif" font-size="14" font-weight="bold" fill="#1c2b36">円運動の周期</text>
+<text x="338" y="212" font-family="sans-serif" font-size="14" fill="#2569a8">T ＝ 2πr / V ＝ 2π / f</text>
+<text x="338" y="236" font-family="sans-serif" font-size="13" fill="#5a6b78">速さ V によらない</text>
+<line x1="338" y1="254" x2="530" y2="254" stroke="#5a6b78" stroke-width="1"/>
+<text x="338" y="282" font-family="sans-serif" font-size="13" fill="#1c2b36">f＝2Ωsinφ は高緯度ほど大</text>
+<text x="338" y="304" font-family="sans-serif" font-size="14" fill="#f2a73b">→ 周期は短くなる</text>
+<text x="338" y="326" font-family="sans-serif" font-size="13" fill="#5a6b78">（緯度30°で約24時間）</text>
+</svg>

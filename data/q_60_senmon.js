@@ -43,7 +43,11 @@ window.KISHO_DATA["60_senmon"] = {
 "answer_note": "",
 "figures": [
 "60_senmon_p03_1.png"
-]
+],
+"expl_fig": {
+"file": "e_60_senmon_q02.svg",
+"caption": "図: 融けかけの粒（表面が水の膜）で反射が最も強くなり、一定の仰角のビームが融解層を切るのでレーダーから等距離の環になるイメージ"
+}
 },
 {
 "q": 3,
@@ -145,7 +149,11 @@ window.KISHO_DATA["60_senmon"] = {
 4
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_60_senmon_q08.svg",
+"caption": "図: 亜熱帯高気圧は下降流の場で、中・上層が乾いているイメージ"
+}
 },
 {
 "q": 9,
@@ -162,7 +170,11 @@ window.KISHO_DATA["60_senmon"] = {
 2
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_60_senmon_q09.svg",
+"caption": "図: 季節風が山地で二手に分かれ、日本海上で合流して収束帯ができるイメージ"
+}
 },
 {
 "q": 10,
@@ -179,7 +191,11 @@ window.KISHO_DATA["60_senmon"] = {
 5
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_60_senmon_q10.svg",
+"caption": "図: 台風の暖気核と、下層の吹き込み・上層の吹き出しのイメージ"
+}
 },
 {
 "q": 11,
@@ -198,7 +214,11 @@ window.KISHO_DATA["60_senmon"] = {
 "answer_note": "",
 "figures": [
 "60_senmon_p08_1.png"
-]
+],
+"expl_fig": {
+"file": "e_60_senmon_q11.svg",
+"caption": "図: 上・中層が乾くと下層の暖かい放射が抜けて暗く写るイメージ"
+}
 },
 {
 "q": 12,
@@ -232,7 +252,11 @@ window.KISHO_DATA["60_senmon"] = {
 3
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_60_senmon_q13.svg",
+"caption": "図: 表層なだれと全層なだれで、滑る雪の範囲が違うイメージ"
+}
 },
 {
 "q": 14,

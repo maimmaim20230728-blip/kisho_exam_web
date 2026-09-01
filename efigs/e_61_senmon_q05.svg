@@ -1,0 +1,53 @@
+<svg viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="320" fill="#ffffff"/>
+  <defs>
+    <marker id="q05arD" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#1c2b36"/>
+    </marker>
+    <marker id="q05arOe" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="q05arOs" viewBox="0 0 10 10" refX="1" refY="5" markerWidth="4" markerHeight="4" orient="auto">
+      <path d="M10,0 L0,5 L10,10 z" fill="#f2a73b"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="30" font-size="19" font-weight="bold" fill="#1c2b36" text-anchor="middle">アンサンブル予報のスプレッドと信頼度</text>
+  <text x="280" y="52" font-size="13" fill="#5a6b78" text-anchor="middle">初期値をわずかに変えた複数の予報(メンバー)の広がり</text>
+
+  <!-- 左:スプレッド小 -->
+  <text x="140" y="78" font-size="16" font-weight="bold" fill="#15a35a" text-anchor="middle">スプレッド 小</text>
+  <text x="42" y="94" font-size="12" fill="#5a6b78" text-anchor="middle">予想値</text>
+  <line x1="42" y1="100" x2="42" y2="240" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="42" y1="240" x2="248" y2="240" stroke="#1c2b36" stroke-width="1.5"/>
+
+  <path d="M52,150 C112,142 172,132 232,126" fill="none" stroke="#2569a8" stroke-width="1.8"/>
+  <path d="M52,150 C112,146 172,139 232,133" fill="none" stroke="#2569a8" stroke-width="1.8"/>
+  <path d="M52,150 C112,150 172,146 232,140" fill="none" stroke="#2569a8" stroke-width="1.8"/>
+  <path d="M52,150 C112,154 172,153 232,147" fill="none" stroke="#2569a8" stroke-width="1.8"/>
+  <path d="M52,150 C112,158 172,160 232,154" fill="none" stroke="#2569a8" stroke-width="1.8"/>
+  <circle cx="52" cy="150" r="3.5" fill="#1c2b36"/>
+
+  <text x="246" y="118" font-size="12" fill="#f2a73b" text-anchor="middle">スプレッド</text>
+  <line x1="246" y1="126" x2="246" y2="154" stroke="#f2a73b" stroke-width="2" marker-start="url(#q05arOs)" marker-end="url(#q05arOe)"/>
+  <text x="145" y="262" font-size="12" fill="#5a6b78" text-anchor="middle">予報時間 →</text>
+
+  <!-- 右:スプレッド大 -->
+  <text x="400" y="78" font-size="16" font-weight="bold" fill="#e0524d" text-anchor="middle">スプレッド 大</text>
+  <text x="302" y="94" font-size="12" fill="#5a6b78" text-anchor="middle">予想値</text>
+  <line x1="302" y1="100" x2="302" y2="240" stroke="#1c2b36" stroke-width="1.5"/>
+  <line x1="302" y1="240" x2="505" y2="240" stroke="#1c2b36" stroke-width="1.5"/>
+
+  <path d="M316,150 C376,120 436,90 492,80" fill="none" stroke="#2569a8" stroke-width="1.8"/>
+  <path d="M316,150 C376,136 436,112 492,104" fill="none" stroke="#2569a8" stroke-width="1.8"/>
+  <path d="M316,150 C376,150 436,148 492,146" fill="none" stroke="#2569a8" stroke-width="1.8"/>
+  <path d="M316,150 C376,166 436,186 492,192" fill="none" stroke="#2569a8" stroke-width="1.8"/>
+  <path d="M316,150 C376,180 436,208 492,218" fill="none" stroke="#2569a8" stroke-width="1.8"/>
+  <circle cx="316" cy="150" r="3.5" fill="#1c2b36"/>
+
+  <text x="505" y="68" font-size="12" fill="#f2a73b" text-anchor="middle">スプレッド</text>
+  <line x1="508" y1="80" x2="508" y2="218" stroke="#f2a73b" stroke-width="2" marker-start="url(#q05arOs)" marker-end="url(#q05arOe)"/>
+  <text x="400" y="262" font-size="12" fill="#5a6b78" text-anchor="middle">予報時間 →</text>
+
+  <text x="280" y="292" font-size="15" font-weight="bold" fill="#1c2b36" text-anchor="middle">スプレッドが大きいほど 予報の信頼度は低い</text>
+</svg>

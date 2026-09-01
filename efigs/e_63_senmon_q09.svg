@@ -1,0 +1,66 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="aB" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2569a8"/>
+    </marker>
+    <marker id="aR" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#e0524d"/>
+    </marker>
+    <marker id="aA" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="aG" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="38" font-size="19" fill="#1c2b36">梅雨前線を支える2つの湿った流れ</text>
+  <text x="24" y="62" font-size="14" fill="#5a6b78">温度差より水蒸気の差でできる前線</text>
+  <rect x="466" y="40" width="76" height="26" rx="6" fill="#eef3f7" stroke="#cfe0ec" stroke-width="1.5"/>
+  <text x="480" y="58" font-size="14" fill="#1c2b36">北半球</text>
+
+  <!-- 平面図 -->
+  <text x="24" y="86" font-size="16" fill="#1c2b36">上から見る: 水蒸気を運ぶ2つの気流</text>
+  <line x1="36" y1="142" x2="36" y2="122" stroke="#5a6b78" stroke-width="2" marker-end="url(#aG)"/>
+  <text x="36" y="112" font-size="14" fill="#5a6b78" text-anchor="middle">北</text>
+
+  <ellipse cx="112" cy="126" rx="70" ry="28" fill="#eef2f5" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="112" y="131" font-size="14" fill="#1c2b36" text-anchor="middle">チベット高原</text>
+
+  <circle cx="470" cy="200" r="50" fill="#e0524d" fill-opacity="0.10" stroke="#e0524d" stroke-width="1.5"/>
+  <text x="470" y="206" font-size="14" fill="#1c2b36" text-anchor="middle">太平洋高気圧</text>
+
+  <path d="M250,190 Q300,170 348,152" fill="none" stroke="#5a6b78" stroke-width="9" stroke-linecap="round" opacity="0.45"/>
+  <text x="356" y="148" font-size="14" fill="#5a6b78">日本</text>
+
+  <path d="M196,212 Q296,196 396,184" fill="none" stroke="#2569a8" stroke-width="14" opacity="0.22"/>
+  <path d="M196,212 Q296,196 396,184" fill="none" stroke="#2569a8" stroke-width="2"/>
+  <text x="188" y="228" font-size="14" fill="#2569a8" text-anchor="end">梅雨前線</text>
+
+  <path d="M56,160 Q140,176 200,184" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="60" y="204" font-size="14" fill="#2569a8">西よりの気流</text>
+
+  <path d="M472,264 Q426,250 414,224 Q408,208 390,206" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#aB)"/>
+  <text x="430" y="272" font-size="14" fill="#2569a8" text-anchor="end">南よりの気流</text>
+
+  <!-- 断面図 -->
+  <text x="24" y="296" font-size="16" fill="#1c2b36">南北の断面: 前線は等相当温位線の集中帯の南縁</text>
+  <line x1="64" y1="378" x2="500" y2="378" stroke="#1c2b36" stroke-width="2"/>
+  <text x="58" y="370" font-size="14" fill="#5a6b78" text-anchor="end">地上</text>
+
+  <path d="M200,376 L258,306 L296,306 L238,376 z" fill="#2569a8" opacity="0.15"/>
+  <line x1="212" y1="376" x2="270" y2="306" stroke="#2569a8" stroke-width="1.5" opacity="0.8"/>
+  <line x1="225" y1="376" x2="283" y2="306" stroke="#2569a8" stroke-width="1.5" opacity="0.8"/>
+  <line x1="302" y1="318" x2="284" y2="326" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="306" y="322" font-size="14" fill="#2569a8">等相当温位線が集中</text>
+
+  <line x1="214" y1="368" x2="250" y2="312" stroke="#e0524d" stroke-width="2.5" marker-end="url(#aR)"/>
+  <line x1="76" y1="360" x2="178" y2="360" stroke="#f2a73b" stroke-width="4" marker-end="url(#aA)"/>
+  <text x="76" y="348" font-size="14" fill="#f2a73b">下層ジェット</text>
+
+  <polygon points="194,376 206,376 200,366" fill="#e0524d"/>
+  <text x="200" y="396" font-size="14" fill="#e0524d" text-anchor="middle">地上前線</text>
+  <text x="64" y="396" font-size="14" fill="#5a6b78">南 暖かく湿る</text>
+  <text x="500" y="396" font-size="14" fill="#5a6b78" text-anchor="end">北 冷たい</text>
+</svg>

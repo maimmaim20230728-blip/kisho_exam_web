@@ -21,7 +21,11 @@ window.KISHO_DATA["62_ippan"] = {
 2
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_62_ippan_q01.svg",
+"caption": "図: 対流圏界面の高さと、高度15kmがどの層にあたるかのイメージ"
+}
 },
 {
 "q": 2,
@@ -38,7 +42,11 @@ window.KISHO_DATA["62_ippan"] = {
 5
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_62_ippan_q02.svg",
+"caption": "図: 下降した空気塊が高度Bを中心に振動するイメージ"
+}
 },
 {
 "q": 3,
@@ -74,7 +82,11 @@ window.KISHO_DATA["62_ippan"] = {
 1
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_62_ippan_q04.svg",
+"caption": "図: 氷面の飽和水蒸気圧が水面より低く、氷晶だけが育つイメージ"
+}
 },
 {
 "q": 5,
@@ -148,7 +160,11 @@ window.KISHO_DATA["62_ippan"] = {
 5
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_62_ippan_q08.svg",
+"caption": "図: 3つの循環と、下降域の緯度・間接循環の向きのイメージ"
+}
 },
 {
 "q": 9,
@@ -165,7 +181,11 @@ window.KISHO_DATA["62_ippan"] = {
 4
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_62_ippan_q09.svg",
+"caption": "図: 持ち上げ凝結高度と自由対流高度のちがいのイメージ"
+}
 },
 {
 "q": 10,

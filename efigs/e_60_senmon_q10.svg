@@ -1,0 +1,76 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="q10arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="32" font-size="19" font-weight="bold" fill="#1c2b36">発達した台風の構造</text>
+  <text x="536" y="32" font-size="14" fill="#5a6b78" text-anchor="end">北半球</text>
+
+  <!-- 左：鉛直断面 -->
+  <text x="24" y="56" font-size="13" fill="#5a6b78">鉛直断面（中心から外側へ）</text>
+
+  <line x1="40" y1="72" x2="320" y2="72" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="7,5"/>
+  <text x="318" y="66" font-size="12" fill="#5a6b78" text-anchor="end">対流圏界面</text>
+
+  <!-- 大気境界層（先に敷いて、雲や暖気核はこの上に描く） -->
+  <rect x="40" y="278" width="280" height="22" fill="#dde3e8"/>
+
+  <line x1="40" y1="300" x2="320" y2="300" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="64" y1="282" x2="64" y2="300" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text x="64" y="318" font-size="13" fill="#1c2b36" text-anchor="middle">中心</text>
+  <text x="316" y="318" font-size="13" fill="#5a6b78" text-anchor="end">外側へ</text>
+
+  <!-- 暖気核 -->
+  <ellipse cx="64" cy="182" rx="24" ry="98" fill="#fbe7e5" stroke="#e0524d" stroke-width="2" stroke-dasharray="6,4"/>
+  <text x="64" y="176" font-size="14" font-weight="bold" fill="#e0524d" text-anchor="middle">暖気核</text>
+  <text x="64" y="196" font-size="12" fill="#e0524d" text-anchor="middle">高温</text>
+
+  <!-- 壁雲 -->
+  <polygon points="86,300 108,300 156,86 124,86" fill="#eaf1f7" stroke="#2569a8" stroke-width="1.5"/>
+  <line x1="158" y1="156" x2="138" y2="166" stroke="#2569a8" stroke-width="1.5"/>
+  <text x="162" y="162" font-size="13" fill="#2569a8">壁雲</text>
+
+  <!-- 上層の吹き出し -->
+  <line x1="164" y1="100" x2="312" y2="100" stroke="#2569a8" stroke-width="3" marker-end="url(#q10arB)"/>
+  <text x="164" y="90" font-size="13" fill="#2569a8">上層は外へ吹き出す</text>
+
+  <!-- 下層の吹き込み（境界層の中） -->
+  <line x1="312" y1="290" x2="170" y2="290" stroke="#2569a8" stroke-width="3" marker-end="url(#q10arB)"/>
+  <text x="185" y="318" font-size="12" fill="#5a6b78" text-anchor="middle">灰色の帯＝大気境界層</text>
+
+  <circle cx="116" cy="258" r="9" fill="#ffffff" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="110" y1="252" x2="122" y2="264" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="122" y1="252" x2="110" y2="264" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="127" y1="258" x2="162" y2="258" stroke="#5a6b78" stroke-width="1.2"/>
+  <text x="166" y="254" font-size="13" fill="#1c2b36">接線風が最大</text>
+  <text x="166" y="270" font-size="12" fill="#5a6b78">（境界層のすぐ上）</text>
+
+  <!-- 右：上から見た流れ -->
+  <text x="348" y="56" font-size="13" fill="#5a6b78">上から見た流れ</text>
+
+  <circle cx="440" cy="128" r="48" fill="none" stroke="#dfe5ea" stroke-width="1.5"/>
+  <path d="M 440,80 A 48,48 0 0 1 488,128" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10arB)"/>
+  <path d="M 488,128 A 48,48 0 0 1 440,176" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10arB)"/>
+  <path d="M 440,176 A 48,48 0 0 1 392,128" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10arB)"/>
+  <path d="M 392,128 A 48,48 0 0 1 440,80" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10arB)"/>
+  <line x1="440" y1="128" x2="440" y2="96" stroke="#5a6b78" stroke-width="2" marker-end="url(#q10arB)"/>
+  <line x1="440" y1="128" x2="472" y2="128" stroke="#5a6b78" stroke-width="2" marker-end="url(#q10arB)"/>
+  <text x="348" y="192" font-size="13" fill="#1c2b36">上層：外向きに吹き出す</text>
+  <text x="348" y="212" font-size="13" fill="#1c2b36">中心から離れると時計回り</text>
+
+  <circle cx="440" cy="278" r="48" fill="none" stroke="#dfe5ea" stroke-width="1.5"/>
+  <path d="M 440,230 A 48,48 0 0 0 392,278" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10arB)"/>
+  <path d="M 392,278 A 48,48 0 0 0 440,326" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10arB)"/>
+  <path d="M 440,326 A 48,48 0 0 0 488,278" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10arB)"/>
+  <path d="M 488,278 A 48,48 0 0 0 440,230" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q10arB)"/>
+  <line x1="440" y1="246" x2="440" y2="272" stroke="#5a6b78" stroke-width="2" marker-end="url(#q10arB)"/>
+  <line x1="472" y1="278" x2="448" y2="278" stroke="#5a6b78" stroke-width="2" marker-end="url(#q10arB)"/>
+  <text x="348" y="346" font-size="13" fill="#1c2b36">下層：反時計回りに吹き込む</text>
+
+  <!-- 説明 -->
+  <text x="24" y="382" font-size="13" fill="#1c2b36">・接線風は境界層のすぐ上で最大、吹き込み（動径成分）は境界層の中で最大。</text>
+  <text x="24" y="404" font-size="13" fill="#1c2b36">・強さは最大風速で分類（猛烈な台風＝約54m/s以上）。中心気圧では分類しない。</text>
+</svg>

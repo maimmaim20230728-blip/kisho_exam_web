@@ -1,0 +1,58 @@
+<svg viewBox="0 0 560 320" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="320" fill="#ffffff"/>
+  <defs>
+    <marker id="fO" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#f2a73b"/>
+    </marker>
+    <marker id="fB" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2569a8"/>
+    </marker>
+    <marker id="fR" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#e0524d"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="32" font-size="18" fill="#1c2b36" text-anchor="middle">霧のでき方: 空気がどう冷えるか</text>
+
+  <!-- ① 放射霧 -->
+  <rect x="20" y="48" width="168" height="214" fill="none" stroke="#5a6b78" stroke-width="1" opacity="0.35"/>
+  <text x="104" y="68" font-size="16" fill="#1c2b36" text-anchor="middle">① 放射霧</text>
+  <text x="104" y="96" font-size="14" fill="#5a6b78" text-anchor="middle">晴れ・風が弱い夜</text>
+  <text x="104" y="116" font-size="14" fill="#1c2b36" text-anchor="middle">放射冷却</text>
+  <text x="104" y="134" font-size="11" fill="#5a6b78" text-anchor="middle">(地面からの赤外放射)</text>
+  <rect x="30" y="198" width="148" height="14" fill="#eceff1"/>
+  <rect x="32" y="176" width="144" height="22" fill="#d5dde2"/>
+  <line x1="30" y1="198" x2="178" y2="198" stroke="#1c2b36" stroke-width="2"/>
+  <line x1="60" y1="196" x2="60" y2="142" stroke="#f2a73b" stroke-width="2.5" stroke-dasharray="5,4" marker-end="url(#fO)"/>
+  <line x1="148" y1="196" x2="148" y2="142" stroke="#f2a73b" stroke-width="2.5" stroke-dasharray="5,4" marker-end="url(#fO)"/>
+  <text x="104" y="192" font-size="14" fill="#1c2b36" text-anchor="middle">霧</text>
+  <text x="104" y="230" font-size="14" fill="#5a6b78" text-anchor="middle">地面が放射で冷え</text>
+  <text x="104" y="250" font-size="14" fill="#5a6b78" text-anchor="middle">接する空気も冷える</text>
+
+  <!-- ② 滑昇霧 -->
+  <rect x="196" y="48" width="168" height="214" fill="none" stroke="#5a6b78" stroke-width="1" opacity="0.35"/>
+  <text x="280" y="68" font-size="16" fill="#1c2b36" text-anchor="middle">② 滑昇霧</text>
+  <path d="M 206 196 L 258 196 L 344 128 L 344 212 L 206 212 Z" fill="#eceff1"/>
+  <polyline points="206,196 258,196 344,128" fill="none" stroke="#1c2b36" stroke-width="2"/>
+  <text x="206" y="140" font-size="14" fill="#1c2b36">湿った空気</text>
+  <ellipse cx="326" cy="116" rx="24" ry="12" fill="#d5dde2"/>
+  <line x1="216" y1="186" x2="312" y2="132" stroke="#2569a8" stroke-width="3" marker-end="url(#fB)"/>
+  <text x="326" y="121" font-size="14" fill="#1c2b36" text-anchor="middle">霧</text>
+  <text x="280" y="230" font-size="14" fill="#5a6b78" text-anchor="middle">湿った空気が斜面を</text>
+  <text x="280" y="250" font-size="14" fill="#5a6b78" text-anchor="middle">上って膨らみ冷える</text>
+
+  <!-- ③ 移流霧 -->
+  <rect x="372" y="48" width="168" height="214" fill="none" stroke="#5a6b78" stroke-width="1" opacity="0.35"/>
+  <text x="456" y="68" font-size="16" fill="#1c2b36" text-anchor="middle">③ 移流霧</text>
+  <text x="382" y="120" font-size="14" fill="#1c2b36">暖かく湿った空気</text>
+  <line x1="386" y1="140" x2="474" y2="140" stroke="#e0524d" stroke-width="3" marker-end="url(#fR)"/>
+  <rect x="384" y="166" width="144" height="22" fill="#d5dde2"/>
+  <text x="456" y="182" font-size="14" fill="#1c2b36" text-anchor="middle">霧</text>
+  <rect x="382" y="190" width="148" height="20" fill="#dce9f4"/>
+  <line x1="382" y1="190" x2="530" y2="190" stroke="#2569a8" stroke-width="2"/>
+  <text x="456" y="204" font-size="14" fill="#2569a8" text-anchor="middle">冷たい海面</text>
+  <text x="456" y="230" font-size="14" fill="#5a6b78" text-anchor="middle">暖かく湿った空気が</text>
+  <text x="456" y="250" font-size="14" fill="#5a6b78" text-anchor="middle">冷たい海面に冷やされる</text>
+
+  <text x="280" y="292" font-size="14" fill="#5a6b78" text-anchor="middle">移流霧は霧が動くのではなく、空気が動いてその場で霧になる</text>
+</svg>

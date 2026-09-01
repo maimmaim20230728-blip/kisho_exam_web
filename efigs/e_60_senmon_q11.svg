@@ -1,0 +1,50 @@
+<svg viewBox="0 0 560 410" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="410" fill="#ffffff"/>
+  <defs>
+    <marker id="q11arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0524d"/>
+    </marker>
+    <marker id="q11arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+  </defs>
+
+  <text x="24" y="32" font-size="19" font-weight="bold" fill="#1c2b36">水蒸気画像：暗く見えるのはなぜか</text>
+
+  <!-- 左：暗域 -->
+  <text x="32" y="58" font-size="15" font-weight="bold" fill="#1c2b36">暗域（黒く見える）</text>
+  <rect x="40" y="68" width="210" height="200" fill="#ffffff" stroke="#5a6b78" stroke-width="1.5"/>
+  <rect x="40" y="218" width="210" height="50" fill="#fbe7e5"/>
+  <line x1="40" y1="218" x2="250" y2="218" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="192" y="140" font-size="16" font-weight="bold" fill="#5a6b78" text-anchor="middle">乾燥</text>
+  <text x="192" y="162" font-size="12" fill="#5a6b78" text-anchor="middle">上・中層</text>
+  <line x1="100" y1="245" x2="100" y2="66" stroke="#e0524d" stroke-width="3" marker-end="url(#q11arR)"/>
+  <text x="178" y="250" font-size="13" fill="#e0524d" text-anchor="middle">暖かい下層</text>
+  <line x1="40" y1="268" x2="250" y2="268" stroke="#1c2b36" stroke-width="2"/>
+
+  <!-- 右：明域 -->
+  <text x="302" y="58" font-size="15" font-weight="bold" fill="#1c2b36">明域（白く見える）</text>
+  <rect x="310" y="68" width="210" height="200" fill="#e4eff8" stroke="#5a6b78" stroke-width="1.5"/>
+  <rect x="310" y="218" width="210" height="50" fill="#fbe7e5"/>
+  <line x1="310" y1="218" x2="520" y2="218" stroke="#5a6b78" stroke-width="1" stroke-dasharray="5,4"/>
+  <text x="462" y="140" font-size="16" font-weight="bold" fill="#2569a8" text-anchor="middle">湿潤</text>
+  <text x="462" y="162" font-size="12" fill="#2569a8" text-anchor="middle">上・中層</text>
+  <line x1="370" y1="150" x2="370" y2="66" stroke="#2569a8" stroke-width="3" marker-end="url(#q11arB)"/>
+  <line x1="370" y1="245" x2="370" y2="176" stroke="#e0524d" stroke-width="3"/>
+  <line x1="360" y1="176" x2="380" y2="160" stroke="#e0524d" stroke-width="2.5"/>
+  <line x1="360" y1="160" x2="380" y2="176" stroke="#e0524d" stroke-width="2.5"/>
+  <text x="448" y="250" font-size="13" fill="#e0524d" text-anchor="middle">暖かい下層</text>
+  <line x1="310" y1="268" x2="520" y2="268" stroke="#1c2b36" stroke-width="2"/>
+
+  <!-- まとめ -->
+  <text x="32" y="294" font-size="14" fill="#1c2b36">上・中層が乾いている</text>
+  <text x="32" y="316" font-size="14" fill="#1c2b36">下層の暖かい放射が宇宙へ</text>
+  <text x="32" y="338" font-size="14" font-weight="bold" fill="#1c2b36">輝度温度が高い → 暗い</text>
+
+  <text x="302" y="294" font-size="14" fill="#1c2b36">上・中層が湿っている</text>
+  <text x="302" y="316" font-size="14" fill="#1c2b36">冷たい上層からの放射だけ</text>
+  <text x="302" y="338" font-size="14" font-weight="bold" fill="#1c2b36">輝度温度が低い → 白い</text>
+
+  <text x="24" y="368" font-size="13" fill="#5a6b78">※暗い＝上・中層が乾燥。上・中層の空気が周囲より暖かいわけではない。</text>
+  <text x="24" y="388" font-size="13" fill="#5a6b78">※さらに暗化＝上層の乾いた空気の下降が強まる＝トラフの深まり。</text>
+</svg>

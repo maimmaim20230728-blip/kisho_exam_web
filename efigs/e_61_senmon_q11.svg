@@ -1,0 +1,71 @@
+<svg viewBox="0 0 560 410" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="410" fill="#ffffff"/>
+  <defs>
+    <marker id="q11arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+    <marker id="q11arR" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#e0524d"/>
+    </marker>
+    <marker id="q11arG" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="30" font-size="19" font-weight="bold" fill="#1c2b36" text-anchor="middle">海陸風の1日周期の入れかわり</text>
+
+  <!-- (1) 日中 海風 -->
+  <text x="26" y="56" font-size="14" font-weight="bold" fill="#1c2b36">(1) 日中:海風(層が厚く風も強い)</text>
+
+  <circle cx="508" cy="60" r="9" fill="#f2a73b"/>
+  <line x1="508" y1="45" x2="508" y2="39" stroke="#f2a73b" stroke-width="2"/>
+  <line x1="523" y1="60" x2="529" y2="60" stroke="#f2a73b" stroke-width="2"/>
+  <line x1="519" y1="49" x2="524" y2="44" stroke="#f2a73b" stroke-width="2"/>
+  <line x1="519" y1="71" x2="524" y2="76" stroke="#f2a73b" stroke-width="2"/>
+
+  <ellipse cx="440" cy="86" rx="27" ry="19" fill="#2569a8" fill-opacity="0.15" stroke="#2569a8" stroke-width="1.5"/>
+  <text x="472" y="100" font-size="12" fill="#1c2b36">積乱雲</text>
+
+  <path d="M100,142 L430,142 L430,172 L245,176 L245,180 L100,180 Z" fill="#2569a8" fill-opacity="0.1"/>
+  <line x1="100" y1="142" x2="430" y2="142" stroke="#2569a8" stroke-width="1.2" stroke-dasharray="5 4" stroke-opacity="0.6"/>
+  <text x="418" y="132" font-size="11" fill="#2569a8" text-anchor="end">海風の吹く層(厚い)</text>
+
+  <line x1="405" y1="92" x2="105" y2="92" stroke="#5a6b78" stroke-width="2.5" marker-end="url(#q11arG)"/>
+  <text x="240" y="84" font-size="12" fill="#5a6b78" text-anchor="middle">上空の戻りの流れ</text>
+  <line x1="85" y1="98" x2="85" y2="152" stroke="#5a6b78" stroke-width="2.5" marker-end="url(#q11arG)"/>
+  <line x1="430" y1="156" x2="430" y2="110" stroke="#e0524d" stroke-width="3" marker-end="url(#q11arR)"/>
+  <line x1="100" y1="162" x2="408" y2="162" stroke="#2569a8" stroke-width="3.5" marker-end="url(#q11arB)"/>
+  <text x="240" y="152" font-size="14" font-weight="bold" fill="#2569a8" text-anchor="middle">海風</text>
+
+  <text x="452" y="136" font-size="12" fill="#e0524d">海風前線</text>
+  <text x="452" y="154" font-size="12" fill="#e0524d">収束して上昇</text>
+
+  <rect x="30" y="180" width="215" height="22" fill="#2569a8" fill-opacity="0.2"/>
+  <line x1="30" y1="180" x2="245" y2="180" stroke="#2569a8" stroke-width="2"/>
+  <polygon points="245,202 245,176 530,170 530,202" fill="#5a6b78" fill-opacity="0.22" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="130" y="220" font-size="13" fill="#1c2b36" text-anchor="middle">海(冷たい)</text>
+  <text x="395" y="220" font-size="13" fill="#1c2b36" text-anchor="middle">陸(強く暖まる)</text>
+
+  <!-- (2) 夜間 陸風 -->
+  <text x="26" y="254" font-size="14" font-weight="bold" fill="#1c2b36">(2) 夜間:陸風(層が薄く風も弱い)</text>
+
+  <circle cx="508" cy="278" r="10" fill="#5a6b78"/>
+  <circle cx="502" cy="273" r="9" fill="#ffffff"/>
+
+  <path d="M150,328 L415,328 L415,340 L245,344 L245,348 L150,348 Z" fill="#2569a8" fill-opacity="0.1"/>
+  <line x1="150" y1="328" x2="415" y2="328" stroke="#2569a8" stroke-width="1.2" stroke-dasharray="5 4" stroke-opacity="0.6"/>
+  <text x="403" y="318" font-size="11" fill="#2569a8" text-anchor="end">陸風の吹く層(薄い)</text>
+
+  <line x1="150" y1="292" x2="400" y2="292" stroke="#5a6b78" stroke-width="2.5" marker-end="url(#q11arG)"/>
+  <text x="275" y="284" font-size="12" fill="#5a6b78" text-anchor="middle">上空の戻りの流れ</text>
+  <line x1="135" y1="328" x2="135" y2="300" stroke="#5a6b78" stroke-width="2.5" marker-end="url(#q11arG)"/>
+  <line x1="415" y1="300" x2="415" y2="326" stroke="#5a6b78" stroke-width="2.5" marker-end="url(#q11arG)"/>
+  <line x1="398" y1="332" x2="152" y2="332" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q11arB)"/>
+  <text x="235" y="324" font-size="14" font-weight="bold" fill="#2569a8" text-anchor="middle">陸風</text>
+
+  <rect x="30" y="348" width="215" height="22" fill="#2569a8" fill-opacity="0.2"/>
+  <line x1="30" y1="348" x2="245" y2="348" stroke="#2569a8" stroke-width="2"/>
+  <polygon points="245,370 245,344 530,338 530,370" fill="#5a6b78" fill-opacity="0.22" stroke="#5a6b78" stroke-width="1.5"/>
+  <text x="130" y="390" font-size="13" fill="#1c2b36" text-anchor="middle">海(暖かい)</text>
+  <text x="395" y="390" font-size="13" fill="#1c2b36" text-anchor="middle">陸(強く冷える)</text>
+</svg>

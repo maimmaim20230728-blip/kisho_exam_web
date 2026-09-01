@@ -1,9 +1,9 @@
 /*
  * 気象予報士 学科過去問トレーニング - Service Worker
  * cache-first。中身を更新したら CACHE の数字を上げてください（例 v1 -> v2）。
- * figs/ は総量が大きいので precache には入れず、表示された図だけ runtime cache に貯める。
+ * figs/ と efigs/(解説図) は総量が大きいので precache には入れず、表示された図だけ runtime cache に貯める。
  */
-var CACHE = "kishoexam-v7";
+var CACHE = "kishoexam-v8";
 var ASSETS = [
   "./",
   "./index.html",
@@ -50,7 +50,7 @@ self.addEventListener("activate", function(e){
   );
 });
 
-// cache-first: あればキャッシュ、無ければ取得してキャッシュ（figs/ はここで貯まる）
+// cache-first: あればキャッシュ、無ければ取得してキャッシュ（figs/ と efigs/ はここで貯まる）
 self.addEventListener("fetch", function(e){
   if(e.request.method !== "GET") return;
   e.respondWith(

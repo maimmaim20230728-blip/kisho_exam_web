@@ -1,0 +1,53 @@
+<svg viewBox="0 0 560 380" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="380" fill="#ffffff"/>
+  <defs>
+    <marker id="q10arB" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto">
+      <path d="M0,0 L10,5 L0,10 z" fill="#2569a8"/>
+    </marker>
+  </defs>
+
+  <text x="280" y="30" font-size="19" font-weight="bold" fill="#1c2b36" text-anchor="middle">台風の発達と水平風の鉛直シアー</text>
+
+  <!-- 左:シアー弱い -->
+  <rect x="20" y="48" width="250" height="282" fill="none" stroke="#5a6b78" stroke-width="1"/>
+  <text x="145" y="72" font-size="16" font-weight="bold" fill="#15a35a" text-anchor="middle">鉛直シアーが弱い</text>
+
+  <text x="52" y="124" font-size="12" fill="#5a6b78" text-anchor="middle">風</text>
+  <line x1="36" y1="140" x2="70" y2="140" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q10arB)"/>
+  <line x1="36" y1="190" x2="70" y2="190" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q10arB)"/>
+  <line x1="36" y1="250" x2="70" y2="250" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q10arB)"/>
+
+  <path d="M132,290 L132,186 C132,158 130,142 120,136 C126,120 144,112 166,112 C188,112 206,120 212,136 C202,142 200,158 200,186 L200,290 Z" fill="#2569a8" fill-opacity="0.15" stroke="#2569a8" stroke-width="1.5"/>
+  <ellipse cx="166" cy="215" rx="15" ry="62" fill="#f2a73b" fill-opacity="0.45" stroke="#f2a73b" stroke-width="1.5"/>
+  <text x="166" y="100" font-size="13" fill="#1c2b36" text-anchor="middle">まっすぐ立つ</text>
+
+  <line x1="30" y1="290" x2="258" y2="290" stroke="#2569a8" stroke-width="3"/>
+  <text x="145" y="318" font-size="14" font-weight="bold" fill="#15a35a" text-anchor="middle">構造が保たれ発達しやすい</text>
+
+  <!-- 右:シアー強い -->
+  <rect x="290" y="48" width="250" height="282" fill="none" stroke="#5a6b78" stroke-width="1"/>
+  <text x="415" y="72" font-size="16" font-weight="bold" fill="#e0524d" text-anchor="middle">鉛直シアーが強い</text>
+
+  <text x="318" y="124" font-size="12" fill="#5a6b78" text-anchor="middle">風</text>
+  <line x1="304" y1="140" x2="392" y2="140" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q10arB)"/>
+  <line x1="304" y1="190" x2="352" y2="190" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q10arB)"/>
+  <line x1="304" y1="250" x2="326" y2="250" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q10arB)"/>
+
+  <line x1="401" y1="120" x2="401" y2="180" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="5 4"/>
+  <ellipse cx="0" cy="0" rx="58" ry="18" fill="#2569a8" fill-opacity="0.15" stroke="#2569a8" stroke-width="1.5" transform="translate(462,160) rotate(-30)"/>
+  <path d="M372,290 L372,200 C372,186 386,180 401,180 C416,180 430,186 430,200 L430,290 Z" fill="#2569a8" fill-opacity="0.15" stroke="#2569a8" stroke-width="1.5"/>
+  <ellipse cx="0" cy="0" rx="36" ry="12" fill="#f2a73b" fill-opacity="0.45" stroke="#f2a73b" stroke-width="1.5" transform="translate(458,164) rotate(-30)"/>
+  <ellipse cx="401" cy="247" rx="14" ry="42" fill="#f2a73b" fill-opacity="0.45" stroke="#f2a73b" stroke-width="1.5"/>
+  <text x="470" y="110" font-size="12" fill="#1c2b36" text-anchor="middle">上部が流される</text>
+
+  <line x1="300" y1="290" x2="528" y2="290" stroke="#2569a8" stroke-width="3"/>
+  <text x="415" y="318" font-size="14" font-weight="bold" fill="#e0524d" text-anchor="middle">暖気核がずれて発達しにくい</text>
+
+  <!-- 凡例 -->
+  <rect x="178" y="342" width="16" height="12" fill="#f2a73b" fill-opacity="0.45" stroke="#f2a73b" stroke-width="1.5"/>
+  <text x="200" y="352" font-size="12" fill="#1c2b36">暖気核</text>
+  <rect x="256" y="342" width="16" height="12" fill="#2569a8" fill-opacity="0.15" stroke="#2569a8" stroke-width="1.5"/>
+  <text x="278" y="352" font-size="12" fill="#1c2b36">積乱雲</text>
+  <line x1="334" y1="348" x2="360" y2="348" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q10arB)"/>
+  <text x="368" y="352" font-size="12" fill="#1c2b36">水平風</text>
+</svg>

@@ -1,0 +1,62 @@
+<svg viewBox="0 0 560 420" xmlns="http://www.w3.org/2000/svg" font-family="sans-serif">
+  <rect width="560" height="420" fill="#ffffff"/>
+  <defs>
+    <marker id="aB" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#2569a8"/>
+    </marker>
+    <marker id="aG" viewBox="0 0 12 12" refX="10" refY="6" markerWidth="12" markerHeight="12" markerUnits="userSpaceOnUse" orient="auto">
+      <path d="M0,0 L12,6 L0,12 z" fill="#5a6b78"/>
+    </marker>
+  </defs>
+
+  <text x="20" y="34" font-size="19" fill="#1c2b36">台風の進路と風向の変わり方</text>
+  <text x="20" y="58" font-size="13" fill="#5a6b78">矢印は空気の動く向き ラベルは風向(風が吹いてくる方角)</text>
+  <rect x="466" y="40" width="76" height="26" rx="6" fill="#eef3f7" stroke="#cfe0ec" stroke-width="1.5"/>
+  <text x="480" y="58" font-size="14" fill="#1c2b36">北半球</text>
+
+  <!-- 凡例: 反時計回りの循環 -->
+  <circle cx="62" cy="116" r="22" fill="none" stroke="#dde5ea" stroke-width="1.5"/>
+  <path d="M 84,116 A 22,22 0 1 0 62,138" fill="none" stroke="#2569a8" stroke-width="2" marker-end="url(#aB)"/>
+  <text x="96" y="110" font-size="13" fill="#1c2b36">台風のまわりの風は</text>
+  <text x="96" y="130" font-size="13" fill="#1c2b36">反時計回りに吹き込む</text>
+
+  <!-- 台風の進路 -->
+  <line x1="280" y1="340" x2="280" y2="104" stroke="#5a6b78" stroke-width="2.5" marker-end="url(#aG)"/>
+  <text x="300" y="110" font-size="13" fill="#5a6b78">台風の進む向き</text>
+  <circle cx="280" cy="320" r="15" fill="#ffffff" stroke="#2569a8" stroke-width="2"/>
+  <circle cx="280" cy="320" r="3.5" fill="#2569a8"/>
+  <circle cx="280" cy="240" r="15" fill="#ffffff" stroke="#2569a8" stroke-width="2"/>
+  <circle cx="280" cy="240" r="3.5" fill="#2569a8"/>
+  <circle cx="280" cy="150" r="15" fill="#ffffff" stroke="#2569a8" stroke-width="2"/>
+  <circle cx="280" cy="150" r="3.5" fill="#2569a8"/>
+  <text x="300" y="325" font-size="13" fill="#5a6b78">台風の中心</text>
+
+  <!-- 観測点A(進路の西側) -->
+  <line x1="248" y1="220" x2="212" y2="235" stroke="#2569a8" stroke-width="2.5" marker-end="url(#aB)"/>
+  <line x1="200" y1="188" x2="200" y2="227" stroke="#2569a8" stroke-width="2.5" marker-end="url(#aB)"/>
+  <line x1="152" y1="220" x2="188" y2="235" stroke="#2569a8" stroke-width="2.5" marker-end="url(#aB)"/>
+  <text x="222" y="208" font-size="13" fill="#2569a8">①東北東</text>
+  <text x="186" y="180" font-size="13" fill="#2569a8">②北</text>
+  <text x="88" y="218" font-size="13" fill="#2569a8">③西北西</text>
+  <circle cx="200" cy="240" r="6" fill="#1c2b36"/>
+  <text x="174" y="270" font-size="13" fill="#1c2b36">観測点A</text>
+
+  <!-- 観測点B(進路の東側) -->
+  <text x="334" y="214" font-size="13" fill="#1c2b36">観測点B</text>
+  <circle cx="360" cy="240" r="6" fill="#1c2b36"/>
+  <line x1="408" y1="260" x2="372" y2="245" stroke="#2569a8" stroke-width="2.5" marker-end="url(#aB)"/>
+  <line x1="360" y1="292" x2="360" y2="253" stroke="#2569a8" stroke-width="2.5" marker-end="url(#aB)"/>
+  <line x1="323" y1="277" x2="351" y2="249" stroke="#2569a8" stroke-width="2.5" marker-end="url(#aB)"/>
+  <text x="416" y="266" font-size="13" fill="#2569a8">①東南東</text>
+  <text x="370" y="310" font-size="13" fill="#2569a8">②南</text>
+  <text x="288" y="298" font-size="13" fill="#2569a8">③南西</text>
+
+  <!-- まとめ -->
+  <rect x="20" y="350" width="250" height="52" rx="8" fill="#f4f8fb" stroke="#cfe0ec" stroke-width="1.5"/>
+  <text x="34" y="374" font-size="14" fill="#2569a8">風向が反時計回りに変化</text>
+  <text x="34" y="394" font-size="14" fill="#1c2b36">中心は観測点の東側を通った</text>
+
+  <rect x="290" y="350" width="250" height="52" rx="8" fill="#f4f8fb" stroke="#cfe0ec" stroke-width="1.5"/>
+  <text x="304" y="374" font-size="14" fill="#2569a8">風向が時計回りに変化</text>
+  <text x="304" y="394" font-size="14" fill="#1c2b36">中心は観測点の西側を通った</text>
+</svg>

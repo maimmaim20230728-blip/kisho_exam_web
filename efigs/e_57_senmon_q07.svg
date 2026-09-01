@@ -1,0 +1,53 @@
+<svg viewBox="0 0 560 370" xmlns="http://www.w3.org/2000/svg">
+<rect width="560" height="370" fill="#ffffff"/>
+<defs>
+<marker id="q7b" markerWidth="7" markerHeight="6" refX="6" refY="3" orient="auto"><path d="M0 0 L7 3 L0 6 Z" fill="#2569a8"/></marker>
+<marker id="q7g" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0 L9 3.5 L0 7 Z" fill="#5a6b78"/></marker>
+<marker id="q7d" markerWidth="9" markerHeight="7" refX="8" refY="3.5" orient="auto"><path d="M0 0 L9 3.5 L0 7 Z" fill="#1c2b36"/></marker>
+</defs>
+<g font-family="sans-serif">
+<text x="20" y="33" font-size="19" font-weight="bold" fill="#1c2b36">寒冷低気圧（切離低気圧）の成因と構造</text>
+<rect x="466" y="17" width="78" height="26" rx="13" fill="#eef3f7" stroke="#5a6b78" stroke-width="1"/>
+<text x="505" y="35" font-size="14" fill="#5a6b78" text-anchor="middle">北半球</text>
+
+<rect x="18" y="48" width="254" height="274" rx="6" fill="none" stroke="#d3dbe1" stroke-width="1"/>
+<text x="30" y="70" font-size="14" font-weight="bold" fill="#1c2b36">① 切離のしくみ（上空）</text>
+<text x="32" y="90" font-size="14" fill="#2569a8">偏西風（ジェット気流）</text>
+<path d="M 28 108 C 56 96 84 96 106 114 C 124 129 128 156 146 156 C 164 156 174 130 194 116 C 214 102 230 100 244 100" fill="none" stroke="#2569a8" stroke-width="3" marker-end="url(#q7b)"/>
+<text x="266" y="96" font-size="11" fill="#5a6b78" text-anchor="end">北</text>
+<text x="266" y="268" font-size="11" fill="#5a6b78" text-anchor="end">南</text>
+<line x1="146" y1="158" x2="146" y2="188" stroke="#5a6b78" stroke-width="2" stroke-dasharray="5 4" marker-end="url(#q7g)"/>
+<text x="156" y="180" font-size="14" fill="#5a6b78">切り離し</text>
+<circle cx="146" cy="232" r="42" fill="#eaf1f8" stroke="#2569a8" stroke-width="2"/>
+<path d="M 178 232 A 32 32 0 0 0 114 232" fill="none" stroke="#2569a8" stroke-width="2.5" marker-end="url(#q7b)"/>
+<text x="146" y="290" font-size="14" fill="#1c2b36" text-anchor="middle">寒冷低気圧（切離した渦）</text>
+<text x="145" y="312" font-size="14" fill="#1c2b36" text-anchor="middle">本流から外れるので動きが遅い</text>
+
+<rect x="288" y="48" width="254" height="274" rx="6" fill="none" stroke="#d3dbe1" stroke-width="1"/>
+<text x="298" y="70" font-size="14" font-weight="bold" fill="#1c2b36">② 鉛直断面（軸と寒気核）</text>
+<line x1="300" y1="300" x2="534" y2="300" stroke="#1c2b36" stroke-width="2"/>
+<line x1="330" y1="300" x2="330" y2="96" stroke="#1c2b36" stroke-width="2" marker-end="url(#q7d)"/>
+<line x1="330" y1="105" x2="534" y2="105" stroke="#5a6b78" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="534" y="98" font-size="14" fill="#5a6b78" text-anchor="end">圏界面</text>
+<line x1="326" y1="150" x2="334" y2="150" stroke="#1c2b36" stroke-width="2"/>
+<line x1="326" y1="200" x2="334" y2="200" stroke="#1c2b36" stroke-width="2"/>
+<line x1="326" y1="256" x2="334" y2="256" stroke="#1c2b36" stroke-width="2"/>
+<text x="322" y="155" font-size="14" fill="#1c2b36" text-anchor="end">上層</text>
+<text x="322" y="205" font-size="14" fill="#1c2b36" text-anchor="end">中層</text>
+<text x="322" y="261" font-size="14" fill="#1c2b36" text-anchor="end">下層</text>
+<text x="322" y="294" font-size="14" fill="#5a6b78" text-anchor="end">地表</text>
+<ellipse cx="435" cy="172" rx="68" ry="48" fill="#2569a8" fill-opacity="0.15" stroke="#2569a8" stroke-width="2"/>
+<text x="405" y="167" font-size="16" font-weight="bold" fill="#1c2b36" text-anchor="middle">寒気核</text>
+<line x1="435" y1="110" x2="435" y2="222" stroke="#f2a73b" stroke-width="2.5" stroke-dasharray="7 5"/>
+<line x1="435" y1="250" x2="435" y2="300" stroke="#f2a73b" stroke-width="2.5" stroke-dasharray="7 5"/>
+<line x1="428" y1="130" x2="442" y2="130" stroke="#f2a73b" stroke-width="2.5"/>
+<line x1="428" y1="200" x2="442" y2="200" stroke="#f2a73b" stroke-width="2.5"/>
+<line x1="428" y1="270" x2="442" y2="270" stroke="#f2a73b" stroke-width="2.5"/>
+<text x="435" y="240" font-size="14" fill="#1c2b36" text-anchor="middle">軸はほぼ直立</text>
+<text x="452" y="280" font-size="14" fill="#5a6b78">下層は不明瞭</text>
+<text x="336" y="318" font-size="14" fill="#5a6b78">西</text>
+<text x="534" y="318" font-size="14" fill="#5a6b78" text-anchor="end">東</text>
+
+<text x="20" y="345" font-size="14" fill="#5a6b78">※ 上層ほど西に傾くのは発達期の温帯低気圧。寒冷低気圧の軸は直立に近い。</text>
+</g>
+</svg>

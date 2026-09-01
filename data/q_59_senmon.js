@@ -40,7 +40,11 @@ window.KISHO_DATA["59_senmon"] = {
 "answer_note": "",
 "figures": [
 "59_senmon_p02_1.png"
-]
+],
+"expl_fig": {
+"file": "e_59_senmon_q02.svg",
+"caption": "図: 北半球の低気圧性の渦とドップラー速度の並び方"
+}
 },
 {
 "q": 3,
@@ -57,7 +61,11 @@ window.KISHO_DATA["59_senmon"] = {
 2
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_59_senmon_q03.svg",
+"caption": "図: 温暖前線は暖気が上から、寒冷前線は寒気が下から広がる"
+}
 },
 {
 "q": 4,
@@ -143,7 +151,11 @@ window.KISHO_DATA["59_senmon"] = {
 4
 ],
 "answer_note": "専門知識の問8(d)の問題文に曖昧な表現があったことから、⑤または④を正解とします。2月8日に<span class=\"term\" data-term=\"公表\">公表</span>した学科解答は、本資料の内容に訂正し差し替えます。",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_59_senmon_q08.svg",
+"caption": "図: 寒気で層厚が薄くなり、上空の高度は下降・地上気圧は上昇"
+}
 },
 {
 "q": 9,
@@ -200,7 +212,11 @@ window.KISHO_DATA["59_senmon"] = {
 1
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_59_senmon_q11.svg",
+"caption": "図: 昼間の加熱と谷風循環でできる熱的低気圧のイメージ"
+}
 },
 {
 "q": 12,
@@ -217,7 +233,11 @@ window.KISHO_DATA["59_senmon"] = {
 1
 ],
 "answer_note": "",
-"figures": []
+"figures": [],
+"expl_fig": {
+"file": "e_59_senmon_q12.svg",
+"caption": "図: 高潮を起こす吸い上げ・吹き寄せ・波浪の3つの効果"
+}
 },
 {
 "q": 13,
