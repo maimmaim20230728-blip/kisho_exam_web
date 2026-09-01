@@ -237,12 +237,39 @@
   .termbox h2{margin:0 0 8px; font-size:18px; color:var(--brand-dark);}
   .termbox .tbody{margin:0 0 14px; font-size:14.5px; line-height:1.85; white-space:pre-wrap;
     overflow-wrap:anywhere;}
-  /* ふりがな。振るのはポップアップの中だけで、問題文・解説本文には振らない */
+  /* ふりがな。振るのはポップアップと用語集の見出しだけで、問題文・解説本文には振らない */
   ruby{ruby-position:over;}
   rt{font-size:.55em; color:inherit; opacity:.75; font-weight:600;}
   /* ルビが上に乗るぶん、ポップアップ内だけ行間を広げる */
   #term-title{line-height:2;}
   #term-body{line-height:2.05;}
+
+  /* ============ 用語集 ============ */
+  .gloss-search{width:100%; font-family:inherit; font-size:15px; color:var(--ink);
+    background:var(--card); border:2px solid var(--line); border-radius:12px;
+    padding:11px 14px; margin-bottom:10px; box-shadow:var(--shadow-sm); -webkit-appearance:none;}
+  .gloss-search:focus{outline:none; border-color:var(--brand);}
+  .gloss-search::placeholder{color:var(--ink-soft); opacity:.85;}
+  /* 並び順の切替。3つで1本の帯に見せて、選んでいるものだけ塗る */
+  .seg{display:flex; margin-bottom:12px; border:2px solid var(--brand); border-radius:12px;
+    overflow:hidden; background:var(--card); box-shadow:var(--shadow-sm);}
+  .seg button{flex:1; font-family:inherit; font-size:13px; font-weight:700; line-height:1.5;
+    padding:9px 4px; border:none; border-left:1px solid var(--line);
+    background:var(--card); color:var(--brand-dark); cursor:pointer;}
+  .seg button:first-child{border-left:none;}
+  .seg button.on{background:var(--brand); color:#fff;}
+  .gloss-list{display:flex; flex-direction:column; gap:8px;}
+  .gloss-row{display:flex; align-items:center; gap:10px; text-align:left; width:100%; font-family:inherit;
+    background:var(--card); border:1px solid var(--line); border-left:4px solid var(--brand);
+    border-radius:12px; padding:9px 13px; cursor:pointer; box-shadow:var(--shadow-sm); color:var(--ink);}
+  .gloss-row:active{transform:scale(.99);}
+  .gloss-row .gbody{flex:1; min-width:0;}
+  /* 見出しにはルビが乗るので、行の中でここだけ行間を広げる */
+  .gloss-row .gterm{font-size:15.5px; font-weight:800; line-height:2; overflow-wrap:anywhere;}
+  .gloss-row .gfq{font-size:11px; color:var(--ink-soft); margin-top:1px;}
+  .gloss-row .gcount{flex:none; font-size:12px; font-weight:700; color:var(--brand-dark);
+    background:var(--brand-soft); border-radius:999px; padding:4px 10px; white-space:nowrap;}
+  .gloss-empty{color:var(--ink-soft); font-size:13.5px; text-align:center; padding:24px 8px;}
 
   /* ============ 解説閲覧 ============ */
   .exam-row .qmark{flex:none; font-size:19px; font-weight:800; line-height:1.2;}
@@ -283,6 +310,7 @@
       <button class="btn btn-sub" id="btn-random">🎲 ランダム演習</button>
       <button class="btn btn-sub" id="btn-review">🔁 間違えた問題を復習</button>
       <button class="btn btn-sub" id="btn-browse">📖 解説を読む</button>
+      <button class="btn btn-sub" id="btn-gloss">📚 用語集</button>
     </div>
 
     <div class="home-foot">
@@ -323,6 +351,23 @@
     <div class="browse-foot">
       <button class="linkbtn" id="browse-exams">回の一覧にもどる</button>
     </div>
+  </section>
+
+  <!-- ============ 用語集 ============ -->
+  <section id="glossary" class="screen">
+    <div class="topbar">
+      <button class="iconbtn" id="gloss-home" title="ホームへ">✕</button>
+      <div class="spacer"></div>
+      <span class="pill" id="gloss-pill">用語集</span>
+    </div>
+    <input class="gloss-search" id="gloss-search" type="search" autocomplete="off"
+      placeholder="用語・よみで探す" aria-label="用語を探す">
+    <div class="seg" id="gloss-sort" role="group" aria-label="並び順">
+      <button type="button" class="on" id="gloss-sort-yomi">よみ順</button>
+      <button type="button" id="gloss-sort-count">登場回数順</button>
+      <button type="button" id="gloss-sort-order">登場順</button>
+    </div>
+    <div class="gloss-list" id="gloss-list"></div>
   </section>
 
   <!-- ============ 出題 ============ -->
@@ -435,7 +480,7 @@
 (function(){
   "use strict";
 
-  var VERSION="0.4.0";
+  var VERSION="0.5.0";
   var STORAGE_KEY="kishoexam.save.v1";
   var THEME_KEY="kishoexam.theme.v1";
   var THEME_META={ light:"#2569a8", dark:"#101821" };   // ブラウザのバーの色
@@ -447,6 +492,7 @@
             61:"2024年1月",62:"2024年8月",63:"2025年1月",64:"2025年8月",65:"2026年1月"};
   var PASS_HIT=11, PASS_OF=15;   // 合格基準の目安(15問中11問)
   var REVEAL_MS=850;             // 正誤の色付けを見せる時間(ランダム/復習のみ)
+  var GLOSS_DEBOUNCE=150;        // 用語集の検索。1文字ごとに1700行を作り直さないための待ち時間
 
   // データファイルが1つも無くても落ちないよう、必ず既定値を用意する
   var DATA=window.KISHO_DATA||{};
@@ -465,9 +511,14 @@
   var timerId=null, timerStart=0;
   var browseTag=null, browseSeq=[], browseIdx=0;   // 解説閲覧モード（記録は一切さわらない）
   var theme="light";    // "light" | "dark"（学習記録とは別の保存キー＝リセットで消えない）
+  // 用語集（辞書を読むだけ＝学習記録には一切さわらない）
+  var glossList=null;     // 一覧に出す語の配列。辞書は変わらないので初回に作って使い回す
+  var glossSort="yomi";   // "yomi"(よみ順) | "count"(登場回数順) | "order"(登場順)
+  var glossQuery="";      // 検索欄の中身（ひらがな化・小文字化したもの）
+  var glossTimer=null;    // 入力の待ち時間
 
   var el=function(id){ return document.getElementById(id); };
-  var screens={ home:el("home"), exams:el("exams"), browse:el("browse"),
+  var screens={ home:el("home"), exams:el("exams"), browse:el("browse"), glossary:el("glossary"),
                 quiz:el("quiz"), result:el("result"), score:el("score") };
 
   /* ---- 保存 ---- */
@@ -612,6 +663,8 @@
     el("btn-exams").disabled=(total===0);
     el("btn-random").disabled=(total===0);
     el("btn-browse").disabled=(total===0);
+    // 用語集は問題データではなく辞書だけを見る（辞書が未配置なら押せない）
+    el("btn-gloss").disabled=(glossEntries().length===0);
     if(total===0){
       warn.textContent="問題データが読み込まれていません。www/data/ に q_56_ippan.js 〜 q_65_senmon.js を配置してください。";
       warn.style.display="block";
@@ -978,6 +1031,97 @@
     });
   }
 
+  /* ---- 用語集 ---- */
+  // 探すときに「カタカナで打ったか」「大文字で打ったか」で取りこぼさないよう、
+  // 比較する文字列はどちらもひらがな＋小文字に寄せてから突き合わせる。
+  function kanaKey(s){
+    return String(s==null?"":s).toLowerCase().replace(/[ァ-ヶ]/g, function(ch){
+      return String.fromCharCode(ch.charCodeAt(0)-0x60);
+    });
+  }
+  // 一覧に載せる語を集める。c=0（常に長い複合語の内側でしか出てこない語）は載せない。
+  // 辞書は起動後に変わらないので、作った配列はそのまま使い回す。
+  function glossEntries(){
+    if(glossList) return glossList;
+    glossList=[];
+    for(var k in GLOSS){
+      var v=GLOSS[k];
+      if(!v || typeof v!=="object") continue;   // 旧形式（説明の文字列だけ）は一覧に出せない
+      if(!(v.c>0)) continue;
+      glossList.push({ k:k, t:v.t||k, y:v.y||"", c:v.c, f:(v.f==null?999999:v.f), fq:v.fq||"",
+                       kkey:kanaKey(k), ykey:kanaKey(v.y||"") });
+    }
+    return glossList;
+  }
+  // いま画面に出すぶんを絞り込んで並べ替える
+  function glossRows(){
+    var rows=glossEntries();
+    rows = glossQuery
+      ? rows.filter(function(e){ return e.kkey.indexOf(glossQuery)>=0 || e.ykey.indexOf(glossQuery)>=0; })
+      : rows.slice();
+    if(glossSort==="count"){
+      rows.sort(function(a,b){ return (b.c-a.c) || a.y.localeCompare(b.y,"ja"); });
+    } else if(glossSort==="order"){
+      rows.sort(function(a,b){ return a.f-b.f; });
+    } else {
+      rows.sort(function(a,b){ return a.y.localeCompare(b.y,"ja"); });
+    }
+    return rows;
+  }
+  // 1700行を超えるので、行はまとめて作って一度だけ差し込む（追加のたびの再計算を避ける）
+  function renderGloss(){
+    var rows=glossRows(), box=el("gloss-list");
+    el("gloss-pill").textContent="用語集 "+rows.length+"語";
+    ["yomi","count","order"].forEach(function(s){
+      var b=el("gloss-sort-"+s);
+      if(b) b.classList.toggle("on", glossSort===s);
+    });
+    box.innerHTML="";
+    if(!rows.length){
+      var e=document.createElement("div");
+      e.className="gloss-empty"; e.textContent="見つかりませんでした";
+      box.appendChild(e);
+      return;
+    }
+    var frag=document.createDocumentFragment();
+    rows.forEach(function(e){
+      var b=document.createElement("button");
+      b.type="button"; b.className="gloss-row"; b.setAttribute("data-term", e.k);
+      var body=document.createElement("div"); body.className="gbody";
+      // 見出しはルビ付きHTML（辞書はビルド時にエスケープ済み）
+      var tm=document.createElement("div"); tm.className="gterm"; tm.innerHTML=e.t;
+      body.appendChild(tm);
+      if(e.fq){
+        var fq=document.createElement("div"); fq.className="gfq"; fq.textContent="初出: "+e.fq;
+        body.appendChild(fq);
+      }
+      var cn=document.createElement("span"); cn.className="gcount"; cn.textContent=e.c+"回";
+      b.appendChild(body); b.appendChild(cn);
+      frag.appendChild(b);
+    });
+    box.appendChild(frag);
+  }
+  function setGlossSort(s){
+    if(s!=="yomi"&&s!=="count"&&s!=="order") return;
+    if(glossSort===s) return;
+    glossSort=s; renderGloss();
+  }
+  // 1文字打つたびに描き直さない。少し待ってから、そのときの入力欄の中身で描き直す。
+  function onGlossInput(){
+    if(glossTimer){ clearTimeout(glossTimer); glossTimer=null; }
+    glossTimer=setTimeout(function(){
+      glossTimer=null;
+      var box=el("gloss-search");
+      glossQuery=kanaKey(String((box&&box.value)||"").trim());
+      renderGloss();
+    }, GLOSS_DEBOUNCE);
+  }
+  function openGlossary(){
+    if(!glossEntries().length) return;
+    stopTimer(); mode=null; current=null; fromScore=false;
+    renderGloss(); show("glossary");
+  }
+
   /* ---- ランダム演習の科目選択 ---- */
   function openPick(){
     el("pick-n-ippan").textContent=poolQids("ippan").length+"問";
@@ -1029,6 +1173,24 @@
   el("browse-prev").addEventListener("click", function(){ if(browseIdx>0) showBrowse(browseIdx-1); });
   el("browse-next").addEventListener("click", function(){ if(browseIdx<browseSeq.length-1) showBrowse(browseIdx+1); });
   el("browse-back").addEventListener("click", function(){ renderBrowseList(); show("browse"); });
+  // 用語集
+  el("btn-gloss").addEventListener("click", function(){ if(!el("btn-gloss").disabled) openGlossary(); });
+  el("gloss-home").addEventListener("click", goHome);
+  el("gloss-search").addEventListener("input", onGlossInput);
+  el("gloss-sort-yomi").addEventListener("click", function(){ setGlossSort("yomi"); });
+  el("gloss-sort-count").addEventListener("click", function(){ setGlossSort("count"); });
+  el("gloss-sort-order").addEventListener("click", function(){ setGlossSort("order"); });
+  // 行は描き直すたびに作り替わるのでイベント委譲（1700行ぶんの登録もしない）
+  el("gloss-list").addEventListener("click", function(ev){
+    var box=el("gloss-list"), t=ev&&ev.target;
+    while(t && t!==box){
+      if(t.classList && t.classList.contains("gloss-row")){
+        openTerm(t.getAttribute("data-term"));
+        return;
+      }
+      t=t.parentNode;
+    }
+  });
   // 用語ポップアップ（本文の4か所だけ。選択肢は対象外）
   ["q-text","r-question","expl-body","ans-note"].forEach(bindTerms);
   el("term-close").addEventListener("click", closeTerm);
@@ -1053,11 +1215,14 @@
     onAnswer:onAnswer, toResult:toResult, nextPractice:nextPractice, renderScore:renderScore,
     openBrowse:openBrowse, renderBrowseList:renderBrowseList, showBrowse:showBrowse,
     openTerm:openTerm, closeTerm:closeTerm, plainHead:plainHead,
+    openGlossary:openGlossary, renderGloss:renderGloss, setGlossSort:setGlossSort,
+    glossRows:glossRows, glossEntries:glossEntries, onGlossInput:onGlossInput, kanaKey:kanaKey,
     setTheme:setTheme, toggleTheme:toggleTheme,
     poolQids:poolQids, wrongQids:wrongQids, allTags:allTags, findQ:findQ, tally:tally,
     peek:function(){ return { mode:mode, seq:seq, seqIdx:seqIdx, current:current, picks:picks,
       lastScore:lastScore, save:save, deckKey:deckKey, fromScore:fromScore,
-      browseTag:browseTag, browseSeq:browseSeq, browseIdx:browseIdx, gloss:GLOSS, theme:theme }; }
+      browseTag:browseTag, browseSeq:browseSeq, browseIdx:browseIdx, gloss:GLOSS, theme:theme,
+      glossSort:glossSort, glossQuery:glossQuery }; }
   };
 })();
 </script>
