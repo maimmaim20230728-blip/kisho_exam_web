@@ -1,0 +1,21 @@
+{
+  "name": "気象予報士 学科過去問トレーニング",
+  "short_name": "気象過去問",
+  "description": "気象予報士試験(学科)の過去問を、回ごとの本試験モード・ランダム演習・間違い復習で解けるオフライン対応アプリ",
+  "lang": "ja",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#eef5fb",
+  "theme_color": "#2569a8",
+  "categories": ["education"],
+  "icons": [
+    {
+      "src": "icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

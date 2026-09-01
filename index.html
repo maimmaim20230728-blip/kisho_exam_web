@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#2569a8" id="theme-meta">
+<meta name="description" content="気象予報士試験(学科)の過去問演習。回ごとの本試験モード・ランダム演習・間違い復習に対応したオフラインアプリ">
+<title>気象予報士 学科過去問トレーニング</title>
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+<script id="theme-boot">
+/* 配色は画面が出る前に決める。本体スクリプトは問題データ20本の後ろなので、
+   ここで立てておかないと夜間モードでも一瞬まぶしい白が出てしまう。 */
+(function(){
+  var t=null;
+  try{ t=localStorage.getItem("kishoexam.theme.v1"); }catch(e){}
+  if(t!=="dark"&&t!=="light"){
+    var m=null;
+    try{ m=window.matchMedia&&window.matchMedia("(prefers-color-scheme: dark)"); }catch(e){}
+    t=(m&&m.matches)?"dark":"light";
+  }
+  document.documentElement.dataset.theme=t;
+  var meta=document.getElementById("theme-meta");
+  if(meta) meta.setAttribute("content", t==="dark"?"#101821":"#2569a8");
+})();
+</script>
+<style>
+  /* 配色はすべてここに集約する。ダーク側で同じ変数を上書きするだけで夜間モードになる。 */
+  :root{
+    color-scheme:light;
+    --bg1:#eef5fb; --bg2:#e8f0f7;
+    --ink:#1c2b36; --ink-soft:#5a6b78;
+    --card:#ffffff; --line:#dde5ec;
+    --brand:#2569a8; --brand-dark:#1b4f80; --brand-soft:#e3eefa;
+    --accent:#f2a73b; --accent-soft:#fdf1de;
+    --correct:#15a35a; --correct-soft:#e4f6ec; --correct-ink:#0e6e3c;
+    --wrong:#e0524d; --wrong-soft:#fbe7e6; --wrong-ink:#a8302c;
+    --warn-line:#eccf9c; --warn-ink:#7a5310;      /* 注意書き・公式注記 */
+    --dim:#dfe6ec; --dim-ink:#9aa8b2;             /* 押せないボタン・準備中の行 */
+    --recap:rgba(255,255,255,.70);                /* 問題文の再掲 */
+    --scrim:rgba(20,34,45,.72);                   /* オーバーレイの背景 */
+    --brand-glow:0 6px 16px rgba(37,105,168,.30);
+    --shadow:0 8px 24px rgba(28,43,54,.10);
+    --shadow-sm:0 3px 10px rgba(28,43,54,.08);
+    --r:14px;
+  }
+  /* 夜間モード。深夜に開く人が多いので、白の面積を残さず暗い側へ寄せる。
+     ただし図(白背景のスキャン画像)だけは反転させない＝読み取れなくなるため。 */
+  :root[data-theme="dark"]{
+    color-scheme:dark;
+    --bg1:#101821; --bg2:#0d141c;
+    --ink:#dce6ee; --ink-soft:#93a4b2;
+    --card:#1a2530; --line:#2c3a47;
+    --brand:#5b9bd5; --brand-dark:#7fb3e3; --brand-soft:#1d3348;
+    --accent:#f2a73b; --accent-soft:#3a2f1a;
+    --correct:#2fbf75; --correct-soft:#173327; --correct-ink:#8fe3b5;
+    --wrong:#e0524d; --wrong-soft:#3a1f1e; --wrong-ink:#f3a9a5;
+    --warn-line:#5d4a26; --warn-ink:#e6bd7a;
+    --dim:#243040; --dim-ink:#6d7d8b;
+    --recap:rgba(255,255,255,.045);
+    --scrim:rgba(3,7,11,.80);
+    --brand-glow:0 6px 16px rgba(0,0,0,.45);
+    --shadow:0 8px 24px rgba(0,0,0,.45);
+    --shadow-sm:0 3px 10px rgba(0,0,0,.35);
+  }
+  *{box-sizing:border-box; -webkit-tap-highlight-color:transparent;}
+  html,body{height:100%;}
+  body{
+    margin:0;
+    /* 大人向けの試験対策アプリなので角ゴシック系（WWの丸ゴシックは使わない） */
+    font-family:"Hiragino Kaku Gothic ProN","Yu Gothic UI","Noto Sans JP","Segoe UI",system-ui,sans-serif;
+    color:var(--ink);
+    background:linear-gradient(165deg,var(--bg1),var(--bg2));
+    background-attachment:fixed;
+    line-height:1.7; -webkit-text-size-adjust:100%; overflow-x:hidden;
+  }
+  #app{max-width:540px; margin:0 auto; min-height:100dvh; display:flex; flex-direction:column; position:relative;}
+  .screen{
+    position:relative; display:none; flex-direction:column;
+    min-height:100vh; min-height:100dvh;
+    padding:18px 18px calc(22px + env(safe-area-inset-bottom));
+    padding-top:calc(14px + env(safe-area-inset-top)); animation:fade .22s ease;
+  }
+  .screen.active{display:flex;}
+  @keyframes fade{from{opacity:0; transform:translateY(6px);} to{opacity:1; transform:none;}}
+
+  /* ============ 共通パーツ ============ */
+  .topbar{display:flex; align-items:center; gap:10px; min-height:38px; margin-bottom:10px;}
+  .topbar .spacer{flex:1;}
+  .iconbtn{border:none; background:var(--card); color:var(--ink-soft); width:38px; height:38px; flex:none;
+    border-radius:50%; font-size:17px; cursor:pointer; box-shadow:var(--shadow-sm); display:grid; place-items:center;
+    font-family:inherit;}
+  .iconbtn:active{transform:scale(.94);}
+  .pill{display:inline-flex; align-items:center; background:var(--brand-soft); color:var(--brand-dark);
+    font-weight:700; padding:5px 13px; border-radius:999px; font-size:14px; white-space:nowrap;}
+  .pill.timer{background:var(--card); color:var(--ink-soft); box-shadow:var(--shadow-sm);
+    font-variant-numeric:tabular-nums; font-feature-settings:"tnum";}
+  .btn{border:none; border-radius:var(--r); cursor:pointer; font-family:inherit; font-weight:700;
+    font-size:17px; padding:15px 18px; width:100%; transition:transform .08s, background .15s;}
+  .btn:active{transform:scale(.985);}
+  .btn-primary{background:var(--brand); color:#fff; box-shadow:var(--brand-glow);}
+  .btn-primary:active{background:var(--brand-dark);}
+  .btn-sub{background:var(--card); color:var(--brand-dark); border:2px solid var(--brand); box-shadow:var(--shadow-sm);}
+  .btn:disabled{background:var(--dim); color:var(--dim-ink); box-shadow:none; cursor:default;}
+  .btn:disabled:active{transform:none;}
+  .linkbtn{background:none; border:none; color:var(--ink-soft); font-size:13px; text-decoration:underline;
+    cursor:pointer; font-family:inherit; padding:8px 6px;}
+  .sec-title{font-size:18px; font-weight:800; color:var(--brand-dark); margin:2px 0 12px;}
+
+  /* ============ ホーム ============ */
+  #home{gap:16px;}
+  .home-head{text-align:center; padding:14px 0 2px;}
+  .home-head .mark{font-size:44px; line-height:1; display:block; margin-bottom:6px;}
+  .title{font-size:25px; font-weight:800; margin:0; color:var(--brand-dark); letter-spacing:.5px; line-height:1.45;}
+  .tagline{margin:6px 0 0; color:var(--ink-soft); font-size:13.5px; font-weight:700;}
+  .card{background:var(--card); border-radius:var(--r); box-shadow:var(--shadow); padding:16px 18px;}
+  .stat-title{font-size:13px; font-weight:800; color:var(--brand-dark); margin:0 0 10px;}
+  .stat-row{display:flex; align-items:baseline; justify-content:space-between; gap:10px; padding:5px 0;
+    border-top:1px solid var(--line); font-size:14px; color:var(--ink-soft);}
+  .stat-row:first-of-type{border-top:none;}
+  .stat-row b{font-size:19px; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums;}
+  .stat-row.main b{color:var(--brand); font-size:23px;}
+  .home-btns{display:flex; flex-direction:column; gap:11px;}
+  .warn{display:none; background:var(--accent-soft); border:1px solid var(--warn-line); color:var(--warn-ink);
+    border-radius:var(--r); padding:12px 14px; font-size:13px; line-height:1.6;}
+  .home-foot{margin-top:auto; padding-top:18px; text-align:center;}
+  .source{font-size:11.5px; color:var(--ink-soft); line-height:1.6; margin:0 0 6px;}
+  .credit{display:inline-block; font-size:11.5px; color:var(--brand-dark); text-decoration:underline;}
+  .credit:active{opacity:.6;}
+  .foot-row{display:flex; align-items:center; justify-content:space-between; margin-top:6px;}
+  .foot-right{display:flex; align-items:center; gap:10px;}
+  .ver{font-size:11px; color:var(--ink-soft); opacity:.8;}
+  /* 夜間モードの切替。主役ではないのでフッターに小さく置く */
+  .iconbtn.small{width:32px; height:32px; font-size:15px;}
+
+  /* ============ 回選択 ============ */
+  .exam-list{display:flex; flex-direction:column; gap:9px;}
+  .exam-row{display:flex; align-items:center; gap:12px; text-align:left; width:100%; font-family:inherit;
+    background:var(--card); border:1px solid var(--line); border-left:4px solid var(--brand);
+    border-radius:12px; padding:12px 14px; cursor:pointer; box-shadow:var(--shadow-sm); color:var(--ink);}
+  .exam-row:active{transform:scale(.99);}
+  .exam-row.senmon{border-left-color:var(--accent);}
+  .exam-row.off{opacity:.5; cursor:default; border-left-color:var(--line);}
+  .exam-row.off:active{transform:none;}
+  .exam-row .ebody{flex:1; min-width:0;}
+  .exam-row .ename{font-size:15.5px; font-weight:800;}
+  .exam-row .esub{font-size:11.5px; color:var(--ink-soft); margin-top:2px;}
+  .exam-row .ebest{flex:none; font-size:12px; font-weight:700; color:var(--brand-dark);
+    background:var(--brand-soft); border-radius:999px; padding:4px 10px; white-space:nowrap;}
+  .exam-row.off .ebest{background:var(--dim); color:var(--ink-soft);}
+
+  /* ============ 出題 ============ */
+  .q-text{font-size:16px; line-height:1.8; white-space:pre-wrap; text-align:left;
+    overflow-wrap:anywhere; margin:0 0 14px;}
+  .figs{display:flex; flex-direction:column; gap:10px; margin:0 0 16px;}
+  .figs img{max-width:100%; height:auto; display:block; margin:0 auto; background:#fff;
+    border:1px solid var(--line); border-radius:8px; cursor:zoom-in;}
+  /* 市販書籍から引用された図は載せられない。図の代わりに理由をカードで置く */
+  .fig-note{background:var(--card); border:1px solid var(--line); border-radius:8px;
+    padding:11px 13px; font-size:12.5px; line-height:1.7; color:var(--ink-soft);}
+  .choices{display:flex; flex-direction:column; gap:10px; margin-bottom:8px;}
+  .choice{display:flex; align-items:flex-start; gap:11px; width:100%; text-align:left; font-family:inherit;
+    background:var(--card); color:var(--ink); border:2px solid var(--line); border-radius:12px;
+    padding:13px 15px; font-size:15.5px; line-height:1.7; cursor:pointer; box-shadow:var(--shadow-sm);
+    transition:transform .08s;}
+  .choice:active{transform:scale(.995);}
+  .choice .mark{flex:none; font-size:19px; line-height:1.5; font-weight:700; color:var(--brand-dark);}
+  .choice .ctext{flex:1; min-width:0; white-space:pre-wrap; overflow-wrap:anywhere; font-weight:600;}
+  .choice.correct{background:var(--correct-soft); border-color:var(--correct); color:var(--correct-ink);}
+  .choice.correct .mark{color:var(--correct);}
+  .choice.wrong{background:var(--wrong-soft); border-color:var(--wrong); color:var(--wrong-ink);}
+  .choice.wrong .mark{color:var(--wrong);}
+  .choice.dim{opacity:.45;}
+
+  /* ============ 解説 ============ */
+  .verdict{font-size:26px; font-weight:800; margin:0 0 4px; text-align:center;}
+  .verdict.ok{color:var(--correct);} .verdict.ng{color:var(--wrong);}
+  .ans-line{text-align:center; font-size:16px; font-weight:800; color:var(--brand-dark); margin:0 0 4px;}
+  .ans-note{display:none; text-align:center; font-size:12.5px; color:var(--warn-ink); background:var(--accent-soft);
+    border-radius:8px; padding:7px 10px; margin:0 0 6px;}
+  .src-line{text-align:center; font-size:11.5px; color:var(--ink-soft); margin:0 0 4px;}
+  /* 解説が支援センターのものではないことを、解説画面でも常時ことわる */
+  .src-note{font-size:11px; opacity:.85; margin:0 0 6px;}
+  .recap{background:var(--recap); border:1px solid var(--line); border-radius:12px;
+    padding:12px 14px; margin:12px 0; font-size:13px; line-height:1.75; white-space:pre-wrap;
+    overflow-wrap:anywhere; color:var(--ink-soft); max-height:34vh; overflow-y:auto;}
+  .expl{background:var(--card); border-radius:var(--r); box-shadow:var(--shadow);
+    padding:16px 18px 20px; font-size:15.5px; line-height:1.85; margin-bottom:16px;}
+  .expl h3{margin:0 0 8px; font-size:14px; color:var(--brand-dark);}
+  .expl .body{white-space:pre-wrap; overflow-wrap:anywhere;}
+  .result-foot{margin-top:auto; text-align:center;}
+
+  /* ============ 採点結果 ============ */
+  .score-big{text-align:center; margin:10px 0 2px; font-weight:800; color:var(--brand);
+    font-size:46px; line-height:1.2; font-variant-numeric:tabular-nums;}
+  .score-big .u{font-size:24px; color:var(--ink-soft);}   /* 「/」「正解」だけ小さく */
+  .score-line{text-align:center; font-size:13px; color:var(--ink-soft); margin:0 0 18px;}
+  .score-grid{display:grid; grid-template-columns:repeat(5,1fr); gap:8px; margin-bottom:18px;}
+  .cell{display:flex; flex-direction:column; align-items:center; gap:1px; padding:9px 2px;
+    background:var(--card); border:2px solid var(--line); border-radius:10px; cursor:pointer;
+    font-family:inherit; box-shadow:var(--shadow-sm);}
+  .cell:active{transform:scale(.96);}
+  .cell .cq{font-size:10.5px; color:var(--ink-soft); font-weight:700;}
+  .cell .cm{font-size:20px; font-weight:800; line-height:1.1;}
+  .cell.ok{border-color:var(--correct);} .cell.ok .cm{color:var(--correct);}
+  .cell.ng{border-color:var(--wrong);} .cell.ng .cm{color:var(--wrong);}
+  .score-btns{display:flex; flex-direction:column; gap:11px; margin-top:auto;}
+
+  /* ============ オーバーレイ ============ */
+  .overlay{position:fixed; inset:0; z-index:50; display:none; background:var(--scrim);
+    animation:fade .2s ease; padding:16px;}
+  .overlay.show{display:block;}
+  #fig-overlay{overflow:auto; -webkit-overflow-scrolling:touch;}
+  #fig-overlay img{display:block; width:100%; max-width:none; height:auto; margin:0 auto;
+    background:#fff; border-radius:6px;}
+  .fig-close{position:fixed; top:calc(10px + env(safe-area-inset-top)); right:12px; z-index:51;}
+  #pick-overlay{display:none; place-items:center;}
+  #pick-overlay.show{display:grid;}
+  .pickbox{background:var(--card); border-radius:18px; box-shadow:var(--shadow); padding:20px 18px 14px;
+    width:100%; max-width:330px; text-align:center;}
+  .pickbox h2{margin:0 0 4px; font-size:17px; color:var(--brand-dark);}
+  .pickbox p{margin:0 0 14px; font-size:12.5px; color:var(--ink-soft);}
+  .pick-item{display:flex; align-items:center; justify-content:space-between; gap:10px; width:100%;
+    font-family:inherit; font-weight:800; font-size:15.5px; color:var(--ink); background:var(--card);
+    border:2px solid var(--brand); border-radius:12px; padding:13px 15px; margin-bottom:10px; cursor:pointer;}
+  .pick-item:active{transform:scale(.98);}
+  .pick-item .pn{font-size:12px; font-weight:700; color:var(--brand-dark); opacity:.85;}
+
+  /* ============ 用語（本文中のタップできる語） ============ */
+  /* 押し付けがましくならないよう、点線の下線だけで「押せる」と伝える */
+  .term{border-bottom:1px dotted var(--brand); color:var(--brand-dark); cursor:pointer;}
+  .term:active{background:var(--brand-soft);}
+  #term-overlay{display:none; place-items:center;}
+  #term-overlay.show{display:grid;}
+  .termbox{background:var(--card); border-radius:18px; box-shadow:var(--shadow); padding:20px 18px 16px;
+    width:100%; max-width:340px; max-height:76vh; overflow-y:auto;}
+  .termbox h2{margin:0 0 8px; font-size:18px; color:var(--brand-dark);}
+  .termbox .tbody{margin:0 0 14px; font-size:14.5px; line-height:1.85; white-space:pre-wrap;
+    overflow-wrap:anywhere;}
+  /* ふりがな。振るのはポップアップの中だけで、問題文・解説本文には振らない */
+  ruby{ruby-position:over;}
+  rt{font-size:.55em; color:inherit; opacity:.75; font-weight:600;}
+  /* ルビが上に乗るぶん、ポップアップ内だけ行間を広げる */
+  #term-title{line-height:2;}
+  #term-body{line-height:2.05;}
+
+  /* ============ 解説閲覧 ============ */
+  .exam-row .qmark{flex:none; font-size:19px; font-weight:800; line-height:1.2;}
+  .qmark.ok{color:var(--correct);} .qmark.ng{color:var(--wrong);}
+  .browse-foot{margin-top:auto; padding-top:14px; text-align:center;}
+  .browse-nav{display:none; gap:10px; margin-bottom:10px;}
+  .browse-nav.show{display:flex;}
+  .verdict.browse{color:var(--ink); font-size:21px;}
+
+  @media (prefers-reduced-motion: reduce){
+    .screen{animation:none;}
+  }
+</style>
+</head>
+<body>
+<div id="app">
+
+  <!-- ============ ホーム ============ -->
+  <section id="home" class="screen active">
+    <div class="home-head">
+      <span class="mark" aria-hidden="true">⛅</span>
+      <h1 class="title">気象予報士<br>学科過去問トレーニング</h1>
+      <p class="tagline">第56回〜第65回 全300問収録</p>
+    </div>
+
+    <div class="card">
+      <p class="stat-title">学習記録</p>
+      <div class="stat-row main"><span>総正答率</span><b id="home-rate">—</b></div>
+      <div class="stat-row"><span>総解答数</span><b id="home-total">0</b></div>
+      <div class="stat-row"><span>一般知識</span><b id="home-ippan">—</b></div>
+      <div class="stat-row"><span>専門知識</span><b id="home-senmon">—</b></div>
+    </div>
+
+    <p class="warn" id="data-warn"></p>
+
+    <div class="home-btns">
+      <button class="btn btn-primary" id="btn-exams">📝 回を選んで挑戦</button>
+      <button class="btn btn-sub" id="btn-random">🎲 ランダム演習</button>
+      <button class="btn btn-sub" id="btn-review">🔁 間違えた問題を復習</button>
+      <button class="btn btn-sub" id="btn-browse">📖 解説を読む</button>
+    </div>
+
+    <div class="home-foot">
+      <p class="source">出典: 気象業務支援センター<br>気象予報士試験 過去問題(第56回〜第65回)</p>
+      <p class="source">本アプリの解説は当団体が独自に作成したものです。気象業務支援センターとは無関係であり、内容は当団体の責任によるものです。</p>
+      <p class="source">過去の試験問題は、技術の進展や法規改正等により、現在では解答が変わる可能性があります。各問題の出典(実施回)をご確認ください。</p>
+      <a class="credit" id="credit-link" href="https://soudansoyogi.com/" target="_blank" rel="noopener noreferrer">アプリ開発: 介護と支援の相談どころ そよぎ</a>
+      <div class="foot-row">
+        <button class="linkbtn" id="reset-btn">学習記録をリセット</button>
+        <div class="foot-right">
+          <span class="ver" id="app-version">v0.1.0</span>
+          <button class="iconbtn small" id="theme-btn" title="夜の色にする" aria-label="配色を切り替える" aria-pressed="false">🌙</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ 回選択 ============ -->
+  <section id="exams" class="screen">
+    <div class="topbar">
+      <button class="iconbtn" id="exams-home" title="ホームへ">✕</button>
+      <div class="spacer"></div>
+      <span class="pill" id="exams-pill">本試験モード</span>
+    </div>
+    <h2 class="sec-title" id="exams-title">回を選んで挑戦</h2>
+    <div class="exam-list" id="exam-list"></div>
+  </section>
+
+  <!-- ============ 解説閲覧（問題をえらぶ） ============ -->
+  <section id="browse" class="screen">
+    <div class="topbar">
+      <button class="iconbtn" id="browse-home" title="ホームへ">✕</button>
+      <div class="spacer"></div>
+      <span class="pill" id="browse-title"></span>
+    </div>
+    <h2 class="sec-title">問題をえらぶ</h2>
+    <div class="exam-list" id="browse-list"></div>
+    <div class="browse-foot">
+      <button class="linkbtn" id="browse-exams">回の一覧にもどる</button>
+    </div>
+  </section>
+
+  <!-- ============ 出題 ============ -->
+  <section id="quiz" class="screen">
+    <div class="topbar">
+      <button class="iconbtn" id="quiz-home" title="ホームへ">✕</button>
+      <span class="pill" id="q-progress"></span>
+      <div class="spacer"></div>
+      <span class="pill timer" id="q-timer">00:00</span>
+    </div>
+    <div class="q-text" id="q-text"></div>
+    <div class="figs" id="q-figs"></div>
+    <div class="choices" id="q-choices"></div>
+  </section>
+
+  <!-- ============ 解説 ============ -->
+  <section id="result" class="screen">
+    <div class="verdict" id="verdict"></div>
+    <p class="ans-line" id="ans-line"></p>
+    <p class="ans-note" id="ans-note"></p>
+    <p class="src-line" id="r-source"></p>
+    <p class="src-line src-note" id="r-expl-note">解説は本アプリ独自のものです(気象業務支援センターとは無関係)</p>
+    <div class="recap" id="r-question"></div>
+    <div class="figs" id="r-figs"></div>
+    <div class="expl">
+      <h3>解説</h3>
+      <div class="body" id="expl-body"></div>
+    </div>
+    <div class="result-foot">
+      <!-- 解説閲覧モードのときだけ出す前後移動 -->
+      <div class="browse-nav" id="browse-nav">
+        <button class="btn btn-sub" id="browse-prev">前の問題</button>
+        <button class="btn btn-primary" id="browse-next">次の問題</button>
+      </div>
+      <button class="btn btn-primary" id="next-btn">次へ</button>
+      <button class="linkbtn" id="result-home">ホームへ</button>
+      <button class="linkbtn" id="browse-back">一覧にもどる</button>
+    </div>
+  </section>
+
+  <!-- ============ 採点結果 ============ -->
+  <section id="score" class="screen">
+    <div class="topbar">
+      <button class="iconbtn" id="score-home" title="ホームへ">✕</button>
+      <div class="spacer"></div>
+      <span class="pill" id="score-title"></span>
+    </div>
+    <div class="score-big"><span id="score-num">0</span><span class="u"> / </span><span id="score-total">0</span><span class="u"> 正解</span></div>
+    <p class="score-line" id="score-line"></p>
+    <div class="score-grid" id="score-grid"></div>
+    <div class="score-btns">
+      <button class="btn btn-primary" id="retry-btn">もう一度</button>
+      <button class="btn btn-sub" id="score-back">ホームへ</button>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============ 図の拡大 ============ -->
+<div class="overlay" id="fig-overlay">
+  <button class="iconbtn fig-close" id="fig-close" title="閉じる">✕</button>
+  <img id="fig-img" alt="図の拡大">
+</div>
+
+<!-- ============ ランダム演習の科目選択 ============ -->
+<div class="overlay" id="pick-overlay">
+  <div class="pickbox">
+    <h2>ランダム演習</h2>
+    <p>出題する科目をえらんでください</p>
+    <button class="pick-item" id="pick-ippan"><span>一般知識</span><span class="pn" id="pick-n-ippan"></span></button>
+    <button class="pick-item" id="pick-senmon"><span>専門知識</span><span class="pn" id="pick-n-senmon"></span></button>
+    <button class="pick-item" id="pick-all"><span>全部</span><span class="pn" id="pick-n-all"></span></button>
+    <button class="linkbtn" id="pick-cancel">キャンセル</button>
+  </div>
+</div>
+
+<!-- ============ 用語の説明 ============ -->
+<div class="overlay" id="term-overlay">
+  <div class="termbox" role="dialog" aria-labelledby="term-title">
+    <h2 id="term-title"></h2>
+    <div class="tbody" id="term-body"></div>
+    <button class="btn btn-sub" id="term-close">閉じる</button>
+  </div>
+</div>
+
+<!-- 問題データ(20ファイル)。未配置でもJSエラーで死なないよう onerror で数えるだけにする -->
+<script src="data/q_56_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_56_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_57_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_57_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_58_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_58_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_59_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_59_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_60_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_60_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_61_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_61_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_62_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_62_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_63_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_63_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_64_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_64_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_65_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/q_65_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<!-- 用語辞書（後工程で_build_data.pyが生成する。未配置でも onerror で読み飛ばす） -->
+<script src="data/glossary.js" onerror="window.KISHO_GLOSS_MISS=1"></script>
+<script>
+(function(){
+  "use strict";
+
+  var VERSION="0.4.0";
+  var STORAGE_KEY="kishoexam.save.v1";
+  var THEME_KEY="kishoexam.theme.v1";
+  var THEME_META={ light:"#2569a8", dark:"#101821" };   // ブラウザのバーの色
+  var MARKS="①②③④⑤";
+  var KAIS=[65,64,63,62,61,60,59,58,57,56];                       // 表示は新しい順
+  var KINDS=["ippan","senmon"];
+  // 実施時期(表示用)
+  var HELD={56:"2021年8月",57:"2022年1月",58:"2022年8月",59:"2023年1月",60:"2023年8月",
+            61:"2024年1月",62:"2024年8月",63:"2025年1月",64:"2025年8月",65:"2026年1月"};
+  var PASS_HIT=11, PASS_OF=15;   // 合格基準の目安(15問中11問)
+  var REVEAL_MS=850;             // 正誤の色付けを見せる時間(ランダム/復習のみ)
+
+  // データファイルが1つも無くても落ちないよう、必ず既定値を用意する
+  var DATA=window.KISHO_DATA||{};
+  // 用語辞書も同様（data/glossary.js が未配置なら空＝ポップアップが出ないだけ）
+  var GLOSS=window.KISHO_GLOSS||{};
+
+  var save={ answers:{}, best:{}, decks:{} };
+  var mode=null;        // "exam" | "random" | "review" | "browse"
+  var deckKey=null;     // ランダム演習のプール識別 "all"/"ippan"/"senmon"
+  var seq=[], seqIdx=0; // 本試験/復習の出題キュー(qidの配列)
+  var current=null;     // {tag,pack,q,qid}
+  var picks={};         // 本試験中の選択 qid -> 選んだ番号(1〜5)
+  var examTag=null, examTitle="";
+  var lastScore=null;   // {tag,correct,total}
+  var fromScore=false;  // 解説画面へ採点結果のグリッドから来たか
+  var timerId=null, timerStart=0;
+  var browseTag=null, browseSeq=[], browseIdx=0;   // 解説閲覧モード（記録は一切さわらない）
+  var theme="light";    // "light" | "dark"（学習記録とは別の保存キー＝リセットで消えない）
+
+  var el=function(id){ return document.getElementById(id); };
+  var screens={ home:el("home"), exams:el("exams"), browse:el("browse"),
+                quiz:el("quiz"), result:el("result"), score:el("score") };
+
+  /* ---- 保存 ---- */
+  function load(){
+    try{
+      var s=JSON.parse(localStorage.getItem(STORAGE_KEY)||"null");
+      if(s){
+        if(s.answers&&typeof s.answers==="object"&&!Array.isArray(s.answers)) save.answers=s.answers;
+        if(s.best&&typeof s.best==="object"&&!Array.isArray(s.best)) save.best=s.best;
+        if(s.decks&&typeof s.decks==="object"&&!Array.isArray(s.decks)) save.decks=s.decks;
+      }
+    }catch(e){}
+  }
+  function persist(){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(save)); }catch(e){} }
+
+  /* ---- 配色（夜間モード） ---- */
+  // 端末の設定を初期値にする。head の theme-boot が同じ判定で先に立てているので、ここは追認になる。
+  function prefersDark(){
+    try{ return !!(window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches); }
+    catch(e){ return false; }
+  }
+  function savedTheme(){
+    var t=null;
+    try{ t=localStorage.getItem(THEME_KEY); }catch(e){}
+    return (t==="dark"||t==="light") ? t : null;    // 壊れた値は無かったことにする
+  }
+  function applyTheme(t){
+    theme=(t==="dark")?"dark":"light";
+    var root=document.documentElement;
+    if(root){
+      if(root.dataset) root.dataset.theme=theme;
+      else root.setAttribute("data-theme", theme);
+    }
+    var meta=el("theme-meta");
+    if(meta) meta.setAttribute("content", THEME_META[theme]);
+    var b=el("theme-btn");
+    if(b){
+      b.textContent=(theme==="dark")?"☀️":"🌙";
+      b.title=(theme==="dark")?"昼の色にする":"夜の色にする";
+      b.setAttribute("aria-pressed", (theme==="dark")?"true":"false");
+    }
+  }
+  function setTheme(t){ applyTheme(t); try{ localStorage.setItem(THEME_KEY, theme); }catch(e){} }
+  function toggleTheme(){ setTheme(theme==="dark"?"light":"dark"); }
+
+  /* ---- データの参照 ---- */
+  function kaiOf(tag){ var p=DATA[tag]; return (p&&p.kai)||parseInt(tag,10)||0; }
+  function kindOfTag(tag){ var p=DATA[tag]; return (p&&p.kind)||(tag.indexOf("senmon")>=0?"senmon":"ippan"); }
+  function kindShort(kind){ return kind==="senmon"?"専門知識":"一般知識"; }
+  function kindMini(kind){ return kind==="senmon"?"専門":"一般"; }
+  function qidOf(tag,q){ return tag+"_"+q; }
+  function kindOfQid(qid){ var m=qid.match(/_(ippan|senmon)_\d+$/); return m?m[1]:null; }
+  // ラベルの末尾「(第65回)」は行の見出しと重複するので落とす
+  function stripKai(label){ return (label||"").replace(/[（(]\s*第\d+回\s*[）)]\s*$/,""); }
+  // 一覧に出す冒頭抜粋。本文はタグ入りHTMLなので、タグを外して素の文字に戻してから切る
+  function plainHead(html, n){
+    var s=String(html||"").replace(/<[^>]*>/g,"");
+    s=s.replace(/&lt;/g,"<").replace(/&gt;/g,">").replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&amp;/g,"&");
+    s=s.replace(/\s+/g," ").trim();
+    return s.length>n ? s.slice(0,n)+"…" : s;
+  }
+  function findQ(qid){
+    var i=qid.lastIndexOf("_");
+    if(i<0) return null;
+    var tag=qid.slice(0,i), n=parseInt(qid.slice(i+1),10);
+    var p=DATA[tag];
+    if(!p||!p.questions) return null;
+    for(var k=0;k<p.questions.length;k++){ if(p.questions[k].q===n) return {tag:tag,pack:p,q:p.questions[k],qid:qid}; }
+    return null;
+  }
+  // 実際に読み込めたタグ(回は新しい順・同じ回は一般→専門)
+  function allTags(){
+    var keys=[];
+    for(var k in DATA){ if(DATA[k]&&DATA[k].questions&&DATA[k].questions.length) keys.push(k); }
+    keys.sort(function(a,b){
+      var d=kaiOf(b)-kaiOf(a);
+      if(d) return d;
+      return (kindOfTag(a)==="ippan"?0:1)-(kindOfTag(b)==="ippan"?0:1);
+    });
+    return keys;
+  }
+  function poolQids(kind){
+    var out=[];
+    allTags().forEach(function(tag){
+      if(kind && kindOfTag(tag)!==kind) return;
+      DATA[tag].questions.forEach(function(q){ out.push(qidOf(tag,q.q)); });
+    });
+    return out;
+  }
+  function sortedQuestions(tag){
+    return DATA[tag].questions.slice().sort(function(a,b){ return (a.q||0)-(b.q||0); });
+  }
+
+  /* ---- 記録の集計 ---- */
+  function tally(kind){
+    var c=0,w=0;
+    for(var qid in save.answers){
+      if(kind && kindOfQid(qid)!==kind) continue;
+      var a=save.answers[qid]||{};
+      c+=(a.c||0); w+=(a.w||0);
+    }
+    var n=c+w;
+    return { c:c, w:w, n:n, rate: n?Math.round(c*100/n):null };
+  }
+  function rateText(t){ return t.rate==null ? "—" : t.rate+"% ("+t.n+"問)"; }
+  // 「最後に解いたとき不正解」かつ、いま読み込めている問題だけ
+  function wrongQids(){
+    var out=[];
+    for(var qid in save.answers){ if(save.answers[qid] && save.answers[qid].last===0 && findQ(qid)) out.push(qid); }
+    return out;
+  }
+  function record(qid, ok){
+    var a=save.answers[qid]||{c:0,w:0,last:0};
+    if(ok){ a.c=(a.c||0)+1; a.last=1; } else { a.w=(a.w||0)+1; a.last=0; }
+    save.answers[qid]=a; persist();
+  }
+
+  /* ---- 画面切替 ---- */
+  function show(name){
+    for(var k in screens){ if(screens[k]) screens[k].classList.toggle("active", k===name); }
+    window.scrollTo(0,0);
+  }
+  function goHome(){
+    stopTimer(); mode=null; current=null; fromScore=false;
+    renderHome(); show("home");
+  }
+
+  /* ---- ホーム ---- */
+  function renderHome(){
+    var all=tally(null);
+    el("home-rate").textContent = all.rate==null ? "—" : all.rate+"%";
+    el("home-total").textContent = all.n;
+    el("home-ippan").textContent = rateText(tally("ippan"));
+    el("home-senmon").textContent = rateText(tally("senmon"));
+
+    var n=wrongQids().length, rb=el("btn-review");
+    rb.textContent="🔁 間違えた問題を復習 ("+n+"件)";
+    rb.disabled=(n===0);
+
+    // データ未配置でも画面は生きているが、押しても意味が無いボタンは止める
+    var total=poolQids(null).length, warn=el("data-warn");
+    el("btn-exams").disabled=(total===0);
+    el("btn-random").disabled=(total===0);
+    el("btn-browse").disabled=(total===0);
+    if(total===0){
+      warn.textContent="問題データが読み込まれていません。www/data/ に q_56_ippan.js 〜 q_65_senmon.js を配置してください。";
+      warn.style.display="block";
+    } else {
+      warn.style.display="none";
+    }
+  }
+
+  /* ---- 回選択（本試験モードと解説閲覧で共用） ---- */
+  // 20回分の枠は常に出し、データが無い行は「準備中」で押せなくする
+  function examRows(){
+    var rows=[], seen={};
+    KAIS.forEach(function(kai){ KINDS.forEach(function(kind){ var tag=kai+"_"+kind; seen[tag]=1; rows.push(tag); }); });
+    var extra=allTags().filter(function(t){ return !seen[t]; });
+    return extra.concat(rows);
+  }
+  function renderExams(){
+    var browsing=(mode==="browse");
+    el("exams-pill").textContent = browsing ? "解説閲覧" : "本試験モード";
+    el("exams-title").textContent = browsing ? "回を選んで解説を読む" : "回を選んで挑戦";
+    var box=el("exam-list"); box.innerHTML="";
+    examRows().forEach(function(tag){
+      var p=DATA[tag], kind=kindOfTag(tag), kai=kaiOf(tag), ready=!!(p&&p.questions&&p.questions.length);
+      var b=document.createElement("button");
+      b.type="button";
+      b.className="exam-row"+(kind==="senmon"?" senmon":"")+(ready?"":" off");
+      var body=document.createElement("div"); body.className="ebody";
+      var nm=document.createElement("div"); nm.className="ename"; nm.textContent="第"+kai+"回 "+kindShort(kind);
+      var sub=document.createElement("div"); sub.className="esub";
+      var parts=[];
+      if(p&&p.label) parts.push(stripKai(p.label));
+      if(HELD[kai]) parts.push(HELD[kai]);
+      sub.textContent=parts.join("・")||"—";
+      body.appendChild(nm); body.appendChild(sub);
+      var best=document.createElement("span"); best.className="ebest";
+      if(!ready) best.textContent="準備中";
+      else if(save.best[tag]!=null) best.textContent="ベスト "+save.best[tag]+"/"+p.questions.length;
+      else best.textContent="未挑戦";
+      b.appendChild(body); b.appendChild(best);
+      if(ready) b.addEventListener("click", function(){ browsing ? openBrowse(tag) : startExam(tag); });
+      box.appendChild(b);
+    });
+  }
+
+  /* ---- デッキ(ランダム演習) ---- */
+  function shuffle(a){
+    for(var i=a.length-1;i>0;i--){ var j=Math.floor(Math.random()*(i+1)); var t=a[i]; a[i]=a[j]; a[j]=t; }
+    return a;
+  }
+  // プールを1巡するまで重複させない。プールが変わった(データ増減)ら残りデッキを追従させる。
+  function nextFromDeck(){
+    var pool=poolQids(deckKey==="all"?null:deckKey);
+    if(!pool.length) return null;
+    var idx={}; pool.forEach(function(x){ idx[x]=1; });
+    var deck=(save.decks[deckKey]||[]).filter(function(x){ return idx[x]; });
+    if(deck.length===0){
+      deck=shuffle(pool.slice());
+      // 1巡の境目で同じ問題が続かないようにする
+      if(current && deck.length>1 && deck[0]===current.qid) deck.push(deck.shift());
+    }
+    var qid=deck.shift();
+    save.decks[deckKey]=deck; persist();
+    return qid;
+  }
+
+  /* ---- 出題 ---- */
+  function startExam(tag){
+    var p=DATA[tag];
+    if(!p||!p.questions||!p.questions.length) return;
+    mode="exam"; examTag=tag; examTitle="第"+kaiOf(tag)+"回 "+kindShort(kindOfTag(tag));
+    picks={}; seqIdx=0;
+    seq=sortedQuestions(tag).map(function(q){ return qidOf(tag,q.q); });
+    current=findQ(seq[0]);
+    if(!current) return;
+    startTimer(); renderQuestion();
+  }
+  function startRandom(key){
+    mode="random"; deckKey=key; stopTimer();
+    var qid=nextFromDeck();
+    var f=qid&&findQ(qid);
+    if(!f){ goHome(); return; }
+    current=f; renderQuestion();
+  }
+  function startReview(){
+    var list=wrongQids();
+    if(!list.length){ goHome(); return; }
+    mode="review"; stopTimer();
+    seq=shuffle(list); seqIdx=0;
+    current=findQ(seq[0]);
+    if(!current){ goHome(); return; }
+    renderQuestion();
+  }
+
+  // 図の描画。載せられない図(市販書籍からの引用など)は figures_note の文言だけを置く。
+  // 図と注記が両方あるときは、図を出したあとに注記を添える。
+  function renderFigs(box, figs, note){
+    box.innerHTML="";
+    var hasFig=!!(figs&&figs.length);
+    var text=(note==null)?"":String(note).trim();
+    if(!hasFig&&!text){ box.style.display="none"; return; }
+    box.style.display="";
+    if(hasFig) figs.forEach(function(name){
+      var img=document.createElement("img");
+      img.alt="問題の図"; img.src="figs/"+name;
+      // 図が未配置でも壊れた画像アイコンを出さない
+      img.addEventListener("error", function(){ img.style.display="none"; });
+      img.addEventListener("click", function(){ openFig(img.src); });
+      box.appendChild(img);
+    });
+    if(text){
+      // 文言はデータ側が持つ。素の文字として描く(HTMLは通さない)
+      var d=document.createElement("div");
+      d.className="fig-note"; d.textContent=text;
+      box.appendChild(d);
+    }
+  }
+
+  function renderQuestion(){
+    var c=current, q=c.q;
+    el("q-timer").style.display=(mode==="exam")?"":"none";
+    el("q-progress").textContent = (mode==="exam")
+      ? "問"+(seqIdx+1)+" / "+seq.length
+      : "第"+kaiOf(c.tag)+"回 "+kindMini(kindOfTag(c.tag))+" 問"+q.q;
+    // 問題文は下線(<u>)を含むためHTMLとして描画。改行はCSSのpre-wrapで保つ。
+    el("q-text").innerHTML=q.question||"";
+    renderFigs(el("q-figs"), q.figures, q.figures_note);
+    var box=el("q-choices"); box.innerHTML="";
+    // ★選択肢は並べ替えない(過去問を①〜⑤の番号どおりそのまま出す)
+    (q.choices||[]).forEach(function(txt,i){
+      var b=document.createElement("button");
+      b.type="button"; b.className="choice"; b.setAttribute("data-num", i+1);
+      var m=document.createElement("span"); m.className="mark"; m.textContent=MARKS.charAt(i)||String(i+1);
+      // 選択肢も下線(<u>)を含み得る。データはビルド時に全エスケープ済みなのでHTML描画で安全
+      var t=document.createElement("span"); t.className="ctext"; t.innerHTML=txt;
+      b.appendChild(m); b.appendChild(t);
+      b.addEventListener("click", function(){ onAnswer(i+1,b); }, {once:true});
+      box.appendChild(b);
+    });
+    show("quiz");
+  }
+
+  function isCorrect(q, num){ return num!=null && (q.answers||[]).indexOf(num)>=0; }
+
+  function onAnswer(num, btn){
+    var q=current.q, ok=isCorrect(q,num);
+    var btns=el("q-choices").querySelectorAll(".choice");
+    for(var i=0;i<btns.length;i++){ btns[i].style.pointerEvents="none"; }
+
+    // 本試験モードは解答を伏せたまま15問通す。記録は採点時にまとめて。
+    if(mode==="exam"){ picks[current.qid]=num; advanceExam(); return; }
+
+    record(current.qid, ok);
+    for(i=0;i<btns.length;i++){
+      var n=parseInt(btns[i].getAttribute("data-num"),10);
+      if(isCorrect(q,n)) btns[i].classList.add("correct");
+      else if(btns[i]!==btn) btns[i].classList.add("dim");
+    }
+    if(!ok && btn) btn.classList.add("wrong");
+    setTimeout(function(){ toResult(current, num, ok, false); }, REVEAL_MS);
+  }
+
+  function advanceExam(){
+    seqIdx++;
+    if(seqIdx>=seq.length){ finishExam(); return; }
+    current=findQ(seq[seqIdx]);
+    if(!current){ finishExam(); return; }
+    renderQuestion();
+  }
+
+  function finishExam(){
+    stopTimer();
+    var correct=0;
+    seq.forEach(function(qid){
+      var f=findQ(qid); if(!f) return;
+      var pick=picks[qid], ok=isCorrect(f.q,pick);
+      if(ok) correct++;
+      if(pick!=null) record(qid, ok);
+    });
+    if(save.best[examTag]==null || correct>save.best[examTag]) save.best[examTag]=correct;
+    persist();
+    lastScore={ tag:examTag, correct:correct, total:seq.length };
+    renderScore(); show("score");
+  }
+
+  /* ---- 解説 ---- */
+  function ansText(q){
+    var marks=(q.answers||[]).map(function(n){ return MARKS.charAt(n-1)||("["+n+"]"); });
+    return "正解: "+(marks.length?marks.join("または"):"—");
+  }
+  // 公式の注記。用語マーキングが入るのでHTML描画（データはビルド時エスケープ済み）
+  function renderNote(q){
+    var note=el("ans-note");
+    if(q.answer_note){ note.innerHTML=q.answer_note; note.style.display="block"; }
+    else { note.innerHTML=""; note.style.display="none"; }
+  }
+  // 問題文の再掲・図・解説本文（採点からの閲覧でも解説閲覧モードでも同じ）
+  function renderRecap(f){
+    el("r-question").innerHTML=f.q.question||"";
+    renderFigs(el("r-figs"), f.q.figures, f.q.figures_note);
+    var body=el("expl-body");
+    if(f.q.explanation){ body.innerHTML=f.q.explanation; }
+    else { body.innerHTML=""; body.textContent="(この問題の解説は準備中です)"; }
+  }
+  // フッターのボタンを場面で出し分ける（解説閲覧のときだけ前後移動）
+  function setResultFoot(browsing){
+    el("browse-nav").classList.toggle("show", !!browsing);
+    el("next-btn").style.display = browsing?"none":"";
+    el("result-home").style.display = browsing?"none":"";
+    el("browse-back").style.display = browsing?"":"none";
+    if(browsing){
+      el("browse-prev").disabled=(browseIdx<=0);
+      el("browse-next").disabled=(browseIdx>=browseSeq.length-1);
+    }
+  }
+  function toResult(f, pick, ok, backToScore){
+    fromScore=!!backToScore;
+    var v=el("verdict");
+    v.textContent = ok ? "○ 正解" : "✕ 不正解";
+    v.className="verdict "+(ok?"ok":"ng");
+    renderSource(f);
+
+    var line=ansText(f.q);
+    // 採点結果から見に来たときは、自分が何を選んだか思い出せるように添える
+    if(backToScore) line+="  /  あなたの解答: "+(pick==null?"未解答":(MARKS.charAt(pick-1)||pick));
+    el("ans-line").textContent=line;
+
+    renderNote(f.q);
+    renderRecap(f);
+    setResultFoot(false);
+    el("next-btn").textContent = backToScore ? "採点結果にもどる" : "次へ";
+    show("result");
+  }
+  function nextPractice(){
+    if(mode==="review"){
+      seqIdx++;
+      if(seqIdx>=seq.length){ startReview(); return; }   // 復習デッキは毎回作り直す
+      current=findQ(seq[seqIdx]);
+      if(!current){ startReview(); return; }
+      renderQuestion(); return;
+    }
+    var qid=nextFromDeck(), f=qid&&findQ(qid);
+    if(!f){ goHome(); return; }
+    current=f; renderQuestion();
+  }
+
+  /* ---- 解説閲覧（学習記録には一切さわらない） ---- */
+  function openBrowse(tag){
+    var p=DATA[tag];
+    if(!p||!p.questions||!p.questions.length) return;
+    mode="browse"; browseTag=tag; browseIdx=0;
+    browseSeq=sortedQuestions(tag).map(function(q){ return qidOf(tag,q.q); });
+    renderBrowseList(); show("browse");
+  }
+  function renderBrowseList(){
+    el("browse-title").textContent="第"+kaiOf(browseTag)+"回 "+kindShort(kindOfTag(browseTag));
+    var box=el("browse-list"); box.innerHTML="";
+    browseSeq.forEach(function(qid,i){
+      var f=findQ(qid);
+      if(!f) return;
+      var b=document.createElement("button");
+      b.type="button";
+      b.className="exam-row"+(kindOfTag(browseTag)==="senmon"?" senmon":"");
+      var body=document.createElement("div"); body.className="ebody";
+      var nm=document.createElement("div"); nm.className="ename"; nm.textContent="問"+f.q.q;
+      var sub=document.createElement("div"); sub.className="esub"; sub.textContent=plainHead(f.q.question,18);
+      body.appendChild(nm); body.appendChild(sub);
+      b.appendChild(body);
+      // 解答履歴があれば右端に○/✕（未解答は何も出さない）
+      var a=save.answers[qid];
+      if(a && ((a.c||0)+(a.w||0))>0){
+        var mk=document.createElement("span");
+        mk.className="qmark "+(a.last===1?"ok":"ng");
+        mk.textContent=(a.last===1?"○":"✕");
+        b.appendChild(mk);
+      }
+      b.addEventListener("click", function(){ showBrowse(i); });
+      box.appendChild(b);
+    });
+  }
+  function showBrowse(i){
+    var f=findQ(browseSeq[i]);
+    if(!f) return;
+    mode="browse"; browseIdx=i; fromScore=false;
+    var v=el("verdict");
+    v.textContent="📖 解説閲覧";
+    v.className="verdict browse";     // 正誤の色は付けない
+    renderSource(f);
+    el("ans-line").textContent=ansText(f.q);
+    renderNote(f.q);
+    renderRecap(f);
+    setResultFoot(true);
+    show("result");
+  }
+  // 全問に出典を明記する(公開時の利用条件対応)。解説表示の全経路(toResult/showBrowse)から呼ぶ
+  function renderSource(f){
+    el("r-source").textContent="出典：気象業務支援センター 気象予報士試験 "
+      +((f.pack&&f.pack.label)||"")+" 学科・"+kindShort(kindOfTag(f.tag))+" 問"+f.q.q;
+  }
+
+  /* ---- 採点結果 ---- */
+  function renderScore(){
+    if(!lastScore) return;
+    el("score-title").textContent=examTitle;
+    el("score-num").textContent=lastScore.correct;
+    el("score-total").textContent=lastScore.total;
+    var need=Math.ceil(lastScore.total*PASS_HIT/PASS_OF);
+    el("score-line").textContent="合格基準の目安: "+need+"問以上 ※回により調整あり";
+    var g=el("score-grid"); g.innerHTML="";
+    seq.forEach(function(qid,i){
+      var f=findQ(qid), pick=picks[qid], ok=!!f&&isCorrect(f.q,pick);
+      var b=document.createElement("button");
+      b.type="button"; b.className="cell "+(ok?"ok":"ng");
+      var cq=document.createElement("span"); cq.className="cq"; cq.textContent="問"+(f?f.q.q:(i+1));
+      var cm=document.createElement("span"); cm.className="cm"; cm.textContent=ok?"○":"✕";
+      b.appendChild(cq); b.appendChild(cm);
+      if(f) b.addEventListener("click", function(){ toResult(f, pick, ok, true); });
+      g.appendChild(b);
+    });
+  }
+
+  /* ---- タイマー(本試験モードの参考表示・カウントアップ) ---- */
+  function fmtTime(sec){ return ("0"+Math.floor(sec/60)).slice(-2)+":"+("0"+(sec%60)).slice(-2); }
+  function tickTimer(){ el("q-timer").textContent=fmtTime(Math.floor((Date.now()-timerStart)/1000)); }
+  function startTimer(){ stopTimer(); timerStart=Date.now(); tickTimer(); timerId=setInterval(tickTimer,1000); }
+  function stopTimer(){ if(timerId){ clearInterval(timerId); timerId=null; } }
+
+  /* ---- 図の拡大 ---- */
+  function openFig(src){ el("fig-img").src=src; el("fig-overlay").classList.add("show"); }
+  function closeFig(){ el("fig-overlay").classList.remove("show"); }
+
+  /* ---- 用語の説明 ---- */
+  // 辞書の値は {t:見出しのルビ付きHTML, d:説明のルビ付きHTML}。どちらもビルド時にエスケープ済み。
+  // 旧形式（説明の文字列だけ）の辞書が来ても落ちないよう、その場合は従来どおり素のテキストで描く。
+  function openTerm(key){
+    var v=GLOSS[key];
+    if(!v) return;                                  // 辞書に無いキーなら何もしない
+    var isObj=(typeof v==="object");
+    var body=isObj ? v.d : v;
+    if(!body) return;                               // 説明が空なら開かない
+    var title=el("term-title"), tbody=el("term-body");
+    if(isObj){
+      if(v.t) title.innerHTML=v.t; else title.textContent=key;
+      tbody.innerHTML=body;
+    } else {
+      title.textContent=key;
+      tbody.textContent=body;
+    }
+    el("term-overlay").classList.add("show");
+  }
+  function closeTerm(){ el("term-overlay").classList.remove("show"); }
+  // 本文は差し替わるのでイベント委譲。選択肢(#q-choices)には付けない＝解答タップと競合させない
+  function bindTerms(id){
+    var box=el(id);
+    if(!box) return;
+    box.addEventListener("click", function(ev){
+      var t=ev&&ev.target;
+      while(t && t!==box){
+        if(t.classList && t.classList.contains("term")){
+          openTerm(t.getAttribute("data-term")||t.textContent);
+          return;
+        }
+        t=t.parentNode;
+      }
+    });
+  }
+
+  /* ---- ランダム演習の科目選択 ---- */
+  function openPick(){
+    el("pick-n-ippan").textContent=poolQids("ippan").length+"問";
+    el("pick-n-senmon").textContent=poolQids("senmon").length+"問";
+    el("pick-n-all").textContent=poolQids(null).length+"問";
+    el("pick-overlay").classList.add("show");
+  }
+  function closePick(){ el("pick-overlay").classList.remove("show"); }
+
+  function resetProgress(){
+    if(!confirm("学習記録(解答数・正答率・ベストスコア・出題の残り)をすべて消します。よろしいですか?")) return;
+    save={ answers:{}, best:{}, decks:{} };
+    persist(); renderHome();
+  }
+
+  /* ---- 配線 ---- */
+  el("btn-exams").addEventListener("click", function(){ mode=null; renderExams(); show("exams"); });
+  el("btn-random").addEventListener("click", openPick);
+  el("btn-review").addEventListener("click", function(){ if(!el("btn-review").disabled) startReview(); });
+  el("btn-browse").addEventListener("click", function(){
+    if(el("btn-browse").disabled) return;
+    mode="browse"; renderExams(); show("exams");
+  });
+  el("reset-btn").addEventListener("click", resetProgress);
+  el("theme-btn").addEventListener("click", toggleTheme);
+  el("exams-home").addEventListener("click", goHome);
+  // 本試験の途中離脱は取り消しになるので一度だけ確認する
+  el("quiz-home").addEventListener("click", function(){
+    if(mode==="exam" && !confirm("本試験モードを中断します。この回の解答は記録されません。よろしいですか?")) return;
+    goHome();
+  });
+  el("next-btn").addEventListener("click", function(){
+    if(fromScore){ fromScore=false; renderScore(); show("score"); return; }
+    nextPractice();
+  });
+  el("result-home").addEventListener("click", goHome);
+  el("score-home").addEventListener("click", goHome);
+  el("score-back").addEventListener("click", goHome);
+  el("retry-btn").addEventListener("click", function(){ if(lastScore) startExam(lastScore.tag); });
+  el("pick-ippan").addEventListener("click", function(){ closePick(); startRandom("ippan"); });
+  el("pick-senmon").addEventListener("click", function(){ closePick(); startRandom("senmon"); });
+  el("pick-all").addEventListener("click", function(){ closePick(); startRandom("all"); });
+  el("pick-cancel").addEventListener("click", closePick);
+  el("fig-overlay").addEventListener("click", closeFig);   // 背景タップで閉じる
+  el("fig-close").addEventListener("click", closeFig);
+  // 解説閲覧
+  el("browse-home").addEventListener("click", goHome);
+  el("browse-exams").addEventListener("click", function(){ mode="browse"; renderExams(); show("exams"); });
+  el("browse-prev").addEventListener("click", function(){ if(browseIdx>0) showBrowse(browseIdx-1); });
+  el("browse-next").addEventListener("click", function(){ if(browseIdx<browseSeq.length-1) showBrowse(browseIdx+1); });
+  el("browse-back").addEventListener("click", function(){ renderBrowseList(); show("browse"); });
+  // 用語ポップアップ（本文の4か所だけ。選択肢は対象外）
+  ["q-text","r-question","expl-body","ans-note"].forEach(bindTerms);
+  el("term-close").addEventListener("click", closeTerm);
+  el("term-overlay").addEventListener("click", function(ev){
+    if(!ev || ev.target===el("term-overlay")) closeTerm();   // 背景タップだけで閉じる
+  });
+
+  /* ---- 起動 ---- */
+  el("app-version").textContent="v"+VERSION;
+  applyTheme(savedTheme() || (prefersDark()?"dark":"light"));
+  setResultFoot(false);          // 解説画面のフッターは通常表示から始める
+  load(); renderHome(); show("home");
+
+  if("serviceWorker" in navigator && location.protocol.indexOf("http")===0){
+    window.addEventListener("load", function(){ navigator.serviceWorker.register("sw.js").catch(function(){}); });
+  }
+
+  // スモークテスト用の入口(画面操作なしで主要フローを走らせるため)
+  window.KishoExam={
+    VERSION:VERSION, show:show, goHome:goHome, renderHome:renderHome, renderExams:renderExams,
+    startExam:startExam, startRandom:startRandom, startReview:startReview,
+    onAnswer:onAnswer, toResult:toResult, nextPractice:nextPractice, renderScore:renderScore,
+    openBrowse:openBrowse, renderBrowseList:renderBrowseList, showBrowse:showBrowse,
+    openTerm:openTerm, closeTerm:closeTerm, plainHead:plainHead,
+    setTheme:setTheme, toggleTheme:toggleTheme,
+    poolQids:poolQids, wrongQids:wrongQids, allTags:allTags, findQ:findQ, tally:tally,
+    peek:function(){ return { mode:mode, seq:seq, seqIdx:seqIdx, current:current, picks:picks,
+      lastScore:lastScore, save:save, deckKey:deckKey, fromScore:fromScore,
+      browseTag:browseTag, browseSeq:browseSeq, browseIdx:browseIdx, gloss:GLOSS, theme:theme }; }
+  };
+})();
+</script>
+</body>
+</html>
