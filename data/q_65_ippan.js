@@ -182,13 +182,15 @@ window.KISHO_DATA["65_ippan"] = {
 4
 ],
 "answer_note": "",
-"figures": [],
+"figures": [
+"r_65_ippan_q09.svg"
+],
 "explanation": "正解は ④ です。\n\nこの問題は、図から気温の<span class=\"term\" data-term=\"極大\">極大</span>・<span class=\"term\" data-term=\"極小\">極小</span>の場所を読み取って、その原因を正しく結びつけられるかを確かめるものです。\n\nまず図の見方から。<span class=\"term\" data-term=\"横軸\">横軸</span>が<span class=\"term\" data-term=\"緯度\">緯度</span>（左端が南緯80度、右端が<span class=\"term\" data-term=\"北緯\">北緯</span>80度）、<span class=\"term\" data-term=\"縦軸\">縦軸</span>が<span class=\"term\" data-term=\"高度\">高度</span>（0〜120 km）で、<span class=\"term\" data-term=\"等値線\">等値線</span>の180・210・240・270は<span class=\"term\" data-term=\"絶対温度\">絶対温度</span>（K）です。1月ですから、<span class=\"term\" data-term=\"南半球\">南半球</span>が夏で<span class=\"term\" data-term=\"北半球\">北半球</span>が冬ですね。読み取るところは3か所あります。<span class=\"term\" data-term=\"赤道\">赤道</span>付近の高度15〜20 kmにある210 Kより低い冷たい<span class=\"term\" data-term=\"領域\">領域</span>（<span class=\"term\" data-term=\"熱帯\">熱帯</span>の<span class=\"term\" data-term=\"対流圏界面\">対流圏界面</span>）、南緯側の高度40〜50 kmにある270 Kの暖かい領域（<span class=\"term\" data-term=\"成層圏界面\">成層圏界面</span>）、そして南緯側の高度90〜100 kmにある180 Kより低い冷たい領域（<span class=\"term\" data-term=\"夏半球\">夏半球</span>の<span class=\"term\" data-term=\"中間圏界面\">中間圏界面</span>）です。\n\n(a)は誤りです。熱帯の高度15〜20 kmが冷たい主な理由は、空気が持ち上げられるときの<span class=\"term\" data-term=\"断熱膨張\">断熱膨張</span>（膨らむときに温度が下がること）による<span class=\"term\" data-term=\"冷却\">冷却</span>と、その高さでの<span class=\"term\" data-term=\"放射\">放射</span>による冷却なんです。<span class=\"term\" data-term=\"雲粒\">雲粒</span>が<span class=\"term\" data-term=\"蒸発\">蒸発</span>するときは周りから熱（<span class=\"term\" data-term=\"潜熱\">潜熱</span>）を奪うので冷やす働き自体はありますが、<span class=\"term\" data-term=\"対流雲\">対流雲</span>の中で放出される潜熱はむしろ<span class=\"term\" data-term=\"対流圏\">対流圏</span><span class=\"term\" data-term=\"上層\">上層</span>を温める側に働きます。ですから、これが主な理由ではありませんね。\n\n(b)は誤りです。高度40〜50 kmで気温が極大になるのは、そこにある<span class=\"term\" data-term=\"オゾン\">オゾン</span>が太陽の<span class=\"term\" data-term=\"紫外線\">紫外線</span>を<span class=\"term\" data-term=\"吸収\">吸収</span>して、<span class=\"term\" data-term=\"大気\">大気</span>を直接温めているからです。<span class=\"term\" data-term=\"下降流\">下降流</span>による<span class=\"term\" data-term=\"断熱圧縮\">断熱圧縮</span>が主な原因ではありません。\n\n(c)は正しいです。1月の南半球は夏で、<span class=\"term\" data-term=\"中間圏\">中間圏</span>では夏の極側で上昇して冬の極側で下降する<span class=\"term\" data-term=\"循環\">循環</span>が働いています。南半球の高度90 km付近はこの<span class=\"term\" data-term=\"上昇流\">上昇流</span>の側なので、断熱膨張で強く冷やされて、大気中で最も低い温度になります。太陽が沈まない夏の側がいちばん冷たいという、放射だけでは説明できない<span class=\"term\" data-term=\"現象\">現象</span>なんですね。\n\nというわけで④です。\n\nポイント: 成層圏界面の暖かさはオゾンによる紫外線の吸収、中間圏界面の冷たさは循環にともなう断熱膨張。原因を分けて覚えましょう。",
 "expl_fig": {
 "file": "e_65_ippan_q09.svg",
 "caption": "図: 気温の鉛直分布と、極大・極小がどの原因で生じるかのイメージ"
 },
-"figures_note": "この問題の図は、市販書籍などからの引用を含むため本アプリでは表示していません。図は気象業務支援センターが公開している試験問題冊子でご確認ください。"
+"figures_note": "この図は、元の図(市販書籍などからの引用を含む)と同じ内容を、本アプリが公開データから独自に描き直したものです。元の図は気象業務支援センターが公開している試験問題冊子でご確認ください。"
 },
 {
 "q": 10,

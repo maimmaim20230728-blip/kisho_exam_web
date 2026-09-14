@@ -132,9 +132,11 @@ window.KISHO_DATA["56_ippan"] = {
 1
 ],
 "answer_note": "",
-"figures": [],
+"figures": [
+"r_56_ippan_q07.svg"
+],
 "explanation": "正解は ① です。\n\n<span class=\"term\" data-term=\"温度風\">温度風</span>の関係(南北の気温差から、風が高さとともにどう変わるかが決まるという関係)を、実際の気温<span class=\"term\" data-term=\"分布\">分布</span>の図から読み取れるかどうかがカギです。\n\n覚えることは一つだけで、「極側が冷たいほど、<span class=\"term\" data-term=\"西風\">西風</span>は高いところほど強くなる(正)」です。逆に極側が暖かければ、<span class=\"term\" data-term=\"西風成分\">西風成分</span>は高いほど小さくなります(<span class=\"term\" data-term=\"負\">負</span>)。この言い方なら<span class=\"term\" data-term=\"北半球\">北半球</span>でも<span class=\"term\" data-term=\"南半球\">南半球</span>でもそのまま使えるんですね。\n\n図の見方です。<span class=\"term\" data-term=\"横軸\">横軸</span>は<span class=\"term\" data-term=\"緯度\">緯度</span>で左が南半球、右が北半球、<span class=\"term\" data-term=\"縦軸\">縦軸</span>は<span class=\"term\" data-term=\"気圧\">気圧</span>で上ほど高い<span class=\"term\" data-term=\"高度\">高度</span>、曲線は<span class=\"term\" data-term=\"気温(K)\">気温(K)</span>の<span class=\"term\" data-term=\"等値線\">等値線</span>です。各点で「そこから極の方へ進むと気温が上がるか下がるか」を読み取っていきましょう。1月なので南半球が夏、北半球が冬です。\n\nア(南半球45°付近、約<span class=\"term\" data-term=\"300hPa\">300hPa</span>、<span class=\"term\" data-term=\"対流圏\">対流圏</span>)…対流圏では極ほど<span class=\"term\" data-term=\"低温\">低温</span>です。図でも南極側へ向かうにつれて等値線の値が下がっていきます。極側が冷たいので正ですね。実際、対流圏では<span class=\"term\" data-term=\"亜熱帯ジェット気流\">亜熱帯ジェット気流</span>が上空ほど強くなっています。\n\nイ(南半球45°付近、約2<span class=\"term\" data-term=\"hPa\">hPa</span>、<span class=\"term\" data-term=\"成層圏\">成層圏</span>の上部)…点の左側に270Kの等値線があって、南極側の方が<span class=\"term\" data-term=\"高温\">高温</span>です。夏の極は太陽が当たり続けるので、この高さでは暖かくなるんです。極側が暖かいので負となり、ここは<span class=\"term\" data-term=\"東風\">東風</span>が上ほど強まっている場所にあたります。\n\nウ(南半球45°付近、約0.01hPa、<span class=\"term\" data-term=\"中間圏\">中間圏</span>の上部)…180Kの等値線が南極側に見えて、成層圏とは逆に夏の極の方が低温になっています。極側が冷たいので正です。\n\nエ(北半球40°付近、約2hPa、成層圏の上部)…1月の<span class=\"term\" data-term=\"北極\">北極</span>側は太陽が当たらず低温で、北へ行くほど等値線の値が下がります。極側が冷たいので正で、これが冬の<span class=\"term\" data-term=\"極夜ジェット\">極夜ジェット</span>にあたります。\n\nア正・イ負・ウ正・エ正 の組み合わせは ① です。\n\nポイント: 「極側が冷たければ西風は上ほど強い」。夏の極は成層圏では暖かく中間圏では冷たいという逆転があることも、図で確かめておきましょう。",
-"figures_note": "この問題の図は、市販書籍などからの引用を含むため本アプリでは表示していません。図は気象業務支援センターが公開している試験問題冊子でご確認ください。"
+"figures_note": "この図は、元の図(市販書籍などからの引用を含む)と同じ内容を、本アプリが公開データから独自に描き直したものです。元の図は気象業務支援センターが公開している試験問題冊子でご確認ください。"
 },
 {
 "q": 8,
