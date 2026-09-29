@@ -3,7 +3,7 @@
  * cache-first。中身を更新したら CACHE の数字を上げてください（例 v1 -> v2）。
  * figs/ と efigs/(解説図) は総量が大きいので precache には入れず、表示された図だけ runtime cache に貯める。
  */
-var CACHE = "kishoexam-v9";
+var CACHE = "kishoexam-v10";
 var ASSETS = [
   "./",
   "./index.html",
