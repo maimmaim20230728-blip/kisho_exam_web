@@ -235,6 +235,13 @@
   /* 押し付けがましくならないよう、点線の下線だけで「押せる」と伝える */
   .term{border-bottom:1px dotted var(--brand); color:var(--brand-dark); cursor:pointer;}
   .term:active{background:var(--brand-soft);}
+  .term:focus-visible, .figs img:focus-visible{outline:3px solid var(--brand); outline-offset:2px;}
+  /* 読み上げソフトだけに伝える文字(正誤)と、短い知らせ(2026-10-30) */
+  .sr-only{position:absolute; width:1px; height:1px; margin:-1px; padding:0; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap; border:0;}
+  .toast{position:fixed; left:50%; bottom:calc(24px + env(safe-area-inset-bottom)); transform:translateX(-50%); z-index:70; max-width:calc(100% - 32px);
+    background:var(--ink); color:var(--card); font-size:15px; font-weight:700; line-height:1.5; padding:12px 18px; border-radius:12px; box-shadow:var(--shadow); text-align:center;
+    opacity:0; pointer-events:none; transition:opacity .25s;}
+  .toast.show{opacity:1;}
   #term-overlay{display:none; place-items:center;}
   #term-overlay.show{display:grid;}
   .termbox{background:var(--card); border-radius:18px; box-shadow:var(--shadow); padding:20px 18px 16px;
@@ -337,10 +344,10 @@
 
     <div class="card">
       <p class="stat-title">学習記録</p>
-      <div class="stat-row main"><span>総正答率</span><b id="home-rate">—</b></div>
+      <div class="stat-row main"><span>総正答率</span><b id="home-rate">まだなし</b></div>
       <div class="stat-row"><span>総解答数</span><b id="home-total">0</b></div>
-      <div class="stat-row"><span>一般知識</span><b id="home-ippan">—</b></div>
-      <div class="stat-row"><span>専門知識</span><b id="home-senmon">—</b></div>
+      <div class="stat-row"><span>一般知識</span><b id="home-ippan">まだなし</b></div>
+      <div class="stat-row"><span>専門知識</span><b id="home-senmon">まだなし</b></div>
     </div>
 
     <p class="warn" id="data-warn"></p>
@@ -362,7 +369,7 @@
       <div class="foot-row">
         <button class="linkbtn" id="reset-btn">学習記録をリセット</button>
         <div class="foot-right">
-          <span class="ver" id="app-version">v0.6.3</span>
+          <span class="ver" id="app-version">v0.6.4</span>
           <button class="iconbtn small" id="theme-btn" title="夜の色にする" aria-label="配色を切り替える" aria-pressed="false">🌙</button>
         </div>
       </div>
@@ -499,6 +506,9 @@
   </div>
 </div>
 
+<div class="sr-only" id="sr-live" aria-live="polite"></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
 <!-- 問題データ(20ファイル)。未配置でもJSエラーで死なないよう onerror で数えるだけにする -->
 <script src="data/q_56_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
 <script src="data/q_56_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
@@ -520,13 +530,13 @@
 <script src="data/q_64_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
 <script src="data/q_65_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
 <script src="data/q_65_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
-<!-- 用語辞書（後工程で_build_data.pyが生成する。未配置でも onerror で読み飛ばす） -->
-<script src="data/glossary.js" onerror="window.KISHO_GLOSS_MISS=1"></script>
+<!-- 用語辞書 data/glossary.js(2.1MB・_build_data.pyが生成)は起動時に読まない。
+     はじめて用語を押したとき・用語集を開いたときに ensureGloss() が読み込む(2026-10-30。起動を軽くするため) -->
 <script>
 (function(){
   "use strict";
 
-  var VERSION="0.6.3";
+  var VERSION="0.6.4";
   var STORAGE_KEY="kishoexam.save.v1";
   var THEME_KEY="kishoexam.theme.v1";
   var THEME_META={ light:"#2569a8", dark:"#101821" };   // ブラウザのバーの色
@@ -543,7 +553,10 @@
   // データファイルが1つも無くても落ちないよう、必ず既定値を用意する
   var DATA=window.KISHO_DATA||{};
   // 用語辞書も同様（data/glossary.js が未配置なら空＝ポップアップが出ないだけ）
+  // 辞書は ensureGloss() で必要になったときに読む。glossState: "idle"(まだ) | "loading" | "ready"
   var GLOSS=window.KISHO_GLOSS||{};
+  var glossState=window.KISHO_GLOSS ? "ready" : "idle", glossWait=[];
+  var answered=false;   // いまの問題に答えたか(答えたあとに押しても2回目は数えない)
 
   var save={ answers:{}, best:{}, decks:{} };
   var mode=null;        // "exam" | "random" | "review" | "browse"
@@ -578,7 +591,20 @@
       }
     }catch(e){}
   }
-  function persist(){ try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(save)); }catch(e){} }
+  // 保存できなかったら(空き容量が少ない・プライベートモードなど)その場で知らせる(1回の起動で1回だけ)
+  var saveWarned=false;
+  function persist(){
+    try{ localStorage.setItem(STORAGE_KEY, JSON.stringify(save)); }
+    catch(e){ if(!saveWarned){ saveWarned=true; toast("学習記録を保存できませんでした(端末の空き容量が少ないときなど)"); } }
+  }
+  var toastTimer=null;
+  function toast(msg){
+    var t=el("toast"); if(!t) return;
+    t.textContent=msg; t.classList.add("show");
+    clearTimeout(toastTimer); toastTimer=setTimeout(function(){ t.classList.remove("show"); }, 3500);
+  }
+  // 正誤などを読み上げソフトに伝える(画面には出さない)
+  function srSay(msg){ var s=el("sr-live"); if(!s) return; s.textContent=""; setTimeout(function(){ s.textContent=msg; }, 30); }
 
   /* ---- 配色（夜間モード） ---- */
   // 端末の設定を初期値にする。head の theme-boot が同じ判定で先に立てているので、ここは追認になる。
@@ -669,7 +695,7 @@
     var n=c+w;
     return { c:c, w:w, n:n, rate: n?Math.round(c*100/n):null };
   }
-  function rateText(t){ return t.rate==null ? "—" : t.rate+"% ("+t.n+"問)"; }
+  function rateText(t){ return t.rate==null ? "まだなし" : t.rate+"% ("+t.n+"問)"; }
   // 「最後に解いたとき不正解」かつ、いま読み込めている問題だけ
   function wrongQids(){
     var out=[];
@@ -695,7 +721,7 @@
   /* ---- ホーム ---- */
   function renderHome(){
     var all=tally(null);
-    el("home-rate").textContent = all.rate==null ? "—" : all.rate+"%";
+    el("home-rate").textContent = all.rate==null ? "まだなし" : all.rate+"%";
     el("home-total").textContent = all.n;
     el("home-ippan").textContent = rateText(tally("ippan"));
     el("home-senmon").textContent = rateText(tally("senmon"));
@@ -709,10 +735,10 @@
     el("btn-exams").disabled=(total===0);
     el("btn-random").disabled=(total===0);
     el("btn-browse").disabled=(total===0);
-    // 用語集は問題データではなく辞書だけを見る（辞書が未配置なら押せない）
-    el("btn-gloss").disabled=(glossEntries().length===0);
+    // 用語集: 辞書を読んだあとは辞書だけを見る(空なら押せない)。まだ読んでいないうちは、問題データがあれば押せる(押したときに読む)
+    el("btn-gloss").disabled = (glossState==="ready") ? (glossEntries().length===0) : (total===0);
     if(total===0){
-      warn.textContent="問題データが読み込まれていません。www/data/ に q_56_ippan.js 〜 q_65_senmon.js を配置してください。";
+      warn.textContent="問題を読み込めませんでした。いったん閉じて、開き直してください。";
       warn.style.display="block";
     } else {
       warn.style.display="none";
@@ -743,7 +769,7 @@
       var parts=[];
       if(p&&p.label) parts.push(stripKai(p.label));
       if(HELD[kai]) parts.push(HELD[kai]);
-      sub.textContent=parts.join("・")||"—";
+      sub.textContent=parts.join("・")||"-";
       body.appendChild(nm); body.appendChild(sub);
       var best=document.createElement("span"); best.className="ebest";
       if(!ready) best.textContent="準備中";
@@ -818,6 +844,11 @@
       // 図が未配置でも壊れた画像アイコンを出さない
       img.addEventListener("error", function(){ img.style.display="none"; });
       img.addEventListener("click", function(){ openFig(img.src); });
+      // キーボード・スイッチでも Enter / Space で拡大できる
+      img.setAttribute("tabindex","0"); img.setAttribute("role","button");
+      img.addEventListener("keydown", function(e){
+        if(e.key==="Enter" || e.key===" " || e.key==="Spacebar"){ e.preventDefault(); openFig(img.src); }
+      });
       box.appendChild(img);
     });
     if(text){
@@ -836,6 +867,8 @@
       : "第"+kaiOf(c.tag)+"回 "+kindMini(kindOfTag(c.tag))+" 問"+q.q;
     // 問題文は下線(<u>)を含むためHTMLとして描画。改行はCSSのpre-wrapで保つ。
     el("q-text").innerHTML=q.question||"";
+    markTerms(el("q-text"));
+    answered=false;
     renderFigs(el("q-figs"), q.figures, q.figures_note);
     var box=el("q-choices"); box.innerHTML="";
     // ★選択肢は並べ替えない(過去問を①〜⑤の番号どおりそのまま出す)
@@ -855,9 +888,12 @@
   function isCorrect(q, num){ return num!=null && (q.answers||[]).indexOf(num)>=0; }
 
   function onAnswer(num, btn){
+    // 答えたあとは、ほかの選択肢を押しても記録しない(キーボード・読み上げソフトで続けて押したときも)(2026-10-30)
+    if(answered || !current) return;
+    answered=true;
     var q=current.q, ok=isCorrect(q,num);
     var btns=el("q-choices").querySelectorAll(".choice");
-    for(var i=0;i<btns.length;i++){ btns[i].style.pointerEvents="none"; }
+    for(var i=0;i<btns.length;i++){ btns[i].style.pointerEvents="none"; btns[i].setAttribute("aria-disabled","true"); }
 
     // 本試験モードは解答を伏せたまま15問通す。記録は採点時にまとめて。
     if(mode==="exam"){ picks[current.qid]=num; advanceExam(); return; }
@@ -869,6 +905,7 @@
       else if(btns[i]!==btn) btns[i].classList.add("dim");
     }
     if(!ok && btn) btn.classList.add("wrong");
+    srSay(ok ? "正解" : "不正解");
     // 色付けの間に ✕ や戻るボタンでホームへ出たら、解説へは進まない(2026-09-30)
     var f=current;
     setTimeout(function(){ if(current===f) toResult(f, num, ok, false); }, REVEAL_MS);
@@ -900,12 +937,12 @@
   /* ---- 解説 ---- */
   function ansText(q){
     var marks=(q.answers||[]).map(function(n){ return MARKS.charAt(n-1)||("["+n+"]"); });
-    return "正解: "+(marks.length?marks.join("または"):"—");
+    return "正解: "+(marks.length?marks.join("または"):"-");
   }
   // 公式の注記。用語マーキングが入るのでHTML描画（データはビルド時エスケープ済み）
   function renderNote(q){
     var note=el("ans-note");
-    if(q.answer_note){ note.innerHTML=q.answer_note; note.style.display="block"; }
+    if(q.answer_note){ note.innerHTML=q.answer_note; note.style.display="block"; markTerms(note); }
     else { note.innerHTML=""; note.style.display="none"; }
   }
   // 解説図。試験の図とは別で、本アプリが解説のために描いたSVG。無い問題では領域ごと隠す。
@@ -923,10 +960,11 @@
   // 問題文の再掲・図・解説本文（採点からの閲覧でも解説閲覧モードでも同じ）
   function renderRecap(f){
     el("r-question").innerHTML=f.q.question||"";
+    markTerms(el("r-question"));
     renderFigs(el("r-figs"), f.q.figures, f.q.figures_note);
     renderExplFig(f.q);
     var body=el("expl-body");
-    if(f.q.explanation){ body.innerHTML=f.q.explanation; }
+    if(f.q.explanation){ body.innerHTML=f.q.explanation; markTerms(body); }
     else { body.innerHTML=""; body.textContent="(この問題の解説は準備中です)"; }
   }
   // フッターのボタンを場面で出し分ける（解説閲覧のときだけ前後移動）
@@ -1073,22 +1111,67 @@
       title.textContent=key;
       tbody.textContent=body;
     }
+    termFrom=document.activeElement||null;
     el("term-overlay").classList.add("show");
+    try{ el("term-close").focus(); }catch(e){}       // 窓の中へ(キーボード・読み上げソフトで続けて読めるように)
   }
-  function closeTerm(){ el("term-overlay").classList.remove("show"); }
+  var termFrom=null;   // 用語の窓を開く前にいた所(閉じたら そこへ もどす)
+  function closeTerm(){
+    el("term-overlay").classList.remove("show");
+    var f=termFrom; termFrom=null;
+    if(f && typeof f.focus==="function"){ try{ f.focus(); }catch(e){} }
+  }
+  // 用語辞書 data/glossary.js(2.1MB)は、はじめて用語を押したとき(用語集を開いたとき)に読む(2026-10-30)。
+  // done(true=読めた / false=読めない)。読めないときは知らせて、次に押したときにもう一度読みにいく
+  function ensureGloss(done){
+    if(glossState==="ready"){ done(true); return; }
+    glossWait.push(done);
+    if(glossState==="loading") return;
+    glossState="loading";
+    function fin(ok){
+      glossState = ok ? "ready" : "idle";
+      if(ok){ GLOSS=window.KISHO_GLOSS||{}; glossList=null; }
+      else toast("用語の説明を読み込めませんでした。いったん閉じて、開き直してください。");
+      var w=glossWait; glossWait=[];
+      w.forEach(function(f){ f(ok); });
+    }
+    try{
+      var s=document.createElement("script");
+      s.src="data/glossary.js";
+      s.onload=function(){ fin(!!window.KISHO_GLOSS); };
+      s.onerror=function(){ fin(false); };
+      (document.head||document.body).appendChild(s);
+    }catch(e){ fin(false); }
+  }
+  function openTermLazy(key){ ensureGloss(function(ok){ if(ok) openTerm(key); }); }
+  // 本文中の用語(span.term)をキーボード・スイッチで届くボタンにする(描き直すたびに呼ぶ)
+  function markTerms(box){
+    if(!box || typeof box.querySelectorAll!=="function") return;
+    var ts=box.querySelectorAll(".term");
+    for(var i=0;i<ts.length;i++){ ts[i].setAttribute("tabindex","0"); ts[i].setAttribute("role","button"); }
+  }
   // 本文は差し替わるのでイベント委譲。選択肢(#q-choices)には付けない＝解答タップと競合させない
+  function termOf(box, ev){
+    var t=ev&&ev.target;
+    while(t && t!==box){
+      if(t.classList && t.classList.contains("term")) return t;
+      t=t.parentNode;
+    }
+    return null;
+  }
   function bindTerms(id){
     var box=el(id);
     if(!box) return;
     box.addEventListener("click", function(ev){
-      var t=ev&&ev.target;
-      while(t && t!==box){
-        if(t.classList && t.classList.contains("term")){
-          openTerm(t.getAttribute("data-term")||t.textContent);
-          return;
-        }
-        t=t.parentNode;
-      }
+      var t=termOf(box, ev);
+      if(t) openTermLazy(t.getAttribute("data-term")||t.textContent);
+    });
+    box.addEventListener("keydown", function(ev){
+      if(!ev || !(ev.key==="Enter" || ev.key===" " || ev.key==="Spacebar")) return;
+      var t=termOf(box, ev);
+      if(!t) return;
+      ev.preventDefault();
+      openTermLazy(t.getAttribute("data-term")||t.textContent);
     });
   }
 
@@ -1409,7 +1492,10 @@
   el("browse-next").addEventListener("click", function(){ if(browseIdx<browseSeq.length-1) showBrowse(browseIdx+1); });
   el("browse-back").addEventListener("click", function(){ renderBrowseList(); show("browse"); });
   // 用語集
-  el("btn-gloss").addEventListener("click", function(){ if(!el("btn-gloss").disabled) openGlossary(); });
+  el("btn-gloss").addEventListener("click", function(){
+    if(el("btn-gloss").disabled) return;
+    ensureGloss(function(ok){ if(ok) openGlossary(); });
+  });
   el("gloss-home").addEventListener("click", goHome);
   el("gloss-search").addEventListener("input", onGlossInput);
   el("gloss-sort-yomi").addEventListener("click", function(){ setGlossSort("yomi"); });
