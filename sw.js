@@ -5,7 +5,7 @@
  * 図は版上げで消えないよう、別の箱 FIG_CACHE に分ける(2026-10-30)。版を上げても FIG_CACHE の名前は変えない。
  * FIG_CACHE は FIG_MAX 枚を超えたら古い順に消す(図は figs 96枚 + efigs 107枚 = 203枚。約25MB)。
  */
-var CACHE = "kishoexam-v12";
+var CACHE = "kishoexam-v13";
 var FIG_CACHE = "kishoexam-figs-v1";
 var FIG_MAX = 240;
 var ASSETS = [
