@@ -20,6 +20,9 @@
     t=(m&&m.matches)?"dark":"light";
   }
   document.documentElement.dataset.theme=t;
+  var fs=null;
+  try{ fs=localStorage.getItem("kishoexam.fsize.v1"); }catch(e){}
+  if(fs==="l"||fs==="xl") document.documentElement.dataset.fs=fs;
   var meta=document.getElementById("theme-meta");
   if(meta) meta.setAttribute("content", t==="dark"?"#101821":"#2569a8");
 })();
@@ -325,6 +328,37 @@
     padding:10px 18px calc(14px + env(safe-area-inset-bottom)); background:var(--bg1); border-top:1px solid var(--line);}
   .guide-row .btn{flex:1 1 0; min-width:0; max-width:260px; min-height:56px; padding:12px 10px;}
 
+  /* ============ 文字の大きさ(標準・大・特大)・分野別・続きから・書き出し(2026-11-11) ============ */
+  /* 本文・選択肢・解説・用語の窓など「読む文字」だけを大きくする。ボタンや見出しの形は変えない */
+  html[data-fs="l"] .q-text, html[data-fs="l"] .choice .ctext, html[data-fs="l"] .expl .body, html[data-fs="l"] .recap,
+  html[data-fs="l"] .ans-note, html[data-fs="l"] .termbox .tbody, html[data-fs="l"] .gloss-row .gterm, html[data-fs="l"] .guide-p,
+  html[data-fs="l"] .fig-note, html[data-fs="l"] .law-note, html[data-fs="l"] .ask-msg{zoom:1.2;}
+  html[data-fs="xl"] .q-text, html[data-fs="xl"] .choice .ctext, html[data-fs="xl"] .expl .body, html[data-fs="xl"] .recap,
+  html[data-fs="xl"] .ans-note, html[data-fs="xl"] .termbox .tbody, html[data-fs="xl"] .gloss-row .gterm, html[data-fs="xl"] .guide-p,
+  html[data-fs="xl"] .fig-note, html[data-fs="xl"] .law-note, html[data-fs="xl"] .ask-msg{zoom:1.4;}
+  .law-note{margin:0 0 8px; background:var(--accent-soft); border:1px solid var(--warn-line); color:var(--warn-ink);
+    border-radius:12px; padding:9px 12px; font-size:12.5px; line-height:1.7; text-align:left;}
+  .qlaw{flex:none; font-size:11px; font-weight:800; color:var(--warn-ink); background:var(--accent-soft);
+    border:1px solid var(--warn-line); border-radius:999px; padding:1px 8px; line-height:1.6;}
+  .field-row{display:flex; align-items:baseline; justify-content:space-between; gap:10px; padding:5px 0;
+    border-top:1px solid var(--line); font-size:13.5px; color:var(--ink-soft);}
+  .field-row:first-of-type{border-top:none;}
+  .field-row b{font-size:15px; font-weight:800; color:var(--ink); font-variant-numeric:tabular-nums; text-align:right;}
+  .field-row.weak b{color:var(--wrong-ink);}
+  .field-row .fweak{font-size:11px; font-weight:800; color:var(--wrong-ink); margin-left:6px;}
+  .field-note{margin:8px 0 0; font-size:11px; color:var(--ink-soft); line-height:1.6;}
+  #xfer-overlay{display:none; place-items:center;}
+  #xfer-overlay.show{display:grid;}
+  .xferbox{background:var(--card); border-radius:18px; box-shadow:var(--shadow); padding:18px 16px 14px;
+    width:100%; max-width:420px; max-height:90vh; overflow-y:auto;}
+  .xferbox h2{margin:0 0 6px; font-size:17px; color:var(--brand-dark);}
+  .xferbox p{margin:0 0 8px; font-size:12.5px; line-height:1.7; color:var(--ink-soft);}
+  .xfer-text{width:100%; height:110px; font-family:ui-monospace,Consolas,monospace; font-size:12px; color:var(--ink);
+    background:var(--bg1); border:2px solid var(--line); border-radius:10px; padding:8px; resize:vertical; word-break:break-all;}
+  .xfer-row{display:flex; gap:8px; margin:8px 0;}
+  .xfer-row .btn{flex:1; padding:11px 8px; font-size:15px;}
+  .xfer-msg{min-height:1.7em; font-weight:700; color:var(--brand-dark);}
+
   @media (prefers-reduced-motion: reduce){
     .screen{animation:none;}
     .guide-ov{animation:none;}
@@ -350,9 +384,16 @@
       <div class="stat-row"><span>専門知識</span><b id="home-senmon">まだなし</b></div>
     </div>
 
+    <div class="card" id="field-card">
+      <p class="stat-title">分野別の正答率(目安)</p>
+      <div id="field-list"></div>
+      <p class="field-note" id="field-note"></p>
+    </div>
+
     <p class="warn" id="data-warn"></p>
 
     <div class="home-btns">
+      <button class="btn btn-primary" id="btn-resume" style="display:none"></button>
       <button class="btn btn-primary" id="btn-exams">📝 回を選んで挑戦</button>
       <button class="btn btn-sub" id="btn-random">🎲 ランダム演習</button>
       <button class="btn btn-sub" id="btn-review">🔁 間違えた問題を復習</button>
@@ -362,6 +403,7 @@
 
     <div class="home-foot">
       <button class="linkbtn" id="guide-btn" type="button">つかいかたを もう一度 見る</button>
+      <button class="linkbtn" id="xfer-btn" type="button">学習記録の書き出し・取り込み</button>
       <p class="source">出典: 気象業務支援センター<br>気象予報士試験 過去問題(第56回〜第65回)</p>
       <p class="source">本アプリの解説は当団体が独自に作成したものです。気象業務支援センターとは無関係であり、内容は当団体の責任によるものです。</p>
       <p class="source">過去の試験問題は、技術の進展や法規改正等により、現在では解答が変わる可能性があります。各問題の出典(実施回)をご確認ください。</p>
@@ -369,6 +411,7 @@
       <div class="foot-row">
         <button class="linkbtn" id="reset-btn">学習記録をリセット</button>
         <div class="foot-right">
+          <button class="linkbtn" id="fs-btn" type="button">文字: 標準</button>
           <span class="ver" id="app-version">v0.6.5</span>
           <button class="iconbtn small" id="theme-btn" title="夜の色にする" aria-label="配色を切り替える" aria-pressed="false">🌙</button>
         </div>
@@ -438,6 +481,7 @@
     <p class="ans-note" id="ans-note"></p>
     <p class="src-line" id="r-source"></p>
     <p class="src-line src-note" id="r-expl-note">解説は本アプリ独自のものです(気象業務支援センターとは無関係)</p>
+    <p class="law-note" id="r-law" style="display:none"></p>
     <div class="recap" id="r-question"></div>
     <div class="figs" id="r-figs"></div>
     <div class="expl">
@@ -506,6 +550,22 @@
   </div>
 </div>
 
+<!-- ============ 学習記録の書き出し・取り込み ============ -->
+<div class="overlay" id="xfer-overlay">
+  <div class="xferbox" role="dialog" aria-labelledby="xfer-title">
+    <h2 id="xfer-title">学習記録の書き出し・取り込み</h2>
+    <p>下の文字列が、いまの学習記録です。「コピー」して、メモなどに残してください。機種を変えたときは、新しい端末で この画面を開き、残した文字列を下の欄にはりつけて「取り込む」を押すと、記録がもどります。</p>
+    <textarea class="xfer-text" id="xfer-text" aria-label="学習記録の文字列" spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+    <div class="xfer-row">
+      <button class="btn btn-sub" id="xfer-copy" type="button">コピー</button>
+      <button class="btn btn-sub" id="xfer-share" type="button" style="display:none">共有</button>
+      <button class="btn btn-primary" id="xfer-import" type="button">取り込む</button>
+    </div>
+    <p class="xfer-msg" id="xfer-msg" role="status" aria-live="polite"></p>
+    <button class="linkbtn" id="xfer-close" type="button">閉じる</button>
+  </div>
+</div>
+
 <div class="sr-only" id="sr-live" aria-live="polite"></div>
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
@@ -530,15 +590,17 @@
 <script src="data/q_64_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
 <script src="data/q_65_ippan.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
 <script src="data/q_65_senmon.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
+<script src="data/fields.js" onerror="window.KISHO_MISS=(window.KISHO_MISS||0)+1"></script>
 <!-- 用語辞書 data/glossary.js(2.1MB・_build_data.pyが生成)は起動時に読まない。
      はじめて用語を押したとき・用語集を開いたときに ensureGloss() が読み込む(2026-10-30。起動を軽くするため) -->
 <script>
 (function(){
   "use strict";
 
-  var VERSION="0.6.5";
+  var VERSION="0.7.0";
   var STORAGE_KEY="kishoexam.save.v1";
   var THEME_KEY="kishoexam.theme.v1";
+  var FSIZE_KEY="kishoexam.fsize.v1";   // 文字の大きさ(学習記録とは別キー=リセットで消えない)
   var THEME_META={ light:"#2569a8", dark:"#101821" };   // ブラウザのバーの色
   var MARKS="①②③④⑤";
   var KAIS=[65,64,63,62,61,60,59,58,57,56];                       // 表示は新しい順
@@ -558,7 +620,7 @@
   var glossState=window.KISHO_GLOSS ? "ready" : "idle", glossWait=[];
   var answered=false;   // いまの問題に答えたか(答えたあとに押しても2回目は数えない)
 
-  var save={ answers:{}, best:{}, decks:{} };
+  var save={ answers:{}, best:{}, decks:{}, exam:null };   // exam=本試験の途中保存 {tag,idx,picks,sec}
   var mode=null;        // "exam" | "random" | "review" | "browse"
   var deckKey=null;     // ランダム演習のプール識別 "all"/"ippan"/"senmon"
   var seq=[], seqIdx=0; // 本試験/復習の出題キュー(qidの配列)
@@ -588,8 +650,20 @@
         if(s.answers&&typeof s.answers==="object"&&!Array.isArray(s.answers)) save.answers=s.answers;
         if(s.best&&typeof s.best==="object"&&!Array.isArray(s.best)) save.best=s.best;
         if(s.decks&&typeof s.decks==="object"&&!Array.isArray(s.decks)) save.decks=s.decks;
+        save.exam=cleanExam(s.exam);
       }
     }catch(e){}
+  }
+  // 本試験の途中保存を読むときの形チェック(壊れていたら無かったことにする)
+  function cleanExam(x){
+    if(!x||typeof x!=="object"||typeof x.tag!=="string") return null;
+    var idx=Math.floor(Number(x.idx)), sec=Math.floor(Number(x.sec));
+    if(!(idx>=0)||!(idx<1000)) return null;
+    var picks={};
+    if(x.picks&&typeof x.picks==="object"&&!Array.isArray(x.picks)){
+      for(var k in x.picks){ var v=x.picks[k]; if(typeof v==="number"&&v>=1&&v<=5&&Math.floor(v)===v) picks[k]=v; }
+    }
+    return { tag:x.tag, idx:idx, picks:picks, sec:(sec>=0&&sec<360000)?sec:0 };
   }
   // 保存できなかったら(空き容量が少ない・プライベートモードなど)その場で知らせる(1回の起動で1回だけ)
   var saveWarned=false;
@@ -635,6 +709,52 @@
   }
   function setTheme(t){ applyTheme(t); try{ localStorage.setItem(THEME_KEY, theme); }catch(e){} }
   function toggleTheme(){ setTheme(theme==="dark"?"light":"dark"); }
+
+  /* ---- 文字の大きさ(標準・大・特大) ---- */
+  var FS_LABEL={ m:"標準", l:"大", xl:"特大" }, FS_NEXT={ m:"l", l:"xl", xl:"m" };
+  var fsize="m";
+  function savedFsize(){
+    var v=null;
+    try{ v=localStorage.getItem(FSIZE_KEY); }catch(e){}
+    return (v==="l"||v==="xl") ? v : "m";
+  }
+  function applyFsize(v){
+    fsize=(v==="l"||v==="xl")?v:"m";
+    var root=document.documentElement;
+    if(root){
+      if(fsize==="m"){ if(root.removeAttribute) root.removeAttribute("data-fs"); else if(root.dataset) delete root.dataset.fs; }
+      else if(root.dataset) root.dataset.fs=fsize; else root.setAttribute("data-fs", fsize);
+    }
+    var b=el("fs-btn");
+    if(b){ b.textContent="文字: "+FS_LABEL[fsize]; b.setAttribute("aria-label","文字の大きさ。いまは"+FS_LABEL[fsize]+"。押すと変わります"); }
+  }
+  function cycleFsize(){
+    applyFsize(FS_NEXT[fsize]);
+    try{ localStorage.setItem(FSIZE_KEY, fsize); }catch(e){}
+    srSay("文字の大きさ: "+FS_LABEL[fsize]);
+  }
+
+  /* ---- 分野(data/fields.js。_make_fields.js が問題文のキーワードで決めた目安) ---- */
+  var FIELDS=window.KISHO_FIELDS||null;
+  function fieldIdx(qid){
+    if(!FIELDS||!FIELDS.map) return -1;
+    var i=FIELDS.map[qid];
+    return (typeof i==="number")?i:-1;
+  }
+  function fieldTallies(){
+    var out=[];
+    if(!FIELDS||!FIELDS.names) return out;
+    FIELDS.names.forEach(function(nm){ out.push({ name:nm, c:0, w:0, n:0, rate:null }); });
+    for(var qid in save.answers){
+      var i=fieldIdx(qid); if(i<0||!out[i]) continue;
+      var a=save.answers[qid]||{};
+      out[i].c+=(a.c||0); out[i].w+=(a.w||0);
+    }
+    out.forEach(function(t){ t.n=t.c+t.w; t.rate=t.n?Math.round(t.c*100/t.n):null; });
+    return out;
+  }
+  // 法律・制度の問題か(分野の0番=法規・制度)
+  function isLawQid(qid){ return fieldIdx(qid)===0; }
 
   /* ---- データの参照 ---- */
   function kaiOf(tag){ var p=DATA[tag]; return (p&&p.kai)||parseInt(tag,10)||0; }
@@ -726,6 +846,8 @@
     el("home-ippan").textContent = rateText(tally("ippan"));
     el("home-senmon").textContent = rateText(tally("senmon"));
 
+    renderFields();
+    renderResumeBtn();
     var n=wrongQids().length, rb=el("btn-review");
     rb.textContent="🔁 間違えた問題を復習 ("+n+"件)";
     rb.disabled=(n===0);
@@ -743,6 +865,79 @@
     } else {
       warn.style.display="none";
     }
+  }
+
+  // 分野別の正答率。いちばん低い分野(3問以上答えたもの)に「ここから」を付ける
+  var FIELD_MIN=3;
+  function renderFields(){
+    var card=el("field-card"), box=el("field-list"), note=el("field-note");
+    if(!card||!box) return;
+    var rows=fieldTallies();
+    if(!rows.length){ card.style.display="none"; return; }
+    card.style.display="";
+    var weak=-1;
+    rows.forEach(function(t,i){ if(t.n>=FIELD_MIN && (weak<0 || t.rate<rows[weak].rate)) weak=i; });
+    box.innerHTML="";
+    rows.forEach(function(t,i){
+      if(t.name==="その他" && t.n===0 && !fieldsHaveOther()) return;
+      var r=document.createElement("div"); r.className="field-row"+(i===weak?" weak":"");
+      var nm=document.createElement("span"); nm.textContent=t.name;
+      var b=document.createElement("b"); b.textContent=rateText(t);
+      if(i===weak){ var w=document.createElement("span"); w.className="fweak"; w.textContent="ここから"; b.appendChild(w); }
+      r.appendChild(nm); r.appendChild(b); box.appendChild(r);
+    });
+    note.textContent = (weak>=0)
+      ? "「ここから」は、"+FIELD_MIN+"問以上答えた分野で、正答率がいちばん低いところです。分野は問題の言葉から分けた目安です。"
+      : "分野は問題の言葉から分けた目安です。"+FIELD_MIN+"問以上答えると、重点にする分野が出ます。";
+  }
+  function fieldsHaveOther(){
+    if(!FIELDS||!FIELDS.map) return false;
+    var last=FIELDS.names.length-1;
+    for(var k in FIELDS.map){ if(FIELDS.map[k]===last) return true; }
+    return false;
+  }
+
+  /* ---- 本試験の途中保存(続きから) ---- */
+  // いま読み込めているデータで再開できる保存か。できれば {tag,idx,picks,sec,seq}、できなければ null
+  function resumable(){
+    var x=save.exam;
+    if(!x) return null;
+    var p=DATA[x.tag];
+    if(!p||!p.questions||!p.questions.length) return null;
+    var sq=sortedQuestions(x.tag).map(function(q){ return qidOf(x.tag,q.q); });
+    if(x.idx>=sq.length) return null;
+    var pk={};
+    sq.forEach(function(id){ if(x.picks[id]!=null) pk[id]=x.picks[id]; });
+    return { tag:x.tag, idx:x.idx, picks:pk, sec:x.sec, seq:sq };
+  }
+  function examLabel(tag){ return "第"+kaiOf(tag)+"回 "+kindShort(kindOfTag(tag)); }
+  function renderResumeBtn(){
+    var b=el("btn-resume"); if(!b) return;
+    var r=resumable();
+    if(!r){ b.style.display="none"; return; }
+    b.style.display="";
+    b.textContent="▶ 本試験の続きから ("+examLabel(r.tag)+"・問"+(r.idx+1)+"から)";
+  }
+  function saveExamProgress(){
+    if(mode!=="exam"||!examTag||seqIdx>=seq.length) return;
+    save.exam={ tag:examTag, idx:seqIdx, picks:picks, sec:Math.floor((Date.now()-timerStart)/1000) };
+    persist();
+  }
+  function resumeExam(){
+    var r=resumable();
+    if(!r){ save.exam=null; persist(); renderHome(); return; }
+    mode="exam"; examTag=r.tag; examTitle=examLabel(r.tag);
+    picks=r.picks; seq=r.seq; seqIdx=r.idx;
+    current=findQ(seq[seqIdx]);
+    if(!current){ goHome(); return; }
+    startTimer(); timerStart-=r.sec*1000; tickTimer();
+    renderQuestion();
+  }
+  // 新しい本試験を始める。途中の保存があれば、消えることを確かめてから
+  function startExamAsk(tag){
+    var r=resumable();
+    if(!r){ startExam(tag); return; }
+    askBox("途中まで進んだ本試験("+examLabel(r.tag)+"・問"+(r.idx+1)+"から)があります。新しく始めると、その続きは消えます。よろしいですか?", function(ok){ if(ok) startExam(tag); });
   }
 
   /* ---- 回選択（本試験モードと解説閲覧で共用） ---- */
@@ -776,7 +971,7 @@
       else if(save.best[tag]!=null) best.textContent="ベスト "+save.best[tag]+"/"+p.questions.length;
       else best.textContent="未挑戦";
       b.appendChild(body); b.appendChild(best);
-      if(ready) b.addEventListener("click", function(){ browsing ? openBrowse(tag) : startExam(tag); });
+      if(ready) b.addEventListener("click", function(){ browsing ? openBrowse(tag) : startExamAsk(tag); });
       box.appendChild(b);
     });
   }
@@ -807,7 +1002,7 @@
     var p=DATA[tag];
     if(!p||!p.questions||!p.questions.length) return;
     mode="exam"; examTag=tag; examTitle="第"+kaiOf(tag)+"回 "+kindShort(kindOfTag(tag));
-    picks={}; seqIdx=0;
+    picks={}; seqIdx=0; save.exam=null;
     seq=sortedQuestions(tag).map(function(q){ return qidOf(tag,q.q); });
     current=findQ(seq[0]);
     if(!current) return;
@@ -917,10 +1112,12 @@
     current=findQ(seq[seqIdx]);
     if(!current){ finishExam(); return; }
     renderQuestion();
+    saveExamProgress();     // 1問進むごとに保存(閉じても「続きから」で再開できる)
   }
 
   function finishExam(){
     stopTimer();
+    save.exam=null;
     var correct=0;
     seq.forEach(function(qid){
       var f=findQ(qid); if(!f) return;
@@ -1031,6 +1228,10 @@
       var sub=document.createElement("div"); sub.className="esub"; sub.textContent=plainHead(f.q.question,18);
       body.appendChild(nm); body.appendChild(sub);
       b.appendChild(body);
+      if(isLawQid(qid)){
+        var lw=document.createElement("span"); lw.className="qlaw"; lw.textContent="制度"; lw.title="法律・制度の問題(今の制度と違う可能性があります)";
+        b.appendChild(lw);
+      }
       // 解答履歴があれば右端に○/✕（未解答は何も出さない）
       var a=save.answers[qid];
       if(a && ((a.c||0)+(a.w||0))>0){
@@ -1059,6 +1260,13 @@
   }
   // 全問に出典を明記する(公開時の利用条件対応)。解説表示の全経路(toResult/showBrowse)から呼ぶ
   function renderSource(f){
+    var law=el("r-law");
+    if(law){
+      if(isLawQid(f.qid)){
+        law.textContent="⚠ 法律・制度の問題です。この問題と解説は、出題された回(" + (HELD[kaiOf(f.tag)]||"当時") + ")の制度にもとづいています。のちに改正されて、いまの制度と答えが違うことがあります。最新の内容は、気象庁の案内や e-Gov 法令検索で確かめてください。";
+        law.style.display="";
+      } else { law.textContent=""; law.style.display="none"; }
+    }
     el("r-source").textContent="出典：気象業務支援センター 気象予報士試験 "
       +((f.pack&&f.pack.label)||"")+" 学科・"+kindShort(kindOfTag(f.tag))+" 問"+f.q.q;
   }
@@ -1275,10 +1483,104 @@
   }
   function closePick(){ el("pick-overlay").classList.remove("show"); }
 
+  /* ---- 学習記録の書き出し・取り込み(文字列。<a download> は Capacitor で動かないので使わない) ---- */
+  var B64="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/";
+  function b64enc(str){     // 半角の文字だけ(学習記録のJSONは半角だけ)
+    var out="", i=0;
+    while(i<str.length){
+      var a=str.charCodeAt(i++), b=i<str.length?str.charCodeAt(i++):NaN, c=i<str.length?str.charCodeAt(i++):NaN;
+      var n=(a<<16)|((b||0)<<8)|(c||0);
+      out+=B64.charAt((n>>18)&63)+B64.charAt((n>>12)&63)+(isNaN(b)?"=":B64.charAt((n>>6)&63))+(isNaN(c)?"=":B64.charAt(n&63));
+    }
+    return out;
+  }
+  function b64dec(s){
+    s=s.replace(/=+$/,"");
+    var out="", bits=0, val=0;
+    for(var i=0;i<s.length;i++){
+      var k=B64.indexOf(s.charAt(i)); if(k<0) return null;
+      val=((val<<6)|k)&0xFFFFFF; bits+=6;
+      if(bits>=8){ bits-=8; out+=String.fromCharCode((val>>bits)&255); }
+    }
+    return out;
+  }
+  var XFER_HEAD="KISHO1:";
+  function exportCode(){ return XFER_HEAD+b64enc(JSON.stringify({ v:1, answers:save.answers, best:save.best })); }
+  // 文字列 → {answers,best,count} か、読めなければ null
+  function parseCode(text){
+    var t=String(text||"").replace(/\s+/g,"");
+    if(t.indexOf(XFER_HEAD)!==0) return null;
+    var raw=b64dec(t.slice(XFER_HEAD.length)), o=null;
+    if(raw==null) return null;
+    try{ o=JSON.parse(raw); }catch(e){ return null; }
+    if(!o||typeof o!=="object"||!o.answers||typeof o.answers!=="object"||Array.isArray(o.answers)) return null;
+    var answers={}, best={}, count=0;
+    for(var qid in o.answers){
+      if(!/^\d+_(ippan|senmon)_\d+$/.test(qid)) continue;
+      var a=o.answers[qid]; if(!a||typeof a!=="object") continue;
+      var c=Math.floor(Number(a.c)), w=Math.floor(Number(a.w));
+      if(!(c>=0&&c<100000)) c=0;
+      if(!(w>=0&&w<100000)) w=0;
+      if(c+w===0) continue;
+      answers[qid]={ c:c, w:w, last:(a.last===1?1:0) }; count++;
+    }
+    if(o.best&&typeof o.best==="object"&&!Array.isArray(o.best)){
+      for(var tg in o.best){ var v=Math.floor(Number(o.best[tg])); if(/^\d+_(ippan|senmon)$/.test(tg)&&v>=0&&v<=100) best[tg]=v; }
+    }
+    return { answers:answers, best:best, count:count };
+  }
+  function xferMsg(m){ var e=el("xfer-msg"); if(e) e.textContent=m||""; }
+  function openXfer(){
+    el("xfer-text").value=exportCode();
+    xferMsg("");
+    el("xfer-share").style.display=(typeof navigator!=="undefined" && navigator && typeof navigator.share==="function")?"":"none";
+    xferFrom=document.activeElement||null;
+    el("xfer-overlay").classList.add("show");
+    try{ el("xfer-copy").focus(); }catch(e){}
+  }
+  var xferFrom=null;
+  function closeXfer(){
+    el("xfer-overlay").classList.remove("show");
+    var f=xferFrom; xferFrom=null;
+    if(f && typeof f.focus==="function"){ try{ f.focus(); }catch(e){} }
+  }
+  function copyXfer(){
+    var ta=el("xfer-text"), t=ta.value;
+    function fallback(){
+      var ok=false;
+      try{ ta.focus(); ta.select(); if(ta.setSelectionRange) ta.setSelectionRange(0,t.length); ok=!!document.execCommand("copy"); }catch(e){ ok=false; }
+      xferMsg(ok ? "コピーしました" : "コピーできませんでした。文字列を長く押して、コピーしてください");
+    }
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){
+        navigator.clipboard.writeText(t).then(function(){ xferMsg("コピーしました"); }, fallback);
+        return;
+      }
+    }catch(e){}
+    fallback();
+  }
+  function shareXfer(){
+    try{
+      var p=navigator.share({ text:el("xfer-text").value });
+      if(p && p.catch) p.catch(function(){});
+    }catch(e){ xferMsg("共有できませんでした。「コピー」を使ってください"); }
+  }
+  function importXfer(){
+    var r=parseCode(el("xfer-text").value);
+    if(!r || r.count===0){ xferMsg("この文字列は読めませんでした。「KISHO1:」から始まる文字列を、そのままはりつけてください"); return; }
+    askBox("いまの学習記録を、この文字列の記録(" + r.count + "問ぶん)に置きかえます。途中の本試験と、ランダム演習の出題の残りは消えます。よろしいですか?", function(ok){
+      if(!ok) return;
+      save={ answers:r.answers, best:r.best, decks:{}, exam:null };
+      persist(); renderHome();
+      el("xfer-text").value=exportCode();
+      xferMsg("取り込みました(" + r.count + "問ぶん)");
+    });
+  }
+
   function resetProgress(){
     askBox("学習記録(解答数・正答率・ベストスコア・出題の残り)をすべて消します。よろしいですか?", function(ok){
       if(!ok) return;
-      save={ answers:{}, best:{}, decks:{} };
+      save={ answers:{}, best:{}, decks:{}, exam:null };
       persist(); renderHome();
     });
   }
@@ -1352,6 +1654,7 @@
     if(askOpen){ askOpen.no(); return; }
     if(guideOpen){ guideOpen.back(); return; }
     // 窓は同じ重なり順(z-index)なので、あとに書いてあるほうが上: 用語の説明 → 科目えらび → 図の拡大
+    if(el("xfer-overlay").classList.contains("show")){ closeXfer(); return; }
     if(el("term-overlay").classList.contains("show")){ closeTerm(); return; }
     if(el("pick-overlay").classList.contains("show")){ closePick(); return; }
     if(el("fig-overlay").classList.contains("show")){ closeFig(); return; }
@@ -1394,13 +1697,13 @@
     ],
     bodies:[
       "気象予報士試験の学科(一般知識・専門知識)の過去問を解いて、解説を読んで学ぶアプリです。第56回〜第65回の300問を収めています。\n解説は当団体が独自に作ったもので、気象業務支援センターとは関係がありません。\n古い回の問題は、技術の進展や法規の改正などで、いまでは答えが変わることがあります。解説の画面に出る出典(実施回)を確かめてください。",
-      "ホームの「📝 回を選んで挑戦」で、回と科目(一般知識・専門知識)をえらびます。\n15問を問1から順に解き、答え合わせは最後にまとめて出ます。右上の時計は、かかった時間の目安です。\n採点結果には合格基準の目安が出て、マスを押すと その問題の解説を読めます。\n途中で左上の「✕」を押すと中断でき、その回の答えは記録されません。",
+      "ホームの「📝 回を選んで挑戦」で、回と科目(一般知識・専門知識)をえらびます。\n15問を問1から順に解き、答え合わせは最後にまとめて出ます。右上の時計は、かかった時間の目安です。\n採点結果には合格基準の目安が出て、マスを押すと その問題の解説を読めます。\n途中で左上の「✕」を押すと中断できます。ここまでの答えは保存され、ホームの「本試験の続きから」で再開できます。",
       "「🎲 ランダム演習」では、「一般知識」「専門知識」「全部」から出す科目をえらびます。\n1問答えるごとに、正解は緑、間違いは赤で出て、解説に進みます。「次へ」で次の問題、「ホームへ」でホームにもどります。\n同じ科目では、ひととおり出るまで同じ問題はくり返しません。",
       "間違えた問題は「🔁 間違えた問題を復習」で、もう一度解けます。\n出るのは、最後に解いたときに間違えた問題です。正解すると、復習から外れます。\n図は、押すと大きく見られます。",
       "「📖 解説を読む」では、回をえらぶと問題の一覧が出て、問題を押すと その解説を読めます。\n「前の問題」「次の問題」で順に読めます。ここで読んでも、学習記録は変わりません。\n解説には、本アプリが描いた図がつく問題もあります。",
       "問題文や解説の中で、点線の下線がついた用語は、押すと説明が出ます。「閉じる」で もどります。\n「📚 用語集」では、用語や よみで探したり、「よみ順」「登場回数順」「登場順」で並べかえたりできます。\n用語集の用語を押しても、同じ説明が出ます。",
-      "学習記録(正答率・ベスト・復習する問題など)は、この端末の中だけに保存され、どこにも送られません。登録もいりません。\nホームのいちばん下の「学習記録をリセット」で、記録をすべて消せます(消す前に確かめます)。\n機種を変えるときに、記録を移すしくみはありません。",
-      "ホームのいちばん下の 🌙 を押すと夜の色、☀️ を押すと昼の色になります。\nこの案内は、ホームの下のほうの「つかいかたを もう一度 見る」で、いつでも見られます。"
+      "学習記録(正答率・ベスト・復習する問題など)は、この端末の中だけに保存され、どこにも送られません。登録もいりません。\nホームのいちばん下の「学習記録をリセット」で、記録をすべて消せます(消す前に確かめます)。\n機種を変えるときは、ホームの「学習記録の書き出し・取り込み」で、記録を文字列にして移せます。",
+      "ホームのいちばん下の 🌙 を押すと夜の色、☀️ を押すと昼の色になります。「文字」を押すと、本文の文字が 標準・大・特大 の順に大きくなります。\nこの案内は、ホームの下のほうの「つかいかたを もう一度 見る」で、いつでも見られます。"
     ]
   };
   var guideOpen=null;   // 出している案内({back:戻るボタン1回, page:いまのページ})
@@ -1453,6 +1756,7 @@
 
   /* ---- 配線 ---- */
   el("btn-exams").addEventListener("click", function(){ mode=null; renderExams(); show("exams"); });
+  el("btn-resume").addEventListener("click", resumeExam);
   el("btn-random").addEventListener("click", openPick);
   el("btn-review").addEventListener("click", function(){ if(!el("btn-review").disabled) startReview(); });
   el("btn-browse").addEventListener("click", function(){
@@ -1462,11 +1766,18 @@
   el("reset-btn").addEventListener("click", resetProgress);
   el("guide-btn").addEventListener("click", function(){ openGuide(false); });
   el("theme-btn").addEventListener("click", toggleTheme);
+  el("fs-btn").addEventListener("click", cycleFsize);
+  el("xfer-btn").addEventListener("click", openXfer);
+  el("xfer-copy").addEventListener("click", copyXfer);
+  el("xfer-share").addEventListener("click", shareXfer);
+  el("xfer-import").addEventListener("click", importXfer);
+  el("xfer-close").addEventListener("click", closeXfer);
+  el("xfer-overlay").addEventListener("click", function(ev){ if(ev && ev.target===el("xfer-overlay")) closeXfer(); });
   el("exams-home").addEventListener("click", goHome);
   // 本試験の途中離脱は取り消しになるので一度だけ確認する
   el("quiz-home").addEventListener("click", function(){
     if(mode!=="exam"){ goHome(); return; }
-    askBox("本試験モードを中断します。この回の解答は記録されません。よろしいですか?", function(ok){ if(ok) goHome(); });
+    askBox("本試験モードを中断します。ここまでの答えは保存され、ホームの「本試験の続きから」で再開できます(学習記録にはまだ入りません)。よろしいですか?", function(ok){ if(ok) goHome(); });
   });
   el("next-btn").addEventListener("click", function(){
     if(fromScore){ fromScore=false; renderScore(); show("score"); return; }
@@ -1522,6 +1833,7 @@
   /* ---- 起動 ---- */
   el("app-version").textContent="v"+VERSION;
   applyTheme(savedTheme() || (prefersDark()?"dark":"light"));
+  applyFsize(savedFsize());
   setResultFoot(false);          // 解説画面のフッターは通常表示から始める
   load(); renderHome(); show("home");
   watchBack();                   // Android の戻るボタン(Play版だけ)
@@ -1541,12 +1853,14 @@
     openGlossary:openGlossary, renderGloss:renderGloss, setGlossSort:setGlossSort,
     glossRows:glossRows, glossEntries:glossEntries, onGlossInput:onGlossInput, kanaKey:kanaKey,
     setTheme:setTheme, toggleTheme:toggleTheme,
+    cycleFsize:cycleFsize, resumeExam:resumeExam, startExamAsk:startExamAsk, fieldTallies:fieldTallies, isLawQid:isLawQid,
+    exportCode:exportCode, parseCode:parseCode, openXfer:openXfer, importXfer:importXfer,
     poolQids:poolQids, wrongQids:wrongQids, allTags:allTags, findQ:findQ, tally:tally,
     openGuide:openGuide, guideDone:guideDone, GUIDE:GUIDE,
     peek:function(){ return { guide:(guideOpen ? guideOpen.page() : -1), mode:mode, seq:seq, seqIdx:seqIdx, current:current, picks:picks,
       lastScore:lastScore, save:save, deckKey:deckKey, fromScore:fromScore,
       browseTag:browseTag, browseSeq:browseSeq, browseIdx:browseIdx, gloss:GLOSS, theme:theme,
-      glossSort:glossSort, glossQuery:glossQuery }; }
+      glossSort:glossSort, glossQuery:glossQuery, fsize:fsize }; }
   };
 })();
 </script>
