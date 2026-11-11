@@ -412,7 +412,7 @@
         <button class="linkbtn" id="reset-btn">学習記録をリセット</button>
         <div class="foot-right">
           <button class="linkbtn" id="fs-btn" type="button">文字: 標準</button>
-          <span class="ver" id="app-version">v0.6.5</span>
+          <span class="ver" id="app-version">v0.7.0</span>
           <button class="iconbtn small" id="theme-btn" title="夜の色にする" aria-label="配色を切り替える" aria-pressed="false">🌙</button>
         </div>
       </div>
@@ -1002,7 +1002,8 @@
     var p=DATA[tag];
     if(!p||!p.questions||!p.questions.length) return;
     mode="exam"; examTag=tag; examTitle="第"+kaiOf(tag)+"回 "+kindShort(kindOfTag(tag));
-    picks={}; seqIdx=0; save.exam=null;
+    picks={}; seqIdx=0;
+    if(save.exam){ save.exam=null; persist(); }   // 前の続きは、確かめて「はい」のあとなので、ここで消して保存する
     seq=sortedQuestions(tag).map(function(q){ return qidOf(tag,q.q); });
     current=findQ(seq[0]);
     if(!current) return;
